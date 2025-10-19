@@ -1,0 +1,692 @@
+{
+  "tasktype": "sc",
+  "taskname": "rm_sc_st",
+  "instructions": {
+    "definition": [
+      "As a helpful assistant performing a task with four different components for successful response.",
+      "Each component refers to a unique problem about the task as described in the instructions below.",
+      "Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+      "Follow all the instructions related to different components of the task to give accurate response.",
+      "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response."
+    ],
+    "TASK_INSTRUCTIONS": {
+      "WORD_PAIR_TASK": {
+        "**Identify the Word Pair**": "Look for the word pair, referred to as 'word_1' and 'word_2'.",
+        "**Check if 'word_2' is Provided**": [
+          "If 'word_2' is a complete and valid English word, report that word as it is.",
+          "If 'word_2' contains a blank value ('_______'), proceed to the next step."
+        ],
+        "**Imagining a Word for Blank 'word_2'**": [
+          "**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair."
+        ],
+        "You are **prohibted** to imagine": [
+          "use of given 'word_1' in any form,compound words made of smaller word,",
+          "symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,",
+          "anything outside of the words would be not in a english dictionary.",
+          "mathmetical"
+        ],
+        "You are **allowed** to imagine": "singular english words that are **not** prohibited as described above."
+      },
+      "RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2": {
+        "definition": [
+          "Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.",
+          "It can be based on mutiple factors,for example:",
+          "similar sounding (phonetics),",
+          "meaning (semantics),",
+          "or categorical (whether the two words can related through common categories).",
+          ""
+        ],
+        "relatedness_rating_scale": [
+          "Use any value in the range of 0 to 100 in relatedness rating scale.",
+          "**0** signifies the words are **not at all related**.",
+          "**100** signifies the words **very highly related**.",
+          "Intermediate values between 0 and 100 denote intermediate values.",
+          "Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.**ALWAYS FOLLOW THESE INSTRUCTION**"
+        ],
+        "type": "number"
+      },
+      "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+        "definition": "Judge the nature of generation of the value of 'word_2' on following options:",
+        "options": {
+          "enum": [
+            "external",
+            "internal"
+          ]
+        },
+        "option_descriptions": {
+          "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+          "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+        }
+      },
+      "CONFIDENCE_ON_JUDGEMENT_OF_GENERATTION_TYPE": {
+        "definition": [
+          "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+          "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+          "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+          "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+          "The ordinal values of the confidence scale from 1 to 6.",
+          "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+          "**Follow the instructions and confidence scale to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+        ],
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "confidence_scale": {
+          "**1**": "**Not at all confident.**",
+          "**2**": "**Slightly confident.**",
+          "**3**": "**Moderately confident.**",
+          "**4**": "**Fairly confident.**",
+          "**5**": "**Very confident.**",
+          "**6**": "**Highly confident.**"
+        },
+        "type": "number"
+      }
+    },
+    "response_format": {
+      "definition": "The response format consists of key-value pair for different sub-task components enclosed in {}.",
+      "format": {
+        "Word_2": "<your word based on the rules for word-pair.>",
+        "Rating": "<your relatededness rating about how much the word_1 and word_2 are related after completeing the word pair using the rating scale described above.>",
+        "Judgement": "<your judgment about the nature of generation behind the 'word_2'.>",
+        "Confidence": "<your condidence level about your judgment being correct.>"
+      }
+    }
+  },
+  "contexts": [
+    "perceived",
+    "imagined"
+  ],
+  "contexts_id": [
+    "perceived",
+    "imagined"
+  ],
+  "context_present": false,
+  "postfix": "",
+  "prefix": "",
+  "rating": {},
+  "items": {
+    "imagined_1": {
+      "word_1": "wrath",
+      "word_2": "________"
+    },
+    "perceived_2": {
+      "word_1": "bears",
+      "word_2": "den"
+    },
+    "imagined_3": {
+      "word_1": "young",
+      "word_2": "________"
+    },
+    "perceived_4": {
+      "word_1": "pin",
+      "word_2": "________"
+    },
+    "perceived_5": {
+      "word_1": "robber",
+      "word_2": "________"
+    },
+    "imagined_6": {
+      "word_1": "flour",
+      "word_2": "________"
+    },
+    "imagined_7": {
+      "word_1": "syringe",
+      "word_2": "haystack"
+    },
+    "perceived_8": {
+      "word_1": "coarse",
+      "word_2": "gravel"
+    },
+    "imagined_9": {
+      "word_1": "fragrance",
+      "word_2": "breathe"
+    },
+    "imagined_10": {
+      "word_1": "mountain",
+      "word_2": "________"
+    },
+    "perceived_11": {
+      "word_1": "sky",
+      "word_2": "________"
+    },
+    "perceived_12": {
+      "word_1": "downy",
+      "word_2": "________"
+    },
+    "perceived_13": {
+      "word_1": "jump",
+      "word_2": "airplane"
+    },
+    "perceived_14": {
+      "word_1": "hear",
+      "word_2": "________"
+    },
+    "imagined_15": {
+      "word_1": "crown",
+      "word_2": "leader"
+    },
+    "perceived_16": {
+      "word_1": "nap",
+      "word_2": "________"
+    },
+    "perceived_17": {
+      "word_1": "range",
+      "word_2": "________"
+    },
+    "perceived_18": {
+      "word_1": "bank",
+      "word_2": "crook"
+    },
+    "perceived_19": {
+      "word_1": "sandwich",
+      "word_2": "________"
+    },
+    "imagined_20": {
+      "word_1": "sewage",
+      "word_2": "________"
+    },
+    "perceived_21": {
+      "word_1": "village",
+      "word_2": "metropolis"
+    },
+    "imagined_22": {
+      "word_1": "emblem",
+      "word_2": "flag"
+    },
+    "imagined_23": {
+      "word_1": "wave",
+      "word_2": "________"
+    },
+    "perceived_24": {
+      "word_1": "hill",
+      "word_2": "climb"
+    },
+    "perceived_25": {
+      "word_1": "medicine",
+      "word_2": "dentist"
+    },
+    "perceived_26": {
+      "word_1": "air",
+      "word_2": "winter"
+    },
+    "imagined_27": {
+      "word_1": "soup",
+      "word_2": "straw"
+    },
+    "imagined_28": {
+      "word_1": "truck",
+      "word_2": "________"
+    },
+    "imagined_29": {
+      "word_1": "streets",
+      "word_2": "________"
+    },
+    "perceived_30": {
+      "word_1": "mean",
+      "word_2": "enrage"
+    },
+    "perceived_31": {
+      "word_1": "hot",
+      "word_2": "frost"
+    },
+    "perceived_32": {
+      "word_1": "suburb",
+      "word_2": "________"
+    },
+    "perceived_33": {
+      "word_1": "hatred",
+      "word_2": "________"
+    },
+    "imagined_34": {
+      "word_1": "hunt",
+      "word_2": "________"
+    },
+    "imagined_35": {
+      "word_1": "sugar",
+      "word_2": "sweet"
+    },
+    "imagined_36": {
+      "word_1": "sash",
+      "word_2": "________"
+    },
+    "perceived_37": {
+      "word_1": "web",
+      "word_2": "animal"
+    },
+    "perceived_38": {
+      "word_1": "shirt",
+      "word_2": "________"
+    },
+    "imagined_39": {
+      "word_1": "coaster",
+      "word_2": "________"
+    },
+    "imagined_40": {
+      "word_1": "suit",
+      "word_2": "lady"
+    },
+    "imagined_41": {
+      "word_1": "boy",
+      "word_2": "hair"
+    },
+    "imagined_42": {
+      "word_1": "fluffy",
+      "word_2": "skin"
+    },
+    "perceived_43": {
+      "word_1": "water",
+      "word_2": "barge"
+    },
+    "imagined_44": {
+      "word_1": "ford",
+      "word_2": "________"
+    },
+    "perceived_45": {
+      "word_1": "springy",
+      "word_2": "latex"
+    },
+    "perceived_46": {
+      "word_1": "bug",
+      "word_2": "creepy"
+    },
+    "imagined_47": {
+      "word_1": "rifle",
+      "word_2": "________"
+    },
+    "perceived_48": {
+      "word_1": "burglar",
+      "word_2": "________"
+    },
+    "imagined_49": {
+      "word_1": "nurse",
+      "word_2": "________"
+    },
+    "imagined_50": {
+      "word_1": "anthem",
+      "word_2": "________"
+    },
+    "perceived_51": {
+      "word_1": "whiff",
+      "word_2": "________"
+    },
+    "perceived_52": {
+      "word_1": "crawl",
+      "word_2": "________"
+    },
+    "imagined_53": {
+      "word_1": "chess",
+      "word_2": "________"
+    },
+    "perceived_54": {
+      "word_1": "fish",
+      "word_2": "mississippi"
+    },
+    "imagined_55": {
+      "word_1": "jagged",
+      "word_2": "sandpaper"
+    },
+    "perceived_56": {
+      "word_1": "radio",
+      "word_2": "________"
+    },
+    "imagined_57": {
+      "word_1": "cigar",
+      "word_2": "stink"
+    },
+    "perceived_58": {
+      "word_1": "cuffs",
+      "word_2": "shorts"
+    },
+    "imagined_59": {
+      "word_1": "bottom",
+      "word_2": "________"
+    },
+    "perceived_60": {
+      "word_1": "army",
+      "word_2": "________"
+    },
+    "imagined_61": {
+      "word_1": "dump",
+      "word_2": "________"
+    },
+    "perceived_62": {
+      "word_1": "building",
+      "word_2": "________"
+    },
+    "imagined_63": {
+      "word_1": "train",
+      "word_2": "car"
+    },
+    "perceived_64": {
+      "word_1": "tooth",
+      "word_2": "tart"
+    },
+    "imagined_65": {
+      "word_1": "rye",
+      "word_2": "wine"
+    },
+    "imagined_66": {
+      "word_1": "prick",
+      "word_2": "sewing"
+    },
+    "imagined_67": {
+      "word_1": "melody",
+      "word_2": "music"
+    },
+    "imagined_68": {
+      "word_1": "river",
+      "word_2": "________"
+    },
+    "imagined_69": {
+      "word_1": "girl",
+      "word_2": "________"
+    },
+    "imagined_70": {
+      "word_1": "basket",
+      "word_2": "salad"
+    },
+    "imagined_71": {
+      "word_1": "freeze",
+      "word_2": "________"
+    },
+    "perceived_72": {
+      "word_1": "muscle",
+      "word_2": "woman"
+    },
+    "perceived_73": {
+      "word_1": "american",
+      "word_2": "stars"
+    },
+    "imagined_74": {
+      "word_1": "garbage",
+      "word_2": "landfill"
+    },
+    "perceived_75": {
+      "word_1": "state",
+      "word_2": "urban"
+    },
+    "perceived_76": {
+      "word_1": "draft",
+      "word_2": "soldier"
+    },
+    "imagined_77": {
+      "word_1": "drowsy",
+      "word_2": "________"
+    },
+    "perceived_78": {
+      "word_1": "see",
+      "word_2": "perfume"
+    },
+    "imagined_79": {
+      "word_1": "swivel",
+      "word_2": "________"
+    },
+    "imagined_80": {
+      "word_1": "lake",
+      "word_2": "________"
+    },
+    "perceived_81": {
+      "word_1": "plastic",
+      "word_2": "measuring"
+    },
+    "perceived_82": {
+      "word_1": "table",
+      "word_2": "________"
+    },
+    "perceived_83": {
+      "word_1": "ready",
+      "word_2": "________"
+    },
+    "imagined_84": {
+      "word_1": "turtle",
+      "word_2": "________"
+    },
+    "imagined_85": {
+      "word_1": "cocktail",
+      "word_2": "________"
+    },
+    "perceived_86": {
+      "word_1": "small",
+      "word_2": "________"
+    },
+    "perceived_87": {
+      "word_1": "sill",
+      "word_2": "________"
+    },
+    "imagined_88": {
+      "word_1": "puff",
+      "word_2": "stain"
+    },
+    "perceived_89": {
+      "word_1": "collar",
+      "word_2": "blouse"
+    },
+    "imagined_90": {
+      "word_1": "speed",
+      "word_2": "________"
+    },
+    "imagined_91": {
+      "word_1": "shoe",
+      "word_2": "walk"
+    },
+    "imagined_92": {
+      "word_1": "slice",
+      "word_2": "jam"
+    },
+    "perceived_93": {
+      "word_1": "rhythm",
+      "word_2": "symphony"
+    },
+    "perceived_94": {
+      "word_1": "queen",
+      "word_2": "________"
+    },
+    "imagined_95": {
+      "word_1": "letter",
+      "word_2": "tip"
+    },
+    "perceived_96": {
+      "word_1": "health",
+      "word_2": "hospital"
+    },
+    "imagined_97": {
+      "word_1": "sleep",
+      "word_2": "snooze"
+    },
+    "imagined_98": {
+      "word_1": "touch",
+      "word_2": "plush"
+    },
+    "perceived_99": {
+      "word_1": "tea",
+      "word_2": "________"
+    },
+    "perceived_100": {
+      "word_1": "gloves",
+      "word_2": "________"
+    },
+    "imagined_101": {
+      "word_1": "fruit",
+      "word_2": "________"
+    },
+    "imagined_102": {
+      "word_1": "orchestra",
+      "word_2": "________"
+    },
+    "perceived_103": {
+      "word_1": "soft",
+      "word_2": "________"
+    },
+    "perceived_104": {
+      "word_1": "fury",
+      "word_2": "emotion"
+    },
+    "perceived_105": {
+      "word_1": "foot",
+      "word_2": "________"
+    },
+    "imagined_106": {
+      "word_1": "pencil",
+      "word_2": "bic"
+    },
+    "perceived_107": {
+      "word_1": "white",
+      "word_2": "________"
+    },
+    "imagined_108": {
+      "word_1": "screen",
+      "word_2": "curtain"
+    },
+    "imagined_109": {
+      "word_1": "hesitant",
+      "word_2": "snail"
+    },
+    "imagined_110": {
+      "word_1": "scribble",
+      "word_2": "________"
+    },
+    "imagined_111": {
+      "word_1": "person",
+      "word_2": "________"
+    },
+    "perceived_112": {
+      "word_1": "listless",
+      "word_2": "sluggish"
+    },
+    "perceived_113": {
+      "word_1": "uncle",
+      "word_2": "________"
+    },
+    "perceived_114": {
+      "word_1": "cage",
+      "word_2": "pride"
+    },
+    "perceived_115": {
+      "word_1": "fire",
+      "word_2": "________"
+    },
+    "imagined_116": {
+      "word_1": "inch",
+      "word_2": "yard"
+    },
+    "imagined_117": {
+      "word_1": "sit",
+      "word_2": "rocking"
+    },
+    "imagined_118": {
+      "word_1": "hurt",
+      "word_2": "________"
+    },
+    "imagined_119": {
+      "word_1": "villain",
+      "word_2": "steal"
+    },
+    "perceived_120": {
+      "word_1": "smoke",
+      "word_2": "________"
+    },
+    "imagined_121": {
+      "word_1": "hand",
+      "word_2": "________"
+    },
+    "perceived_122": {
+      "word_1": "shiver",
+      "word_2": "________"
+    },
+    "perceived_123": {
+      "word_1": "chair",
+      "word_2": "cushion"
+    },
+    "imagined_124": {
+      "word_1": "patient",
+      "word_2": "________"
+    },
+    "perceived_125": {
+      "word_1": "pocket",
+      "word_2": "________"
+    },
+    "imagined_126": {
+      "word_1": "tamer",
+      "word_2": "________"
+    },
+    "perceived_127": {
+      "word_1": "combat",
+      "word_2": "navy"
+    },
+    "perceived_128": {
+      "word_1": "soles",
+      "word_2": "elastic"
+    },
+    "imagined_129": {
+      "word_1": "pie",
+      "word_2": "________"
+    },
+    "perceived_130": {
+      "word_1": "valley",
+      "word_2": "plain"
+    },
+    "imagined_131": {
+      "word_1": "ink",
+      "word_2": "charred"
+    },
+    "imagined_132": {
+      "word_1": "black",
+      "word_2": "grief"
+    },
+    "imagined_133": {
+      "word_1": "elevate",
+      "word_2": "high"
+    },
+    "perceived_134": {
+      "word_1": "chocolate",
+      "word_2": "________"
+    },
+    "perceived_135": {
+      "word_1": "england",
+      "word_2": "prince"
+    },
+    "perceived_136": {
+      "word_1": "banana",
+      "word_2": "cherry"
+    },
+    "perceived_137": {
+      "word_1": "red",
+      "word_2": "________"
+    },
+    "perceived_138": {
+      "word_1": "yawn",
+      "word_2": "awake"
+    },
+    "imagined_139": {
+      "word_1": "sand",
+      "word_2": "________"
+    },
+    "imagined_140": {
+      "word_1": "cute",
+      "word_2": "dress"
+    },
+    "imagined_141": {
+      "word_1": "open",
+      "word_2": "pane"
+    },
+    "perceived_142": {
+      "word_1": "junk",
+      "word_2": "bag"
+    },
+    "perceived_143": {
+      "word_1": "eraser",
+      "word_2": "________"
+    },
+    "imagined_144": {
+      "word_1": "race",
+      "word_2": "highway"
+    }
+  },
+  "parser": "ResponseRmScSt",
+  "trial_chain": "instructions"
+}

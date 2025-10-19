@@ -1,0 +1,15 @@
+click
+
+[dev]
+psychscanner[docs,tests]
+
+[docs]
+furo
+myst-parser
+sphinx
+sphinx-autobuild
+sphinx-copybutton
+sphinxext-opengraph
+
+[tests]
+pytest

@@ -1,0 +1,95 @@
+{
+    "tasktype": "survey",
+    "taskname": "vviqen",
+    "instructions": {
+        "definition": [
+            "Visual imagery refers to the ability to visualize, that is, the ability to form mental pictures, or to ‘see in the mind’s eye’.",
+            "Marked individual differences are found in the strength and clarity of reported visual imagery and these differences are of considerable psychological interest."
+        ],
+        "INSTRUCTIONS": {
+            "TEST": [
+                "The aim of this test is to determine the vividness of your visual imagery. The items of the test will possibly bring certain images to your mind. You are asked to rate the vividness of each image by reference to the five-point scale given below. For example, if your image is ‘vague and dim’, then give it a rating of 2. After each item, select the appropriate number rating for the vividness of imagery experience.",
+                "Familiarize yourself with the different categories on the rating scale. Throughout the test, refer to the rating scale when judging the vividness of each image. Try to rate independently of how you may have done other items."
+            ],
+            "VIVIDNESS_RATING": {
+                "definition": ["The vividness of imagery can be rated on a scale from 1 to 5.",
+                "Higher the numberic value of vividness, higher is your vividness level in the judgment about the generation type being correct.",
+                "**Follow the instructions and vividness scale be able to faithfully report the vividness level in your imagery.**"],
+                "enum": [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "vividness_scale": {
+                    "**5**": "**Perfectly clear and as vivid as normal vision.**",
+                    "**4**": "**Clear and reasonably vivid.**",
+                    "**3**": "**Moderately clear and vivid.**",
+                    "**2**": "**Vague and dim.**",
+                    "**1**": "**No image at all, you only “know” that you are thinking of the object.**"
+                }
+            }
+        }
+
+    },
+
+    "contexts": [
+        "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind’s eye.",
+        "Think of the rising sun. Consider carefully the picture that comes before your mind’s eye.",
+        "Think of the front of a shop which you often go to. Consider the picture that comes before your mind’s eye.",
+        "Think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind’s eye.",
+        "Think of being driven in a fast-moving car by a relative or friend along a major highway. Consider the picture that comes into your mind’s eye.",
+        "Think of the beach by the ocean on a warm summer’s day. Consider the picture that comes before your mind’s eye.",
+        "Think of a railway station. Consider the picture that comes before your mind’s eye.",
+        "Finally, think of a garden with lawns, bushes, flowers and shrubs. Consider the picture that comes before your mind’s eye."
+    ],
+    "contexts_id": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+    ],
+    "context_present": true,
+    
+    "items": {
+        "A_1": "The exact contour of face, head, shoulders and body.",
+        "A_2": "Characteristic poses of head, attitudes of body etc.",
+        "A_3": "The precise carriage, length of step, etc. in walking.",
+        "A_4": "The different colours worn in some familiar clothes.",
+        "B_5": "The sun is rising above the horizon into a hazy sky.",
+        "B_6": "The sky clears and surrounds the sun with blueness.",
+        "B_7": "Clouds. A storm blows up, with flashes of lightening.",
+        "B_8": "A rainbow appears.",
+        "C_9": "The overall appearance of the shop from the opposite side of the road.",
+        "C_10": "A window display including colours, shape and details of individual items for sale.",
+        "C_11": "You are near the entrance. The colour, shape and details of the door.",
+        "C_12": "You enter the shop and go to the counter. The counter assistant serves you. Money changes hands.",
+        "D_13": "The contours of the landscape.",
+        "D_14": "The colour and shape of the trees.",
+        "D_15": "The colour and shape of the lake.",
+        "D_16": "A strong wind blows on the tree and on the lake causing waves.",
+        "E_17": "You observe the heavy traffic travelling at maximum speed around your car. The overall appearance of vehicles, their colours, sizes and shapes.",
+        "E_18": "Your car accelerates to overtake the traffic directly in front of you. You see an urgent expression on the face of the driver and the people in the other vehicles as you pass.",
+        "E_19": "A large truck is flashing its headlight directly behind. Your car quickly moves over to let the truck pass. The driver signals with a friendly wave.",
+        "E_20": "You see a broken-down vehicle beside the road. Its lights are flashing. The driver is looking concerned and she is using a mobile phone.",
+        "F_21": "The overall appearance and colour of the water, surf, and sky.",
+        "F_22": "Bathers are swimming and splashing about in the water. Some are playing with a brightly coloured beach ball.",
+        "F_23": "An ocean liner crosses the horizon. It leaves a trail of smoke in the blue sky.",
+        "F_24": "A beautiful air balloon appears with four people aboard. The balloon drifts past you, almost directly overhead. The passengers wave and smile. You wave and smile back at them.",
+        "G_25": "The overall appearance of the station viewed from in front of the main entrance.",
+        "G_26": "You walk into the station. The colour, shape and details of the entrance hall.",
+        "G_27": "You approach the ticket office, go to a vacant counter and purchase your ticket",
+        "G_28": "You walk to the platform and observe other passengers and the railway lines. A train arrives. You climb aboard.",
+        "H_29": "The overall appearance and design of the garden.",
+        "H_30": "The colour and shape of the bushes and shrubs.",
+        "H_31": "The colour and appearance of the flowers.",
+        "H_32": "Some birds fly down onto the lawn and start pecking for food."
+    },
+    "parser": "DefaultLiteralVivid15",
+    "trial_chain": "items"
+}

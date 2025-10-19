@@ -1,0 +1,209 @@
+"""This module provides functions for generating prompts.
+
+It genrates system messages, trial prompts,and handling task-related data for experiments.
+It includes utilities for creating human and AI messages based on experiment card data and task configurations.
+"""
+
+from __future__ import annotations
+
+from typing import Any
+import json
+import click
+from langchain_core.messages import AIMessage, HumanMessage
+import numpy as np
+from itertools import product
+import copy
+
+
+def create_symsg_data_prompt(template, inst: str, persona_role: str) -> dict:
+    sys_msg = template
+    if "{system_persona}" in template:
+        sys_msg = sys_msg.replace("{system_persona}", persona_role)
+
+    if "{instructions}" in template:
+        sys_msg = sys_msg.replace("{instructions}", inst)
+
+    symsg_data = {
+        "symessage": sys_msg,
+        "system_persona": persona_role,
+        "instruction": inst,
+        "template": template,
+    }
+
+    return symsg_data
+
+
+def get_persona_statements(persona_levels:list[dict])->list:
+
+    all_persona = []
+    all_p_levels = []
+    for p_level in persona_levels:
+        if "persona_statements" in p_level:
+            all_p_levels += [p_level["persona_statements"]]
+        else:
+            all_p_levels += [list(p_level.values())]
+    all_persona = list(product(*all_p_levels))
+    return [" ".join(i) for i in all_persona]
+
+def all_system_msg_prompts(template, instructions, persona_statements):
+
+    all_sys_msgs = []
+
+    for persona in persona_statements:
+        sys_msg=template
+        if "{system_persona}" in template:
+            sys_msg = sys_msg.replace("{system_persona}", persona)
+
+        if "{instructions}" in template:
+            sys_msg = sys_msg.replace("{instructions}", instructions)
+
+        all_sys_msgs.append(copy.deepcopy(sys_msg))
+
+    return all_sys_msgs
+
+
+def gen_symsg_promptdata(expcard: Any) -> dict:
+    """Generate system message prompt data based on the experiment card.
+
+    Parameters:
+    ----------
+    expcard : object
+        The experiment card containing population, persona, and task data.
+
+
+    Returns:
+    -------
+    dict
+        A dictionary containing the system message template and inputs.
+    """
+
+    sys_template_type = expcard.card_in.cogtype
+    persona_data = expcard.persona_data
+    task = expcard.task_data
+    nsim = expcard.card_in.nsim
+    chain_type = task["chain_type"]
+    persona_statements = None
+
+    instructions = task["on_file"]["instructions"]
+    instructions = json.dumps(instructions)
+    if sys_template_type == "no":
+        sys_msg_template = {
+            "TASK CONTEXT": "{instructions}",
+        }
+        sys_msg_template = json.dumps(sys_msg_template, indent=4)
+        persona_statements = [""] * nsim
+    elif sys_template_type == "assistant":
+        sys_msg_template = {
+            "TASK CONTEXT": "{instructions}",
+        }
+        sys_msg_template = json.dumps(sys_msg_template, indent=4)
+
+        sys_msg_template = (
+            "You are a helpful assistant. Perform the task as per the instructions described below.\n\n"
+            + sys_msg_template
+        )
+        persona_statements = [""] * nsim
+
+    elif sys_template_type == "custom":
+        sys_msg_template = {
+            "You are a helpful assistant with the following individual characteristics": "{system_persona} \n\nPerform the task as per the instructions described below.",
+            "TASK CONTEXT": "{instructions}",
+        }
+        sys_msg_template = json.dumps(sys_msg_template, indent=4)
+        persona_statements = get_persona_statements(persona_data)
+
+    system_prompts = all_system_msg_prompts(sys_msg_template,instructions,persona_statements)
+
+    return {
+        "system_template": sys_msg_template,
+        "system_prompts": system_prompts,
+        "chain_type": chain_type,
+    }
+
+def gen_stimulus_prompt(
+    trstim
+):
+    trial_dict = {}
+    if trstim.get("trcode") == "task_instruction":
+        trial_dict["NEXT TASK INSTRUCTION FOR TRIALS"] = trstim["stimulus"]
+
+    elif trstim["context_present"]:
+        trial_dict["TRIAL_CONTEXT"] = trstim["context_item"]
+
+        trial_dict["TRIAL"] = trstim["stimulus"]
+
+    else:
+        trial_dict = trstim["stimulus"]
+
+    return HumanMessage(json.dumps(trial_dict, indent = 4))
+
+def get_human_feedback_prompt(
+    fbmsg: str, context_prefix: str = "", context_postfix: str = ""
+) -> HumanMessage:
+    """Generate a human feedback prompt message.
+
+    Parameters:
+    ----------
+    fbmsg : str
+        The feedback message content.
+    context_prefix : str, optional
+        The prefix to add to the feedback message (default is an empty string).
+    context_postfix : str, optional
+        The postfix to add to the feedback message (default is an empty string).
+
+    Returns:
+    -------
+    HumanMessage
+        The generated human feedback message.
+    """
+    message_content = context_prefix + fbmsg + context_postfix
+    return HumanMessage(message_content)
+
+def gen_trial_promptdata(expcard: Any) -> dict:
+    """Generate trial prompt data based on the experiment card.
+
+    Parameters:
+    ----------
+    expcard : Any
+        The experiment card containing task data and context information.
+
+    Returns:
+    -------
+    dict
+        A dictionary containing trial prompt data for the given task type.
+    """
+    task_data = expcard.task_data
+    exp_trials_raw = task_data["items"]
+    chain_codes = []
+    trials = []
+    for i,(trid,tr) in enumerate(exp_trials_raw.items()):
+        trial_chain_code = []
+        for trstim in tr:
+            trstim["taskname"] = task_data["on_file"]["taskname"]
+            trstim["tasktype"] = task_data["on_file"]["tasktype"]
+            trstim["context_present"] = task_data["on_file"]["context_present"]
+            trstim["context"]= trstim["trcode"].split("_")[0],
+            trstim["context_item"] = task_data["on_file"]["contexts"][
+                task_data["on_file"]["contexts_id"].index(trstim["trcode"].split("_")[0])
+            ]
+            trstim["trid"] = trid
+            trstim["chain_type"] = task_data["chain_type"]
+            trstim["hmsg"] = gen_stimulus_prompt(trstim)
+            #trials.append(trstim)
+            if trstim["chain_type"] == "item":
+                trial_chain_code.append(i)
+            if trstim["chain_type"] == "trial":
+                trial_chain_code.append(trstim["trcode"])
+            if trstim["chain_type"] == "task":
+                trial_chain_code.append("0")
+            if trstim["tasktype"] =="episodic":
+                trstim["esys_message"] = None # episodic system message added to top level system messsage.
+            trials.append(copy.deepcopy(trstim))
+
+        chain_codes.append(trial_chain_code)
+        
+    return {
+        "trials": trials,
+        "chain_codes": chain_codes,
+        "chain_type": task_data["chain_type"],
+    }

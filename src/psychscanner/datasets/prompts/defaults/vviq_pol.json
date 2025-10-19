@@ -1,0 +1,71 @@
+{
+    "tasktype":"survey",
+    "taskname":"vviqpol",
+    "instructions": ["Celem tego kwestionariusza jest pobudzenie Twojej wyobraźni wizualnej.", "Poszczególne opisy w zadaniach prawdopodobnie przywołają konkretne obrazy w Twoim umyśle.",
+    "Prosimy, abyś ocenił/-a wyrazistość każdego z nich na 5-cio stopniowej skali opisanej poniżej.","Na przykład, jeśli obraz jest „mglisty i przyciemniony” powinien otrzymać ocenę 2.", "Zapoznaj się z różnymi kategoriami w skali oceniania. Spróbuj wykonać każde zadanie oddzielnie, niezależnie od tego jak poradziłeś/-aś sobie z poprzednimi."
+],
+    "contexts": [
+        "Pomyśl o jakiś krewnym lub znajomym, kogo widujesz często (ale kto nie jest w tej chwili obecny przy Tobie) i uważnie rozważ obraz jaki pojawia się w Twojej głowie.",
+        "Pomyśl o wschodzącym słońcu. Uważnie rozważ obraz jaki pojawia się w Twojej głowie.",
+        "Pomyśl o sklepie, do którego często chodzisz. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie.",
+        "Pomyśl o wiejskim krajobrazie, w którym pojawiają się drzewa, góry oraz jezioro. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie.",
+        "Pomyśl, że jedziesz szybko poruszającym się samochodem, prowadzonym przez Twojego krewnego lub znajomego po dużej autostradzie. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie.",
+        "Pomyśl o plaży nad oceanem w ciepły, letni dzień. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie.",
+        "Pomyśl o stacji kolejowej. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie.",
+        "Pomyśl o ogrodzie z trawnikami, krzewami, krzakami i kwiatami. Uważnie rozważ obraz, jaki pojawia się w Twojej głowie."
+    ],
+    "contexts_id": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+    ],
+    "context_present": true,
+    "rating": [
+        "Brak obrazu, „wiesz” tylko, że myślisz o jakimś obiekcie: 1",
+        "Mglisty i przyciemniony: 2",
+        "Umiarkowanie jasny i wyraźny: 3",
+        "Jasny i dostatecznie wyraźny: 4",
+        "Całkowicie jasny i wyraźny jak realny obraz: 5"
+    ],
+    
+    "items": {
+    "A_1": "Dokładny zarys twarzy, głowy, ramion i ciała.",
+    "A_2": "Charakterystyczne ułożenie głowy, cechy ciała itd.",
+    "A_3": "Precyzyjna postawa, długość kroku w chodzie.",
+    "A_4": "Różne kolory znajomych Ci ubrań.",
+    "B_5": "Słońce wschodzi ponad horyzontem w zamglone niebo.",
+    "B_6": "Niebo rozjaśnia się i otacza słońce błękitem.",
+    "B_7": "Chmury. Rozpętała się burza z piorunami.",
+    "B_8": "Pojawia się tęcza.",
+    "C_9": "Ogólny wygląd sklepu z przeciwnej strony ulicy.",
+    "C_10": "Witryna sklepowa wraz kolorami, kształtami i detalami poszczególnych przedmiotów w sprzedaży.",
+    "C_11": "Jesteś blisko wejścia. Kolory, kształty i detale drzwi.",
+    "C_12": "Wchodzisz do sklepu i podchodzisz do lady. Sprzedawca Cię obsługuje, następuje wymiana gotówki.",
+    "D_13": "Kontury krajobrazu.",
+    "D_14": "Kolory i kształty drzew.",
+    "D_15": "Kolor i kształt jeziora.",
+    "D_16": "Silny wiatr wzruszający drzewa oraz fale na jeziorze.",
+    "E_17": "Obserwujesz bardzo duży ruch samochodów, podróżujących z maksymalną prędkością. Ogólny wygląd samochodów, ich kolory, kształty, rozmiary.",
+    "E_18": "Twój samochód przyśpiesza by wyprzedzić samochody znajdujące się bezpośrednio przed Tobą. Widzisz skupiony wyraz twarzy kierowcy oraz ludzi podróżujących innymi samochodami, które wyprzedzacie.",
+    "E_19": "Duża ciężarówka świecąca przednimi światłami bezpośrednio za Tobą. Twój samochód szybko ustępuje miejsca, by ciężarówka mogła przejechać. Kierowca daje sygnał, machając przyjaźnie.",
+    "E_20": "Widzisz popsuty samochód przy drodze. Jego światła migają. Kierowca wygląda na zmartwionego i używa telefonu komórkowego.",
+    "F_21": "Ogólny wygląd i kolor wody, fali i nieba.",
+    "F_22": "Kąpiący się pływają i bawią się w wodzie. Niektórzy z nich grają jasno-kolorową piłką plażową.",
+    "F_23": "Duży liniowiec przecina horyzont. Pozostawia smugę dymu na błękitnym niebie.",
+    "F_24": "Piękny balon z czterema osobami na pokładzie pojawia się na niebie. Dryfuje niemalże nad Twoją głową. Pasażerowie machają i uśmiechają się. Ty odwdzięczasz się tym samym.",
+    "G_25": "Ogólny wygląd stacji widziany spod głównego wejścia.",
+    "G_26": "Wchodzisz na stację. Kolory, kształt i detale holu wejściowego.",
+    "G_27": "Podchodzisz do kasy biletowej, idziesz do wolnego okienka i kupujesz bilet.",
+    "G_28": "Wchodzisz na peron i obserwujesz pasażerów oraz tory kolejowe. Przyjeżdża pociąg. Wchodzisz do niego.",
+    "H_29": "Ogólny wygląd i projekt ogrodu.",
+    "H_30": "Kolory i kształty krzaków i krzewów.",
+    "H_31": "Kolor i wygląd kwiatów.",
+    "H_32": "Ptaki lądują na trawniki zaczynają dziobać w poszukiwaniu jedzenia."
+    },
+    "parser": "DefaultLiteralVivid15_Pol"
+}

@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psychscanner"
+description = "A tool to bridge natural psychology witth  the artificial."
+authors = [{name = "Saurabh Ranjan", email = "saurabh.ctheory@proton.me"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+]
+requires-python = "~=3.9"
+dependencies = [
+    "click",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+]
+docs = [
+    "furo",
+    "myst-parser",
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-copybutton",
+    "sphinxext-opengraph",
+]
+dev = [
+    "psychscanner[tests,docs]",
+]
+
+[project.urls]
+Documentation = "https://psychscanner.readthedocs.io/en/stable/"
+Changelog = "https://psychscanner.readthedocs.io/en/stable/changelog.html"
+"Source Code" = "https://github.com/saurabhr/psychscanner"
+"Issue Tracker" = "https://github.com/saurabhr/psychscanner/issues"
+
+[project.scripts]
+psychscanner = "psychscanner.cli:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "psychscanner.__version__"}
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+    "E501",  # line too long (pycodestyle), handled by ruff-format
+    "ANN002",  # missing-type-args (flake8-annotations)
+    "ANN003",  # missing-type-kwargs (flake8-annotations)
+    "ANN401",  # any-type (flake8-annotations)
+    "COM",  # flake8-commas, handled by ruff-format
+    "CPY",  # flake8-copyright
+    "ISC001",  # single-line-implicit-string-concatenation (flake8-implicit-str-concat)
+    "INP",  # flake8-no-pep420
+]
+src = ["src", "tests", "docs"]
+target-version = "py39"  # the minimum Python version supported, used by pyupgrade
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+    "F401",  # unused-import (Pyflakes)
+]
+"noxfile.py" = [
+    "D100",  # undocumented-public-module (pydocstyle)
+    "ERA001",  # commented-out-code (eradicate)
+]
+"docs/conf.py" = [
+    "A001",  # builtin-variable-shadowing (flake8-builtins)
+]
+"src/psychscanner/cli.py" = [
+    "C901",  # complex-structure (mccabe)
+    "FBT001",  # boolean-type-hint-positional-argument (flake8-boolean-trap)
+    "A001",  # builtin-variable-shadowing (flake8-builtins)
+    "A002",  # builtin-argument-shadowing (flake8-builtins)
+    "PLR0913",  # too-many-arguments (Pylint)
+]
+"tests/**/test_*.py" = [
+    "D",  # pydocstyle
+    "ANN201",  # missing-return-type-undocumented-public-function (flake8-annotations)
+    "S101",   # assert (flake8-bandit)
+    "SIM300",   # yoda-conditions (flake8-simplify)
+    "PLR2004",   # magic-value-comparison (Pylint)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+  "psychscanner",
+  "tests",
+]
+lines-between-types = 0
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

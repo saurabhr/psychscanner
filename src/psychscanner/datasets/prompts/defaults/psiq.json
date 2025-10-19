@@ -1,0 +1,51 @@
+{
+    "tasktype": "survey",
+    "taskname": "psiq",
+    "instructions": "Imagination is the ability of forming a mental representation of something not present to the senses or never before wholly perceived in reality. Thus, imagination is the ability to form internally generated mental representation. Marked individual differences are found in the strength and clarity of reported imagined experience and these differences are of considerable psychological interest. \n\n\tRate the mental image of the given situation.",
+    "contexts": [
+        "appearance",
+        "sound",
+        "smell",
+        "taste",
+        "touching",
+        "bodily sensation",
+        "feeling"
+    ],
+    "contexts_id": [
+        "App",
+        "So",
+        "Sm",
+        "Ta",
+        "To",
+        "Bo",
+        "Fe"
+    ],
+    "context_present": false,
+    "rating": [
+        "Please try to form the images described in a situation and rate each mental image on the following scale:\n0 (no image at all) to 10 (image as clear and vivid as real life)."
+    ],
+    "items": {
+        "App_1": "Imagine the appearance of a bonfire. How vivid is the image?",
+        "App_2": "Imagine the appearance of a sunset. How vivid is the image?",
+        "App_3": "Imagine the appearance of a cat climbing a tree. How vivid is the image?",
+        "So_4": "Imagine the sound of a car horn. How clear is the sound?",
+        "So_5": "Imagine the sound of hands clapping in applause. How clear is the sound?",
+        "So_6": "Imagine the sound of an ambulance siren. How clear is the sound?",
+        "Sm_7": "Imagine the smell of newly cut grass. How strong is the smell?",
+        "Sm_8": "Imagine the smell of burning wood. How strong is the smell?",
+        "Sm_9": "Imagine the smell of a rose. How strong is the smell?",
+        "Ta_10": "Imagine the taste of black pepper. How strong is the taste?",
+        "Ta_11": "Imagine the taste of lemon. How strong is the taste?",
+        "Ta_12": "Imagine the taste of mustard. How strong is the taste?",
+        "To_13": "Imagine touching fur. How strong is the sensation?",
+        "To_14": "Imagine touching warm sand. How strong is the sensation?",
+        "To_15": "Imagine touching a soft towel. How strong is the sensation?",
+        "Bo_16": "Imagine the bodily sensation of relaxing in a warm bath. How strong is the sensation?",
+        "Bo_17": "Imagine the bodily sensation of walking briskly in the cold. How strong is the sensation?",
+        "Bo_18": "Imagine the bodily sensation of jumping into a swimming pool. How strong is the sensation?",
+        "Fe_19": "Imagine feeling excited. How strong is the feeling?",
+        "Fe_20": "Imagine feeling relieved. How strong is the feeling?",
+        "Fe_21": "Imagine feeling scared. How strong is the feeling?"
+    },
+    "parser": "DefaultLiteralVivid010"
+}

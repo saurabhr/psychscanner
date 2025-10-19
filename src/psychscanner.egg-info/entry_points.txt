@@ -1,0 +1,2 @@
+[console_scripts]
+psychscanner = psychscanner.cli:cli
