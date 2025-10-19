@@ -1,6 +1,8 @@
 <!-- start docs-include-index -->
 
-# psychscanner-cli
+# psychscanner
+
+[Under Preparation] PsychScanner: A tool to bridge natural psychology with the artificial intelligence.
 
 [![PyPI](https://img.shields.io/pypi/v/psychscanner)](https://img.shields.io/pypi/v/psychscanner)
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/psychscanner)](https://pypi.org/project/psychscanner/)
