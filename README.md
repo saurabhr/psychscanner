@@ -4,9 +4,6 @@
 
 [Under Preparation] PsychScanner: A tool to bridge natural psychology with the artificial intelligence.
 
-
-A tool to bridge natural psychology witth  the artificial.
-
 Tested on python 3.11.11
 
 ## Installation
