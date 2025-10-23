@@ -2,15 +2,13 @@
 
 # psychscanner
 
-[Under Preparation] PsychScanner: A tool to bridge natural psychology with the artificial intelligence.
+PsychScanner: A tool to bridge natural psychology with the artificial intelligence.
 
 Tested on python 3.11.11
 
 ## Installation
 
 <!-- start docs-include-installation -->
-
-psychscanner-cli is available on [PyPI](https://pypi.org/project/psychscanner/). Install with [uv](https://docs.astral.sh/uv/) or your package manager of choice:
 
 ```sh
 uv tool install psychscanner
