@@ -13,7 +13,7 @@ Tested on python 3.11.11
 ```sh
 uv tool install psychscanner
 ```
-or after downloading
+or
 
 ```sh
 pip install -e .
