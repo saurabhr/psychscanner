@@ -9,6 +9,13 @@ Tested on python 3.11.11
 ![image](docs/psychscanner.png)
 
 
+
+* Automates laboratory cognitive tasks with LLMs.
+* Cognitive tasks can be implemented with different levels of conversation history.
+* Configurable trial feedback/message for LLMs’ responses.
+* Run LLMs with different persona to do tasks.
+
+
 ## Installation
 
 <!-- start docs-include-installation -->
