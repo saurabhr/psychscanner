@@ -8,6 +8,7 @@ Tested on Python 3.11.11
 
 ![image](docs/psychscanner.png)
 
+Note: The package is under rapid development. Contributions are welcome.
 
 
 * Automates laboratory cognitive tasks with LLMs.
