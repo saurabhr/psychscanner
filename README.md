@@ -4,7 +4,7 @@
 
 [PsychScanner: A tool to bridge natural psychology with the artificial intelligence.](https://docs.google.com/presentation/d/1X6IQNQOaf0nH-nFBU2EQedfQF_81r5z1XYtxeamFWY8/edit?usp=sharing)
 
-Tested on python 3.11.11
+Tested on Python 3.11.11
 
 ![image](docs/psychscanner.png)
 
