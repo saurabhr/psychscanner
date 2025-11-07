@@ -32,4 +32,4 @@ pip install -e .
 
 ## Documentation
 
-Simple Tutorial to get started.
+Simple Tutorial to get started. [Coming Soon!]
