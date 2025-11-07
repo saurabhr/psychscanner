@@ -6,6 +6,9 @@ PsychScanner: A tool to bridge natural psychology with the artificial intelligen
 
 Tested on python 3.11.11
 
+![image](docs/psychscanner.png)
+
+
 ## Installation
 
 <!-- start docs-include-installation -->
