@@ -33,4 +33,4 @@ pip install -e .
 
 ## Documentation
 
-Simple Tutorial to get started. [Coming Soon!]
+Simple tutorial to get started. [Coming Soon!]
