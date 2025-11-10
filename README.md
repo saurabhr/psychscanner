@@ -33,6 +33,7 @@ Note: The package is under rapid development. Contributions are welcome.
 ```
 pip install -e .
 ```
+```
 @software{psychscanner2025,
   author = {Ranjan, Saurabh},
   title = {PsychScanner: A tool to bridge natural psychology with artificial intelligence},
@@ -40,3 +41,4 @@ pip install -e .
   url = {https://github.com/saurabhr/psychscanner},
   version = {0.1.0}
 }
+```
