@@ -20,14 +20,21 @@ Note: The package is under rapid development. Contributions are welcome.
 ✨ Features
 
 🧠 Automated Cognitive Tasks: Run psychological experiments with LLMs
+
 💬 Flexible Memory: Support for stateless and conversational interactions
+
 🎭 Persona System: Configure AI agents with different personality traits
+
 📊 Multiple Task Types: Surveys, cognitive tasks, reality monitoring, and more
+
 🔄 Session Recovery: Checkpoint and resume long-running experiments
+
 🎯 Structured Outputs: Pydantic-based response parsing for reliable data
+
 🌐 Multi-Provider Support: Works with OpenAI, Anthropic, Ollama, HuggingFace, and more
 
 🚀 Quick Start
+
 Installation
 ```
 pip install -e .
