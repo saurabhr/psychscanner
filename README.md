@@ -28,7 +28,8 @@ Note: The package is under rapid development. Contributions are welcome.
 
 🚀 Quick Start
 
-Installation
+# Installation
+
 ```
 pip install -e .
 ```
