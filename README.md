@@ -10,13 +10,6 @@ Tested on Python 3.11.11
 
 Note: The package is under rapid development. Contributions are welcome.
 
-
-* Automates laboratory cognitive tasks with LLMs.
-* Cognitive tasks can be implemented with different levels of conversation history.
-* Configurable trial feedback/message for LLMs’ responses.
-* Run LLMs with different persona to do the tasks.
-
-
 ✨ Features
 
 🧠 Automated Cognitive Tasks: Run psychological experiments with LLMs
