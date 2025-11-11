@@ -18,7 +18,7 @@ Note: The package is under rapid development. Contributions are welcome.
 
 🎭 Persona System: Configure AI agents with different personality traits
 
-📊 Multiple Task Types: Surveys, cognitive tasks, reality monitoring, and more
+📊 Multiple Task Types: Surveys, cognitive tasks
 
 🔄 Session Recovery: Checkpoint and resume long-running experiments
 
