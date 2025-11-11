@@ -25,7 +25,8 @@ Note: The package is under rapid development. Contributions are welcome.
   
 # Installation
 
+```bash
+git clone https://github.com/saurabhr/psychscanner.git
+cd psychscanner
+pip install .
 ```
-pip install -e .
-```
-
