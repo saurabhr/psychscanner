@@ -22,11 +22,6 @@ Note: The package is under rapid development. Contributions are welcome.
 
 🔄 Session Recovery: Checkpoint and resume long-running experiments
 
-🎯 Structured Outputs: Pydantic-based response parsing for reliable data
-
-🌐 Multi-Provider Support: Works with OpenAI, Anthropic, Ollama, HuggingFace, and more
-
-🚀 Quick Start
 
 # Installation
 
