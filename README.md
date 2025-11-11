@@ -10,19 +10,19 @@ Tested on Python 3.11.11
 
 Note: The package is under rapid development. Contributions are welcome.
 
-✨ Features
+✨ Features:
 
-🧠 Automated Cognitive Tasks: Run psychological experiments with LLMs
-
-💬 Flexible Memory: Support for stateless and conversational interactions
-
-🎭 Persona System: Configure AI agents with different personality traits
-
-📊 Multiple Task Types: Surveys, cognitive tasks
-
-🔄 Session Recovery: Checkpoint and resume long-running experiments
-
-
+  🧠 Automated Cognitive Tasks: Run psychological experiments with LLMs
+  
+  💬 Flexible Memory: Support for stateless and conversational interactions
+  
+  🎭 Persona System: Configure AI agents with different personality traits
+  
+  📊 Multiple Task Types: Surveys, cognitive tasks
+  
+  🔄 Session Recovery: Checkpoint and resume long-running experiments
+  
+  
 # Installation
 
 ```
