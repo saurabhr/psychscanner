@@ -1,0 +1,27 @@
+{
+    "tasktype": "survey",
+    "taskname": "example_survey",
+    "instructions": {
+        "definition": [
+            "You will rate your agreement with the following statements.",
+            "Use a scale from 1 (strongly disagree) to 5 (strongly agree).",
+            "Be honest and thoughtful in your responses."
+        ]
+    },
+    "contexts": [
+        "Openness to Experience",
+        "Conscientiousness"
+    ],
+    "contexts_id": ["O", "C"],
+    "context_present": true,
+    "items": {
+        "O_1": "I enjoy trying new things and exploring new ideas.",
+        "O_2": "I am comfortable with ambiguity and uncertainty.",
+        "O_3": "I prefer routine and predictability.",
+        "C_1": "I am organized and pay attention to details.",
+        "C_2": "I follow through on my commitments.",
+        "C_3": "I tend to procrastinate on important tasks."
+    },
+    "parser": "DefaultLiteralAgree",
+    "trial_chain": "items"
+}
