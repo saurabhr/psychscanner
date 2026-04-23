@@ -46,13 +46,14 @@ def llm_chat_model(model: str, family: str, parameters: dict) -> object:
     elif family == "ollama":
         try:
             if parameters:
+                print(parameters)
                 llm = ChatOllama(model=model, **parameters)
             else:
                 llm = ChatOllama(model=model)
             chat_model = llm
         except Exception as exc:
             raise ValueError(NOT_FOUND_LLM_MSG) from exc
-
+	
     elif family == "huggingface":
         try:
             if parameters:

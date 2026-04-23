@@ -45,7 +45,8 @@ def get_task_data(expcard) -> dict:
         A dictionary containing task details such as task type and number of trials.
     """
     taskinfo = expcard.task_file
-    task_initial = open_json(taskinfo)
+    task_initial = open_json(taskinfo) if isinstance(taskinfo, str) or isinstance(taskinfo, Path) else taskinfo
+
     task = {}
     task["on_file"] = task_initial
 

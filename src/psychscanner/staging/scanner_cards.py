@@ -41,7 +41,7 @@ class ExpCardInit(BaseModel):
         default="mock-llm",
         description="Name of the family of the model. Default is 'mockllm'. Other than default, modelname and family name should be correctly provided.",
     )
-    parameters: dict[str, Any] | None = Field(
+    parameters: dict | None = Field(
         default=None,
         description="Parameters for the model. Default is an empty dictionary. Model defined parametes passed as a dictinory of key value pair should be correctly provided. To look at available model parametes look at the model documentation.",
     )
@@ -58,7 +58,7 @@ class ExpCardInit(BaseModel):
         default=None,
         description="Path to the .json persona related files. If None value is updated to DEFAULT_PER in person_roles as list of strings by ExpCard class. If not default, path to the persona file should be correctly provided. File Should be formated in .json file with 'persona_statements' as key and list of string values. List values from the file stored in key: persona_roles.",
     )
-    task_file: FilePath | None = Field(
+    task_file: dict | FilePath | None = Field(
         default=Path(datasets.__file__).parent/"default_survey.json",
         description="Task to run in the scanner. JSON file format with a psychscanner task structure for survey or cognitive tasks. By default runs a VVIQ quesstionnaire with 16 items. On an item the AI responds with a rating value. The VVIQ-16-items suvey can be found as DEFAULT SURVEY in datasets/datasets.py",
     )

@@ -1,0 +1,727 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I enjoy trying new things and exploring new ideas.",
+            "trcode": "O_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_1",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_1"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am comfortable with ambiguity and uncertainty.",
+            "trcode": "O_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_2",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_2"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I prefer routine and predictability.",
+            "trcode": "O_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_3",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Openness', 'Rating': 4.0}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "2b57d83d-44dc-4ba8-af4b-b77b6a449f05",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "2b57d83d-44dc-4ba8-af4b-b77b6a449f05",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_3"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "6f40e037-37d8-48a9-ad41-ffadccc5cd55"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am organized and pay attention to details.",
+            "trcode": "C_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_1",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "6f40e037-37d8-48a9-ad41-ffadccc5cd55"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Conscientiousness', 'Rating': 5.0}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "94e9eea0-8be9-443a-ba5c-7d9d5ced5aa4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "2b57d83d-44dc-4ba8-af4b-b77b6a449f05",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "6f40e037-37d8-48a9-ad41-ffadccc5cd55"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "94e9eea0-8be9-443a-ba5c-7d9d5ced5aa4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_1"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        },
+        {
+            "trial_idx": 4,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "e44711cf-5906-4e1f-915e-2ed0dcb8f487"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I follow through on my commitments.",
+            "trcode": "C_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_2",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "e44711cf-5906-4e1f-915e-2ed0dcb8f487"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Conscientiousness', 'Rating': 4.75}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "cfbff7b0-e798-4499-bb42-07888dd0507b",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "2b57d83d-44dc-4ba8-af4b-b77b6a449f05",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "6f40e037-37d8-48a9-ad41-ffadccc5cd55"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "94e9eea0-8be9-443a-ba5c-7d9d5ced5aa4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "e44711cf-5906-4e1f-915e-2ed0dcb8f487"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "cfbff7b0-e798-4499-bb42-07888dd0507b",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_2"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        },
+        {
+            "trial_idx": 5,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "7c7a8e45-1f4f-4062-b4df-4940bc41519a"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I tend to procrastinate on important tasks.",
+            "trcode": "C_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_3",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "7c7a8e45-1f4f-4062-b4df-4940bc41519a"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'Conscientiousness', 'Rating': 3.875}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "3c1f3a43-e7ff-4f89-9a77-9e7aa0633792",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "81f7b086-868d-4397-8db2-0cf062114e33"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8a0d482-76ae-47c2-9b8d-3693aab0ee95",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "62c95ca6-e4b6-489a-abe4-62b25c633778"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3b42c12a-ea9b-4968-a327-8edbe0f9afe4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "ac98ed72-de3d-4fa7-9162-53196724c1fe"
+                    },
+                    {
+                        "content": "{'Word_2': 'Openness', 'Rating': 4.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "2b57d83d-44dc-4ba8-af4b-b77b6a449f05",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "6f40e037-37d8-48a9-ad41-ffadccc5cd55"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 5.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "94e9eea0-8be9-443a-ba5c-7d9d5ced5aa4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "e44711cf-5906-4e1f-915e-2ed0dcb8f487"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 4.75}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "cfbff7b0-e798-4499-bb42-07888dd0507b",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "7c7a8e45-1f4f-4062-b4df-4940bc41519a"
+                    },
+                    {
+                        "content": "{'Word_2': 'Conscientiousness', 'Rating': 3.875}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "3c1f3a43-e7ff-4f89-9a77-9e7aa0633792",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_3"
+            },
+            "trace_id": "20260423T03-09-23testingConvoexample_survey1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-testing"
+        }
+    ]
+}

@@ -15,13 +15,13 @@
     "contexts_id": ["O", "C"],
     "context_present": true,
     "items": {
-        "O_1": "I enjoy trying new things and exploring new ideas.",
-        "O_2": "I am comfortable with ambiguity and uncertainty.",
-        "O_3": "I prefer routine and predictability.",
-        "C_1": "I am organized and pay attention to details.",
-        "C_2": "I follow through on my commitments.",
-        "C_3": "I tend to procrastinate on important tasks."
+        "O_1": [{"trcode": "O_1", "stimulus": "I enjoy trying new things and exploring new ideas."}],
+        "O_2": [{"trcode": "O_2", "stimulus": "I am comfortable with ambiguity and uncertainty."}],
+        "O_3": [{"trcode": "O_3", "stimulus": "I prefer routine and predictability."}],
+        "C_1": [{"trcode": "C_1", "stimulus": "I am organized and pay attention to details."}],
+        "C_2": [{"trcode": "C_2", "stimulus": "I follow through on my commitments."}],
+        "C_3": [{"trcode": "C_3", "stimulus": "I tend to procrastinate on important tasks."}]
     },
     "parser": "DefaultLiteralAgree",
-    "trial_chain": "items"
+    "chain_type": "item"
 }

@@ -11,7 +11,7 @@ from langchain_core.messages import (
 )
 import click
 from langchain_core.messages.utils import count_tokens_approximately
-from langchain.output_parsers import OutputFixingParser
+#from langchain.output_parsers import OutputFixingParser
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.checkpoint.memory import InMemorySaver, MemorySaver

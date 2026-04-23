@@ -42,6 +42,7 @@ src/psychscanner/staging/scanner_cards.py
 src/psychscanner/staging/utils.py
 src/psychscanner/task_runner/__init__.py
 src/psychscanner/task_runner/task_runner.py
+src/psychscanner/task_runner/task_runner_legacy_withoutfb.py
 src/psychscanner/templates/__init__.py
 src/psychscanner/templates/tasks/__init__.py
 src/psychscanner/templates/tasks/get_task_template.py

@@ -6,7 +6,7 @@ from psychscanner.datasets.prompts import chat_prompts
 class AgentConfig(BaseModel):
     modelname: str | None
     familyname: str | None
-    parameters: str | None
+    parameters: dict | None
     modelobject: Any|None
     memory_type: Literal["SingleTurn", "Convo"]
     memory_k: int | None
