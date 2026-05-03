@@ -17,8 +17,8 @@ from typing import Type
 
 from pydantic import BaseModel
 
-from psychscanner.datasets.prompts import parser as _parser_mod
-from psychscanner.datasets.prompts import parser_extra as _parser_extra_mod
+from psychscanner.datasets.prompts import parser_tasks as _parser_tasks_mod
+from psychscanner.datasets.prompts import parser_general as _parser_general_mod
 
 
 def _collect(mod) -> dict[str, Type[BaseModel]]:
@@ -35,8 +35,8 @@ def _collect(mod) -> dict[str, Type[BaseModel]]:
 
 
 PARSER_REGISTRY: dict[str, Type[BaseModel]] = {
-    **_collect(_parser_mod),
-    **_collect(_parser_extra_mod),
+    **_collect(_parser_tasks_mod),
+    **_collect(_parser_general_mod),
 }
 
 
