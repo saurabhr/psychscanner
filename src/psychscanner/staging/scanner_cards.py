@@ -18,7 +18,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from psychscanner import datasets
 from psychscanner.datasets import load_datasets
 from psychscanner.session_tunnel import SessionTunnel
-from psychscanner.datasets.prompts.parser import *
+from psychscanner.parsers import get_parser
 
 class Settings(BaseSettings):
     """Settings for configuring the application.
@@ -212,12 +212,17 @@ class ExpCard:
             self.parser = self.card_in.parser
 
         elif self.card_in.parser == "1":
-            self.parser = self.task_data["parser"]
-            if isinstance(self.card_in.parser, str):
-                self.parser = eval(self.parser) # try to find its alternative.  # noqa: S307
-                if not issubclass(self.parser, BaseModel):
-                    msg = "Not valid parser provided."
-                    raise TypeError(msg)
+            parser_name = self.task_data.get("parser")
+            if not isinstance(parser_name, str) or not parser_name:
+                msg = (
+                    "parser='1' requires the task JSON to have a non-empty "
+                    "'parser' field naming a registered parser class."
+                )
+                raise ValueError(msg)
+            try:
+                self.parser = get_parser(parser_name)
+            except KeyError as exc:
+                raise ValueError(str(exc)) from exc
         elif self.card_in.parser == "dynamic":
             self.parser = "dynamic"
         else:

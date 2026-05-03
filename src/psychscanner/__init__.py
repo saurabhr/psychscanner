@@ -8,6 +8,7 @@ from .staging.scanner_cards import (
 )
 from .session_tunnel import SessionTunnel
 from .datasets.prompts import parser
+from . import parsers
 
 from .scanner_models.scanner_model import ScannerModel
 from .simulation_model.simulation_model import (
@@ -24,7 +25,7 @@ __all__ = [
     "ExpCardInit",
     "factory_settings",
     "ScannerModel",
-    "parser","SessionTunnel",
+    "parser","parsers","SessionTunnel",
     "SimulationModel",
     "TaskSimulationModel",
     "TrialSimulationModel",
