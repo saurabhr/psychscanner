@@ -1,0 +1,442 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "b19f4cb6-f706-43db-80b5-5a1534dd7557"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I enjoy trying new things and exploring new ideas.",
+            "trcode": "O_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "b19f4cb6-f706-43db-80b5-5a1534dd7557"
+            },
+            "pred_resp": {
+                "content": "{'rating': 5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "01d0845c-c965-4269-8e85-602ee824ea76",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "b19f4cb6-f706-43db-80b5-5a1534dd7557"
+                    },
+                    {
+                        "content": "{'rating': 5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "01d0845c-c965-4269-8e85-602ee824ea76",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_1"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "4c278ab8-5b9e-452e-8074-bba5563a0a38"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am comfortable with ambiguity and uncertainty.",
+            "trcode": "O_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "4c278ab8-5b9e-452e-8074-bba5563a0a38"
+            },
+            "pred_resp": {
+                "content": "{'rating': 5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "4be490bd-fd18-45ca-893a-82c5609f346c",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "4c278ab8-5b9e-452e-8074-bba5563a0a38"
+                    },
+                    {
+                        "content": "{'rating': 5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "4be490bd-fd18-45ca-893a-82c5609f346c",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_2"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "8e5f6c33-2703-4258-bd61-142dbeba4fee"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I prefer routine and predictability.",
+            "trcode": "O_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "8e5f6c33-2703-4258-bd61-142dbeba4fee"
+            },
+            "pred_resp": {
+                "content": "{'rating': 1}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "b3992863-6433-4b1c-8fa0-c1b6ef6c1039",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "8e5f6c33-2703-4258-bd61-142dbeba4fee"
+                    },
+                    {
+                        "content": "{'rating': 1}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "b3992863-6433-4b1c-8fa0-c1b6ef6c1039",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_3"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "cf8d0e7c-557e-4964-9918-c5a84419e0f5"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am organized and pay attention to details.",
+            "trcode": "C_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "cf8d0e7c-557e-4964-9918-c5a84419e0f5"
+            },
+            "pred_resp": {
+                "content": "{'rating': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "78d69bdf-7d34-460b-985a-17b82953b6f4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "cf8d0e7c-557e-4964-9918-c5a84419e0f5"
+                    },
+                    {
+                        "content": "{'rating': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "78d69bdf-7d34-460b-985a-17b82953b6f4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_1"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        },
+        {
+            "trial_idx": 4,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "228d721c-e081-4c11-bdb0-4073ea19aca7"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I follow through on my commitments.",
+            "trcode": "C_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "228d721c-e081-4c11-bdb0-4073ea19aca7"
+            },
+            "pred_resp": {
+                "content": "{'rating': 5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "8ad40b98-d956-4aa6-8706-fdec463fdffe",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "228d721c-e081-4c11-bdb0-4073ea19aca7"
+                    },
+                    {
+                        "content": "{'rating': 5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "8ad40b98-d956-4aa6-8706-fdec463fdffe",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_2"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        },
+        {
+            "trial_idx": 5,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "e5f24fd7-83cc-4c34-81f3-43a7d1baeca1"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I tend to procrastinate on important tasks.",
+            "trcode": "C_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "e5f24fd7-83cc-4c34-81f3-43a7d1baeca1"
+            },
+            "pred_resp": {
+                "content": "{'rating': 1}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "cca9e60c-d2f1-4ace-87b7-7ad4b0c22bd3",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "e5f24fd7-83cc-4c34-81f3-43a7d1baeca1"
+                    },
+                    {
+                        "content": "{'rating': 1}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "cca9e60c-d2f1-4ace-87b7-7ad4b0c22bd3",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_3"
+            },
+            "trace_id": null,
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-SingleTurn_item"
+        }
+    ]
+}

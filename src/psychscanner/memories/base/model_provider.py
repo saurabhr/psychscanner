@@ -39,10 +39,10 @@ def llm_chat_model(model: str, family: str, parameters: dict) -> object:
     if family == "mock-llm":
         if parameters:
             chat_model = ChatMockModel(
-                model=model, repeat_buffer_length=3, **parameters
+                model=model, repeat_buffer_length=10, **parameters
             )
         else:
-            chat_model = ChatMockModel(model=model, repeat_buffer_length=3)
+            chat_model = ChatMockModel(model=model, repeat_buffer_length=10)
     elif family == "ollama":
         try:
             if parameters:
