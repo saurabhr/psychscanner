@@ -88,15 +88,6 @@
         },
         "type": "number"
       }
-    },
-    "response_format": {
-      "definition": "The response format consists of key-value pair for different sub-task components enclosed in {}.",
-      "format": {
-        "Word_2": "<your word based on the rules for word-pair.>",
-        "Rating": "<your relatededness rating about how much the word_1 and word_2 are related after completeing the word pair using the rating scale described above.>",
-        "Judgement": "<your judgment about the nature of generation behind the 'word_2'.>",
-        "Confidence": "<your condidence level about your judgment being correct.>"
-      }
     }
   },
   "contexts": [
