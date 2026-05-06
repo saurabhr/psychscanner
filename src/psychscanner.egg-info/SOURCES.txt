@@ -4,6 +4,7 @@ pyproject.toml
 src/psychscanner/__init__.py
 src/psychscanner/__main__.py
 src/psychscanner/cli.py
+src/psychscanner/parsers.py
 src/psychscanner/py.typed
 src/psychscanner.egg-info/PKG-INFO
 src/psychscanner.egg-info/SOURCES.txt
@@ -17,6 +18,8 @@ src/psychscanner/datasets/prompts/__init__.py
 src/psychscanner/datasets/prompts/chat_prompts.py
 src/psychscanner/datasets/prompts/parser.py
 src/psychscanner/datasets/prompts/parser_extra.py
+src/psychscanner/datasets/prompts/parser_general.py
+src/psychscanner/datasets/prompts/parser_tasks.py
 src/psychscanner/datasets/prompts/task_prompts.py
 src/psychscanner/datasets/prompts/task_prompts_old.py
 src/psychscanner/datasets/prompts/task_prompts_v2.py
