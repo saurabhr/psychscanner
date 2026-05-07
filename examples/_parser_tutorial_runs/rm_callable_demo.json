@@ -1,0 +1,47 @@
+{
+  "tasktype": "survey",
+  "taskname": "rm_callable_demo",
+  "instructions": {
+    "definition": [
+      "Encoding: report the second word and rate its relatedness 0-100.",
+      "Test: judge whether the word was internal/external and rate confidence 1-6."
+    ]
+  },
+  "contexts": [
+    "encode",
+    "test"
+  ],
+  "contexts_id": [
+    "encode",
+    "test"
+  ],
+  "context_present": true,
+  "chain_type": "item",
+  "parser": "0",
+  "items": {
+    "encode_1": [
+      {
+        "trcode": "encode_1",
+        "stimulus": "Word 1: APPLE | Word 2: FRUIT"
+      }
+    ],
+    "encode_2": [
+      {
+        "trcode": "encode_2",
+        "stimulus": "Word 1: TABLE | Word 2: ____ (imagine)"
+      }
+    ],
+    "test_1": [
+      {
+        "trcode": "test_1",
+        "stimulus": "APPLE \u2014 was the 2nd word internal or external?"
+      }
+    ],
+    "test_2": [
+      {
+        "trcode": "test_2",
+        "stimulus": "TABLE \u2014 was the 2nd word internal or external?"
+      }
+    ]
+  }
+}
