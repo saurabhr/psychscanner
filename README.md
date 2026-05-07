@@ -111,8 +111,4 @@ to_csv(scanner, path=card.proj_dir)
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
 
-## Citation
-
-If you use PsychScanner in your research, please cite:
-
 
