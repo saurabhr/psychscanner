@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+import logging
+
 from langgraph.graph import StateGraph
 from langgraph.graph import START, END
 from langgraph.graph.message import add_messages, RemoveMessage
@@ -6,9 +10,37 @@ from langchain_core.messages import BaseMessage, AIMessage, SystemMessage, Human
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from typing_extensions import Annotated, TypedDict, NotRequired
 from typing import Sequence
+from tenacity import (
+    retry,
+    retry_if_exception,
+    stop_after_attempt,
+    wait_exponential_jitter,
+    before_sleep_log,
+)
 
 from .base.base_agent import AgentInitializer
 from psychscanner.parsers import resolve_parser
+
+logger = logging.getLogger(__name__)
+
+
+def _is_rate_limit(exc: BaseException) -> bool:
+    """Return True for HTTP-429 / rate-limit errors from any LLM provider."""
+    if "RateLimit" in type(exc).__name__:
+        return True
+    msg = str(exc)
+    return "429" in msg or "rate_limit_exceeded" in msg.lower() or "rate limit" in msg.lower()
+
+
+@retry(
+    retry=retry_if_exception(_is_rate_limit),
+    wait=wait_exponential_jitter(initial=2, max=64),
+    stop=stop_after_attempt(8),
+    reraise=True,
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+)
+def _invoke_with_retry(runnable, invoke_input: dict):
+    return runnable.invoke(invoke_input)
 
 
 def _make_summary(messages: list, existing_summary: str, model) -> str:
@@ -103,24 +135,20 @@ def single_turn_convo_node(
             system_msg = f"{system_msg}\n\n[Conversation summary: {current_summary}]"
 
         # ── 4. Build runnable and invoke ──────────────────────────────────────
+        invoke_input = {
+            "system_message": system_msg,
+            "inputs": messages,
+        }
         if parser_cls is None:
             runnable = prompt | agent_cfg.modelobject
-            invoke_input = {
-                "system_message": system_msg,
-                "inputs": messages,
-            }
-            response = runnable.invoke(invoke_input)
+            response = _invoke_with_retry(runnable, invoke_input)
         else:
             runnable = prompt | agent_cfg.modelobject.with_structured_output(
                 parser_cls,
                 include_raw=agent_cfg.parser_raw,
                 **agent_cfg.parser_config,
             )
-            invoke_input = {
-                "system_message": system_msg,
-                "inputs": messages,
-            }
-            response = runnable.invoke(invoke_input)
+            response = _invoke_with_retry(runnable, invoke_input)
             if agent_cfg.parser_raw:
                 response = response["raw"]
             else:

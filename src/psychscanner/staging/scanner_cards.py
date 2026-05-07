@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any, Literal, Callable
 
 import click
-from pydantic import BaseModel, ConfigDict, Field, FilePath
+from pydantic import BaseModel, ConfigDict, Field, FilePath, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from psychscanner import datasets
@@ -155,15 +155,33 @@ class ExpCardInit(BaseModel):
         default=None,
         description="'item' is for when only one stimulus is in the trial. 'trial' is for when there is multiple stimulus in a trial. 'task' is for previous trial memory. if given the overrides the 'chain_type' parameter in the task json file otherwise used from the json file."    )
 
-    feedback: Literal["0", "1"] = Field(
-        default="0",
-        description="Feedback on trials. Trial prompt will have a key called fb as true/false on every trial trompt, if fb key not present in trial prompt dictionary and given 1 for fbactive than the user settings is overwritten to no feedback. if activefb = 1 and fb key in true then the fb is should be explicilty coded or else no feedback is given. Feedback function is stored in key injectfun",
-    )  # defult is False, else
+    feedback: bool = Field(
+        default=False,
+        description=(
+            "Enable trial-level feedback. Set True (or '1' for backward compatibility) to activate. "
+            "When enabled, feedback_fn must also be provided. "
+            "Each trial may include an 'fb' key (True/False) to opt individual trials in or out of feedback."
+        ),
+    )
+
+    @field_validator("feedback", mode="before")
+    @classmethod
+    def _coerce_feedback(cls, v):
+        if v in ("0", False, 0, None, ""):
+            return False
+        if v in ("1", True, 1):
+            return True
+        raise ValueError(f"feedback must be a bool or '0'/'1', got {v!r}")
 
     feedback_fn: Callable | None = Field(
         default=None,
-        description="Should be provided when feedback is '1' otherwise resets Feedback to '0'. Feedback function to use. Default is None. If not default, should be correctly provided. Feedback function is used to provide feedback on the trials. The feedback function should be a callable object that takes the trial data as input and returns the feedback as output. The feedback function should be defined in the script in the staging.",
-    )  # defult is False, else
+        description=(
+            "A FeedbackBase subclass (the class itself, not an instance). "
+            "Required when feedback=True. psychscanner instantiates it once per "
+            "participant simulation so cross-trial state can live safely in self. "
+            "Must implement on_response(trial, response) -> str | None."
+        ),
+    )
 
 
 class ExpCard:
@@ -238,6 +256,12 @@ class ExpCard:
             )
         except (KeyError, TypeError, ValueError) as exc:
             raise ValueError(str(exc)) from exc
+
+        if self.card_in.feedback and self.card_in.feedback_fn is None:
+            raise ValueError(
+                "feedback=True requires feedback_fn to be set. "
+                "Provide a FeedbackBase subclass (not an instance) as feedback_fn."
+            )
 
         click.echo("----<PROJECT AND DATA ROOT DIRECTORY>----")
         click.echo(f"\tProject root dir: {self.card_in.proj_dir}")

@@ -1,271 +1,187 @@
+"""Reality Monitoring feedback handler.
+
+Subclasses FeedbackBase to provide trial-by-trial feedback for the RM
+word-pair task.  Tracks words used across all trials within one participant
+simulation via self.all_words_in_use — no module-level globals needed.
+
+Usage::
+
+    from rm_msg_injection import Stim_Trial_Injection
+
+    card_in = ExpCard(
+        ...
+        feedback=True,
+        feedback_fn=Stim_Trial_Injection,   # pass the class, not an instance
+    )
+"""
+from __future__ import annotations
+
 import json
-from nltk.corpus import words
-from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
-from pydantic import BaseModel
+
+from nltk.corpus import words as nltk_words
+
+from psychscanner.feedback import FeedbackBase
 
 
-def extract_response_dict_to_fb(message):
-    # Find the start and end indices of the dictionary string
-    start_index = message.find("{")
-    end_index = message.find("}") + 1  # +1 to include the closing brace
+# ---------------------------------------------------------------------------
+# Helper: extract (response_str, rating_str) from a pre-parsed response dict.
+# Uses the trial's 'parser' key for explicit field lookup so that:
+#   Response_part_1_rm  →  Word_2 (str),            Rating (0–100)
+#   Response_part_2_rm  →  Judgment (internal/ext),  Confidence (1–6)
+# ---------------------------------------------------------------------------
 
-    if start_index != -1 and end_index != -1 and start_index < end_index:
-        dict_string = message[start_index:end_index]
-        try:
-            # Convert the string to a Python dictionary
-            # json.loads expects keys to be strings, so we need a slight modification
-            # for integer keys that look like they came from a Python dict literal.
-            # ast.literal_eval is safer for Python literals.
-            # import ast
-            import json
-
-            # result_dict = ast.literal_eval(dict_string)
-            result_dict = eval(dict_string)
-            return result_dict["response"].strip(), result_dict["rating"]
-
-        except:
-            return "", ""
-
-    elif "READY" in message:
-        return "READY", ""
-    else:
-        return message, ""
+def _extract_fields(response: dict, parser_name: str | None) -> tuple[str, str]:
+    if parser_name == "Response_part_1_rm":
+        return str(response.get("Word_2", "")), str(response.get("Rating", ""))
+    if parser_name in ("Response_part_2_rm", "Response_part_2_rmrevo"):
+        return str(response.get("Judgment", "")), str(response.get("Confidence", ""))
+    # Unstructured / unknown parser — best-effort fallback
+    values = list(response.values())
+    response_str = str(response.get("content") or (values[0] if values else ""))
+    rating_str   = str(values[1] if len(values) > 1 else "")
+    return response_str, rating_str
 
 
-all_words_in_use = []
+# ---------------------------------------------------------------------------
+# Standalone feedback logic (pure function — easy to unit-test)
+# ---------------------------------------------------------------------------
 
+def generate_fb_response(
+    trial: dict,
+    response: dict,
+    words_in_use: list,
+) -> str | None:
+    """Return a JSON feedback string, or None when no feedback is needed.
 
-# self.trial_prompt,pred_dict,input_dict
-
-
-def update_input_with_feedback(input_dict: dict, fb_response: str) -> dict:
-    """Update the input dictionary with feedback response.
-
-    Parameters:
+    Parameters
     ----------
-    input_dict : dict
-        The input dictionary to be updated.
-    fb_response : str
-        The feedback response to be added.
-
-    Returns:
-    -------
-    dict
-        The updated input dictionary.
+    trial:
+        Full trial dict from the task JSON.
+    response:
+        Pre-parsed model response dict (from TaskRunner).
+    words_in_use:
+        Accumulating list of all words seen so far in this simulation.
+        Modified in-place so the caller's reference stays in sync.
     """
-    
+    parser_name = trial.get("parser")  # 'Response_part_1_rm' or 'Response_part_2_rm'
+    response_str, rating_str = _extract_fields(response, parser_name)
+    stim = trial.get("stimulus", {})
 
-    #input_msg = {"**feedba"}input_dict["inputs"][0]
-    feedback_msg = fb_response
-    feedback_msg = HumanMessage(feedback_msg)
-    # if isinstance(input_msg.content, str):
-    #    input_msg = json.loads(input_msg.content)
-    #    input_msg["PREVIOUS TRIAL FEEDBACK"] = fb_response
+    # ── task-instruction trials ────────────────────────────────────────────
+    if "task_instruction" in trial["trcode"]:
+        if "ready" not in response_str.lower():
+            return "Correct answer is READY. Please carefully follow the instructions."
+        return None
 
-    # input_dict["input_stim"][0] = HumanMessage(json.dumps(input_msg))
-    
-    trial_dict = json.loads(input_dict["inputs"][0].content) 
-    updated_trial_with_fb = HumanMessage(json.dumps({
-        **json.loads(fb_response),
-        "current_trial": trial_dict},
-        indent=4
-        ))
-    #print("---updated_trial---",updated_trial_with_fb)
-    input_dict["inputs"] = [updated_trial_with_fb]
-    return input_dict
-
-
-def generate_fb_response(trdata, pred_dict, input_dict, parser_status, trial_item_collector=None):
-    if trial_item_collector is None:
-        trial_item_collector = []
-
-    parser = parser_status
-    response_fb = ""
-    rate_fb = ""
-    overall_fb = ""
-    feedback_msg = ""
-    message = pred_dict.content
-    
-    
-    if parser == "1":
-        message = eval(message)
-        values = list(message.values())
-        # Named lookup first so different parser schemas (2-field or 4-field) all work.
-        # response: the word produced or the judgment made
-        response = str(
-            message.get("Word_2")
-            or message.get("Judgment")
-            or message.get("response")
-            or (values[0] if values else "")
-        )
-        # rating: relatedness (0-100) for encode trials, confidence (1-6) for test trials
-        rating = (
-            message.get("Confidence")
-            or message.get("Rating")
-            or message.get("rating")
-            or (values[1] if len(values) > 1 else "")
-        )
-
-    if parser == "0":
-        response, rating = extract_response_dict_to_fb(message)
-    
-    
-    stim = trdata["stimulus"]
-    
-    if "task_instruction" in trdata["trcode"]:
-        if parser == "1":
-            if "ready" not in response.lower():
-                return "Correct answer is READY. Please carefully follow the instructions."
-            else:
-                return None
-        else:
-            if "ready" not in message.lower():
-                return "Correct answer is READY. Please carefully follow the instructions."
-            else:
-                return None
-    elif "test" in trdata["trcode"]:
-        corr_ans = trdata["corrAns"].strip()
+    # ── test/recognition trials ────────────────────────────────────────────
+    if "test" in trial["trcode"]:
+        corr_ans = trial.get("corrAns", "").strip()
         if (
-            response.lower().replace(".", "").strip()
+            response_str.lower().replace(".", "").strip()
             == corr_ans.lower().replace(".", "").strip()
         ):
-            response_fb = f"**CORRECT: Correct generation for 'Word_2' response was {corr_ans}.  Your 'Word_2' response followed the task instructions**"
+            response_fb = (
+                f"**CORRECT: The correct 'Judgment' was '{corr_ans}'. "
+                "Your 'Judgment' followed the task instructions.**"
+            )
         else:
-            response_fb = f"**INCORRECT: Correct generation for 'Word_2' response was {corr_ans}.**    It might be also be incorrect due to poor formatting of your ANSWER.    Carefully follow all the trial instructions about the 'response' options to be accurate on the given trial.    "
+            response_fb = (
+                f"**INCORRECT: The correct 'Judgment' was '{corr_ans}'. "
+                "It might also be incorrect due to poor formatting. "
+                "Carefully follow all trial instructions about the source-judgment options.**"
+            )
+
         try:
-                rating = float(rating)
-                if (rating >= 1) and (rating <= 6):
-                    rate_fb = (
-                        "**CORRECT: Your 'rating' value is in the instructed rating scale range.**"
-                    )
-                else:
-                    rate_fb = "**INCORRECT: Your 'rating' value is INCORRECT as it is not in the instructed rating scale range.    It might be also be incorrect due to poor formatting of your ANSWER.**    Carefully follow all the trial instructions about the rating scale in the given trial instructions.    "
+            rating = float(rating_str)
+            rate_fb = (
+                "**CORRECT: Your 'Confidence' value is in the instructed rating scale range (1–6).**"
+                if 1 <= rating <= 6
+                else "**INCORRECT: Your 'Confidence' value is not in the instructed range (1–6).**"
+            )
+        except (ValueError, TypeError):
+            rate_fb = "**INCORRECT: Your 'Confidence' value is incorrect due to formatting problems.**"
 
-        except:
-            rate_fb = "**INCORRECT: Your 'rating' value is INCORRECT due to problems in format of your answer.**    Carefully follow all the trial instructions about the rating scale in the given trial instructions.    "
-
+    # ── encoding trials ────────────────────────────────────────────────────
     else:
-        word1, word2 = (
-            stim["Word_Pair"]["word_1"],
-            stim["Word_Pair"]["word_2"],
-        )  # word12.split(" and ")
-        word1 = word1.strip()
-        word2 = word2.strip()
-        all_words_in_use.append(word1)
-        if "__" in word2:
-            if response.lower() in all_words_in_use:
-                all_words_in_use.append(response)
-                response_fb = "**INCORRECT: Last trial was a imagined trial type, your 'Word_2' value is INCORRECT because you imagined a second word to the incomplete word-pair in the trial which already have been used in the present trial as the first word or in any other way in previous trials. Always imagine the second word that is novel and have not been used in present and previous trials as your 'response' in a trial that is imagined trial type.    It might be also be incorrect due to poor formatting in your ANSWER.**    Carefully follow all the trial instructions related to imagined trials.    "
+        word1 = stim.get("Word_Pair", {}).get("word_1", "").strip()
+        word2 = stim.get("Word_Pair", {}).get("word_2", "").strip()
+        words_in_use.append(word1)
 
-            elif response.lower() not in words.words():
-                all_words_in_use.append(response)
-                response_fb = "**INCORRECT: Last trial was a imagined trial type, your 'Word_2' value is INCORRECT because it is not in the English dictionary. Always imagine novel second word from english language to give as 'response' in trial similar to imagined trial type.    It might be also be incorrect due to poor formatting in your ANSWER.**    Carefully follow all the trial instructions related to imagined trials.    "
+        if "__" in word2:  # imagined trial
+            if response_str.lower() in [w.lower() for w in words_in_use]:
+                words_in_use.append(response_str)
+                response_fb = (
+                    "**INCORRECT: Last trial was an imagined trial type. Your 'Word_2' has "
+                    "already been used in a previous trial. Always imagine a novel second word.**"
+                )
+            elif response_str.lower() not in nltk_words.words():
+                words_in_use.append(response_str)
+                response_fb = (
+                    "**INCORRECT: Last trial was an imagined trial type. Your 'Word_2' is not "
+                    "in the English dictionary. Always imagine a novel English word.**"
+                )
+            else:
+                words_in_use.append(response_str)
+                response_fb = (
+                    "**CORRECT: Last trial was an imagined trial type. "
+                    "Your 'Word_2' correctly followed the given instructions.**"
+                )
+        else:  # perceived trial
+            words_in_use.append(word2)
+            words_in_use.append(response_str)
+            if word2.lower() != response_str.lower():
+                response_fb = (
+                    "**INCORRECT: Last trial was a perceived trial type. Your 'Word_2' does "
+                    "not match the second word in the pair.**"
+                )
+            else:
+                response_fb = (
+                    "**CORRECT: Last trial was a perceived trial type. "
+                    "Your 'Word_2' correctly followed the trial instruction.**"
+                )
 
-            else:
-                response_fb = "**CORRECT: Last trial was a imagined trial type, your 'Word_2' correctly followed the given instructions.**    "
-        else:
-            all_words_in_use.append(word2)
-            all_words_in_use.append(response)
-            if word2.lower() != response.lower():
-                response_fb = "**INCORRECT: Last trial was a perceived trial type, your 'Word_2' value is INCORRECT because the second word in the previous trial word-pair does not match your 'response'.    It might be also be incorrect due to poor formatting of your ANSWER.**    Carefully follow all the trial instructions related to perceived trials.    "
-            else:
-                response_fb = "**CORRECT: Last trial was a perceived trial type, your 'Word_2' value correctly followed the trial instruction for the given trial.**"
         try:
-                rating = float(rating)
-                if (rating >= 0) and (rating <= 100):
-                    rate_fb = (
-                        "**CORRECT: Your 'rating' value is in the instructed rating scale range.**"
-                    )
-                else:
-                    rate_fb = "**INCORRECT: Your 'rating' value is INCORRECT as it is not in the instructed rating scale range.    It might be also be incorrect due to poor formatting of your ANSWER.**    Carefully follow all the trial instructions about the rating scale in the given trial.    "
+            rating = float(rating_str)
+            rate_fb = (
+                "**CORRECT: Your 'rating' value is in the instructed rating scale range.**"
+                if 0 <= rating <= 100
+                else "**INCORRECT: Your 'rating' value is not in the instructed range.**"
+            )
+        except (ValueError, TypeError):
+            rate_fb = "**INCORRECT: Your 'rating' value is incorrect due to formatting problems.**"
 
-        except:
-                rate_fb = "**INCORRECT: Your 'rating' value is INCORRECT due to problems in format of your answer.**    Carefully follow all the trial instructions about the rating scale in the given trial.    "
+    overall_fb = (
+        "**INCORRECT Answer!** Follow all trial instructions more accurately."
+        if "INCORRECT" in response_fb or "INCORRECT" in rate_fb
+        else "**CORRECT Answer!** Well answered, good job!"
+    )
 
-
-    if any(["INCORRECT" in response_fb, "INCORRECT" in rate_fb]):
-            overall_fb = "**INCORRECT Answer!** **Follow all the trial instructions more accurately to give correct response and rating.**"
-    else:
-        overall_fb = "**CORRECT Answer!** **Well Answered, Good Job!**"
-
-    feedback_msg = json.dumps(
-            {"Feedback on previous response": {
+    return json.dumps(
+        {
+            "Feedback on previous response": {
                 "response feedback": response_fb,
                 "rating feedback": rate_fb,
                 "overall feedback": overall_fb,
-            }},
-            indent=4,
-        )
-    return feedback_msg
+            }
+        },
+        indent=4,
+    )
 
-class Stim_Trial_Injection:
-    def __init__(
-        self,
-        trial_data=None,
-        pred_dict=None,
-        check_input=None,
-        parser_status=None,
-        llmobj=None,
-        trial_item_collector=None,
-    ):
-        self.trial_data = trial_data
-        self.pred_dict = pred_dict
-        self.check_input = check_input
-        self.parser_status = parser_status
-        self.llmobj = llmobj
 
-        self.trialhash = {}
-        self.trialhash["trcode"] = []
-        self.trialhash["input"] = []
-        self.trialhash["stim"] = []
-        self.trialhash["output"] = []
-        self.trialhash["response"] = []
-        self.trialhash["rating"] = []
+# ---------------------------------------------------------------------------
+# FeedbackBase subclass
+# ---------------------------------------------------------------------------
 
-        self.all_stim_in_use = trial_item_collector
+class Stim_Trial_Injection(FeedbackBase):
+    """Feedback handler for the Reality Monitoring word-pair task.
 
-        self.fb_response = None
+    Instantiated once per participant simulation by psychscanner, so
+    ``self.all_words_in_use`` correctly tracks words across all trials.
+    """
 
-    def generate_feedback(
-        self, trdata, pred_dict, input_dict, parser_status, trial_item_collector
-    ):
-        if trdata is None:
-            trdata = self.trial_data
-        else: 
-            self.trial_data = trdata
+    def __init__(self):
+        self.all_words_in_use: list[str] = []
 
-        if pred_dict is None:
-            pred_dict = self.pred_dict
-
-        if input_dict is None:
-            input_dict = self.check_input
-
-        if parser_status is None:
-            parser_status = self.parser_status
-
-        if trial_item_collector is None:
-            trial_item_collector = self.all_stim_in_use
-        self.fb_response = generate_fb_response(
-            trdata=trdata,
-            pred_dict=pred_dict,
-            input_dict=input_dict,
-            parser_status=parser_status,
-            trial_item_collector=trial_item_collector,
-        )
-        # print(self.fb_response,"xx")
-        return self.fb_response
-
-    def update_trial_stim(self, finput=None, fb_response=None, mod_finput=False):
-        
-        if finput is None:
-            finput = self.trial_data["stimulus"]
-        # if  fb_response is None:
-        #    fb_response = self.generate_feedback()
-        
-        ffb_input = update_input_with_feedback(
-            finput, fb_response
-        )  # list of HumanMessage(content=<feedback>) and future input HumanMessage(content=<trial>)
-        # if mod_finput:
-        mfinput = ffb_input  # changes future input HumanMessage(content=<trial>)
-
-        return mfinput
+    def on_response(self, trial: dict, response: dict) -> str | None:
+        """Generate feedback based on the trial type and model response."""
+        return generate_fb_response(trial, response, self.all_words_in_use)

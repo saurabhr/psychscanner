@@ -20,6 +20,8 @@ from .simulation_model.simulation_model import (
     PredSimulationModel,
 )
 from .templates.tasks.get_task_template import get_task_template
+from .feedback import FeedbackBase
+
 __all__ = [
     "ExpCard",
     "ExpCardInit",
@@ -33,4 +35,5 @@ __all__ = [
     "InputSimulationModel",
     "PredSimulationModel",
     "get_task_template",
+    "FeedbackBase",
 ]

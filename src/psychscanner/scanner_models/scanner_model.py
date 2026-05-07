@@ -210,9 +210,7 @@ class ScannerModel:
             feedback = self.feedback
 
         if feedback_fn is None:
-            if feedback == "0":
-                feedback_fn = None
-            elif feedback == "1":
+            if feedback:
                 feedback_fn = self.expcard.card_in.feedback_fn
 
         # self.tunnel_data
