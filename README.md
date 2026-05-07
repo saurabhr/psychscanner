@@ -115,7 +115,4 @@ to_csv(scanner, path=card.proj_dir)
 
 If you use PsychScanner in your research, please cite:
 
-```
-Ranjan, S. (2025). PsychScanner: A framework for simulating psychological experiments
-with large language models. [Preprint]
-```
+
