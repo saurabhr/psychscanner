@@ -45,3 +45,4 @@ dependencies:
     - requests==2.33.1
     - polars==1.39.3
     - typing-extensions==4.15.0
+    - mkdocs-material==9.7.6
