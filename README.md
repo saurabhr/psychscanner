@@ -57,6 +57,10 @@ Keys are loaded automatically from the environment for each provider family. Oll
 
 ## Quick Start
 
+This is the same code pinned by `tests/test_readme_quickstart.py::test_readme_quickstart_live_ollama`.
+It runs against a local Ollama smol model (no API key) — pull it once with
+`ollama pull smollm2:360m-instruct-fp16`, then run:
+
 ```python
 from pathlib import Path
 from psychscanner import ExpCardInit, ExpCard, ScannerModel, to_csv
@@ -64,12 +68,13 @@ from psychscanner.parsers import DefaultLiteralVivid15
 
 # 1. Configure the experiment
 card = ExpCardInit(
-    model       = "gpt-4o-mini",
-    family      = "openai",
-    projectname = "my_experiment",
-    proj_dir    = Path("./results"),
-    cogtype     = "no",         # no persona files — set participant count directly
-    nsim        = 10,           # 10 simulated participants
+    model       = "smollm2:360m-instruct-fp16",   # local Ollama; alt: "openai/gpt-oss-120b" with family="groq"
+    family      = "ollama",
+    parameters  = {"temperature": 0},
+    projectname = "readme_quickstart",
+    proj_dir    = Path.cwd() / "results",         # output goes to ./results in your CWD
+    cogtype     = "no",                           # no persona files — use nsim instead
+    nsim        = 1,                              # 1 simulated participant (bump up for real studies)
     memory      = "SingleTurn",
     parser      = DefaultLiteralVivid15,
 )
@@ -78,8 +83,8 @@ card = ExpCardInit(
 scanner = ScannerModel(expcard=ExpCard(card))
 results = scanner.run()
 
-# 3. Export
-to_csv(scanner, path=card.proj_dir)
+# 3. Export to CSV (auto-named under proj_dir)
+df = to_csv(scanner, path=card.proj_dir)
 ```
 
 ## Supported Providers

@@ -1,51 +1,44 @@
 {
-    "tasktype": "survey",
-    "taskname": "vviqen",
-    "instructions": [
-        "Visual imagery refers to the ability to visualize, that is, the ability to form mental pictures, or to ‘see in the mind’s eye’. Marked individual differences are found in the strength and clarity of reported visual imagery and these differences are of considerable psychological interest.",
-        "The aim of this test is to determine the vividness of your visual imagery. The items of the test will possibly bring certain images to your mind. You are asked to rate the vividness of each image by reference to the five-point scale given below. For example, if your image is ‘vague and dim’, then give it a rating of 2. After each item, select the appropriate number rating for the vividness of imagery experience.",
-        "Before you turn to the items, familiarize yourself with the different categories on the rating scale. Throughout the test, refer to the rating scale when judging the vividness of each image. Try to do each item separately, independent of how you may have done other items.",
-        "This test consists of 32 items to be imaged with your eyes closed. When we say “eyes closed”, we mean the question is read, you close your eyes, an image is formed with them closed, and then open them to write the score. Please refer to the scale scores throughout the test when you judge the vividness of each image. Please do not go to the next page until you have completed the items on the page you are doing, and do not look at the items you’ve already covered. Try to score each item separately and independently of how you scored the other items."
-    ],
-    "contexts": [
-        "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind’s eye.",
-        "Think of the rising sun. Consider carefully the picture that comes before your mind’s eye.",
-        "Think of the front of a shop which you often go to. Consider the picture that comes before your mind’s eye.",
-        "Think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind’s eye."
-    ],
-    "contexts_id": [
-        "A",
-        "B",
-        "C",
-        "D"
-    ],
-    "context_present": true,
-    "rating": [
-        "Perfectly clear and as vivid as normal vision: 5",
-        "Clear and reasonably vivid: 4",
-        "Moderately clear and vivid: 3",
-        "Vague and dim: 2",
-        "No image at all, you only “know” that you are thinking of the object: 1"
-    ],
-    "item_reponse_template_postfix": "Give response by providing the vivdness rating as the integer based on the given RATING SCALE in the range of 1 (No image at all) to 5 (Perfectly clear and as vivid as normal vision).\nAlways select sigular option from RATING VALUE from RATING SCALE with values between 1 (No image at all) to 5 (Perfectly clear and as vivid as normal vision) based on your vivdness experience.\nRemember the RATING SCALE and always give single value and no other value or response is allowed.\nNOTE in the following response format: 'x' is SINGULAR INTEGER RATING VALUE that should be within the instructed range and NO OTHER FORMATTING IS ALLOWED other than\n the following:\nrating: x\n",
-
-    "items": {
-        "A_1": "The exact contour of face, head, shoulders and body.",
-        "A_2": "Characteristic poses of head, attitudes of body etc.",
-        "A_3": "The precise carriage, length of step, etc. in walking.",
-        "A_4": "The different colours worn in some familiar clothes.",
-        "B_5": "The sun is rising above the horizon into a hazy sky.",
-        "B_6": "The sky clears and surrounds the sun with blueness.",
-        "B_7": "Clouds. A storm blows up, with flashes of lightening.",
-        "B_8": "A rainbow appears.",
-        "C_9": "The overall appearance of the shop from the opposite side of the road.",
-        "C_10": "A window display including colours, shape and details of individual items for sale.",
-        "C_11": "You are near the entrance. The colour, shape and details of the door.",
-        "C_12": "You enter the shop and go to the counter. The counter assistant serves you. Money changes hands.",
-        "D_13": "The contours of the landscape.",
-        "D_14": "The colour and shape of the trees.",
-        "D_15": "The colour and shape of the lake.",
-        "D_16": "A strong wind blows on the tree and on the lake causing waves."
+    "tasktype": "imagery",
+    "taskname": "vviq16",
+    "instructions": {
+        "definition": [
+            "For each of the following items, try to form a vivid mental image of the described scene or object.",
+            "After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:",
+            "  1 = No image at all; you only 'know' that you are thinking of the object.",
+            "  2 = Vague and dim.",
+            "  3 = Moderately clear and vivid.",
+            "  4 = Clear and reasonably vivid.",
+            "  5 = Perfectly clear and as vivid as normal vision.",
+            "Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be."
+        ]
     },
-    "parser": "DefaultLiteralVivid15"
+    "contexts": [
+        "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+        "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+        "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+        "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye."
+    ],
+    "contexts_id": ["S1", "S2", "S3", "S4"],
+    "context_present": true,
+    "items": {
+        "S1_1": [{"trcode": "S1_1", "stimulus": "The exact contour of face, head, shoulders and body."}],
+        "S1_2": [{"trcode": "S1_2", "stimulus": "Characteristic poses of head, attitudes of body, etc."}],
+        "S1_3": [{"trcode": "S1_3", "stimulus": "The precise carriage, length of step, etc. in walking."}],
+        "S1_4": [{"trcode": "S1_4", "stimulus": "The different colours worn in some familiar clothes."}],
+        "S2_1": [{"trcode": "S2_1", "stimulus": "The sun is rising above the horizon into a hazy sky."}],
+        "S2_2": [{"trcode": "S2_2", "stimulus": "The sky clears and surrounds the sun with blueness."}],
+        "S2_3": [{"trcode": "S2_3", "stimulus": "Clouds. A storm blows up, with flashes of lightning strikes."}],
+        "S2_4": [{"trcode": "S2_4", "stimulus": "A rainbow appears."}],
+        "S3_1": [{"trcode": "S3_1", "stimulus": "The overall appearance of the shop from the opposite side of the road."}],
+        "S3_2": [{"trcode": "S3_2", "stimulus": "A window display including colour, shape and details of the articles in it."}],
+        "S3_3": [{"trcode": "S3_3", "stimulus": "You are near the entrance. The colour, shape and details of the door."}],
+        "S3_4": [{"trcode": "S3_4", "stimulus": "You enter the shop and go to the counter. The counter assistant serves you."}],
+        "S4_1": [{"trcode": "S4_1", "stimulus": "The contours of the landscape."}],
+        "S4_2": [{"trcode": "S4_2", "stimulus": "The colour and shape of the trees."}],
+        "S4_3": [{"trcode": "S4_3", "stimulus": "The colour and shape of the lake in the scene."}],
+        "S4_4": [{"trcode": "S4_4", "stimulus": "A strong wind blows on the trees and on the lake causing waves."}]
+    },
+    "parser": "DefaultLiteralVivid15",
+    "chain_type": "item"
 }

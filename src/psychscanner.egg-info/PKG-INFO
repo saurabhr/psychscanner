@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: psychscanner
-Version: 0.1.0
+Version: 0.2.0
 Summary: A tool to bridge natural psychology witth  the artificial.
 Author-email: Saurabh Ranjan <saurabh.ctheory@proton.me>
 License: MIT License
@@ -63,31 +63,114 @@ Dynamic: license-file
 
 # psychscanner
 
-[PsychScanner: A tool to bridge natural psychology with artificial intelligence.](https://docs.google.com/presentation/d/1X6IQNQOaf0nH-nFBU2EQedfQF_81r5z1XYtxeamFWY8/edit?usp=sharing)
+PsychScanner: A framework for running psychological experiments with large language models.
 
-Tested on Python 3.11.11
+Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-Note: The package is under rapid development. Contributions are welcome.
+> The package is under active development. Contributions are welcome.
 
-✨ Features:
+## Features
 
-  🧠 Automated Cognitive Tasks: Run psychological experiments with LLMs
-  
-  💬 Flexible Memory: Support for stateless and conversational interactions
-  
-  🎭 Persona System: Configure AI agents with different personality traits
-  
-  📊 Multiple Task Types: Surveys, cognitive tasks
-  
-  🔄 Session Recovery: Checkpoint and resume long-running experiments
-  
-  
-# Installation
+- **Automated Cognitive Tasks** — run validated psychological experiments (surveys, rating scales, cognitive tasks) with any LLM
+- **Flexible Memory** — stateless (no-memory) and conversational (session memory) conditions in the same experiment
+- **Persona System** — configure AI agents with system prompts, personality traits, and response formats
+- **Multi-provider** — works with OpenAI, Anthropic, Groq, Mistral, Google, Ollama (local/remote), HuggingFace, and more via LangChain
+- **Session Recovery** — checkpoint and resume long-running simulations with `SessionTunnel`
+- **Structured Output** — export trial-level results to CSV with parsed response fields
+
+## Installation
+
+### 1. Create the conda environment
+
+```bash
+conda env create -f environment.yml
+conda activate psyscan
+```
+
+### 2. Install psychscanner
 
 ```bash
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
-pip install .
+pip install -e .
 ```
+
+### 3. Set API keys
+
+Create a `.env` file in your project directory (or export variables in your shell):
+
+```bash
+# .env
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+GROQ_API_KEY=gsk_...
+MISTRAL_API_KEY=...
+GOOGLE_API_KEY=...
+HUGGINGFACEHUB_API_TOKEN=hf_...
+
+# Ollama remote server (only needed when not using localhost)
+OLLAMA_API_KEY=...
+```
+
+Keys are loaded automatically from the environment for each provider family. Ollama running locally needs no key.
+
+## Quick Start
+
+```python
+from pathlib import Path
+from psychscanner import ExpCardInit, ExpCard, ScannerModel, to_csv
+from psychscanner.parsers import DefaultLiteralVivid15
+
+# 1. Configure the experiment
+card = ExpCardInit(
+    model       = "gpt-4o-mini",
+    family      = "openai",
+    projectname = "my_experiment",
+    proj_dir    = Path("./results"),
+    cogtype     = "no",         # no persona files — set participant count directly
+    nsim        = 10,           # 10 simulated participants
+    memory      = "SingleTurn",
+    parser      = DefaultLiteralVivid15,
+)
+
+# 2. Run (uses built-in VVIQ-16 imagery questionnaire by default)
+scanner = ScannerModel(expcard=ExpCard(card))
+results = scanner.run()
+
+# 3. Export
+to_csv(scanner, path=card.proj_dir)
+```
+
+## Supported Providers
+
+| Family | Env var | Notes |
+|---|---|---|
+| `openai` | `OPENAI_API_KEY` | GPT-4o, GPT-4o-mini, o1, … |
+| `anthropic` | `ANTHROPIC_API_KEY` | Claude 3.5, Claude 3 Haiku, … |
+| `groq` | `GROQ_API_KEY` | Llama 3, Mixtral on Groq Cloud |
+| `mistral` | `MISTRAL_API_KEY` | Mistral, Codestral |
+| `google` / `gemini` | `GOOGLE_API_KEY` | Gemini 2.0, 1.5 |
+| `together` | `TOGETHER_API_KEY` | Together.ai hosted models |
+| `fireworks` | `FIREWORKS_API_KEY` | Fireworks.ai |
+| `azure` | `AZURE_OPENAI_API_KEY` | Azure OpenAI |
+| `huggingface` | `HUGGINGFACEHUB_API_TOKEN` | HuggingFace Inference API |
+| `ollama` | — (local) / `OLLAMA_API_KEY` (remote) | Pass `base_url` in `parameters` for remote |
+
+## Examples
+
+| Notebook | Description |
+|---|---|
+| `00_quickstart.ipynb` | Minimal working example |
+| `01_ollama_local_models.ipynb` | Local models via Ollama |
+| `02_parameters_reference.ipynb` | Full `ExpCard` parameter reference |
+| `03_parsers.ipynb` | Response parsing overview |
+| `04_parser_modules.ipynb` | Custom parser modules |
+| `05_rm_task.ipynb` | Reality monitoring task |
+| `06_feedback_api.ipynb` | Feedback / scoring API |
+| `07_rm_feedback_task.ipynb` | Reality monitoring with feedback |
+| `08_ps_parser_guide.ipynb` | Structured output parsing guide |
+| `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
+
+

@@ -4,20 +4,22 @@
 
 ```python
 from pathlib import Path
-from psychscanner import ExpCard, ExpCardInit, ScannerModel, to_csv
+from psychscanner import ExpCardInit, ExpCard, ScannerModel, to_csv
+from psychscanner.parsers import DefaultLiteralVivid15
 
 # 1. Configure the experiment
-card = ExpCardInit()
-card.model         = "gpt-4o-mini"
-card.family        = "openai"
-card.projectname   = "my_experiment"
-card.proj_dir      = Path("./results")
-card.system_prompt = "You are a human participant in a psychology study."
-card.task_prompt   = "Rate how vividly you can imagine the following scene (1–5): {scene}"
-card.response_format = {"Vividness": "int (1–5)"}
-card.nsim          = 10   # number of simulated participants
+card = ExpCardInit(
+    model       = "gpt-4o-mini",
+    family      = "openai",
+    projectname = "my_experiment",
+    proj_dir    = Path("./results"),
+    cogtype     = "no",         # no persona files — set participant count directly
+    nsim        = 10,           # number of simulated participants
+    memory      = "SingleTurn",
+    parser      = DefaultLiteralVivid15,
+)
 
-# 2. Run
+# 2. Run (uses built-in VVIQ-16 imagery questionnaire by default)
 scanner = ScannerModel(expcard=ExpCard(card))
 results = scanner.run()
 

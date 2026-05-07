@@ -47,8 +47,8 @@ Executes the full simulation.
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `progress_bar` | `bool` | `False` | Show tqdm bar per system message (overrides `expcard.enabletqdm`) |
-| `feedback` | `Any` | `None` | Deprecated — set `feedback=True` on the `ExpCard` instead |
-| `feedback_fn` | `Callable` | `None` | Override the feedback handler at runtime |
+| `feedback` | `Any` | `None` | Runtime override for `expcard.card_in.feedback` — leave `None` to use the card setting |
+| `feedback_fn` | `Callable` | `None` | Runtime override for `expcard.card_in.feedback_fn` |
 | `save_str` | `str` | `None` | Custom suffix appended to `.psyscan` output filenames |
 | `tunnel` | `Any` | `None` | Override the session tunnel at runtime |
 

@@ -12,5 +12,5 @@ Complete API documentation for PsychScanner.
 ## Quick Links
 
 - [Installation](../installation.md)
-- [Quick Start](../quickstart.md)
-- [Examples](../examples/)
+- [Quick Start](../usage.md)
+- [Examples](../examples/index.md)

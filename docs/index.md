@@ -23,26 +23,26 @@
 
 ```python
 from pathlib import Path
-from psychscanner import ExpCard, ExpCardInit, ScannerModel
+from psychscanner import ExpCardInit, ExpCard, ScannerModel, to_csv
+from psychscanner.parsers import DefaultLiteralVivid15
 
 # 1. Configure the experiment
-card = ExpCardInit()
-card.model         = "gpt-4o-mini"
-card.family        = "openai"
-card.projectname   = "my_experiment"
-card.proj_dir      = Path("./results")
-card.system_prompt = "You are a human participant in a psychology study."
-card.task_prompt   = "Rate how vividly you can imagine the following scene (1–5): {scene}"
-card.response_format = {"Vividness": "int (1–5)"}
-card.nsim          = 10   # number of simulated participants
-card.memory_type   = "0"  # "0" = no memory, "1" = conversation memory
+card = ExpCardInit(
+    model       = "gpt-4o-mini",
+    family      = "openai",
+    projectname = "my_experiment",
+    proj_dir    = Path("./results"),
+    cogtype     = "no",         # no persona files — set participant count directly
+    nsim        = 10,           # 10 simulated participants
+    memory      = "SingleTurn", # "SingleTurn" (stateless) or "Convo" (chained)
+    parser      = DefaultLiteralVivid15,
+)
 
-# 2. Run
+# 2. Run (uses built-in VVIQ-16 imagery questionnaire by default)
 scanner = ScannerModel(expcard=ExpCard(card))
 results = scanner.run()
 
 # 3. Export
-from psychscanner import to_csv
 to_csv(scanner, path=card.proj_dir)
 ```
 
@@ -76,6 +76,7 @@ to_csv(scanner, path=card.proj_dir)
 | `04_parser_modules.ipynb` | Custom parser modules |
 | `05_rm_task.ipynb` | Reality monitoring task |
 | `06_feedback_api.ipynb` | Feedback / scoring API |
+| `07_rm_feedback_task.ipynb` | Reality monitoring with feedback |
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
 

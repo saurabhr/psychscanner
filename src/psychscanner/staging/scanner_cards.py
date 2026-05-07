@@ -78,7 +78,7 @@ class ExpCardInit(BaseModel):
         description="Path to the .json persona related files. If None value is updated to DEFAULT_PER in person_roles as list of strings by ExpCard class. If not default, path to the persona file should be correctly provided. File Should be formated in .json file with 'persona_statements' as key and list of string values. List values from the file stored in key: persona_roles.",
     )
     task_file: dict | FilePath | None = Field(
-        default=Path(datasets.__file__).parent/"default_survey.json",
+        default=Path(datasets.__file__).parent/"prompts"/"defaults"/"default_survey.json",
         description="Task to run in the scanner. JSON file format with a psychscanner task structure for survey or cognitive tasks. By default runs a VVIQ quesstionnaire with 16 items. On an item the AI responds with a rating value. The VVIQ-16-items suvey can be found as DEFAULT SURVEY in datasets/datasets.py",
     )
     task_context: Literal[True, False,None] = Field(

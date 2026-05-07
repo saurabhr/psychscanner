@@ -303,10 +303,13 @@ def to_csv(
     df, meta, base_dir = _source_to_df(source, expcard)
 
     if not df.is_empty():
+        taskname = df["taskname"][0] if "taskname" in df.columns else None
         if path is None:
-            taskname = df["taskname"][0] if "taskname" in df.columns else None
-            path = _auto_path({**meta, "taskname": taskname}, base_dir)
-        out = Path(path)
+            out = _auto_path({**meta, "taskname": taskname}, base_dir)
+        else:
+            out = Path(path)
+            if out.is_dir() or out.suffix == "":
+                out = _auto_path({**meta, "taskname": taskname}, out)
         out.parent.mkdir(parents=True, exist_ok=True)
         df.write_csv(out, separator=sep)
         print(f"Saved {len(df)} rows → {out}")
@@ -397,11 +400,13 @@ def concat_csv(
 
     combined = pl.concat(aligned, rechunk=True)
 
+    taskname = combined["taskname"][0] if "taskname" in combined.columns else None
     if path is None:
-        taskname = combined["taskname"][0] if "taskname" in combined.columns else None
-        path = _auto_path({**first_meta, "taskname": taskname}, first_base)
-
-    out = Path(path)
+        out = _auto_path({**first_meta, "taskname": taskname}, first_base)
+    else:
+        out = Path(path)
+        if out.is_dir() or out.suffix == "":
+            out = _auto_path({**first_meta, "taskname": taskname}, out)
     out.parent.mkdir(parents=True, exist_ok=True)
     combined.write_csv(out, separator=sep)
     print(f"Saved {len(combined)} rows from {len(frames)} source(s) → {out}")
