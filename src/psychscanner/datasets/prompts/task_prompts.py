@@ -174,36 +174,22 @@ def gen_trial_promptdata(expcard: Any) -> dict:
     """
     task_data = expcard.task_data
     exp_trials_raw = task_data["items"]
-    chain_codes = []
     trials = []
-    for i,(trid,tr) in enumerate(exp_trials_raw.items()):
-        trial_chain_code = []
+    for trid, tr in exp_trials_raw.items():
         for trstim in tr:
             trstim["taskname"] = task_data["on_file"]["taskname"]
             trstim["tasktype"] = task_data["on_file"]["tasktype"]
             trstim["context_present"] = task_data["on_file"]["context_present"]
-            trstim["context"]= trstim["trcode"].split("_")[0],
+            trstim["context"] = trstim["trcode"].split("_")[0],
             trstim["context_item"] = task_data["on_file"]["contexts"][
                 task_data["on_file"]["contexts_id"].index(trstim["trcode"].split("_")[0])
             ]
             trstim["trid"] = trid
             trstim["chain_type"] = task_data["chain_type"]
             trstim["hmsg"] = gen_stimulus_prompt(trstim)
-            #trials.append(trstim)
-            if trstim["chain_type"] == "item":
-                trial_chain_code.append(i)
-            if trstim["chain_type"] == "trial":
-                trial_chain_code.append(trstim["trcode"])
-            if trstim["chain_type"] == "task":
-                trial_chain_code.append("0")
-            if trstim["tasktype"] =="episodic":
-                trstim["esys_message"] = None # episodic system message added to top level system messsage.
             trials.append(copy.deepcopy(trstim))
 
-        chain_codes.append(trial_chain_code)
-        
     return {
         "trials": trials,
-        "chain_codes": chain_codes,
         "chain_type": task_data["chain_type"],
     }

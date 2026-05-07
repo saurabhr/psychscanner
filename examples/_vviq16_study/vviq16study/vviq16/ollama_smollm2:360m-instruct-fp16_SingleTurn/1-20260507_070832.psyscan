@@ -1,0 +1,1188 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The exact contour of face, head, shoulders and body.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "098b911b-d8d2-441c-adb0-8c090cc56b87"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The exact contour of face, head, shoulders and body.",
+            "trcode": "S1_1",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S1"
+            ],
+            "context_item": "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+            "trid": "S1_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The exact contour of face, head, shoulders and body.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "098b911b-d8d2-441c-adb0-8c090cc56b87"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "4d6566b3-bd70-4af8-bba1-285b1cc4e7eb",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The exact contour of face, head, shoulders and body.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "098b911b-d8d2-441c-adb0-8c090cc56b87"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "4d6566b3-bd70-4af8-bba1-285b1cc4e7eb",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S1_1",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Characteristic poses of head, attitudes of body, etc.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "c2cd8aa9-3c1d-42e4-874f-6d8f5848f61c"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "Characteristic poses of head, attitudes of body, etc.",
+            "trcode": "S1_2",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S1"
+            ],
+            "context_item": "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+            "trid": "S1_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Characteristic poses of head, attitudes of body, etc.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "c2cd8aa9-3c1d-42e4-874f-6d8f5848f61c"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 3}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "9dfe6716-e44e-4636-ac3e-d0452e8d8576",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Characteristic poses of head, attitudes of body, etc.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "c2cd8aa9-3c1d-42e4-874f-6d8f5848f61c"
+                    },
+                    {
+                        "content": "{'Vividness': 3}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "9dfe6716-e44e-4636-ac3e-d0452e8d8576",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S1_2",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The precise carriage, length of step, etc. in walking.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "c7ffb728-9f03-4733-943b-036ea34fd279"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The precise carriage, length of step, etc. in walking.",
+            "trcode": "S1_3",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S1"
+            ],
+            "context_item": "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+            "trid": "S1_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The precise carriage, length of step, etc. in walking.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "c7ffb728-9f03-4733-943b-036ea34fd279"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "b6b9148d-f364-4c1b-a095-48edae9ad164",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The precise carriage, length of step, etc. in walking.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "c7ffb728-9f03-4733-943b-036ea34fd279"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "b6b9148d-f364-4c1b-a095-48edae9ad164",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S1_3",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The different colours worn in some familiar clothes.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "f61e827e-8ac0-4e20-ac52-5c84abb3c549"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The different colours worn in some familiar clothes.",
+            "trcode": "S1_4",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S1"
+            ],
+            "context_item": "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+            "trid": "S1_4",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The different colours worn in some familiar clothes.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "f61e827e-8ac0-4e20-ac52-5c84abb3c549"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "59eb48bc-9774-4406-ba91-323764ce54a4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The different colours worn in some familiar clothes.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "f61e827e-8ac0-4e20-ac52-5c84abb3c549"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "59eb48bc-9774-4406-ba91-323764ce54a4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S1_4",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 4,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sun is rising above the horizon into a hazy sky.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "b477c448-efb3-4f92-b217-1d77637aa4da"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The sun is rising above the horizon into a hazy sky.",
+            "trcode": "S2_1",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S2"
+            ],
+            "context_item": "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+            "trid": "S2_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sun is rising above the horizon into a hazy sky.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "b477c448-efb3-4f92-b217-1d77637aa4da"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "8e4b53f4-2e3a-433e-8de1-d362379a6219",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sun is rising above the horizon into a hazy sky.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "b477c448-efb3-4f92-b217-1d77637aa4da"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "8e4b53f4-2e3a-433e-8de1-d362379a6219",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S2_1",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 5,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sky clears and surrounds the sun with blueness.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "90e59f71-fde2-496e-8ce8-0633eed2ff72"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The sky clears and surrounds the sun with blueness.",
+            "trcode": "S2_2",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S2"
+            ],
+            "context_item": "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+            "trid": "S2_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sky clears and surrounds the sun with blueness.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "90e59f71-fde2-496e-8ce8-0633eed2ff72"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 3}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "ee701a85-202e-4cc0-8162-5cf70a42805e",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The sky clears and surrounds the sun with blueness.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "90e59f71-fde2-496e-8ce8-0633eed2ff72"
+                    },
+                    {
+                        "content": "{'Vividness': 3}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "ee701a85-202e-4cc0-8162-5cf70a42805e",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S2_2",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 6,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Clouds. A storm blows up, with flashes of lightning strikes.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "249c0a52-4c7c-4a81-bbaa-abad4a96e0d5"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "Clouds. A storm blows up, with flashes of lightning strikes.",
+            "trcode": "S2_3",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S2"
+            ],
+            "context_item": "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+            "trid": "S2_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Clouds. A storm blows up, with flashes of lightning strikes.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "249c0a52-4c7c-4a81-bbaa-abad4a96e0d5"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "c2bb0739-1bb1-4ddd-9beb-abeade8d9ca5",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"Clouds. A storm blows up, with flashes of lightning strikes.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "249c0a52-4c7c-4a81-bbaa-abad4a96e0d5"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "c2bb0739-1bb1-4ddd-9beb-abeade8d9ca5",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S2_3",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 7,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A rainbow appears.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "02da48c1-8a0e-4cfc-99a3-839229a19a62"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "A rainbow appears.",
+            "trcode": "S2_4",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S2"
+            ],
+            "context_item": "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+            "trid": "S2_4",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A rainbow appears.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "02da48c1-8a0e-4cfc-99a3-839229a19a62"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "0023c988-6f9b-416b-85ce-f14cec12dc2f",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A rainbow appears.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "02da48c1-8a0e-4cfc-99a3-839229a19a62"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "0023c988-6f9b-416b-85ce-f14cec12dc2f",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S2_4",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 8,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The overall appearance of the shop from the opposite side of the road.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "c6298c69-8b7f-4ed8-94de-907d53522ee2"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The overall appearance of the shop from the opposite side of the road.",
+            "trcode": "S3_1",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S3"
+            ],
+            "context_item": "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+            "trid": "S3_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The overall appearance of the shop from the opposite side of the road.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "c6298c69-8b7f-4ed8-94de-907d53522ee2"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "22c2521f-e740-4ca1-b31c-11605ad11497",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The overall appearance of the shop from the opposite side of the road.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "c6298c69-8b7f-4ed8-94de-907d53522ee2"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "22c2521f-e740-4ca1-b31c-11605ad11497",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S3_1",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 9,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A window display including colour, shape and details of the articles in it.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "247f8e5e-5208-437d-b35b-ac0ba32b4457"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "A window display including colour, shape and details of the articles in it.",
+            "trcode": "S3_2",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S3"
+            ],
+            "context_item": "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+            "trid": "S3_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A window display including colour, shape and details of the articles in it.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "247f8e5e-5208-437d-b35b-ac0ba32b4457"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 3}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "6ff5f4b6-92c7-4651-8459-619be12f6b87",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A window display including colour, shape and details of the articles in it.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "247f8e5e-5208-437d-b35b-ac0ba32b4457"
+                    },
+                    {
+                        "content": "{'Vividness': 3}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "6ff5f4b6-92c7-4651-8459-619be12f6b87",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S3_2",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 10,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You are near the entrance. The colour, shape and details of the door.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "43424cdf-4879-4d00-a862-79469412f2a8"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "You are near the entrance. The colour, shape and details of the door.",
+            "trcode": "S3_3",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S3"
+            ],
+            "context_item": "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+            "trid": "S3_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You are near the entrance. The colour, shape and details of the door.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "43424cdf-4879-4d00-a862-79469412f2a8"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "9af3396c-da11-4fb5-8848-0ab98ef8f6f4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You are near the entrance. The colour, shape and details of the door.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "43424cdf-4879-4d00-a862-79469412f2a8"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "9af3396c-da11-4fb5-8848-0ab98ef8f6f4",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S3_3",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 11,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You enter the shop and go to the counter. The counter assistant serves you.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "2751f80a-5509-420c-9e93-7a55219ac062"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "You enter the shop and go to the counter. The counter assistant serves you.",
+            "trcode": "S3_4",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S3"
+            ],
+            "context_item": "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+            "trid": "S3_4",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You enter the shop and go to the counter. The counter assistant serves you.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "2751f80a-5509-420c-9e93-7a55219ac062"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 3}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "44e83926-35ec-42d9-a3c5-d3166f12506a",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"You enter the shop and go to the counter. The counter assistant serves you.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "2751f80a-5509-420c-9e93-7a55219ac062"
+                    },
+                    {
+                        "content": "{'Vividness': 3}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "44e83926-35ec-42d9-a3c5-d3166f12506a",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S3_4",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 12,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The contours of the landscape.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "51de5929-2384-47a8-9beb-8bd68d3d85b9"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The contours of the landscape.",
+            "trcode": "S4_1",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S4"
+            ],
+            "context_item": "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.",
+            "trid": "S4_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The contours of the landscape.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "51de5929-2384-47a8-9beb-8bd68d3d85b9"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 3}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "ef376777-ec16-4fcc-9c61-b31807f1a99e",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The contours of the landscape.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "51de5929-2384-47a8-9beb-8bd68d3d85b9"
+                    },
+                    {
+                        "content": "{'Vividness': 3}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "ef376777-ec16-4fcc-9c61-b31807f1a99e",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S4_1",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 13,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the trees.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "f0b003b3-9e44-4767-b508-a24a1d092ea0"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The colour and shape of the trees.",
+            "trcode": "S4_2",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S4"
+            ],
+            "context_item": "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.",
+            "trid": "S4_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the trees.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "f0b003b3-9e44-4767-b508-a24a1d092ea0"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "67a24310-fa28-4839-b8ee-86af04c06232",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the trees.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "f0b003b3-9e44-4767-b508-a24a1d092ea0"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "67a24310-fa28-4839-b8ee-86af04c06232",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S4_2",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 14,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the lake in the scene.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "07cedf3f-3731-45ed-9681-6bc466ea51f2"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "The colour and shape of the lake in the scene.",
+            "trcode": "S4_3",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S4"
+            ],
+            "context_item": "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.",
+            "trid": "S4_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the lake in the scene.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "07cedf3f-3731-45ed-9681-6bc466ea51f2"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "48f12229-9b81-4941-bd56-87b44fdba932",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"The colour and shape of the lake in the scene.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "07cedf3f-3731-45ed-9681-6bc466ea51f2"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "48f12229-9b81-4941-bd56-87b44fdba932",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S4_3",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        },
+        {
+            "trial_idx": 15,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A strong wind blows on the trees and on the lake causing waves.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "cf889684-0779-4741-b07d-fe405914207d"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+            "stimulus": "A strong wind blows on the trees and on the lake causing waves.",
+            "trcode": "S4_4",
+            "taskname": "vviq16",
+            "tasktype": "imagery",
+            "context_present": true,
+            "context": [
+                "S4"
+            ],
+            "context_item": "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.",
+            "trid": "S4_4",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A strong wind blows on the trees and on the lake causing waves.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "cf889684-0779-4741-b07d-fe405914207d"
+            },
+            "pred_resp": {
+                "content": "{'Vividness': 4}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "a2b7be22-4849-43e3-a458-c073f262d82b",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye.\",\n    \"TRIAL\": \"A strong wind blows on the trees and on the lake causing waves.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "cf889684-0779-4741-b07d-fe405914207d"
+                    },
+                    {
+                        "content": "{'Vividness': 4}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "a2b7be22-4849-43e3-a458-c073f262d82b",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
+                "trcode": "S4_4",
+                "parser": null
+            },
+            "trace_id": "20260507T07-08-06vviq16studySingleTurnvviq161",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+        }
+    ]
+}

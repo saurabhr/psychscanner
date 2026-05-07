@@ -44,7 +44,8 @@ class ScannerModel:
             ),
             memory_type=self.expcard.card_in.memory,
             memory_k=self.expcard.card_in.memory_k,
-            chain_type = self.expcard.task_data["chain_type"],
+            summary_k=self.expcard.card_in.summary_k,
+            chain_type=self.expcard.task_data["chain_type"],
             system_msg=None,
             parser=self.expcard.parser,
             parser_raw=self.expcard.card_in.parser_raw,
@@ -209,9 +210,7 @@ class ScannerModel:
             feedback = self.feedback
 
         if feedback_fn is None:
-            if feedback == "0":
-                feedback_fn = None
-            elif feedback == "1":
+            if feedback:
                 feedback_fn = self.expcard.card_in.feedback_fn
 
         # self.tunnel_data

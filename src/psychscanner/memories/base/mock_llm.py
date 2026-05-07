@@ -182,7 +182,7 @@ class ChatMockModel(BaseChatModel):
 
 if __name__ == "__main__":
     # REF: https://python.langchain.com/docs/how_to/custom_chat_model/
-    model = ChatMockModel(repeat_buffer_length=3, model="psychscanner_mock_model")
+    model = ChatMockModel(repeat_buffer_length=10, model="psychscanner_mock_model")
 
     click.echo(
         model.invoke(

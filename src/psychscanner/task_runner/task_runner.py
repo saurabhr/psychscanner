@@ -1,9 +1,29 @@
 from __future__ import annotations
+
+import ast
+import json
+from typing import Callable
+
 from tqdm import tqdm
 from langchain_core.messages import HumanMessage
 import click
-from typing import Optional
-import json
+
+
+def _parse_response(pred_resp, parser_status: str) -> dict:
+    """Convert an AIMessage into a plain dict for feedback handlers.
+
+    For structured output, `pred_resp.content` is the string repr of a
+    pydantic `.model_dump()`, so we use ast.literal_eval.  Unstructured
+    responses are wrapped in {"content": ...}.
+    """
+    content = pred_resp.content
+    if parser_status == "1":
+        try:
+            return ast.literal_eval(content)
+        except Exception:
+            pass
+    return {"content": content}
+
 
 class TaskRunner:
     def __init__(
@@ -15,8 +35,8 @@ class TaskRunner:
         chain_type: str = None,
         tunnel=None,
         hmsg="hmsg",
-        feedback=None,
-        feedback_fn=None,
+        feedback: bool = False,
+        feedback_fn: Callable | None = None,
     ) -> None:
         self.test_agent = scanning_agent
         self.trace_cfg = trace_cfg
@@ -28,124 +48,119 @@ class TaskRunner:
         if self.chain_type is None:
             self.chain_type = trace_cfg["chain_type"]
 
-
         self.stimulus_key = hmsg
         self.task_recorder = []
 
         self.trial_response = None
-        self.input_dict = {} # trial input
-        self.pred_dict = {} # prediction input
+        self.input_dict = {}
+        self.pred_dict = {}
         self.trial_prompt = None
         self.tr_idx = None
-        self.tr_ai_resp_value = None
-        if self.test_agent.parser == "0":
-            self.parser_status = "0"
-        else:
-            self.parser_status = "1"
+        self.parser_status = "0"
 
-        self.stim_collector = []
-
-        self.feedback = feedback
-        self.feedback_fn = feedback_fn  # eval("Feedback")
-        self.fb_response = None
+        # Normalize legacy "0"/"1" strings to bool
+        if isinstance(feedback, str):
+            feedback = feedback == "1"
+        self.feedback: bool = bool(feedback)
+        self.feedback_fn = feedback_fn
+        self.fb_response: str | None = None
 
     def execute(
         self,
         test_agent: object = None,
         tasktrials: dict | None = None,
         disable_tqdm: bool = True,
-    ) -> list:  # noqa: FBT001, FBT002
-        """Executes the task trials and records the results.
+    ) -> list:
+        """Execute all task trials and return a list of per-trial result dicts.
 
-        Parameters:
+        Parameters
         ----------
-        ai_agent : object, optional
-            The AI agent used for predictions. Defaults to the instance's ai_agent.
-        tasktrials : dict, optional
-            A dictionary containing task trial data. Defaults to the instance's tasktrials.
-        disable_tqdm : bool, optional
-            Whether to disable the tqdm progress bar. Defaults to True.
+        test_agent:
+            AI agent; defaults to the instance's scanning_agent.
+        tasktrials:
+            Task trial data; defaults to the instance's tasktrials.
+        disable_tqdm:
+            When True the tqdm bar is hidden.
 
-        Returns:
+        Returns
         -------
         list
-            A list of dictionaries containing the results of each trial.
+            One dict per trial containing inputs, prompt, prediction, and
+            optional feedback.
         """
         click.echo("----<>---- task running")
         if test_agent is None:
             test_agent = self.test_agent
-
         if tasktrials is None:
             tasktrials = self.tasktrials
 
         trial_prompts = tasktrials["trials"]
 
+        # Instantiate the feedback handler once for the whole simulation so that
+        # cross-trial state (e.g. word lists) accumulates correctly.
+        fb_handler = None
+        if self.feedback and self.feedback_fn is not None:
+            fb_handler = self.feedback_fn()
+
+        self.fb_response = None
+
         for self.tr_idx, self.trial_prompt in tqdm(
-            enumerate(trial_prompts), disable=disable_tqdm):
+            enumerate(trial_prompts), disable=disable_tqdm
+        ):
             if self.trial_prompt["tasktype"] == "episodic_system":
                 if isinstance(self.trial_prompt["system_message"], dict):
-                    esystem_message = json.dumps(self.trial_prompt["system_message"])
-                    self.system_message = esystem_message
+                    self.system_message = json.dumps(
+                        self.trial_prompt["system_message"]
+                    )
                 else:
-                    self.system_message = self.system_message + "\n" + self.trial_prompt["system_message"]
+                    self.system_message = (
+                        self.system_message + "\n" + self.trial_prompt["system_message"]
+                    )
+
+            # Per-trial parser: trial JSON overrides card-level parser
+            trial_parser = self.trial_prompt.get("parser") or self.test_agent.parser
+            self.parser_status = "0" if trial_parser is None else "1"
+
             self.input_dict = {
                 "inputs": [self.trial_prompt[self.stimulus_key]],
                 "system_message": self.system_message,
                 "trcode": self.trial_prompt["trcode"],
+                "parser": self.trial_prompt.get("parser"),  # str or None
             }
-            if self.feedback == "1":
-                """
-                feedback_model = self.feedback_fn(
-                    trial_data=self.trial_prompt,
-                    pred_dict=self.pred_dict,
-                    check_input=self.input_dict,
-                    parser_status=self.parser_status,
-                    llmobj=self.test_agent,
-                    trial_item_collector=self.stim_collector,
+
+            # Inject previous trial's feedback when enabled and available.
+            # The per-trial "fb" key (default True when absent) opts in/out.
+            trial_wants_fb = self.trial_prompt.get("fb", True)
+            if fb_handler is not None and self.fb_response is not None and trial_wants_fb:
+                self.input_dict = fb_handler.inject_feedback(
+                    self.input_dict, self.fb_response
                 )
-                """
-                feedback_model = self.feedback_fn(trial_data=self.trial_prompt)
-                if self.fb_response is not None:
-                    self.input_dict = feedback_model.update_trial_stim(
-                        finput = self.input_dict, fb_response =self.fb_response
-                    )
-                    self.stim_collector += self.input_dict
+
+            # ── invoke the agent ──────────────────────────────────────────
+            # "item" chain type also needs a thread_id when the graph uses
+            # MemorySaver (Convo memory).  Use the task-scoped id so that
+            # conversation accumulates across all trials in one simulation run.
+            # Passing thread_id to a SingleTurn graph (no checkpointer) is
+            # silently ignored by LangGraph.
             thread_id = None
             if self.chain_type == "trial":
                 thread_id = self.trace_cfg["trial"] + self.trial_prompt["trcode"]
-            elif self.chain_type == "task":
+            elif self.chain_type in ["task", "item"]:
                 thread_id = self.trace_cfg["task"]
-            elif self.chain_type == "item":
-                thread_id = None
 
-            if self.chain_type in ["trial","task"]:
-                config = {
-                    "configurable": {
-                        "thread_id": thread_id,
-                    }
-                }
-                self.pred_dict = self.test_agent.ai_app.invoke(self.input_dict,config=config)
+            if thread_id is not None:
+                config = {"configurable": {"thread_id": thread_id}}
+                self.pred_dict = test_agent.ai_app.invoke(self.input_dict, config=config)
             else:
-                self.pred_dict = self.test_agent.ai_app.invoke(
-                    self.input_dict
-                )
+                self.pred_dict = test_agent.ai_app.invoke(self.input_dict)
 
             pred_resp = self.pred_dict["inputs"][-1]
-            #click.echo(f"--<input_dict>-- {self.input_dict}")
-            #click.echo(f"---<pred_dict>-- {pred_resp}")
-            #click.echo(f"---<chain_type>-- {self.chain_type}")
-            #click.echo(f"---<thread_id>-- {thread_id}")
-            #click.echo(f"---<feedback flag>-- {self.feedback}")
-            if self.feedback == "1":
-                
-                self.fb_response = feedback_model.generate_feedback(
-                    trdata=self.trial_prompt,
-                    pred_dict=pred_resp,
-                    input_dict=self.input_dict,
-                    parser_status=self.parser_status,
-                    trial_item_collector=self.stim_collector,
-                )
 
+            # ── generate feedback for next trial ──────────────────────────
+            self.fb_response = None
+            if fb_handler is not None and trial_wants_fb:
+                parsed_resp = _parse_response(pred_resp, self.parser_status)
+                self.fb_response = fb_handler.on_response(self.trial_prompt, parsed_resp)
 
             self.trial_response = {
                 "trial_idx": self.tr_idx,
@@ -156,6 +171,7 @@ class TaskRunner:
                 "trace_id": thread_id,
                 "chain_type": self.chain_type,
                 "system_message": self.system_message,
+                "fb_response": self.fb_response,
             }
             self.task_recorder.append(self.trial_response)
 

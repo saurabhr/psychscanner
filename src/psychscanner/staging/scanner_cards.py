@@ -7,18 +7,22 @@ Classes for ExpCard, ModelCard, DataCard and their validation.
 
 from __future__ import annotations
 
+import json
 from ast import literal_eval
 from pathlib import Path
 from typing import Any, Literal, Callable
 
 import click
-from pydantic import BaseModel, Field, FilePath
+from pydantic import BaseModel, ConfigDict, Field, FilePath, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from psychscanner import datasets
 from psychscanner.datasets import load_datasets
 from psychscanner.session_tunnel import SessionTunnel
-from psychscanner.datasets.prompts.parser import *
+from psychscanner.parsers import get_parser, resolve_parser, PARSER_REGISTRY
+
+# Sentinel — distinguishes "caller did not pass" from "caller passed None"
+_UNSET: object = object()
 
 class Settings(BaseSettings):
     """Settings for configuring the application.
@@ -32,6 +36,8 @@ class Settings(BaseSettings):
 
 class ExpCardInit(BaseModel):
     """Experiment Card for Psychscanner."""
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     model: str = Field(
         default="mock-chat-model",
@@ -51,7 +57,20 @@ class ExpCardInit(BaseModel):
     )
     memory_k: int | None = Field(
         default=-1,
-        description="Memory k. Default is -1 the memory models run with default settings. In Convo, k stroes last k interactions, in summary k only keeps summary of last k interactions. In ConvoSummaryK, k is the number of recent interactions kept as conversation while the past interactions are summarized",
+        description=(
+            "Max number of messages kept in full in the conversation context. "
+            "Default -1 keeps unlimited history. "
+            "When set to N, only the last N messages are passed to the model."
+        ),
+    )
+    summary_k: int | None = Field(
+        default=0,
+        description=(
+            "Summarization batch size. Only active in Convo memory mode with memory_k set. "
+            "0 = no summarization, older messages beyond memory_k are simply dropped. "
+            "N = when overflow messages reach N, they are summarized into a rolling summary "
+            "that is prepended to the system message so context is preserved."
+        ),
     )
 
     persona_files: list[FilePath] | None = Field(
@@ -82,9 +101,17 @@ class ExpCardInit(BaseModel):
         default=[],
         description="Tags for the project. Default is an empty list. If not default, should be correctly provided. Tags are used to create a folder in the current working directory to store the session files. files are saved in submodules in datasets/defult_project/<projectname timestamped>. If a folder location is given then the data is saved there and if the folder does not exist then it is created. If the folder location is not given then the data is saved in the current working directory by creading a folder with the project name.",
     )
-    parser: str = Field(
-        default = "0",
-        description = "A callalable pydantic object as string or '0' for no parser. Should be defined in the script in the staging.",
+    parser: str | type[BaseModel] | Callable | None = Field(
+        default=None,
+        description=(
+            "Structured output parser. Accepts: "
+            "None or '0' (no parser); "
+            "'1' (resolve by name from task JSON 'parser' field); "
+            "a registered parser name string e.g. 'DefaultLiteralVivid15'; "
+            "a BaseModel subclass passed directly; "
+            "a callable for per-trial dispatch e.g. "
+            "lambda trcode: ParserA if 'test' in trcode else ParserB."
+        ),
     )
     parser_raw: bool = Field(
         default=False,
@@ -132,15 +159,33 @@ class ExpCardInit(BaseModel):
         default=None,
         description="'item' is for when only one stimulus is in the trial. 'trial' is for when there is multiple stimulus in a trial. 'task' is for previous trial memory. if given the overrides the 'chain_type' parameter in the task json file otherwise used from the json file."    )
 
-    feedback: Literal["0", "1"] = Field(
-        default="0",
-        description="Feedback on trials. Trial prompt will have a key called fb as true/false on every trial trompt, if fb key not present in trial prompt dictionary and given 1 for fbactive than the user settings is overwritten to no feedback. if activefb = 1 and fb key in true then the fb is should be explicilty coded or else no feedback is given. Feedback function is stored in key injectfun",
-    )  # defult is False, else
+    feedback: bool = Field(
+        default=False,
+        description=(
+            "Enable trial-level feedback. Set True (or '1' for backward compatibility) to activate. "
+            "When enabled, feedback_fn must also be provided. "
+            "Each trial may include an 'fb' key (True/False) to opt individual trials in or out of feedback."
+        ),
+    )
+
+    @field_validator("feedback", mode="before")
+    @classmethod
+    def _coerce_feedback(cls, v):
+        if v in ("0", False, 0, None, ""):
+            return False
+        if v in ("1", True, 1):
+            return True
+        raise ValueError(f"feedback must be a bool or '0'/'1', got {v!r}")
 
     feedback_fn: Callable | None = Field(
         default=None,
-        description="Should be provided when feedback is '1' otherwise resets Feedback to '0'. Feedback function to use. Default is None. If not default, should be correctly provided. Feedback function is used to provide feedback on the trials. The feedback function should be a callable object that takes the trial data as input and returns the feedback as output. The feedback function should be defined in the script in the staging.",
-    )  # defult is False, else
+        description=(
+            "A FeedbackBase subclass (the class itself, not an instance). "
+            "Required when feedback=True. psychscanner instantiates it once per "
+            "participant simulation so cross-trial state can live safely in self. "
+            "Must implement on_response(trial, response) -> str | None."
+        ),
+    )
 
 
 class ExpCard:
@@ -208,25 +253,263 @@ class ExpCard:
         if self.card_in.parser_config is None:
             self.card_in.parser_config = {"method": "json_schema"}
 
-        if self.card_in.parser == "0":
-            self.parser = self.card_in.parser
+        try:
+            self.parser = resolve_parser(
+                self.card_in.parser,
+                task_parser_name=self.task_data.get("parser"),
+            )
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(str(exc)) from exc
 
-        elif self.card_in.parser == "1":
-            self.parser = self.task_data["parser"]
-            if isinstance(self.card_in.parser, str):
-                self.parser = eval(self.parser) # try to find its alternative.  # noqa: S307
-                if not issubclass(self.parser, BaseModel):
-                    msg = "Not valid parser provided."
-                    raise TypeError(msg)
-        elif self.card_in.parser == "dynamic":
-            self.parser = "dynamic"
-        else:
-            self.parser = self.card_in.parser
-            if not issubclass(self.parser, BaseModel):
-                msg = "Not valid parser provided."
-                raise TypeError(msg)
+        if self.card_in.feedback and self.card_in.feedback_fn is None:
+            raise ValueError(
+                "feedback=True requires feedback_fn to be set. "
+                "Provide a FeedbackBase subclass (not an instance) as feedback_fn."
+            )
 
         click.echo("----<PROJECT AND DATA ROOT DIRECTORY>----")
         click.echo(f"\tProject root dir: {self.card_in.proj_dir}")
         click.echo(f"\tSimulation data root dir: {self.data_root_dir}")
         click.echo("----<>----")
+
+
+# ── Scalar fields that round-trip cleanly through JSON ───────────────────────
+_SCALAR_FIELDS: tuple[str, ...] = (
+    "model", "family", "parameters", "memory", "memory_k", "summary_k",
+    "task_context", "tunnel_status", "tunnel_k", "projectname", "tags",
+    "parser_raw", "parser_config", "cogtype", "nsim", "chain_type",
+    "feedback", "enabletqdm",
+)
+
+
+def save_expcard(
+    card_in: ExpCardInit,
+    path: str | Path | None = None,
+) -> dict:
+    """Serialize an ``ExpCardInit`` to a portable, JSON-safe dict.
+
+    The returned dict (and the file written when *path* is given) contains
+    everything needed to reproduce the experiment on a different machine:
+
+    - **task_file** and **persona_files** are embedded as inline JSON, so the
+      recipient does not need local copies of those files.
+    - Registered parsers are stored by name string (re-imported via the
+      registry on load).
+    - Custom parser classes and callable dispatch functions are stored as
+      ``module + qualname`` so they can be re-imported if the module is
+      installed on the recipient's machine.
+    - ``feedback_fn`` is stored the same way.
+
+    Machine-specific fields (``proj_dir``, ``login_env``) and runtime-only
+    fields (``session_tunnel``, ``persona_data``, ``task_data``,
+    ``trial_parsers``) are intentionally omitted.
+
+    Parameters
+    ----------
+    card_in:
+        The experiment card to serialize.
+    path:
+        Optional file path. When given, the dict is also written as JSON.
+
+    Returns
+    -------
+    dict
+        Portable representation. Pass to :func:`load_expcard` to reconstruct.
+
+    Examples
+    --------
+    >>> from psychscanner import ExpCardInit, save_expcard, load_expcard
+    >>> card = ExpCardInit(model="smollm2:360m-instruct-fp16", family="ollama")
+    >>> save_expcard(card, "my_experiment.json")
+    >>> card2 = load_expcard("my_experiment.json")
+    """
+    from datetime import datetime, timezone
+    import psychscanner as _psy
+
+    d: dict[str, Any] = {
+        "_psychscanner_version": _psy.__version__,
+        "_saved_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+    # ── scalar / simple fields ────────────────────────────────────────────────
+    for field in _SCALAR_FIELDS:
+        d[field] = getattr(card_in, field)
+
+    # ── task_file — embed inline ──────────────────────────────────────────────
+    tf = card_in.task_file
+    if tf is None:
+        d["task_file"] = None
+    elif isinstance(tf, (str, Path)):
+        d["task_file"] = json.loads(Path(tf).read_text())
+    else:
+        d["task_file"] = tf  # already a dict
+
+    # ── persona_files — embed inline ──────────────────────────────────────────
+    pf = card_in.persona_files
+    if pf is None:
+        d["_persona_embedded"] = None
+    else:
+        pf_list = pf if isinstance(pf, list) else [pf]
+        d["_persona_embedded"] = [
+            json.loads(Path(p).read_text()) for p in pf_list
+        ]
+
+    # ── parser ────────────────────────────────────────────────────────────────
+    parser = card_in.parser
+    if parser is None or isinstance(parser, str):
+        # None / "0" / "1" / any registered name string
+        d["parser"] = parser
+    elif isinstance(parser, type) and issubclass(parser, BaseModel):
+        # Registered class → name string; custom class → module+qualname dict
+        if parser.__name__ in PARSER_REGISTRY:
+            d["parser"] = parser.__name__
+        else:
+            d["parser"] = {
+                "__class__": {
+                    "module": parser.__module__,
+                    "qualname": parser.__qualname__,
+                }
+            }
+    elif callable(parser):
+        d["parser"] = {
+            "__callable__": {
+                "module": getattr(parser, "__module__", None),
+                "qualname": getattr(parser, "__qualname__", None),
+            }
+        }
+    else:
+        d["parser"] = None
+
+    # ── feedback_fn ───────────────────────────────────────────────────────────
+    fb_fn = card_in.feedback_fn
+    if fb_fn is None:
+        d["feedback_fn"] = None
+    else:
+        d["feedback_fn"] = {
+            "module": getattr(fb_fn, "__module__", None),
+            "qualname": getattr(fb_fn, "__qualname__", None),
+        }
+
+    if path is not None:
+        Path(path).write_text(json.dumps(d, indent=2, ensure_ascii=False))
+
+    return d
+
+
+def load_expcard(
+    source: str | Path | dict,
+    *,
+    proj_dir: str | Path | None = None,
+    parser: type[BaseModel] | Callable | None = _UNSET,
+    feedback_fn: Callable | None = _UNSET,
+) -> ExpCardInit:
+    """Reconstruct an ``ExpCardInit`` from a dict or JSON file created by
+    :func:`save_expcard`.
+
+    Parameters
+    ----------
+    source:
+        File path (str or Path) or the dict returned by :func:`save_expcard`.
+    proj_dir:
+        Output root directory override.  If *None*, defaults to
+        ``~/psychscanner``.  The original ``proj_dir`` is not stored in the
+        portable file because it is machine-specific.
+    parser:
+        Override the saved parser.  Required when the original parser was a
+        lambda or a custom class that is not importable on the current machine.
+    feedback_fn:
+        Override the saved feedback handler class.  Required when the original
+        handler is not importable on the current machine.
+
+    Returns
+    -------
+    ExpCardInit
+        Ready to pass directly to ``ExpCard``.
+
+    Raises
+    ------
+    ImportError
+        If a custom parser class or feedback handler cannot be re-imported and
+        no override was supplied.
+
+    Examples
+    --------
+    >>> card = load_expcard("my_experiment.json")
+    >>> card = load_expcard("my_experiment.json", proj_dir="/data/results")
+    >>> card = load_expcard("my_experiment.json", parser=my_dispatch_fn)
+    """
+    import importlib
+
+    if isinstance(source, (str, Path)):
+        d: dict = json.loads(Path(source).read_text())
+    else:
+        d = dict(source)
+
+    kwargs: dict[str, Any] = {f: d[f] for f in _SCALAR_FIELDS if f in d}
+
+    # ── proj_dir ──────────────────────────────────────────────────────────────
+    kwargs["proj_dir"] = Path(proj_dir) if proj_dir is not None else Path.home() / "psychscanner"
+
+    # ── task_file — dict accepted directly by get_task_data ──────────────────
+    task_file = d.get("task_file")
+    if task_file is not None:
+        kwargs["task_file"] = task_file
+
+    # ── persona_files — write embedded dicts to a persistent sub-directory ───
+    persona_embedded = d.get("_persona_embedded")
+    if persona_embedded is not None:
+        portables_dir = kwargs["proj_dir"] / ".portable_personas"
+        portables_dir.mkdir(parents=True, exist_ok=True)
+        # Use the original save timestamp so repeated loads reuse the same files
+        ts = d.get("_saved_at", "").replace(":", "-")[:19]
+        persona_paths: list[Path] = []
+        for i, pdata in enumerate(persona_embedded):
+            p = portables_dir / f"persona_{ts}_{i}.json"
+            p.write_text(json.dumps(pdata, indent=2, ensure_ascii=False))
+            persona_paths.append(p)
+        kwargs["persona_files"] = persona_paths
+
+    # ── parser ────────────────────────────────────────────────────────────────
+    if parser is not _UNSET:
+        kwargs["parser"] = parser
+    else:
+        saved = d.get("parser")
+        if saved is None or isinstance(saved, str):
+            # None / "0" / "1" / registered name — resolve_parser handles it
+            kwargs["parser"] = saved
+        elif isinstance(saved, dict):
+            key = "__class__" if "__class__" in saved else "__callable__"
+            info = saved[key]
+            kind = "parser class" if key == "__class__" else "parser callable"
+            try:
+                mod = importlib.import_module(info["module"])
+                obj: Any = mod
+                for part in info["qualname"].split("."):
+                    obj = getattr(obj, part)
+                kwargs["parser"] = obj
+            except (ImportError, AttributeError) as exc:
+                raise ImportError(
+                    f"Cannot import {kind} '{info['module']}.{info['qualname']}': {exc}.\n"
+                    f"Pass it explicitly: load_expcard(..., parser=<your_{kind}>)"
+                ) from exc
+
+    # ── feedback_fn ───────────────────────────────────────────────────────────
+    if feedback_fn is not _UNSET:
+        kwargs["feedback_fn"] = feedback_fn
+    else:
+        saved_fn = d.get("feedback_fn")
+        if saved_fn is not None:
+            try:
+                mod = importlib.import_module(saved_fn["module"])
+                obj = mod
+                for part in saved_fn["qualname"].split("."):
+                    obj = getattr(obj, part)
+                kwargs["feedback_fn"] = obj
+            except (ImportError, AttributeError) as exc:
+                raise ImportError(
+                    f"Cannot import feedback handler "
+                    f"'{saved_fn['module']}.{saved_fn['qualname']}': {exc}.\n"
+                    f"Pass it explicitly: load_expcard(..., feedback_fn=MyHandler)"
+                ) from exc
+
+    return ExpCardInit(**kwargs)

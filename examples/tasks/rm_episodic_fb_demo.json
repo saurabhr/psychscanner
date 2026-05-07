@@ -1,0 +1,278 @@
+{
+  "tasktype": "episodic_system",
+  "taskname": "rm_2op_convo_fb",
+  "instructions": {
+    "definition": ""
+  },
+  "contexts": [
+    "perceived",
+    "imagined",
+    "test:perceived",
+    "test:imagined"
+  ],
+  "contexts_id": [
+    "perceived",
+    "imagined",
+    "test:perceived",
+    "test:imagined"
+  ],
+  "context_present": false,
+  "items": {
+    "imagined_1": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "sandpaper",
+            "word_2": "________"
+          }
+        },
+        "trcode": "imagined_1",
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task with two different components for successful response.",
+            "Each component refers to a unique problem about the task as described in the instructions below.",
+            "Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials in the word-pair task.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "WORD_PAIR_TASK": {
+              "**Identify the Word Pair**": "Look for the word pair, referred to as 'word_1' and 'word_2'.",
+              "**Check if 'word_2' is Provided**": [
+                "If 'word_2' is a complete and valid English word, report that word as it is.",
+                "If 'word_2' contains a blank value ('_______'), proceed to the next step."
+              ],
+              "**If 'word_2' is a blank in the word-pair then imagine**": [
+                "**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**"
+              ],
+              "You are **prohibted** to imagine": [
+                "Use of given 'word_1' in any form.",
+                "Compound words made of smaller word,",
+                "Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,",
+                "anything outside of the words would be not in a english dictionary.",
+                "Mathmetical or algebraic equations"
+              ],
+              "You are **allowed** to imagine": "singular english words that are **not** prohibited as described above."
+            },
+            "RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2": {
+              "definition": [
+                "Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.",
+                "It can be based on mutiple factors,for example:",
+                "similar sounding (phonetics),",
+                "meaning (semantics),",
+                "or categorical (whether the two words can related through common categories).",
+                ""
+              ],
+              "relatedness_rating_scale": [
+                "Use any value in the range of 0 to 100 in relatedness rating scale.",
+                "**0** signifies the words are **not at all related**.",
+                "**100** signifies the words **very highly related**.",
+                "Intermediate values between 0 and 100 denote intermediate values.",
+                "Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.",
+                "**ALWAYS FOLLOW THESE INSTRUCTION**"
+              ],
+              "type": "number"
+            }
+          }
+        }
+      }
+    ],
+    "perceived_2": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "sugar",
+            "word_2": "sweet"
+          }
+        },
+        "trcode": "perceived_2",
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task with two different components for successful response.",
+            "Each component refers to a unique problem about the task as described in the instructions below.",
+            "Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials in the word-pair task.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "WORD_PAIR_TASK": {
+              "**Identify the Word Pair**": "Look for the word pair, referred to as 'word_1' and 'word_2'.",
+              "**Check if 'word_2' is Provided**": [
+                "If 'word_2' is a complete and valid English word, report that word as it is.",
+                "If 'word_2' contains a blank value ('_______'), proceed to the next step."
+              ],
+              "**If 'word_2' is a blank in the word-pair then imagine**": [
+                "**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**"
+              ],
+              "You are **prohibted** to imagine": [
+                "Use of given 'word_1' in any form.",
+                "Compound words made of smaller word,",
+                "Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,",
+                "anything outside of the words would be not in a english dictionary.",
+                "Mathmetical or algebraic equations"
+              ],
+              "You are **allowed** to imagine": "singular english words that are **not** prohibited as described above."
+            },
+            "RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2": {
+              "definition": [
+                "Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.",
+                "It can be based on mutiple factors,for example:",
+                "similar sounding (phonetics),",
+                "meaning (semantics),",
+                "or categorical (whether the two words can related through common categories).",
+                ""
+              ],
+              "relatedness_rating_scale": [
+                "Use any value in the range of 0 to 100 in relatedness rating scale.",
+                "**0** signifies the words are **not at all related**.",
+                "**100** signifies the words **very highly related**.",
+                "Intermediate values between 0 and 100 denote intermediate values.",
+                "Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.",
+                "**ALWAYS FOLLOW THESE INSTRUCTION**"
+              ],
+              "type": "number"
+            }
+          }
+        }
+      }
+    ],
+    "imagined_3": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "suburb",
+            "word_2": "________"
+          }
+        },
+        "trcode": "imagined_3",
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task with two different components for successful response.",
+            "Each component refers to a unique problem about the task as described in the instructions below.",
+            "Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials in the word-pair task.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "WORD_PAIR_TASK": {
+              "**Identify the Word Pair**": "Look for the word pair, referred to as 'word_1' and 'word_2'.",
+              "**Check if 'word_2' is Provided**": [
+                "If 'word_2' is a complete and valid English word, report that word as it is.",
+                "If 'word_2' contains a blank value ('_______'), proceed to the next step."
+              ],
+              "**If 'word_2' is a blank in the word-pair then imagine**": [
+                "**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**"
+              ],
+              "You are **prohibted** to imagine": [
+                "Use of given 'word_1' in any form.",
+                "Compound words made of smaller word,",
+                "Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,",
+                "anything outside of the words would be not in a english dictionary.",
+                "Mathmetical or algebraic equations"
+              ],
+              "You are **allowed** to imagine": "singular english words that are **not** prohibited as described above."
+            },
+            "RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2": {
+              "definition": [
+                "Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.",
+                "It can be based on mutiple factors,for example:",
+                "similar sounding (phonetics),",
+                "meaning (semantics),",
+                "or categorical (whether the two words can related through common categories).",
+                ""
+              ],
+              "relatedness_rating_scale": [
+                "Use any value in the range of 0 to 100 in relatedness rating scale.",
+                "**0** signifies the words are **not at all related**.",
+                "**100** signifies the words **very highly related**.",
+                "Intermediate values between 0 and 100 denote intermediate values.",
+                "Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.",
+                "**ALWAYS FOLLOW THESE INSTRUCTION**"
+              ],
+              "type": "number"
+            }
+          }
+        }
+      }
+    ],
+    "perceived_4": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "chair",
+            "word_2": "cushion"
+          }
+        },
+        "trcode": "perceived_4",
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task with two different components for successful response.",
+            "Each component refers to a unique problem about the task as described in the instructions below.",
+            "Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials in the word-pair task.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "WORD_PAIR_TASK": {
+              "**Identify the Word Pair**": "Look for the word pair, referred to as 'word_1' and 'word_2'.",
+              "**Check if 'word_2' is Provided**": [
+                "If 'word_2' is a complete and valid English word, report that word as it is.",
+                "If 'word_2' contains a blank value ('_______'), proceed to the next step."
+              ],
+              "**If 'word_2' is a blank in the word-pair then imagine**": [
+                "**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**"
+              ],
+              "You are **prohibted** to imagine": [
+                "Use of given 'word_1' in any form.",
+                "Compound words made of smaller word,",
+                "Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,",
+                "anything outside of the words would be not in a english dictionary.",
+                "Mathmetical or algebraic equations"
+              ],
+              "You are **allowed** to imagine": "singular english words that are **not** prohibited as described above."
+            },
+            "RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2": {
+              "definition": [
+                "Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.",
+                "It can be based on mutiple factors,for example:",
+                "similar sounding (phonetics),",
+                "meaning (semantics),",
+                "or categorical (whether the two words can related through common categories).",
+                ""
+              ],
+              "relatedness_rating_scale": [
+                "Use any value in the range of 0 to 100 in relatedness rating scale.",
+                "**0** signifies the words are **not at all related**.",
+                "**100** signifies the words **very highly related**.",
+                "Intermediate values between 0 and 100 denote intermediate values.",
+                "Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.",
+                "**ALWAYS FOLLOW THESE INSTRUCTION**"
+              ],
+              "type": "number"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "chain_type": "task",
+  "trial_parsers": [],
+  "parser": "dynamic",
+  "postfix": "",
+  "prefix": "",
+  "_source_file": "rm_2op_convo_feedback_allparts.json",
+  "_source_repo": "rmllm/data/raw/run_tasks",
+  "_n_items_trimmed_to": 4
+}
