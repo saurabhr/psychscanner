@@ -28,7 +28,7 @@ card = ExpCardInit(model="gpt-4o-mini", family="openai", nsim=20)
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
 | `model` | `str` | `"mock-chat-model"` | LLM model name (e.g. `"gpt-4o"`, `"llama3.1:8b"`, `"claude-3-5-sonnet-20241022"`) |
-| `family` | `str` | `"mock-llm"` | Provider family — see [Supported Providers](../installation.md#set-api-keys) |
+| `family` | `str` | `"mock-llm"` | Provider family — see [Supported Providers](../installation.md#3-set-api-keys) |
 | `parameters` | `dict \| None` | `None` | Extra kwargs forwarded to the model constructor (e.g. `{"temperature": 0, "base_url": "..."}`) |
 
 ### Task & Persona

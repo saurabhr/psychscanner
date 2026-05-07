@@ -29,4 +29,4 @@ python examples/advanced/multi_persona.py
 
 ## Contributing Examples
 
-Have an interesting use case? [Contribute your example](../../CONTRIBUTING.md)!
+Have an interesting use case? Open an issue on [GitHub](https://github.com/saurabhr/psychscanner/issues)!

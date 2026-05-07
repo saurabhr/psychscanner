@@ -85,7 +85,7 @@ card.parameters = {
 The experimental task. Accepts:
 
 - A **file path** to a `.json` task file
-- An **inline dict** following the [task JSON schema](../guides/cognitive_tasks.md#task-json-schema)
+- An **inline dict** following the [task JSON schema](guides/cognitive_tasks.md#task-json-schema)
 - `None` — uses the built-in VVIQ-16 imagery questionnaire
 
 ### `cogtype`
@@ -164,7 +164,7 @@ Overrides the `chain_type` field in the task JSON.
 ### `parser`
 **Type:** `str | type[BaseModel] | Callable | None` | **Default:** `None`
 
-Controls structured output. See [Parser modes](expcard.md#parser-modes).
+Controls structured output. See [ExpCard API](api/expcard.md) for parser modes.
 
 ### `parser_raw`
 **Type:** `bool` | **Default:** `False`
