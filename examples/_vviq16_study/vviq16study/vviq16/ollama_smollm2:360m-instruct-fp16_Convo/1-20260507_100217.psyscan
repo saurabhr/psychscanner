@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                    "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -30,15 +30,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
             },
             "pred_resp": {
-                "content": "{'Vividness': 3}",
+                "content": "{'Vividness': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -51,15 +51,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -69,10 +69,10 @@
                 "trcode": "S1_1",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 1,
@@ -83,7 +83,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                    "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -104,15 +104,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
             },
             "pred_resp": {
-                "content": "{'Vividness': 2}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -125,15 +125,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -144,15 +144,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -162,10 +162,10 @@
                 "trcode": "S1_2",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 2,
@@ -176,7 +176,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                    "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -197,15 +197,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 2}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -218,15 +218,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -237,15 +237,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -256,15 +256,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -274,10 +274,10 @@
                 "trcode": "S1_3",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 3,
@@ -288,7 +288,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                    "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -309,15 +309,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -330,15 +330,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -349,15 +349,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -368,15 +368,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -387,15 +387,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -405,10 +405,10 @@
                 "trcode": "S1_4",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 4,
@@ -419,7 +419,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                    "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -440,7 +440,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                "id": "1588c058-a162-4598-855b-f5b776e2f58b"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -448,7 +448,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -461,15 +461,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -480,15 +480,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -499,15 +499,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -518,15 +518,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -537,7 +537,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -545,7 +545,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -555,10 +555,10 @@
                 "trcode": "S2_1",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 5,
@@ -569,7 +569,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                    "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -590,15 +590,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                "id": "8ad86058-0640-4d23-9d0b-56c389384603"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -611,15 +611,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -630,15 +630,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -649,15 +649,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -668,15 +668,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -687,7 +687,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -695,7 +695,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -706,15 +706,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -724,10 +724,10 @@
                 "trcode": "S2_2",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 6,
@@ -738,7 +738,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                    "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -759,15 +759,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 2}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -780,15 +780,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -799,15 +799,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -818,15 +818,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -837,15 +837,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -856,7 +856,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -864,7 +864,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -875,15 +875,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -894,15 +894,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -912,10 +912,10 @@
                 "trcode": "S2_3",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 7,
@@ -926,7 +926,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                    "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -947,15 +947,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -968,15 +968,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -987,15 +987,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1006,15 +1006,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1025,15 +1025,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1044,7 +1044,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1052,7 +1052,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1063,15 +1063,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1082,15 +1082,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1101,15 +1101,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1119,10 +1119,10 @@
                 "trcode": "S2_4",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 8,
@@ -1133,7 +1133,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                    "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1154,7 +1154,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1162,7 +1162,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1175,15 +1175,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1194,15 +1194,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1213,15 +1213,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1232,15 +1232,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1251,7 +1251,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1259,7 +1259,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1270,15 +1270,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1289,15 +1289,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1308,15 +1308,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1327,7 +1327,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1335,7 +1335,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1345,10 +1345,10 @@
                 "trcode": "S3_1",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 9,
@@ -1359,7 +1359,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                    "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1380,7 +1380,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1388,7 +1388,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1401,15 +1401,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1420,15 +1420,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1439,15 +1439,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1458,15 +1458,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1477,7 +1477,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1485,7 +1485,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1496,15 +1496,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1515,15 +1515,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1534,15 +1534,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1553,7 +1553,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1561,7 +1561,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1572,7 +1572,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1580,7 +1580,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1590,10 +1590,10 @@
                 "trcode": "S3_2",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 10,
@@ -1604,7 +1604,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                    "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1625,7 +1625,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                "id": "bed884d6-32ba-490e-9504-7276af24ff87"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1633,7 +1633,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1646,15 +1646,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1665,15 +1665,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1684,15 +1684,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1703,15 +1703,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1722,7 +1722,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1730,7 +1730,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1741,15 +1741,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1760,15 +1760,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1779,15 +1779,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1798,7 +1798,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1806,7 +1806,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1817,7 +1817,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1825,7 +1825,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1836,7 +1836,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1844,7 +1844,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1854,10 +1854,10 @@
                 "trcode": "S3_3",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 11,
@@ -1868,7 +1868,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                    "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1889,15 +1889,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1910,15 +1910,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1929,15 +1929,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1948,15 +1948,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1967,15 +1967,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1986,7 +1986,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1994,7 +1994,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2005,15 +2005,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2024,15 +2024,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2043,15 +2043,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2062,7 +2062,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2070,7 +2070,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2081,7 +2081,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2089,7 +2089,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2100,7 +2100,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2108,7 +2108,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2119,15 +2119,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                        "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                        "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2137,10 +2137,10 @@
                 "trcode": "S3_4",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 12,
@@ -2151,7 +2151,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                    "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -2172,15 +2172,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "7bd84ba2-64fa-43e4-80d5-2687ecc137af",
+                "id": "ea605335-0eb9-4235-bc9a-1a63177e99e5",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2193,15 +2193,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2212,15 +2212,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2231,15 +2231,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2250,15 +2250,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2269,7 +2269,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2277,7 +2277,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2288,15 +2288,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2307,15 +2307,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2326,15 +2326,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2345,7 +2345,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2353,7 +2353,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2364,7 +2364,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2372,7 +2372,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2383,7 +2383,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2391,7 +2391,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2402,15 +2402,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                        "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                        "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2421,15 +2421,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                        "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "7bd84ba2-64fa-43e4-80d5-2687ecc137af",
+                        "id": "ea605335-0eb9-4235-bc9a-1a63177e99e5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2439,10 +2439,10 @@
                 "trcode": "S4_1",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 13,
@@ -2453,7 +2453,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "8fd61b4d-be09-44eb-9885-17268a185e56"
+                    "id": "82a0adc7-e649-4967-b3bd-1af11b667e43"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -2474,15 +2474,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "8fd61b4d-be09-44eb-9885-17268a185e56"
+                "id": "82a0adc7-e649-4967-b3bd-1af11b667e43"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "e2a26fac-432a-4264-b6a9-1c337dd9e899",
+                "id": "c34b0756-2fb2-4d02-b832-1e7c0d1edf8a",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2495,15 +2495,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2514,15 +2514,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2533,15 +2533,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2552,15 +2552,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2571,7 +2571,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2579,7 +2579,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2590,15 +2590,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2609,15 +2609,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2628,15 +2628,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2647,7 +2647,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2655,7 +2655,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2666,7 +2666,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2674,7 +2674,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2685,7 +2685,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2693,7 +2693,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2704,15 +2704,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                        "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                        "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2723,15 +2723,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                        "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "7bd84ba2-64fa-43e4-80d5-2687ecc137af",
+                        "id": "ea605335-0eb9-4235-bc9a-1a63177e99e5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2742,15 +2742,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "8fd61b4d-be09-44eb-9885-17268a185e56"
+                        "id": "82a0adc7-e649-4967-b3bd-1af11b667e43"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e2a26fac-432a-4264-b6a9-1c337dd9e899",
+                        "id": "c34b0756-2fb2-4d02-b832-1e7c0d1edf8a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2760,10 +2760,10 @@
                 "trcode": "S4_2",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 14,
@@ -2774,7 +2774,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "31a3eaba-7f9f-4dfc-b45d-a1e1c3be004f"
+                    "id": "b1fc3826-f585-4908-b88a-e129be280954"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -2795,15 +2795,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "31a3eaba-7f9f-4dfc-b45d-a1e1c3be004f"
+                "id": "b1fc3826-f585-4908-b88a-e129be280954"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 2}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "bfe7a512-2127-4ad1-8244-ce24ead4dcd6",
+                "id": "cd34194b-cf4f-4fb4-a160-15be8385f389",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2816,15 +2816,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2835,15 +2835,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2854,15 +2854,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2873,15 +2873,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2892,7 +2892,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2900,7 +2900,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2911,15 +2911,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2930,15 +2930,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2949,15 +2949,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2968,7 +2968,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2976,7 +2976,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2987,7 +2987,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -2995,7 +2995,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3006,7 +3006,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -3014,7 +3014,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3025,15 +3025,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                        "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                        "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3044,15 +3044,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                        "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "7bd84ba2-64fa-43e4-80d5-2687ecc137af",
+                        "id": "ea605335-0eb9-4235-bc9a-1a63177e99e5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3063,15 +3063,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "8fd61b4d-be09-44eb-9885-17268a185e56"
+                        "id": "82a0adc7-e649-4967-b3bd-1af11b667e43"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e2a26fac-432a-4264-b6a9-1c337dd9e899",
+                        "id": "c34b0756-2fb2-4d02-b832-1e7c0d1edf8a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3082,15 +3082,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "31a3eaba-7f9f-4dfc-b45d-a1e1c3be004f"
+                        "id": "b1fc3826-f585-4908-b88a-e129be280954"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bfe7a512-2127-4ad1-8244-ce24ead4dcd6",
+                        "id": "cd34194b-cf4f-4fb4-a160-15be8385f389",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3100,10 +3100,10 @@
                 "trcode": "S4_3",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         },
         {
             "trial_idx": 15,
@@ -3114,7 +3114,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "43afd2e0-4a4c-447f-8df4-71925e9bf8e0"
+                    "id": "4b63974c-1ae6-47ff-906a-615514d54dd9"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -3135,15 +3135,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "43afd2e0-4a4c-447f-8df4-71925e9bf8e0"
+                "id": "4b63974c-1ae6-47ff-906a-615514d54dd9"
             },
             "pred_resp": {
-                "content": "{'Vividness': 5}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "88076275-49c0-4ca2-a2a5-c47d01d607c5",
+                "id": "c68d9565-c68f-4f44-8e5b-0cb58d6118ef",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -3156,15 +3156,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "37b93de4-3719-478f-b12c-cf7fc39e17be"
+                        "id": "8acb69b9-6a76-442e-9638-7f62dc4d0c18"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "23a0211d-dea7-423e-a738-489b84e06b0d",
+                        "id": "c2a97f73-67e6-4307-aa3f-7d8391931959",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3175,15 +3175,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bf8a35fa-845c-4c5e-b816-adaece3368c8"
+                        "id": "1f5cd892-5a13-4564-8030-6f7713c3d0a3"
                     },
                     {
-                        "content": "{'Vividness': 2}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d28c676a-e76e-4cc1-a3e8-dd9fdaad55e8",
+                        "id": "2a13717d-4fb8-4c02-a1ed-d70693a37e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3194,15 +3194,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bde0bc66-d776-4cc7-9db6-b2b1fffbe038"
+                        "id": "cb4a4e4a-d89b-4e7f-a87b-e835d79e5b56"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "acbca4e6-b3b8-49b0-8811-8336b3fb69ef",
+                        "id": "6ba4807d-2392-4961-ab85-638da1e53155",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3213,15 +3213,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "061d7d58-d419-42c0-9fa1-8147cf28f58e"
+                        "id": "0ebca305-31e3-45e5-ab8e-d08ae5cbe775"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a6250b31-d8ea-4b14-9cd3-6e9a08c7cb55",
+                        "id": "35f41b0a-1ebe-4746-bc9c-f32215d771bc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3232,7 +3232,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9e4d642c-333d-47da-bc28-9818507cddf6"
+                        "id": "1588c058-a162-4598-855b-f5b776e2f58b"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -3240,7 +3240,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e3d7b836-526a-4717-a6f1-56df18c621a5",
+                        "id": "810c0d02-cc7d-41dd-b7c0-a13a024342ca",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3251,15 +3251,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e3c592c4-c7e8-41e6-b02b-a9676942ddfe"
+                        "id": "8ad86058-0640-4d23-9d0b-56c389384603"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "736fdfde-5cb2-4090-b90b-695d966a2d43",
+                        "id": "a5d2c047-f3a4-42dd-9e8b-95037db12bda",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3270,15 +3270,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "88bb53f1-4b84-4ed9-b382-cda4b6a61b0a"
+                        "id": "9f7342c6-399e-4458-9f11-0bae716d8c3a"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a464f7c-19c2-4f77-8c2b-08938700131a",
+                        "id": "bec2a204-03a9-4140-ba3e-b1bc67d7bb01",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3289,15 +3289,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7fe01c3a-16b2-4cab-b934-567f25bc8774"
+                        "id": "3c603f65-05e3-4f4b-b4ff-28463afba18f"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e263d1a8-50d3-4e5f-969a-7e1c25bd019f",
+                        "id": "39e1d0e8-c2ca-475a-aab6-2069ef9aa46d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3308,7 +3308,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f9bca7e8-2aff-4f9c-bbbe-2bc10208c922"
+                        "id": "9f35927f-3023-4baa-b94f-ca362c0f08b2"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -3316,7 +3316,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9a3b83a7-7a1f-47ba-a54e-055b71cca643",
+                        "id": "30ca7145-2aa8-47e2-8b59-88f0a34f7a24",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3327,7 +3327,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c4e03228-0199-44fb-9429-48ed6f49c269"
+                        "id": "45f324a5-fd09-4311-9115-0700c1a8a6d8"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -3335,7 +3335,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cb053023-1e52-4bbd-95ab-db78136e60c1",
+                        "id": "a79dfac2-9f2d-4b8a-a1eb-0603398cb3dc",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3346,7 +3346,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b8dd6553-8b43-4672-9510-6731d797ee5d"
+                        "id": "bed884d6-32ba-490e-9504-7276af24ff87"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -3354,7 +3354,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "49a736bc-b7a6-4f52-8eee-f73ab2c63c75",
+                        "id": "a4341b26-bce4-4a29-83a2-2816899935b8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3365,15 +3365,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00094309-4e28-41c0-8887-2254cb3194da"
+                        "id": "ce7e02e7-47cc-430c-87b6-6fddaee48086"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "ea5c6147-3045-4af7-b730-33241e195260",
+                        "id": "97c62fd1-09f1-470a-823d-51e2bb1a54b4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3384,15 +3384,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7c07f6d2-408f-4b9f-a60d-8110d1e8eac0"
+                        "id": "1013e291-0371-49e2-82b6-80dbf561e7a5"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "7bd84ba2-64fa-43e4-80d5-2687ecc137af",
+                        "id": "ea605335-0eb9-4235-bc9a-1a63177e99e5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3403,15 +3403,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "8fd61b4d-be09-44eb-9885-17268a185e56"
+                        "id": "82a0adc7-e649-4967-b3bd-1af11b667e43"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e2a26fac-432a-4264-b6a9-1c337dd9e899",
+                        "id": "c34b0756-2fb2-4d02-b832-1e7c0d1edf8a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3422,15 +3422,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "31a3eaba-7f9f-4dfc-b45d-a1e1c3be004f"
+                        "id": "b1fc3826-f585-4908-b88a-e129be280954"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 2}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bfe7a512-2127-4ad1-8244-ce24ead4dcd6",
+                        "id": "cd34194b-cf4f-4fb4-a160-15be8385f389",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3441,15 +3441,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "43afd2e0-4a4c-447f-8df4-71925e9bf8e0"
+                        "id": "4b63974c-1ae6-47ff-906a-615514d54dd9"
                     },
                     {
-                        "content": "{'Vividness': 5}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "88076275-49c0-4ca2-a2a5-c47d01d607c5",
+                        "id": "c68d9565-c68f-4f44-8e5b-0cb58d6118ef",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3459,10 +3459,10 @@
                 "trcode": "S4_4",
                 "parser": null
             },
-            "trace_id": "20260507T07-09-45vviq16studyConvovviq163",
-            "system_message_idx": 3,
+            "trace_id": "20260507T10-01-40vviq16studyConvovviq161",
+            "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
+            "tunnel_id": "sidx-[1]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-vviq16study"
         }
     ]
 }

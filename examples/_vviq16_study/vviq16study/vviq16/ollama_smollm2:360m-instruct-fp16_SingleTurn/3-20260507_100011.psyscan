@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "2bb31ae3-33c1-43c1-8347-7b28ba0c258c"
+                    "id": "231822b5-3e75-4401-aef7-829013fe5494"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -30,15 +30,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "2bb31ae3-33c1-43c1-8347-7b28ba0c258c"
+                "id": "231822b5-3e75-4401-aef7-829013fe5494"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "6b06e5d5-86a1-4951-833b-8be93650b5a7",
+                "id": "1d5775c1-48d0-413f-97c6-75bd543d3cef",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -51,15 +51,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "2bb31ae3-33c1-43c1-8347-7b28ba0c258c"
+                        "id": "231822b5-3e75-4401-aef7-829013fe5494"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "6b06e5d5-86a1-4951-833b-8be93650b5a7",
+                        "id": "1d5775c1-48d0-413f-97c6-75bd543d3cef",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -69,10 +69,10 @@
                 "trcode": "S1_1",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 1,
@@ -83,7 +83,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "4e9cab11-a37b-4ea3-860b-929c0c30f0fb"
+                    "id": "7dde5961-7a18-4ce9-be5f-1b363f3b37f9"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -104,15 +104,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "4e9cab11-a37b-4ea3-860b-929c0c30f0fb"
+                "id": "7dde5961-7a18-4ce9-be5f-1b363f3b37f9"
             },
             "pred_resp": {
-                "content": "{'Vividness': 3}",
+                "content": "{'Vividness': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "424fc0f8-3cae-43e8-89f3-add4903acc03",
+                "id": "8639fc24-27cc-4965-a6d2-001495a45ce5",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -125,15 +125,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4e9cab11-a37b-4ea3-860b-929c0c30f0fb"
+                        "id": "7dde5961-7a18-4ce9-be5f-1b363f3b37f9"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "424fc0f8-3cae-43e8-89f3-add4903acc03",
+                        "id": "8639fc24-27cc-4965-a6d2-001495a45ce5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -143,10 +143,10 @@
                 "trcode": "S1_2",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 2,
@@ -157,7 +157,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "13488db6-8422-4228-b695-6bdd0a2de4fd"
+                    "id": "3dbb9bcf-31b9-4a1c-85e7-28c8d70922a2"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -178,15 +178,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "13488db6-8422-4228-b695-6bdd0a2de4fd"
+                "id": "3dbb9bcf-31b9-4a1c-85e7-28c8d70922a2"
             },
             "pred_resp": {
-                "content": "{'Vividness': 3}",
+                "content": "{'Vividness': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "b0c98da6-aefa-473c-8265-b6e1ef85b305",
+                "id": "4833d3c2-bb92-42c4-92a0-ba9156f47b16",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -199,15 +199,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "13488db6-8422-4228-b695-6bdd0a2de4fd"
+                        "id": "3dbb9bcf-31b9-4a1c-85e7-28c8d70922a2"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b0c98da6-aefa-473c-8265-b6e1ef85b305",
+                        "id": "4833d3c2-bb92-42c4-92a0-ba9156f47b16",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -217,10 +217,10 @@
                 "trcode": "S1_3",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 3,
@@ -231,7 +231,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b4c3f02e-f2d4-4af0-b381-c1aca385d886"
+                    "id": "64f8cccc-57bb-4b7b-b6e6-cc2b9c6e5638"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -252,15 +252,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b4c3f02e-f2d4-4af0-b381-c1aca385d886"
+                "id": "64f8cccc-57bb-4b7b-b6e6-cc2b9c6e5638"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "93b3c202-55d7-4ef3-8589-76db84f6c481",
+                "id": "c23d7347-2cdb-4bbf-8e7e-07cd90ec556f",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -273,15 +273,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b4c3f02e-f2d4-4af0-b381-c1aca385d886"
+                        "id": "64f8cccc-57bb-4b7b-b6e6-cc2b9c6e5638"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "93b3c202-55d7-4ef3-8589-76db84f6c481",
+                        "id": "c23d7347-2cdb-4bbf-8e7e-07cd90ec556f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -291,10 +291,10 @@
                 "trcode": "S1_4",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 4,
@@ -305,7 +305,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "360030fe-f5cb-4ebc-820a-a82026285b46"
+                    "id": "58fbb94f-86d9-49ff-a42f-3dd239df79e4"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -326,15 +326,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "360030fe-f5cb-4ebc-820a-a82026285b46"
+                "id": "58fbb94f-86d9-49ff-a42f-3dd239df79e4"
             },
             "pred_resp": {
-                "content": "{'Vividness': 4}",
+                "content": "{'Vividness': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "a05898dc-93a2-4a1e-979b-db1eb190600b",
+                "id": "065a8cbd-9f56-4afc-b367-aa11df6922e3",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -347,15 +347,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "360030fe-f5cb-4ebc-820a-a82026285b46"
+                        "id": "58fbb94f-86d9-49ff-a42f-3dd239df79e4"
                     },
                     {
-                        "content": "{'Vividness': 4}",
+                        "content": "{'Vividness': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a05898dc-93a2-4a1e-979b-db1eb190600b",
+                        "id": "065a8cbd-9f56-4afc-b367-aa11df6922e3",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -365,10 +365,10 @@
                 "trcode": "S2_1",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 5,
@@ -379,7 +379,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "fcf3d279-486b-486f-8c56-d771ef50ea11"
+                    "id": "cf4411a0-4735-4c33-8723-270211368550"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -400,7 +400,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "fcf3d279-486b-486f-8c56-d771ef50ea11"
+                "id": "cf4411a0-4735-4c33-8723-270211368550"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -408,7 +408,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "c570a78c-6505-4876-bfd1-667c9be5c40f",
+                "id": "aee33524-6242-47f6-9512-9534c717ba6e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -421,7 +421,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "fcf3d279-486b-486f-8c56-d771ef50ea11"
+                        "id": "cf4411a0-4735-4c33-8723-270211368550"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -429,7 +429,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c570a78c-6505-4876-bfd1-667c9be5c40f",
+                        "id": "aee33524-6242-47f6-9512-9534c717ba6e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -439,10 +439,10 @@
                 "trcode": "S2_2",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 6,
@@ -453,7 +453,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "c67b3a9a-cd49-4d34-81ae-c6cd6ef07c1f"
+                    "id": "54bf6114-cef6-4c1f-a1c9-f2f63950dc72"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -474,15 +474,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "c67b3a9a-cd49-4d34-81ae-c6cd6ef07c1f"
+                "id": "54bf6114-cef6-4c1f-a1c9-f2f63950dc72"
             },
             "pred_resp": {
-                "content": "{'Vividness': 3}",
+                "content": "{'Vividness': 5}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "f43cc6f8-ee52-49f0-9ff6-3912d07ed196",
+                "id": "9433d361-5ba4-4bf6-a148-2b4318a6de02",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -495,15 +495,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c67b3a9a-cd49-4d34-81ae-c6cd6ef07c1f"
+                        "id": "54bf6114-cef6-4c1f-a1c9-f2f63950dc72"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 5}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "f43cc6f8-ee52-49f0-9ff6-3912d07ed196",
+                        "id": "9433d361-5ba4-4bf6-a148-2b4318a6de02",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -513,10 +513,10 @@
                 "trcode": "S2_3",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 7,
@@ -527,7 +527,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "68333f75-c2b9-4484-bbdd-b628d4da6c9d"
+                    "id": "9281297b-30fd-4585-a610-c37f8e6a6ec3"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -548,15 +548,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "68333f75-c2b9-4484-bbdd-b628d4da6c9d"
+                "id": "9281297b-30fd-4585-a610-c37f8e6a6ec3"
             },
             "pred_resp": {
-                "content": "{'Vividness': 3}",
+                "content": "{'Vividness': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "09fb70b0-76e9-4eb1-bbbb-6d5179b47bc9",
+                "id": "994e2425-04e7-46bc-9826-bab27a8f1cc2",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -569,15 +569,15 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "68333f75-c2b9-4484-bbdd-b628d4da6c9d"
+                        "id": "9281297b-30fd-4585-a610-c37f8e6a6ec3"
                     },
                     {
-                        "content": "{'Vividness': 3}",
+                        "content": "{'Vividness': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "09fb70b0-76e9-4eb1-bbbb-6d5179b47bc9",
+                        "id": "994e2425-04e7-46bc-9826-bab27a8f1cc2",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -587,10 +587,10 @@
                 "trcode": "S2_4",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 8,
@@ -601,7 +601,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "c1281700-f9f8-4055-a8a1-1d306f7617b7"
+                    "id": "e7fd929e-0372-4cba-a757-541482dc8202"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -622,7 +622,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "c1281700-f9f8-4055-a8a1-1d306f7617b7"
+                "id": "e7fd929e-0372-4cba-a757-541482dc8202"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -630,7 +630,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "8ef0fe91-cc5a-423d-98cd-e32e84169770",
+                "id": "5496eed0-9a61-4058-b193-240f985b3daf",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -643,7 +643,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c1281700-f9f8-4055-a8a1-1d306f7617b7"
+                        "id": "e7fd929e-0372-4cba-a757-541482dc8202"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -651,7 +651,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "8ef0fe91-cc5a-423d-98cd-e32e84169770",
+                        "id": "5496eed0-9a61-4058-b193-240f985b3daf",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -661,10 +661,10 @@
                 "trcode": "S3_1",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 9,
@@ -675,7 +675,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "f341a0bd-6a16-4071-b5b8-3eb8d707c07e"
+                    "id": "c745189e-67ee-41c4-a0c5-8df9b2f2f77d"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -696,7 +696,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "f341a0bd-6a16-4071-b5b8-3eb8d707c07e"
+                "id": "c745189e-67ee-41c4-a0c5-8df9b2f2f77d"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -704,7 +704,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "4038bf8d-d6d1-47f8-b1d8-5fc8c25781be",
+                "id": "f84a9ed1-5dca-4923-9ff7-1db6beedb21e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -717,7 +717,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "f341a0bd-6a16-4071-b5b8-3eb8d707c07e"
+                        "id": "c745189e-67ee-41c4-a0c5-8df9b2f2f77d"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -725,7 +725,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "4038bf8d-d6d1-47f8-b1d8-5fc8c25781be",
+                        "id": "f84a9ed1-5dca-4923-9ff7-1db6beedb21e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -735,10 +735,10 @@
                 "trcode": "S3_2",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 10,
@@ -749,7 +749,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "bbd03a9b-5538-4308-9b6c-0646713c9c86"
+                    "id": "5f21de91-245f-4aeb-be21-897c33d37ef4"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -770,7 +770,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "bbd03a9b-5538-4308-9b6c-0646713c9c86"
+                "id": "5f21de91-245f-4aeb-be21-897c33d37ef4"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -778,7 +778,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "c2b749f2-bf87-4a38-8d74-73523989fa13",
+                "id": "83ec5cbf-98f1-455e-8994-ff73de6899a6",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -791,7 +791,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bbd03a9b-5538-4308-9b6c-0646713c9c86"
+                        "id": "5f21de91-245f-4aeb-be21-897c33d37ef4"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -799,7 +799,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c2b749f2-bf87-4a38-8d74-73523989fa13",
+                        "id": "83ec5cbf-98f1-455e-8994-ff73de6899a6",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -809,10 +809,10 @@
                 "trcode": "S3_3",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 11,
@@ -823,7 +823,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "4dec454c-6b6b-48ab-950b-b0c42423cb93"
+                    "id": "2300129c-bf21-4a03-a7b2-d54354b0ffc7"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -844,7 +844,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "4dec454c-6b6b-48ab-950b-b0c42423cb93"
+                "id": "2300129c-bf21-4a03-a7b2-d54354b0ffc7"
             },
             "pred_resp": {
                 "content": "{'Vividness': 3}",
@@ -852,7 +852,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "14353ee9-dc11-482f-9108-c074703705c2",
+                "id": "76d4e3f5-93f6-4d6a-bee1-9a3a642e0757",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -865,7 +865,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4dec454c-6b6b-48ab-950b-b0c42423cb93"
+                        "id": "2300129c-bf21-4a03-a7b2-d54354b0ffc7"
                     },
                     {
                         "content": "{'Vividness': 3}",
@@ -873,7 +873,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "14353ee9-dc11-482f-9108-c074703705c2",
+                        "id": "76d4e3f5-93f6-4d6a-bee1-9a3a642e0757",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -883,10 +883,10 @@
                 "trcode": "S3_4",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 12,
@@ -897,7 +897,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "39ce1b6e-4c41-43c3-b9de-4aa4cb65f147"
+                    "id": "ecd0b372-b2b6-4db6-b474-5f5682c712a1"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -918,7 +918,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "39ce1b6e-4c41-43c3-b9de-4aa4cb65f147"
+                "id": "ecd0b372-b2b6-4db6-b474-5f5682c712a1"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -926,7 +926,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "4f57d363-2ab4-4c59-b5e4-3465848fb7a3",
+                "id": "d8307d04-e2db-4b3b-997d-d034fd576178",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -939,7 +939,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "39ce1b6e-4c41-43c3-b9de-4aa4cb65f147"
+                        "id": "ecd0b372-b2b6-4db6-b474-5f5682c712a1"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -947,7 +947,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "4f57d363-2ab4-4c59-b5e4-3465848fb7a3",
+                        "id": "d8307d04-e2db-4b3b-997d-d034fd576178",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -957,10 +957,10 @@
                 "trcode": "S4_1",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 13,
@@ -971,7 +971,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "6dbccfda-f678-4e50-8c33-8e8d44b54aee"
+                    "id": "07ab0c22-3f94-4e6a-aaf3-cdaea14e5e8a"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -992,7 +992,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "6dbccfda-f678-4e50-8c33-8e8d44b54aee"
+                "id": "07ab0c22-3f94-4e6a-aaf3-cdaea14e5e8a"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1000,7 +1000,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "71800c63-5741-4a10-a8fb-c8be8ba49b0f",
+                "id": "1a318aa6-3913-4926-9887-77a8e79e08e4",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1013,7 +1013,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6dbccfda-f678-4e50-8c33-8e8d44b54aee"
+                        "id": "07ab0c22-3f94-4e6a-aaf3-cdaea14e5e8a"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1021,7 +1021,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "71800c63-5741-4a10-a8fb-c8be8ba49b0f",
+                        "id": "1a318aa6-3913-4926-9887-77a8e79e08e4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1031,10 +1031,10 @@
                 "trcode": "S4_2",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 14,
@@ -1045,7 +1045,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "419b10f9-5116-4580-9c26-cadb0426eb36"
+                    "id": "59a93b5e-e42a-4050-adc6-73a4e44281ab"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1066,7 +1066,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "419b10f9-5116-4580-9c26-cadb0426eb36"
+                "id": "59a93b5e-e42a-4050-adc6-73a4e44281ab"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1074,7 +1074,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "fb74cd57-f7cb-4545-8f4d-62d994717485",
+                "id": "87961c22-6cb6-4d36-b476-a5572c1e314a",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1087,7 +1087,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "419b10f9-5116-4580-9c26-cadb0426eb36"
+                        "id": "59a93b5e-e42a-4050-adc6-73a4e44281ab"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1095,7 +1095,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fb74cd57-f7cb-4545-8f4d-62d994717485",
+                        "id": "87961c22-6cb6-4d36-b476-a5572c1e314a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1105,10 +1105,10 @@
                 "trcode": "S4_3",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         },
         {
             "trial_idx": 15,
@@ -1119,7 +1119,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "63b4ad56-0f68-4258-8a59-cd7801786a57"
+                    "id": "92be15c0-1a01-4ee6-acc3-e87d85d265d9"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"For each of the following items, try to form a vivid mental image of the described scene or object.\", \"After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:\", \"  1 = No image at all; you only 'know' that you are thinking of the object.\", \"  2 = Vague and dim.\", \"  3 = Moderately clear and vivid.\", \"  4 = Clear and reasonably vivid.\", \"  5 = Perfectly clear and as vivid as normal vision.\", \"Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be.\"]}\"\n}",
@@ -1140,7 +1140,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "63b4ad56-0f68-4258-8a59-cd7801786a57"
+                "id": "92be15c0-1a01-4ee6-acc3-e87d85d265d9"
             },
             "pred_resp": {
                 "content": "{'Vividness': 4}",
@@ -1148,7 +1148,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "1b902865-226c-4e90-a3ff-1c7cb1e8f123",
+                "id": "5746a9f8-3fef-48a9-a242-99965dc067f4",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1161,7 +1161,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "63b4ad56-0f68-4258-8a59-cd7801786a57"
+                        "id": "92be15c0-1a01-4ee6-acc3-e87d85d265d9"
                     },
                     {
                         "content": "{'Vividness': 4}",
@@ -1169,7 +1169,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1b902865-226c-4e90-a3ff-1c7cb1e8f123",
+                        "id": "5746a9f8-3fef-48a9-a242-99965dc067f4",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1179,10 +1179,10 @@
                 "trcode": "S4_4",
                 "parser": null
             },
-            "trace_id": "20260507T06-41-08vviq16studySingleTurnvviq160",
-            "system_message_idx": 0,
+            "trace_id": "20260507T09-59-44vviq16studySingleTurnvviq163",
+            "system_message_idx": 3,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
+            "tunnel_id": "sidx-[3]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-vviq16study"
         }
     ]
 }
