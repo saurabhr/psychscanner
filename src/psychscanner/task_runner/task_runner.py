@@ -137,13 +137,18 @@ class TaskRunner:
                 )
 
             # ── invoke the agent ──────────────────────────────────────────
+            # "item" chain type also needs a thread_id when the graph uses
+            # MemorySaver (Convo memory).  Use the task-scoped id so that
+            # conversation accumulates across all trials in one simulation run.
+            # Passing thread_id to a SingleTurn graph (no checkpointer) is
+            # silently ignored by LangGraph.
             thread_id = None
             if self.chain_type == "trial":
                 thread_id = self.trace_cfg["trial"] + self.trial_prompt["trcode"]
-            elif self.chain_type == "task":
+            elif self.chain_type in ["task", "item"]:
                 thread_id = self.trace_cfg["task"]
 
-            if self.chain_type in ["trial", "task"]:
+            if thread_id is not None:
                 config = {"configurable": {"thread_id": thread_id}}
                 self.pred_dict = test_agent.ai_app.invoke(self.input_dict, config=config)
             else:

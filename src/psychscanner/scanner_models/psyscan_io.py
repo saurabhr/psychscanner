@@ -12,17 +12,33 @@ import polars as pl
 
 
 def _parse_pred_resp(pred_resp: Any) -> tuple[str, dict]:
-    """Return (raw_content_str, {field: value}) from any pred_resp shape."""
-    if not isinstance(pred_resp, dict):
-        return str(pred_resp) if pred_resp is not None else "", {}
-    # RawPredMsgModel shape: {"raw": ..., "parsed": ...}
-    if "raw" in pred_resp and "parsed" in pred_resp:
-        inner = pred_resp["parsed"]
-        raw = inner.get("content", str(inner)) if isinstance(inner, dict) else str(inner)
-    elif "content" in pred_resp:
-        raw = pred_resp["content"]
+    """Return (raw_content_str, {field: value}) from any pred_resp shape.
+
+    Handles three cases:
+    - LangChain AIMessage (or any object with .content): extract .content
+    - dict with "raw"/"parsed" keys (RawPredMsgModel): extract parsed content
+    - plain dict with "content" key: extract directly
+    """
+    if pred_resp is None:
+        return "", {}
+
+    # LangChain AIMessage and similar objects expose .content
+    if hasattr(pred_resp, "content"):
+        raw = pred_resp.content
+        if not isinstance(raw, str):
+            raw = str(raw)
+    elif isinstance(pred_resp, dict):
+        # RawPredMsgModel shape: {"raw": ..., "parsed": ...}
+        if "raw" in pred_resp and "parsed" in pred_resp:
+            inner = pred_resp["parsed"]
+            raw = inner.get("content", str(inner)) if isinstance(inner, dict) else str(inner)
+        elif "content" in pred_resp:
+            raw = pred_resp["content"]
+        else:
+            raw = json.dumps(pred_resp, default=str)
     else:
-        raw = json.dumps(pred_resp, default=str)
+        return str(pred_resp), {}
+
     try:
         parsed = ast.literal_eval(raw)
     except Exception:

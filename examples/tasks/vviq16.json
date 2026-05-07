@@ -1,0 +1,44 @@
+{
+    "tasktype": "imagery",
+    "taskname": "vviq16",
+    "instructions": {
+        "definition": [
+            "For each of the following items, try to form a vivid mental image of the described scene or object.",
+            "After attempting to visualize each item, rate the vividness of your mental image on a scale from 1 to 5:",
+            "  1 = No image at all; you only 'know' that you are thinking of the object.",
+            "  2 = Vague and dim.",
+            "  3 = Moderately clear and vivid.",
+            "  4 = Clear and reasonably vivid.",
+            "  5 = Perfectly clear and as vivid as normal vision.",
+            "Rate each item honestly based on the actual vividness of the image, not how vivid you think it should be."
+        ]
+    },
+    "contexts": [
+        "Think of some relative or friend whom you frequently see (but who is not with you at present) and consider carefully the picture that comes before your mind's eye.",
+        "Visualize a rising sun. Consider carefully the picture that comes before your mind's eye.",
+        "Think of the front of a shop which you often go to. Consider the picture that comes before your mind's eye.",
+        "Finally, think of a country scene which involves trees, mountains and a lake. Consider the picture that comes before your mind's eye."
+    ],
+    "contexts_id": ["S1", "S2", "S3", "S4"],
+    "context_present": true,
+    "items": {
+        "S1_1": [{"trcode": "S1_1", "stimulus": "The exact contour of face, head, shoulders and body."}],
+        "S1_2": [{"trcode": "S1_2", "stimulus": "Characteristic poses of head, attitudes of body, etc."}],
+        "S1_3": [{"trcode": "S1_3", "stimulus": "The precise carriage, length of step, etc. in walking."}],
+        "S1_4": [{"trcode": "S1_4", "stimulus": "The different colours worn in some familiar clothes."}],
+        "S2_1": [{"trcode": "S2_1", "stimulus": "The sun is rising above the horizon into a hazy sky."}],
+        "S2_2": [{"trcode": "S2_2", "stimulus": "The sky clears and surrounds the sun with blueness."}],
+        "S2_3": [{"trcode": "S2_3", "stimulus": "Clouds. A storm blows up, with flashes of lightning strikes."}],
+        "S2_4": [{"trcode": "S2_4", "stimulus": "A rainbow appears."}],
+        "S3_1": [{"trcode": "S3_1", "stimulus": "The overall appearance of the shop from the opposite side of the road."}],
+        "S3_2": [{"trcode": "S3_2", "stimulus": "A window display including colour, shape and details of the articles in it."}],
+        "S3_3": [{"trcode": "S3_3", "stimulus": "You are near the entrance. The colour, shape and details of the door."}],
+        "S3_4": [{"trcode": "S3_4", "stimulus": "You enter the shop and go to the counter. The counter assistant serves you."}],
+        "S4_1": [{"trcode": "S4_1", "stimulus": "The contours of the landscape."}],
+        "S4_2": [{"trcode": "S4_2", "stimulus": "The colour and shape of the trees."}],
+        "S4_3": [{"trcode": "S4_3", "stimulus": "The colour and shape of the lake in the scene."}],
+        "S4_4": [{"trcode": "S4_4", "stimulus": "A strong wind blows on the trees and on the lake causing waves."}]
+    },
+    "parser": "DefaultLiteralVivid15",
+    "chain_type": "item"
+}
