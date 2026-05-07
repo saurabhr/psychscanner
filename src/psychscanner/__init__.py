@@ -13,6 +13,7 @@ from .datasets.prompts import parser
 from . import parsers
 
 from .scanner_models.scanner_model import ScannerModel
+from .scanner_models.psyscan_io import to_csv, concat_csv
 from .simulation_model.simulation_model import (
     SimulationModel,
     TaskSimulationModel,
@@ -31,6 +32,8 @@ __all__ = [
     "load_expcard",
     "factory_settings",
     "ScannerModel",
+    "to_csv",
+    "concat_csv",
     "parser","parsers","SessionTunnel",
     "SimulationModel",
     "TaskSimulationModel",
