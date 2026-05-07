@@ -269,7 +269,7 @@
   },
   "chain_type": "task",
   "trial_parsers": [],
-  "parser": "dynamic",
+  "parser": "Response_part_1_rm",
   "postfix": "",
   "prefix": "",
   "_source_file": "rm_2op_convo_feedback_allparts.json",

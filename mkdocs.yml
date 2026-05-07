@@ -1,0 +1,87 @@
+site_name: saurabhr.github.io/psychscanner
+site_url: https://saurabhr.github.io/psychscanner
+site_description: A framework for running psychological experiments with large language models.
+site_author: Saurabh Ranjan
+repo_url: https://github.com/saurabhr/psychscanner
+repo_name: saurabhr/psychscanner
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Quick Start: usage.md
+    - Configuration: configuration.md
+  - User Guide:
+    - Overview: guides/index.md
+    - PsychScanner Workflow: guides/psychscanner_workflow.md
+    - Memory Types: guides/memory_types.md
+    - Cognitive Tasks: guides/cognitive_tasks.md
+    - Survey Tasks: guides/survey_tasks.md
+    - Custom Parsers: guides/custom_parsers.md
+    - Session Recovery: guides/session_recovery.md
+  - Examples:
+    - Overview: examples/index.md
+    - Basic Survey: examples/basic_survey.md
+    - Reality Monitoring: examples/reality_monitoring.md
+    - Feedback Loop: examples/feedback_loop.md
+    - Multi-Persona: examples/multi_persona.md
+  - API Reference:
+    - Overview: api/index.md
+    - ExpCard: api/expcard.md
+    - ScannerModel: api/scanner_model.md
+    - Parsers: api/parsers.md
+    - SessionTunnel: api/session_tunnel.md
+  - CLI: cli.md
+  - Deployment: deployment.md
+  - Troubleshooting: troubleshooting.md
+  - Changelog: changelog.md
