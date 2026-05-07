@@ -12,13 +12,13 @@ from pathlib import Path
 from typing import Any, Literal, Callable
 
 import click
-from pydantic import BaseModel, Field, FilePath
+from pydantic import BaseModel, ConfigDict, Field, FilePath
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from psychscanner import datasets
 from psychscanner.datasets import load_datasets
 from psychscanner.session_tunnel import SessionTunnel
-from psychscanner.parsers import get_parser
+from psychscanner.parsers import get_parser, resolve_parser
 
 class Settings(BaseSettings):
     """Settings for configuring the application.
@@ -32,6 +32,8 @@ class Settings(BaseSettings):
 
 class ExpCardInit(BaseModel):
     """Experiment Card for Psychscanner."""
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     model: str = Field(
         default="mock-chat-model",
@@ -51,7 +53,20 @@ class ExpCardInit(BaseModel):
     )
     memory_k: int | None = Field(
         default=-1,
-        description="Memory k. Default is -1 the memory models run with default settings. In Convo, k stroes last k interactions, in summary k only keeps summary of last k interactions. In ConvoSummaryK, k is the number of recent interactions kept as conversation while the past interactions are summarized",
+        description=(
+            "Max number of messages kept in full in the conversation context. "
+            "Default -1 keeps unlimited history. "
+            "When set to N, only the last N messages are passed to the model."
+        ),
+    )
+    summary_k: int | None = Field(
+        default=0,
+        description=(
+            "Summarization batch size. Only active in Convo memory mode with memory_k set. "
+            "0 = no summarization, older messages beyond memory_k are simply dropped. "
+            "N = when overflow messages reach N, they are summarized into a rolling summary "
+            "that is prepended to the system message so context is preserved."
+        ),
     )
 
     persona_files: list[FilePath] | None = Field(
@@ -82,9 +97,17 @@ class ExpCardInit(BaseModel):
         default=[],
         description="Tags for the project. Default is an empty list. If not default, should be correctly provided. Tags are used to create a folder in the current working directory to store the session files. files are saved in submodules in datasets/defult_project/<projectname timestamped>. If a folder location is given then the data is saved there and if the folder does not exist then it is created. If the folder location is not given then the data is saved in the current working directory by creading a folder with the project name.",
     )
-    parser: str = Field(
-        default = "0",
-        description = "A callalable pydantic object as string or '0' for no parser. Should be defined in the script in the staging.",
+    parser: str | type[BaseModel] | Callable | None = Field(
+        default=None,
+        description=(
+            "Structured output parser. Accepts: "
+            "None or '0' (no parser); "
+            "'1' (resolve by name from task JSON 'parser' field); "
+            "a registered parser name string e.g. 'DefaultLiteralVivid15'; "
+            "a BaseModel subclass passed directly; "
+            "a callable for per-trial dispatch e.g. "
+            "lambda trcode: ParserA if 'test' in trcode else ParserB."
+        ),
     )
     parser_raw: bool = Field(
         default=False,
@@ -208,28 +231,13 @@ class ExpCard:
         if self.card_in.parser_config is None:
             self.card_in.parser_config = {"method": "json_schema"}
 
-        if self.card_in.parser == "0":
-            self.parser = self.card_in.parser
-
-        elif self.card_in.parser == "1":
-            parser_name = self.task_data.get("parser")
-            if not isinstance(parser_name, str) or not parser_name:
-                msg = (
-                    "parser='1' requires the task JSON to have a non-empty "
-                    "'parser' field naming a registered parser class."
-                )
-                raise ValueError(msg)
-            try:
-                self.parser = get_parser(parser_name)
-            except KeyError as exc:
-                raise ValueError(str(exc)) from exc
-        elif self.card_in.parser == "dynamic":
-            self.parser = "dynamic"
-        else:
-            self.parser = self.card_in.parser
-            if not issubclass(self.parser, BaseModel):
-                msg = "Not valid parser provided."
-                raise TypeError(msg)
+        try:
+            self.parser = resolve_parser(
+                self.card_in.parser,
+                task_parser_name=self.task_data.get("parser"),
+            )
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(str(exc)) from exc
 
         click.echo("----<PROJECT AND DATA ROOT DIRECTORY>----")
         click.echo(f"\tProject root dir: {self.card_in.proj_dir}")

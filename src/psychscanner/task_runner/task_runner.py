@@ -33,20 +33,17 @@ class TaskRunner:
         self.task_recorder = []
 
         self.trial_response = None
-        self.input_dict = {} # trial input
-        self.pred_dict = {} # prediction input
+        self.input_dict = {}
+        self.pred_dict = {}
         self.trial_prompt = None
         self.tr_idx = None
         self.tr_ai_resp_value = None
-        if self.test_agent.parser == "0":
-            self.parser_status = "0"
-        else:
-            self.parser_status = "1"
+        self.parser_status = "0"  # updated per-trial in execute()
 
         self.stim_collector = []
 
         self.feedback = feedback
-        self.feedback_fn = feedback_fn  # eval("Feedback")
+        self.feedback_fn = feedback_fn
         self.fb_response = None
 
     def execute(
@@ -88,10 +85,15 @@ class TaskRunner:
                     self.system_message = esystem_message
                 else:
                     self.system_message = self.system_message + "\n" + self.trial_prompt["system_message"]
+            # Per-trial parser: trial JSON overrides card-level parser
+            trial_parser = self.trial_prompt.get("parser") or self.test_agent.parser
+            self.parser_status = "0" if trial_parser is None else "1"
+
             self.input_dict = {
                 "inputs": [self.trial_prompt[self.stimulus_key]],
                 "system_message": self.system_message,
                 "trcode": self.trial_prompt["trcode"],
+                "parser": self.trial_prompt.get("parser"),  # str or None
             }
             if self.feedback == "1":
                 """
