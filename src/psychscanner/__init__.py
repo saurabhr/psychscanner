@@ -5,6 +5,8 @@ from .staging import factory_settings
 from .staging.scanner_cards import (
     ExpCard,
     ExpCardInit,
+    save_expcard,
+    load_expcard,
 )
 from .session_tunnel import SessionTunnel
 from .datasets.prompts import parser
@@ -25,6 +27,8 @@ from .feedback import FeedbackBase
 __all__ = [
     "ExpCard",
     "ExpCardInit",
+    "save_expcard",
+    "load_expcard",
     "factory_settings",
     "ScannerModel",
     "parser","parsers","SessionTunnel",

@@ -10,6 +10,14 @@ _site/
 .bundle/
 vendor/
 
+
+s13428-018-01193-y.pdf
+PsychScanner_NeurIPS_2026.zip
+PsychScanner_NeurIPS_2026.pdf
+PsychScanner_NeurIPS_2026/
+psychscanner_neurips.zip
+psychscanner_neurips/
+
 ### macOS ###
 # General
 *.DS_Store
