@@ -1,6 +1,6 @@
 """A tool to bridge natural psychology witth  the artificial."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 from .staging import factory_settings
 from .staging.scanner_cards import (
     ExpCard,
