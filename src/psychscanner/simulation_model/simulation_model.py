@@ -54,7 +54,7 @@ class TrialSimulationModel(BaseModel):
     trial_idx: int
     inputs: list[Any]
     system_message: str
-    stimulus: str|dict
+    stimulus: str | dict | list
     trcode: str | None
     taskname: str
     tasktype: str

@@ -41,6 +41,56 @@ class DefaultLiteralAgree(BaseModel):
 
 
 # =============================================================================
+# Paired-associate learning
+# =============================================================================
+
+class PairedAssociateRecall(BaseModel):
+    """Recall response for paired-associate learning — recalled word and confidence."""
+
+    recalled_word: str = Field(
+        ...,
+        description="The single word you believe was paired with the probe word during the study phase.",
+    )
+    confidence: Literal[1, 2, 3, 4, 5, 6] = Field(
+        ...,
+        description=(
+            "Confidence in your recall.\n"
+            "  1 = Not at all confident\n"
+            "  2 = Slightly confident\n"
+            "  3 = Somewhat confident\n"
+            "  4 = Moderately confident\n"
+            "  5 = Very confident\n"
+            "  6 = Completely confident"
+        ),
+    )
+
+
+# =============================================================================
+# Serial probe (behavioral profiling task)
+# =============================================================================
+
+class SerialProbeResponse(BaseModel):
+    """Recall response for a serial position probe — recalled number and confidence."""
+
+    recalled_number: int = Field(
+        ...,
+        description="The number you believe was paired with the probe word during the study phase.",
+    )
+    confidence: Literal[1, 2, 3, 4, 5, 6] = Field(
+        ...,
+        description=(
+            "Confidence in your recall.\n"
+            "  1 = Not at all confident\n"
+            "  2 = Slightly confident\n"
+            "  3 = Somewhat confident\n"
+            "  4 = Moderately confident\n"
+            "  5 = Very confident\n"
+            "  6 = Completely confident"
+        ),
+    )
+
+
+# =============================================================================
 # Generic response + rating shapes
 # =============================================================================
 

@@ -1,0 +1,10 @@
+{
+    "_comment": "Zhang et al. persona axis — 5 individuals sampled from persona_200.json (seed=7, excluding traits_n5 sample). Used as standalone axis in Exp 1.2b (no traits_n5 crossing); Cartesian product gives 5 participants.",
+    "persona_statements": [
+        "I m a pilot for Southwest. I met my wife at a nickleback concert. My favorite food is fried chicken. I have a twin sister named Jessica.",
+        "I am a father. I work many hours. My favorite band is imagine dragons. I like basketball.",
+        "I love to paint pictures. I have a new job selling cars. I love meat. My wife use to be a teacher.",
+        "I look forward to retiring. My wife always puts a smile on my face. I love all of my beautiful children. I tried to make it as an actor when I was younger. I am a humble baker.",
+        "I enjoy my steaks cooked medium rare. I've the gene that lets me know when someone s eaten asparagus. I've five different flavors of coffee in my fridge. I m too short to reach the top shelf."
+    ]
+}

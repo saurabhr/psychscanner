@@ -29,6 +29,7 @@ _API_KEY_ENV: dict[str, str] = {
     "azure":        "AZURE_OPENAI_API_KEY",
     "huggingface":  "HUGGINGFACEHUB_API_TOKEN",
     "ollama":       "OLLAMA_API_KEY",
+    "openrouter":   "OPENROUTER_API_KEY",
 }
 
 # Kwarg name the provider SDK expects for the key (defaults to "api_key").
@@ -114,6 +115,14 @@ def llm_chat_model(
             repeat_buffer_length=10,
             **parameters,
         )
+    elif family_lower == "openrouter":
+        # Route through the OpenAI-compatible endpoint at openrouter.ai
+        params = _resolve_api_key("openrouter", parameters)
+        params.setdefault("base_url", "https://openrouter.ai/api/v1")
+        try:
+            chat_model = init_chat_model(model, model_provider="openai", **params)
+        except Exception as exc:
+            raise ValueError(NOT_FOUND_LLM_MSG) from exc
     else:
         params = _resolve_api_key(family_lower, parameters)
         try:

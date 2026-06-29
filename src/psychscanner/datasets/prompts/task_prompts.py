@@ -133,7 +133,11 @@ def gen_stimulus_prompt(
         trial_dict["TRIAL"] = trstim["stimulus"]
 
     else:
-        trial_dict = trstim["stimulus"]
+        stimulus = trstim["stimulus"]
+        if isinstance(stimulus, list):
+            # Multimodal content: list of {"type": ..., ...} blocks (e.g. image_url + text)
+            return HumanMessage(content=stimulus)
+        trial_dict = stimulus
 
     return HumanMessage(json.dumps(trial_dict, indent = 4))
 

@@ -1,0 +1,10 @@
+{
+    "_comment": "5 diverse individual trait profiles, seed=42 sample from persona_200.json. Used as the individual-differences axis in Cartesian product with WEIRD/non-WEIRD axis files. Each statement becomes one simulated participant.",
+    "persona_statements": [
+        "My father is in the army. I recently was fired and had to get a new job. I work in the insurance business. My mom passed away when I was young.",
+        "I want to travel the world taking photographs of my travels. I like taking pictures. I am a widow.",
+        "I ride horses. I collect vintage cars. I try to limit how much meat I eat for health reasons. I have many homes.",
+        "I speak english and spanish fluently. I like listening to blues music. I am mixed with puerto rican and chinese. I am from Germany. My favorite artist was prince.",
+        "My neighbor comes over all the time to watch rugby with me. My car broke down last week. I like to fly kites. I love sports, but rugby is my favorite."
+    ]
+}

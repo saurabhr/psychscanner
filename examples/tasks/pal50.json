@@ -1,0 +1,1231 @@
+{
+    "tasktype": "episodic",
+    "taskname": "pal50",
+    "instructions": {
+        "definition": [
+            "This is a paired-associate learning task with two phases.",
+            "STUDY PHASE: You will be shown 50 word pairs. Please study and remember each pair.",
+            "TEST PHASE: You will be given the first word of each pair. Recall the second word and rate your confidence.",
+            "Respond honestly based on what you studied, not what seems semantically obvious."
+        ]
+    },
+    "contexts": [
+        "Similarity 0.0",
+        "Similarity 0.25",
+        "Similarity 0.50",
+        "Similarity 0.75",
+        "Similarity 1.0"
+    ],
+    "contexts_id": [
+        "L0",
+        "L25",
+        "L50",
+        "L75",
+        "L100"
+    ],
+    "context_present": false,
+    "items": {
+        "L0_enc_01": [
+            {
+                "trcode": "L0_enc_01",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'cat' is paired with 'umbrella'.",
+                "phase": "encoding",
+                "word1": "cat",
+                "word2": "umbrella",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_02": [
+            {
+                "trcode": "L0_enc_02",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'moon' is paired with 'pencil'.",
+                "phase": "encoding",
+                "word1": "moon",
+                "word2": "pencil",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_03": [
+            {
+                "trcode": "L0_enc_03",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'tree' is paired with 'sock'.",
+                "phase": "encoding",
+                "word1": "tree",
+                "word2": "sock",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_04": [
+            {
+                "trcode": "L0_enc_04",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'river' is paired with 'wallet'.",
+                "phase": "encoding",
+                "word1": "river",
+                "word2": "wallet",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_05": [
+            {
+                "trcode": "L0_enc_05",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'bird' is paired with 'hammer'.",
+                "phase": "encoding",
+                "word1": "bird",
+                "word2": "hammer",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_06": [
+            {
+                "trcode": "L0_enc_06",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'dog' is paired with 'ladder'.",
+                "phase": "encoding",
+                "word1": "dog",
+                "word2": "ladder",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_07": [
+            {
+                "trcode": "L0_enc_07",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'sky' is paired with 'carrot'.",
+                "phase": "encoding",
+                "word1": "sky",
+                "word2": "carrot",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_08": [
+            {
+                "trcode": "L0_enc_08",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'book' is paired with 'engine'.",
+                "phase": "encoding",
+                "word1": "book",
+                "word2": "engine",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_09": [
+            {
+                "trcode": "L0_enc_09",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'house' is paired with 'guitar'.",
+                "phase": "encoding",
+                "word1": "house",
+                "word2": "guitar",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_enc_10": [
+            {
+                "trcode": "L0_enc_10",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'sun' is paired with 'kettle'.",
+                "phase": "encoding",
+                "word1": "sun",
+                "word2": "kettle",
+                "similarity": 0.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_01": [
+            {
+                "trcode": "L25_enc_01",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'lion' is paired with 'tiger'.",
+                "phase": "encoding",
+                "word1": "lion",
+                "word2": "tiger",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_02": [
+            {
+                "trcode": "L25_enc_02",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'rose' is paired with 'daisy'.",
+                "phase": "encoding",
+                "word1": "rose",
+                "word2": "daisy",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_03": [
+            {
+                "trcode": "L25_enc_03",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'oak' is paired with 'pine'.",
+                "phase": "encoding",
+                "word1": "oak",
+                "word2": "pine",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_04": [
+            {
+                "trcode": "L25_enc_04",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'sofa' is paired with 'table'.",
+                "phase": "encoding",
+                "word1": "sofa",
+                "word2": "table",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_05": [
+            {
+                "trcode": "L25_enc_05",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'apple' is paired with 'orange'.",
+                "phase": "encoding",
+                "word1": "apple",
+                "word2": "orange",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_06": [
+            {
+                "trcode": "L25_enc_06",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'wrench' is paired with 'saw'.",
+                "phase": "encoding",
+                "word1": "wrench",
+                "word2": "saw",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_07": [
+            {
+                "trcode": "L25_enc_07",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'blue' is paired with 'red'.",
+                "phase": "encoding",
+                "word1": "blue",
+                "word2": "red",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_08": [
+            {
+                "trcode": "L25_enc_08",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'doctor' is paired with 'teacher'.",
+                "phase": "encoding",
+                "word1": "doctor",
+                "word2": "teacher",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_09": [
+            {
+                "trcode": "L25_enc_09",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'piano' is paired with 'drum'.",
+                "phase": "encoding",
+                "word1": "piano",
+                "word2": "drum",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L25_enc_10": [
+            {
+                "trcode": "L25_enc_10",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'sheep' is paired with 'goat'.",
+                "phase": "encoding",
+                "word1": "sheep",
+                "word2": "goat",
+                "similarity": 0.25,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_01": [
+            {
+                "trcode": "L50_enc_01",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'bee' is paired with 'honey'.",
+                "phase": "encoding",
+                "word1": "bee",
+                "word2": "honey",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_02": [
+            {
+                "trcode": "L50_enc_02",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'fire' is paired with 'smoke'.",
+                "phase": "encoding",
+                "word1": "fire",
+                "word2": "smoke",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_03": [
+            {
+                "trcode": "L50_enc_03",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'pen' is paired with 'ink'.",
+                "phase": "encoding",
+                "word1": "pen",
+                "word2": "ink",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_04": [
+            {
+                "trcode": "L50_enc_04",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'arrow' is paired with 'target'.",
+                "phase": "encoding",
+                "word1": "arrow",
+                "word2": "target",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_05": [
+            {
+                "trcode": "L50_enc_05",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'seed' is paired with 'plant'.",
+                "phase": "encoding",
+                "word1": "seed",
+                "word2": "plant",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_06": [
+            {
+                "trcode": "L50_enc_06",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'winter' is paired with 'snow'.",
+                "phase": "encoding",
+                "word1": "winter",
+                "word2": "snow",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_07": [
+            {
+                "trcode": "L50_enc_07",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'kitchen' is paired with 'cook'.",
+                "phase": "encoding",
+                "word1": "kitchen",
+                "word2": "cook",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_08": [
+            {
+                "trcode": "L50_enc_08",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'hospital' is paired with 'nurse'.",
+                "phase": "encoding",
+                "word1": "hospital",
+                "word2": "nurse",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_09": [
+            {
+                "trcode": "L50_enc_09",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'spider' is paired with 'web'.",
+                "phase": "encoding",
+                "word1": "spider",
+                "word2": "web",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L50_enc_10": [
+            {
+                "trcode": "L50_enc_10",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'key' is paired with 'lock'.",
+                "phase": "encoding",
+                "word1": "key",
+                "word2": "lock",
+                "similarity": 0.5,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_01": [
+            {
+                "trcode": "L75_enc_01",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'salt' is paired with 'pepper'.",
+                "phase": "encoding",
+                "word1": "salt",
+                "word2": "pepper",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_02": [
+            {
+                "trcode": "L75_enc_02",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'bread' is paired with 'butter'.",
+                "phase": "encoding",
+                "word1": "bread",
+                "word2": "butter",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_03": [
+            {
+                "trcode": "L75_enc_03",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'black' is paired with 'white'.",
+                "phase": "encoding",
+                "word1": "black",
+                "word2": "white",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_04": [
+            {
+                "trcode": "L75_enc_04",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'night' is paired with 'day'.",
+                "phase": "encoding",
+                "word1": "night",
+                "word2": "day",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_05": [
+            {
+                "trcode": "L75_enc_05",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'knife' is paired with 'fork'.",
+                "phase": "encoding",
+                "word1": "knife",
+                "word2": "fork",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_06": [
+            {
+                "trcode": "L75_enc_06",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'cup' is paired with 'saucer'.",
+                "phase": "encoding",
+                "word1": "cup",
+                "word2": "saucer",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_07": [
+            {
+                "trcode": "L75_enc_07",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'stamp' is paired with 'envelope'.",
+                "phase": "encoding",
+                "word1": "stamp",
+                "word2": "envelope",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_08": [
+            {
+                "trcode": "L75_enc_08",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'needle' is paired with 'thread'.",
+                "phase": "encoding",
+                "word1": "needle",
+                "word2": "thread",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_09": [
+            {
+                "trcode": "L75_enc_09",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'chalk' is paired with 'board'.",
+                "phase": "encoding",
+                "word1": "chalk",
+                "word2": "board",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L75_enc_10": [
+            {
+                "trcode": "L75_enc_10",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'water' is paired with 'wave'.",
+                "phase": "encoding",
+                "word1": "water",
+                "word2": "wave",
+                "similarity": 0.75,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_01": [
+            {
+                "trcode": "L100_enc_01",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'big' is paired with 'large'.",
+                "phase": "encoding",
+                "word1": "big",
+                "word2": "large",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_02": [
+            {
+                "trcode": "L100_enc_02",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'happy' is paired with 'joyful'.",
+                "phase": "encoding",
+                "word1": "happy",
+                "word2": "joyful",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_03": [
+            {
+                "trcode": "L100_enc_03",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'fast' is paired with 'quick'.",
+                "phase": "encoding",
+                "word1": "fast",
+                "word2": "quick",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_04": [
+            {
+                "trcode": "L100_enc_04",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'small' is paired with 'tiny'.",
+                "phase": "encoding",
+                "word1": "small",
+                "word2": "tiny",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_05": [
+            {
+                "trcode": "L100_enc_05",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'dark' is paired with 'dim'.",
+                "phase": "encoding",
+                "word1": "dark",
+                "word2": "dim",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_06": [
+            {
+                "trcode": "L100_enc_06",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'cold' is paired with 'chilly'.",
+                "phase": "encoding",
+                "word1": "cold",
+                "word2": "chilly",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_07": [
+            {
+                "trcode": "L100_enc_07",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'warm' is paired with 'cozy'.",
+                "phase": "encoding",
+                "word1": "warm",
+                "word2": "cozy",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_08": [
+            {
+                "trcode": "L100_enc_08",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'bright' is paired with 'radiant'.",
+                "phase": "encoding",
+                "word1": "bright",
+                "word2": "radiant",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_09": [
+            {
+                "trcode": "L100_enc_09",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'afraid' is paired with 'scared'.",
+                "phase": "encoding",
+                "word1": "afraid",
+                "word2": "scared",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L100_enc_10": [
+            {
+                "trcode": "L100_enc_10",
+                "stimulus": "STUDY PHASE \u2014 Please remember this word pair: the word 'angry' is paired with 'furious'.",
+                "phase": "encoding",
+                "word1": "angry",
+                "word2": "furious",
+                "similarity": 1.0,
+                "parser": null,
+                "fb": false
+            }
+        ],
+        "L0_tst_01": [
+            {
+                "trcode": "L0_tst_01",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'cat' during the study phase?",
+                "phase": "test",
+                "word1": "cat",
+                "word2": "umbrella",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_02": [
+            {
+                "trcode": "L0_tst_02",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'moon' during the study phase?",
+                "phase": "test",
+                "word1": "moon",
+                "word2": "pencil",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_03": [
+            {
+                "trcode": "L0_tst_03",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'tree' during the study phase?",
+                "phase": "test",
+                "word1": "tree",
+                "word2": "sock",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_04": [
+            {
+                "trcode": "L0_tst_04",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'river' during the study phase?",
+                "phase": "test",
+                "word1": "river",
+                "word2": "wallet",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_05": [
+            {
+                "trcode": "L0_tst_05",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'bird' during the study phase?",
+                "phase": "test",
+                "word1": "bird",
+                "word2": "hammer",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_06": [
+            {
+                "trcode": "L0_tst_06",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'dog' during the study phase?",
+                "phase": "test",
+                "word1": "dog",
+                "word2": "ladder",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_07": [
+            {
+                "trcode": "L0_tst_07",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'sky' during the study phase?",
+                "phase": "test",
+                "word1": "sky",
+                "word2": "carrot",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_08": [
+            {
+                "trcode": "L0_tst_08",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'book' during the study phase?",
+                "phase": "test",
+                "word1": "book",
+                "word2": "engine",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_09": [
+            {
+                "trcode": "L0_tst_09",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'house' during the study phase?",
+                "phase": "test",
+                "word1": "house",
+                "word2": "guitar",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L0_tst_10": [
+            {
+                "trcode": "L0_tst_10",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'sun' during the study phase?",
+                "phase": "test",
+                "word1": "sun",
+                "word2": "kettle",
+                "similarity": 0.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_01": [
+            {
+                "trcode": "L25_tst_01",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'lion' during the study phase?",
+                "phase": "test",
+                "word1": "lion",
+                "word2": "tiger",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_02": [
+            {
+                "trcode": "L25_tst_02",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'rose' during the study phase?",
+                "phase": "test",
+                "word1": "rose",
+                "word2": "daisy",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_03": [
+            {
+                "trcode": "L25_tst_03",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'oak' during the study phase?",
+                "phase": "test",
+                "word1": "oak",
+                "word2": "pine",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_04": [
+            {
+                "trcode": "L25_tst_04",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'sofa' during the study phase?",
+                "phase": "test",
+                "word1": "sofa",
+                "word2": "table",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_05": [
+            {
+                "trcode": "L25_tst_05",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'apple' during the study phase?",
+                "phase": "test",
+                "word1": "apple",
+                "word2": "orange",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_06": [
+            {
+                "trcode": "L25_tst_06",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'wrench' during the study phase?",
+                "phase": "test",
+                "word1": "wrench",
+                "word2": "saw",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_07": [
+            {
+                "trcode": "L25_tst_07",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'blue' during the study phase?",
+                "phase": "test",
+                "word1": "blue",
+                "word2": "red",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_08": [
+            {
+                "trcode": "L25_tst_08",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'doctor' during the study phase?",
+                "phase": "test",
+                "word1": "doctor",
+                "word2": "teacher",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_09": [
+            {
+                "trcode": "L25_tst_09",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'piano' during the study phase?",
+                "phase": "test",
+                "word1": "piano",
+                "word2": "drum",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L25_tst_10": [
+            {
+                "trcode": "L25_tst_10",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'sheep' during the study phase?",
+                "phase": "test",
+                "word1": "sheep",
+                "word2": "goat",
+                "similarity": 0.25,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_01": [
+            {
+                "trcode": "L50_tst_01",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'bee' during the study phase?",
+                "phase": "test",
+                "word1": "bee",
+                "word2": "honey",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_02": [
+            {
+                "trcode": "L50_tst_02",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'fire' during the study phase?",
+                "phase": "test",
+                "word1": "fire",
+                "word2": "smoke",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_03": [
+            {
+                "trcode": "L50_tst_03",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'pen' during the study phase?",
+                "phase": "test",
+                "word1": "pen",
+                "word2": "ink",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_04": [
+            {
+                "trcode": "L50_tst_04",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'arrow' during the study phase?",
+                "phase": "test",
+                "word1": "arrow",
+                "word2": "target",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_05": [
+            {
+                "trcode": "L50_tst_05",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'seed' during the study phase?",
+                "phase": "test",
+                "word1": "seed",
+                "word2": "plant",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_06": [
+            {
+                "trcode": "L50_tst_06",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'winter' during the study phase?",
+                "phase": "test",
+                "word1": "winter",
+                "word2": "snow",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_07": [
+            {
+                "trcode": "L50_tst_07",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'kitchen' during the study phase?",
+                "phase": "test",
+                "word1": "kitchen",
+                "word2": "cook",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_08": [
+            {
+                "trcode": "L50_tst_08",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'hospital' during the study phase?",
+                "phase": "test",
+                "word1": "hospital",
+                "word2": "nurse",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_09": [
+            {
+                "trcode": "L50_tst_09",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'spider' during the study phase?",
+                "phase": "test",
+                "word1": "spider",
+                "word2": "web",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L50_tst_10": [
+            {
+                "trcode": "L50_tst_10",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'key' during the study phase?",
+                "phase": "test",
+                "word1": "key",
+                "word2": "lock",
+                "similarity": 0.5,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_01": [
+            {
+                "trcode": "L75_tst_01",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'salt' during the study phase?",
+                "phase": "test",
+                "word1": "salt",
+                "word2": "pepper",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_02": [
+            {
+                "trcode": "L75_tst_02",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'bread' during the study phase?",
+                "phase": "test",
+                "word1": "bread",
+                "word2": "butter",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_03": [
+            {
+                "trcode": "L75_tst_03",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'black' during the study phase?",
+                "phase": "test",
+                "word1": "black",
+                "word2": "white",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_04": [
+            {
+                "trcode": "L75_tst_04",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'night' during the study phase?",
+                "phase": "test",
+                "word1": "night",
+                "word2": "day",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_05": [
+            {
+                "trcode": "L75_tst_05",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'knife' during the study phase?",
+                "phase": "test",
+                "word1": "knife",
+                "word2": "fork",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_06": [
+            {
+                "trcode": "L75_tst_06",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'cup' during the study phase?",
+                "phase": "test",
+                "word1": "cup",
+                "word2": "saucer",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_07": [
+            {
+                "trcode": "L75_tst_07",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'stamp' during the study phase?",
+                "phase": "test",
+                "word1": "stamp",
+                "word2": "envelope",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_08": [
+            {
+                "trcode": "L75_tst_08",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'needle' during the study phase?",
+                "phase": "test",
+                "word1": "needle",
+                "word2": "thread",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_09": [
+            {
+                "trcode": "L75_tst_09",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'chalk' during the study phase?",
+                "phase": "test",
+                "word1": "chalk",
+                "word2": "board",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L75_tst_10": [
+            {
+                "trcode": "L75_tst_10",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'water' during the study phase?",
+                "phase": "test",
+                "word1": "water",
+                "word2": "wave",
+                "similarity": 0.75,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_01": [
+            {
+                "trcode": "L100_tst_01",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'big' during the study phase?",
+                "phase": "test",
+                "word1": "big",
+                "word2": "large",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_02": [
+            {
+                "trcode": "L100_tst_02",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'happy' during the study phase?",
+                "phase": "test",
+                "word1": "happy",
+                "word2": "joyful",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_03": [
+            {
+                "trcode": "L100_tst_03",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'fast' during the study phase?",
+                "phase": "test",
+                "word1": "fast",
+                "word2": "quick",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_04": [
+            {
+                "trcode": "L100_tst_04",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'small' during the study phase?",
+                "phase": "test",
+                "word1": "small",
+                "word2": "tiny",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_05": [
+            {
+                "trcode": "L100_tst_05",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'dark' during the study phase?",
+                "phase": "test",
+                "word1": "dark",
+                "word2": "dim",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_06": [
+            {
+                "trcode": "L100_tst_06",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'cold' during the study phase?",
+                "phase": "test",
+                "word1": "cold",
+                "word2": "chilly",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_07": [
+            {
+                "trcode": "L100_tst_07",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'warm' during the study phase?",
+                "phase": "test",
+                "word1": "warm",
+                "word2": "cozy",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_08": [
+            {
+                "trcode": "L100_tst_08",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'bright' during the study phase?",
+                "phase": "test",
+                "word1": "bright",
+                "word2": "radiant",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_09": [
+            {
+                "trcode": "L100_tst_09",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'afraid' during the study phase?",
+                "phase": "test",
+                "word1": "afraid",
+                "word2": "scared",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ],
+        "L100_tst_10": [
+            {
+                "trcode": "L100_tst_10",
+                "stimulus": "TEST PHASE \u2014 What word was paired with 'angry' during the study phase?",
+                "phase": "test",
+                "word1": "angry",
+                "word2": "furious",
+                "similarity": 1.0,
+                "parser": "PairedAssociateRecall",
+                "fb": true
+            }
+        ]
+    },
+    "parser": "PairedAssociateRecall",
+    "chain_type": "task"
+}

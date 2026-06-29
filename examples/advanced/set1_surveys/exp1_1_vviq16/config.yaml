@@ -1,0 +1,70 @@
+# Exp 1.1 — VVIQ-16 Imagery Questionnaire
+# Design spec consumed by run.py (PsychScanner is configured via ExpCardInit in Python;
+# this file documents the design and maps parameters to ExpCardInit fields).
+
+experiment_id: exp1_1_vviq16
+instrument: VVIQ-16
+task_file: "../../../../examples/tasks/vviq16.json"   # relative to repo root
+
+# ── model ─────────────────────────────────────────────────────────────────────
+model:  smollm2:360m-instruct-fp16
+family: ollama
+parameters:
+  temperature: 0                # deterministic; raise for stochastic runs
+
+# ── design ────────────────────────────────────────────────────────────────────
+n_runs: 5                       # simulations per condition (= n persona-trait combos)
+
+factors:
+  persona:
+    n_levels: 2
+    levels:
+      weird:
+        axis_file:   "../../personas/weird/weird_axis.json"    # 1 statement
+        traits_file: "../../personas/traits_n5.json"           # 5 statements
+        # product → 5 simulated participants, all WEIRD-conditioned
+      non_weird:
+        axis_file:   "../../personas/non_weird/non_weird_axis.json"
+        traits_file: "../../personas/traits_n5.json"
+        # product → 5 simulated participants, all non-WEIRD-conditioned
+
+  memory:
+    n_levels: 3
+    levels:
+      - label:      item_ST            # item-level, stateless
+        memory:     SingleTurn         # ExpCardInit.memory
+        chain_type: item               # ExpCardInit.chain_type
+      - label:      task_Cv            # cross-item conversation memory
+        memory:     Convo
+        chain_type: task
+      - label:      trial_Cv           # per-trial conversation thread
+        memory:     Convo
+        chain_type: trial
+
+# Note on trial_Cv: with VVIQ-16 each trial is a single exchange, so trial_Cv
+# and item_ST produce equivalent per-trial context. The condition is retained
+# for completeness and for tasks with multi-turn trials.
+
+# ── parser ────────────────────────────────────────────────────────────────────
+parser: "1"                     # resolved from task JSON → DefaultLiteralVivid15
+
+# ── dependent variables ───────────────────────────────────────────────────────
+dvs:
+  - resp_Vividness              # integer 1–5 per trial (from DefaultLiteralVivid15)
+  - trial_idx                   # 0-based trial position (0–15)
+  - trcode                      # scene-item code (S1_1 … S4_4)
+
+# ── benchmark ─────────────────────────────────────────────────────────────────
+benchmark:
+  source: OpenPsychometrics VVIQ
+  url:    https://openpsychometrics.org/
+  note:   "Download open dataset manually; path expected at analysis/benchmark_vviq.csv"
+
+# ── output figures ────────────────────────────────────────────────────────────
+output_figures:
+  - figures/trial_trajectory.png    # mean vividness per trial, per condition
+  - figures/total_vviq_violin.png   # total VVIQ per Persona × Memory cell
+  - figures/vviq_vs_benchmark.png   # per-scene means vs OpenPsychometrics norms
+
+# ── total cells ───────────────────────────────────────────────────────────────
+# Persona(2) × Memory(3) × n_runs(5) = 30 simulations × 16 trials = 480 trial records
