@@ -8,8 +8,8 @@ build:
   tools:
     python: "3.13"
 
-sphinx:
-  configuration: docs/conf.py
+mkdocs:
+  configuration: mkdocs.yml
   fail_on_warning: false
 
 python:
@@ -17,8 +17,4 @@ python:
     - method: pip
       path: .
       extra_requirements:
-        - docs
-
-formats:
-  - pdf
-  - epub
+        - mkdocs
