@@ -217,12 +217,12 @@ graph LR
 - `ScannerModel` turns `ExpCard` into actionable prompt data:
   - `system_prompts`
   - `task_prompts`
-- `AgentInitializer` creates the AI agent and memory chain.
-- `TaskRunner` receives:
+- `ScannerModel.agent()` creates the AI agent and memory chain (via `AgentInitializer` + `single_turn_convo_node()`).
+- Each `TaskRunner` (one per system prompt) receives:
   - the AI agent with memory chain
-  - `system_prompts`
+  - one system prompt
   - `task_prompts`
-- `TaskRunner` runs trial loops and records results.
+- `TaskRunner.execute()` runs the trial loop and records results.
 
 ## Slide 4 — Loop behavior
 
@@ -248,9 +248,9 @@ graph LR
 
 ## Slide 5 — Outputs and resume
 
-- `TaskRunner` writes results into `SimulationModel` / `TaskSimulationModel`.
+- `TaskRunner.execute()` returns a list of per-trial result dicts; `ScannerModel.model_dump()` wraps them in `SimulationModel` / `TaskSimulationModel`.
 - Outputs are saved as `*.psyscan` files.
-- `SessionTunnel` logs checkpoints and can provide a resume index.
+- `SessionTunnel` logs checkpoints; `ScannerModel.tunnel_systemtrials()` uses them to compute a resume index.
 
 > When tunnel mode is enabled, the workflow can restart from the last completed system prompt.
 
@@ -265,13 +265,13 @@ graph LR
 3. Scanner model preparation
    - `ScannerModel` translates the experiment card into `scanner_data` and `task_prompts`.
 4. Agent initialization
-   - `AgentInitializer` builds the LLM agent with the selected memory chain (`SingleTurn` or `Convo`) and passes that agent into `TaskRunner`.
+   - `ScannerModel.agent()` builds the LLM agent graph for the selected memory chain (`SingleTurn` or `Convo`) via `single_turn_convo_node()`, attaches it to an `AgentInitializer`, and that agent is passed into a `TaskRunner`.
 5. Trial execution
-   - `TaskRunner` iterates system prompts and task trials, invokes the agent, applies optional feedback, and collects trial outputs.
+   - `ScannerModel.run()` loops over system prompts, creating one `TaskRunner` per system prompt; each `TaskRunner` iterates its own task trials, invokes the agent, applies optional feedback, and collects trial outputs.
 6. Output persistence
-   - Results are serialized through `SimulationModel` / `TaskSimulationModel` into `.psyscan` files and session checkpoints are logged.
+   - `ScannerModel.model_dump()` wraps the collected trial dicts in `SimulationModel` / `TaskSimulationModel` and writes `.psyscan` files; session checkpoints are logged separately via `SessionTunnel`.
 7. Resume support
-   - When tunnel mode is enabled, `SessionTunnel` can load past logs and provide a resume index back to `ScannerModel`.
+   - When tunnel mode is enabled, `ScannerModel.tunnel_systemtrials()` reads past logs via `SessionTunnel` and computes the resume index.
 
 
 
@@ -284,52 +284,49 @@ classDiagram
     direction LR
 
     class ExpCard {
-        +persona_file_paths: List[str]
-        +task_file: str
-        +model_params: Dict
-        +memory_settings: Dict
-        +parser_settings: Dict
-        +feedback: str
-        +feedback_fn: Callable
-        +project_config: Dict
-        +validate_inputs()
-        +load_data()
-        +create_session_tunnel()
+        +card_in: ExpCardInit
+        +task_data: dict
+        +persona_data: dict
+        +data_root_dir: Path
+        +session_tunnel: SessionTunnel
     }
 
     class ScannerModel {
-        +exp_card: ExpCard
-        +generate_scanner_data()
-        +create_prompts()
+        +expcard: ExpCard
+        +tunnel: SessionTunnel
+        +tunnel_systemtrials()
+        +agent(agent_cfg, memory)
+        +run(progress_bar)
+        +model_dump()
     }
 
     class TaskRunner {
-        +agent: Agent
-        +system_prompts: List[str]
-        +task_prompts: List[str]
-        +run_trials()
-        +apply_feedback()
-        +record_results()
+        +system_message: str
+        +tasktrials: dict
+        +execute()
     }
 
     class SimulationModel {
-        +results: Dict
-        +serialize_to_psyscan()
+        +simdata: List~TrialSimulationModel~
     }
 
     class SessionTunnel {
-        +checkpoints: List
-        +log_checkpoint()
-        +get_resume_index()
+        +create_tunnel()
+        +scan_checkpoint()
+        +subscan_checkpoint()
+        +end_checkpoint()
+        +load_tunnel_logs()
     }
 
-    ExpCard --> ScannerModel : drives
-    ScannerModel --> TaskRunner : provides prompts
-    TaskRunner --> SimulationModel : writes results
+    ExpCard --> ScannerModel : configures
     ExpCard --> SessionTunnel : constructs
-    TaskRunner --> SessionTunnel : checkpoints
-    SessionTunnel --> ScannerModel : resume support
+    ScannerModel --> TaskRunner : one instance per system prompt
+    TaskRunner --> SimulationModel : trial result dicts
+    ScannerModel --> SimulationModel : wraps and writes via model_dump
+    ScannerModel --> SessionTunnel : checkpoints per system prompt
 ```
+
+Note: `ExpCard` and `TaskRunner` do the work described above inline in `__init__`/`execute` — they don't expose separate `validate_inputs()`/`run_trials()`-style methods. The method names above are the real public methods on each class.
 
 
 
@@ -344,10 +341,10 @@ Inspect: Built to evaluate generalized capabilities and safety of large language
 PsychScanner: Built explicitly to simulate human psychological behaviors across surveys and cognitive tasks. Its focus is on evaluating how an LLM acts when prompted with human-like personas and subjective items (like taking the VVIQ survey or ranking emotional relatedness).
 2. Architecture & Abstractions
 Inspect Models: Uses generic concepts like Datasets, Solvers (prompts/strategies applied to the model), Scorers (evaluating accuracy against a known target), and Tasks.
-PsychScanner Models: Uses psychology experiment-based semantics. It relies on an ExpCard to configure experimental conditions, defines Persona data to assign subjective human traits to the model, and runs a TrialLoop (simulating experimental trials).
+PsychScanner Models: Uses psychology experiment-based semantics. It relies on an ExpCard to configure experimental conditions, defines Persona data to assign subjective human traits to the model, and runs a TaskRunner (simulating experimental trials).
 3. Memory & Trial Continuity
 Inspect: Primarily evaluates interactions based on agent behavior and tool usages (like bash, Python, browser manipulation).
-PsychScanner: Deeply focuses on stateful psychological persistence. It utilizes Memory Settings (e.g., SingleTurn vs Convo) and feedback_functions to monitor how a "participant's" beliefs, context, or fatigue might dynamically change from trial to trial across an experiment session.
+PsychScanner: Deeply focuses on stateful psychological persistence. It utilizes memory settings (`memory`: `SingleTurn` vs `Convo`) and a `feedback_fn` handler to monitor how a "participant's" beliefs, context, or fatigue might dynamically change from trial to trial across an experiment session.
 4. Sandboxing vs. Logging
 Inspect: Emphasizes heavily secure sandboxing (via Docker or Kubernetes) to safely execute untrusted code that an LLM generates during evaluation tasks.
 

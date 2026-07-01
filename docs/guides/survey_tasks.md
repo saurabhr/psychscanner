@@ -19,7 +19,7 @@ structured responses. This is the most common use case for PsychScanner.
     ]
   },
   "contexts"        : ["Block 1"],
-  "contexts_id"     : ["items"],
+  "contexts_id"     : ["item"],
   "context_present" : false,
   "chain_type"      : "item",
   "parser"          : "DefaultLiteralAgree",
@@ -41,7 +41,7 @@ structured responses. This is the most common use case for PsychScanner.
 | `chain_type` | `"item"` (usually) |
 | `context_present` | `false` unless contexts should appear in the prompt |
 | `parser` | A Likert or rating parser from the registry |
-| `items` keys | Must match `contexts_id` entries |
+| Each trial's `trcode` prefix | Text before the first `_` must appear in `contexts_id` (the `items` dict key itself is not used for lookup) |
 
 ---
 
@@ -123,7 +123,7 @@ task = {
     "taskname":         "openness_items",
     "instructions":     {"definition": ["Rate each statement 1 (disagree) to 5 (agree)."]},
     "contexts":         ["Openness"],
-    "contexts_id":      ["items"],
+    "contexts_id":      ["open"],
     "context_present":  False,
     "chain_type":       "item",
     "parser":           "DefaultLiteralAgree",

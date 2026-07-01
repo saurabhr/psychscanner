@@ -41,17 +41,17 @@ Every task is defined in a JSON file (or inline dict). The top-level keys are:
 | `taskname` | Used as a sub-folder name in output paths |
 | `instructions` | String, list of strings, or `{"definition": [...]}` dict shown in the system message |
 | `contexts` | Full-text descriptions of task contexts (shown to the agent) |
-| `contexts_id` | Short IDs — must match the keys in `items` |
+| `contexts_id` | Short IDs — must match the `trcode` prefix (text before the first `_`) of each trial, not the `items` dict keys |
 | `context_present` | Whether to include context text in the prompt |
 | `chain_type` | `"item"`, `"trial"`, or `"task"` — see [Memory Types](memory_types.md#chain_type) |
 | `parser` | Registered parser class name used when `card.parser = "1"` |
-| `items` | Dict keyed by `contexts_id` values; each value is a list of trial dicts |
+| `items` | Dict of trial-group labels (keys are arbitrary, not used for context lookup); each value is a list of trial dicts |
 
 ### Trial dict fields
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `trcode` | Yes | Unique trial identifier |
+| `trcode` | Yes | Unique trial identifier. The text before the first `_` is used to look up the trial's context in `contexts_id` |
 | `stimulus` | Yes | The prompt shown to the model (string or structured dict) |
 | `fb` | No | Whether this trial receives feedback (default: `True`) |
 | `corrAns` | No | Correct answer for validation |
@@ -142,11 +142,28 @@ class RMFeedback(FeedbackBase):
             fb = "CORRECT." if given.lower() == word2.lower() else f"INCORRECT — expected '{word2}', got '{given}'."
         return json.dumps({"feedback": fb})
 
-card.memory      = "Convo"
-card.chain_type  = "task"
-card.feedback    = True
-card.feedback_fn = RMFeedback
+fb_card = ExpCardInit(
+    model       = "llama3.1:8b",
+    family      = "ollama",
+    task_file   = Path("tasks/rm_task.json"),
+    memory      = "Convo",
+    chain_type  = "task",
+    parser      = rm_parser,
+    feedback    = True,
+    feedback_fn = RMFeedback,
+    cogtype     = "no",
+    nsim        = 20,
+    proj_dir    = Path("./results"),
+    projectname = "rm_feedback_study",
+)
+
+scanner = ScannerModel(expcard=ExpCard(fb_card))
+results = scanner.run(progress_bar=True)
 ```
+
+Feedback settings must be passed to a fresh `ExpCardInit`/`ExpCard` — mutating
+a `card` object after it's already been passed to `ExpCard()` has no effect on
+that (or any already-run) `ScannerModel`.
 
 ---
 

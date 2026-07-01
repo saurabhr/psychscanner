@@ -96,16 +96,20 @@ Writes a TRACE-level entry for trial-level checkpointing (finer granularity than
 ```python
 tunnel.load_tunnel_logs(
     tunnel_file: Path | None = None,
+    *,
     return_all: bool = False,
     to_frame: bool = False,
 ) -> list[dict] | pd.DataFrame
 ```
 
-Reads and deserializes the tunnel log.
+Reads and deserializes the tunnel log. `return_all` and `to_frame` are keyword-only.
+
+Both settings return the same set of log entries (all levels — CRITICAL/INFO/TRACE —
+are included either way; nothing is filtered by level):
 
 | Parameter | Description |
 |-----------|-------------|
-| `return_all` | `True` = return every log entry; `False` = return only INFO + CRITICAL |
+| `return_all` | `True` = return the raw loguru log dicts (full nested `record` structure); `False` (default) = return a flattened subset with just `timestamp`, `level`, `run_type`, `session_id`, `state`, `message` |
 | `to_frame` | `True` = return a pandas DataFrame |
 
 ### Inspection helpers
@@ -130,7 +134,7 @@ card = ExpCardInit(
     family        = "openai",
     nsim          = 100,
     tunnel_status = "1",   # enable
-    tunnel_k      = -1,    # checkpoint after every participant (-1 = default)
+    tunnel_k      = -1,    # accepted but currently unused by the run loop
     proj_dir      = "./results",
     projectname   = "large_study",
     ...

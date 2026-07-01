@@ -1,31 +1,36 @@
 # Examples
 
-Practical examples demonstrating PsychScanner capabilities.
+Practical examples demonstrating PsychScanner capabilities. These pages are
+narrative, code-snippet walkthroughs — for runnable code, see the
+[Tutorials](../tutorials/index.md) section, which renders the actual notebooks
+from [`examples/`](https://github.com/saurabhr/psychscanner/tree/main/examples).
 
 ## Basic Examples
 
-- [Simple Survey](basic_survey.md) - Running a basic questionnaire
-- See `examples/basic/` for code
+- [Simple Survey](basic_survey.md) — running a basic questionnaire
 
 ## Advanced Examples
 
-- [Multi-Persona Study](multi_persona.md) - Testing multiple personas
-- [Reality Monitoring Task](reality_monitoring.md) - Complex cognitive task
-- [Feedback Loop System](feedback_loop.md) - Trial-by-trial feedback
+- [Multi-Persona Study](multi_persona.md) — testing multiple personas
+- [Reality Monitoring Task](reality_monitoring.md) — complex cognitive task
+- [Feedback Loop System](feedback_loop.md) — trial-by-trial feedback
 
-## Running Examples
+## Running the tutorial notebooks
 
 ```bash
 # Clone the repository
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
+pip install -e ".[dev]"
 
-# Run basic example
-python examples/basic/simple_survey.py
-
-# Run advanced example
-python examples/advanced/multi_persona.py
+# Launch the notebooks
+jupyter lab examples/
 ```
+
+The `examples/advanced/` directory also contains larger, multi-experiment
+study scripts (organized by `set1_surveys/`, `set2_episodic/`, etc.) — see
+[`examples/advanced/README.md`](https://github.com/saurabhr/psychscanner/tree/main/examples/advanced)
+for their current status.
 
 ## Contributing Examples
 

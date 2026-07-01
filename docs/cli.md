@@ -1,7 +1,14 @@
 # CLI Reference
 
-PsychScanner can be run from the command line for quick experiments without
-writing a Python script.
+Installing the package registers a `psychscanner` console command
+(`pyproject.toml`'s `[project.scripts]` entry point), which you can also invoke
+as `python -m psychscanner`. Both forms run the same `click` command defined in
+`src/psychscanner/cli.py`.
+
+> **Current behavior:** the CLI currently just parses and echoes its options
+> back to stdout — it does **not** build an `ExpCard`/`ScannerModel` or run an
+> experiment yet. Use it to sanity-check option parsing, or use the Python API
+> below to actually run experiments.
 
 ---
 
@@ -11,14 +18,47 @@ After installing, verify the package is available:
 
 ```bash
 python -m psychscanner --version
+# or
+psychscanner --version
 ```
+
+---
+
+## Options
+
+```bash
+psychscanner --help
+```
+
+| Flag | Type | Default | Description |
+|------|------|---------|-------------|
+| `-m, --model` | `str` | — | Model name passed to the provider |
+| `-f, --family` | `str` | — | Provider family (`openai`, `anthropic`, `ollama`, …) |
+| `-p, --parameters` | `dict` | `None` | Extra kwargs forwarded to the model constructor |
+| `-mem, --memory` | `Choice(SingleTurn, Convo)` | `SingleTurn` | Memory mode |
+| `-memk, --memory_k` | `int` | `-1` | Number of past interactions to keep |
+| `-pers, --persona_files` | `list[Path]` | `None` | Persona JSON file(s) |
+| `-t, --task_file` | `Path` | `None` | Task JSON file |
+| `-tc, --task_context` | `Choice(True, False, None)` | `None` | Whether to include context text in prompts |
+| `-tus, --tunnel_status` | `Choice("0", "1")` | `"0"` | Enable checkpointing (`"1"`) |
+| `-tuk, --tunnel_k` | `int` | `-1` | Accepted but currently unused by the run loop |
+| `-projname, --projectname` | `str` | `"DEFAULTPROJ"` | Project name / output sub-folder |
+| `-tg, --tags` | `list[str]` | `[]` | Arbitrary metadata tags |
+| `-pa, --parser` | `str` | `"0"` | Parser name, or `"0"` for none |
+| `-praw, --parser_raw` | `bool` | `False` | Keep the raw `AIMessage` alongside the parsed response |
+| `-pcon, --parser_config` | `dict` | `None` | Forwarded to `with_structured_output()` |
+| `-pd, --proj_dir` | `Path` | `~/psychscanner` | Root output directory |
+| `-le, --login_env` | `str` | `None` | Path to a `.env` file for API keys |
+| `-tq, --enabletqdm` | flag | `False` | Show a tqdm progress bar |
+| `-v, --version` | flag | — | Print the installed version and exit |
+| `-h, --help` | flag | — | Show help and exit |
 
 ---
 
 ## Python API (recommended)
 
-For most use cases, the Python API gives you full control and is the recommended
-approach:
+For actually running experiments today, use the Python API, which gives you
+full control:
 
 ```python
 from pathlib import Path
@@ -91,10 +131,15 @@ wall-time limit, re-submitting resumes from the last completed participant.
 # Set API keys before running
 export OPENAI_API_KEY=sk-...
 export GROQ_API_KEY=gsk_...
+```
 
-# Or use a .env file (auto-loaded by psychscanner)
-cat .env
-# OPENAI_API_KEY=sk-...
+Or keep them in a `.env` file and load it yourself before constructing the
+card — psychscanner does **not** load `.env` files automatically (the
+`login_env` field exists but is currently unused):
+
+```python
+from dotenv import load_dotenv
+load_dotenv()  # requires `pip install python-dotenv`
 ```
 
 ---

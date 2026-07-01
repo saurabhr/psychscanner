@@ -3,6 +3,12 @@
 PsychScanner supports two memory modes that control whether a simulated participant
 "remembers" previous trials within an experiment run.
 
+> The snippets below (`card.memory = ...`, `card.memory_k = ...`, etc.) illustrate
+> `ExpCardInit` fields. `ExpCard` reads these values once at construction time
+> (`ExpCard(card)`), so set them on the `ExpCardInit` instance *before* building
+> the `ExpCard`/`ScannerModel` — mutating `card` afterwards has no effect on an
+> already-constructed `ExpCard`.
+
 ---
 
 ## SingleTurn (stateless)
@@ -74,8 +80,9 @@ card.summary_k = 0    # default: no summarisation
 card.summary_k = 20   # summarise when context overflows
 ```
 
-When the context overflows, the oldest `summary_k` messages are condensed into
-a single summary message by the model before continuing.
+`summary_k` is a threshold, not a batch size: once the overflow (all messages
+beyond `memory_k`) reaches `summary_k` messages, the **entire overflow** is
+condensed into a single summary message by the model before continuing.
 This preserves thematic context without the cost of the full history.
 
 ---
@@ -89,12 +96,16 @@ and interacts with the memory mode.
 |-------|----------------------|
 | `"item"` | One stimulus → one model call. The most common mode. |
 | `"trial"` | Multiple stimuli shown in sequence within a single turn. |
-| `"task"` | Trials carry over context from previous trials (task-level chaining, required for feedback). |
+| `"task"` | Trials carry over context from previous trials (task-level chaining, commonly used with feedback). |
 
 ```python
 card.chain_type = "item"   # default for most tasks
-card.chain_type = "task"   # required for feedback experiments
+card.chain_type = "task"   # commonly used for feedback experiments
 ```
+
+Feedback injection itself is controlled by `feedback`/`feedback_fn` and works
+regardless of `chain_type` — `chain_type` only changes which LangGraph
+`thread_id` trials share, not whether feedback is applied.
 
 `chain_type` can be set on the card (overrides the task JSON) or defined inside the task JSON.
 

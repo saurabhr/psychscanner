@@ -62,6 +62,8 @@ to_csv(scanner, path=card.proj_dir)
 | `azure` | `AZURE_OPENAI_API_KEY` | Azure OpenAI |
 | `huggingface` | `HUGGINGFACEHUB_API_TOKEN` | HuggingFace Inference API |
 | `ollama` | — (local) / `OLLAMA_API_KEY` (remote) | Pass `base_url` in `parameters` for remote |
+| `cohere` | `COHERE_API_KEY` | Cohere Command models |
+| `openrouter` | `OPENROUTER_API_KEY` | Routed through the OpenAI-compatible endpoint at openrouter.ai |
 
 ---
 

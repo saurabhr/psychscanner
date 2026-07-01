@@ -66,8 +66,8 @@ Single entry point that accepts any parser specification and returns the concret
 | Module | Contents |
 |---|---|
 | `psychscanner.parsers` | Top-level namespace + registry helpers |
-| `psychscanner.datasets.prompts.parser_tasks` | Vividness + RM parsers (29 classes) |
-| `psychscanner.datasets.prompts.parser_general` | Likert, generic, word-class, readiness (12 classes) |
+| `psychscanner.datasets.prompts.parser_tasks` | Vividness + RM parsers (28 classes) |
+| `psychscanner.datasets.prompts.parser_general` | Likert, generic, word-class, readiness (15 classes) |
 | `psychscanner.datasets.prompts.parser` | Backward-compat shim (old name) |
 | `psychscanner.datasets.prompts.parser_extra` | Backward-compat shim (old name) |
 
@@ -93,8 +93,16 @@ All paths for the same class return the **same object** — no duplication.
 | `DefaultParser` | `response` | Generic list response |
 | `DefaultRatingParser` | `response` | Single integer rating |
 | `DefaultResponseRating` | `response`, `rating` | String + float |
+| `DefaultResponseRatingConvo` | `response`, `rating` | Conversational variant with a richer multi-option response description |
 | `SimpleResponseRating` | `response`, `rating` | Single word + float |
 | `TwoResponses` | `Response_1`, `Response_2` | Two-part answers |
+
+### Paired-associate / serial recall
+
+| Class | Fields | Scale |
+|---|---|---|
+| `PairedAssociateRecall` | `recalled_word`, `confidence` | Word + confidence 1–6 |
+| `SerialProbeResponse` | `recalled_number`, `confidence` | Number + confidence 1–6 |
 
 ### Word classification
 

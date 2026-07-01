@@ -47,7 +47,7 @@ card = ExpCardInit(model="gpt-4o-mini", family="openai", nsim=20)
 |-------|------|---------|-------------|
 | `memory` | `"SingleTurn"` / `"Convo"` | `"SingleTurn"` | `"SingleTurn"` = each trial is independent; `"Convo"` = trials chained in one conversation |
 | `memory_k` | `int` | `-1` | Max messages kept in context: `-1` = unlimited, `N` = most recent N messages |
-| `summary_k` | `int` | `0` | Summarization batch size (Convo only): `0` = disabled, `N` = summarize when context overflows |
+| `summary_k` | `int` | `0` | Summarization threshold (Convo only): `0` = disabled; once the memory-k overflow reaches `N` messages, the entire overflow is summarized |
 | `chain_type` | `"item"` / `"trial"` / `"task"` / `None` | `None` | Overrides the task JSON `chain_type`; controls how stimuli are grouped within a trial |
 
 ### Parsing
@@ -57,6 +57,7 @@ card = ExpCardInit(model="gpt-4o-mini", family="openai", nsim=20)
 | `parser` | `str \| type[BaseModel] \| Callable \| None` | `None` | Structured-output parser — see [Parser modes](#parser-modes) |
 | `parser_raw` | `bool` | `False` | When `True`, the raw `AIMessage` is included in output as `"_raw"` |
 | `parser_config` | `dict \| None` | `None` | Forwarded to `model.with_structured_output(**parser_config)`; default `{"method": "json_schema"}` |
+| `trial_parsers` | `list[Any] \| None` | `None` | Used when `chain_type="trial"` and per-trial parsers are present in the task JSON |
 
 #### Parser modes
 
@@ -83,9 +84,9 @@ card = ExpCardInit(model="gpt-4o-mini", family="openai", nsim=20)
 | `projectname` | `str` | `"DEFAULTPROJ"` | Sub-directory name identifying this project |
 | `tags` | `list[str]` | `[]` | Arbitrary metadata tags |
 | `tunnel_status` | `"0"` / `"1"` | `"0"` | `"1"` enables session checkpointing for pause/resume |
-| `tunnel_k` | `int` | `-1` | Checkpoint interval: `-1` = after all trials, `N` = every N trials |
+| `tunnel_k` | `int` | `-1` | Accepted and stored, but currently not read anywhere in the run loop — checkpointing always happens after every system prompt |
 | `enabletqdm` | `bool` | `False` | Show a tqdm progress bar during the run |
-| `login_env` | `type[Settings] \| None` | `None` | Path to a `.env` file for API keys |
+| `login_env` | `type[Settings] \| None` | `None` | A `pydantic_settings.Settings` **class** (not a path string) for authenticating proprietary models. Currently stored on the card but never instantiated/read anywhere — it has no effect on which `.env` file is loaded. Call `dotenv.load_dotenv()` yourself before constructing the card if you need `.env`-based API keys. |
 
 ---
 

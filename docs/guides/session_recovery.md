@@ -14,9 +14,13 @@ Set `tunnel_status="1"` on the `ExpCard`:
 card = ExpCardInit(
     ...
     tunnel_status = "1",
-    tunnel_k      = -1,   # checkpoint after every participant
+    tunnel_k      = -1,   # accepted but currently unused — see note below
 )
 ```
+
+> `tunnel_k` is stored on the card but is not currently read anywhere in the
+> run loop — checkpointing always happens after every system prompt,
+> regardless of its value.
 
 A tunnel log file is written alongside the data:
 ```
@@ -31,12 +35,13 @@ On every `ScannerModel.run()` call:
 
 1. The tunnel log is opened.
 2. If it contains a previous `END` marker the run is blocked — the session already completed.
-3. If it contains partial checkpoints, the scanner reads the last `SCAN` entry and computes the resume index.
-4. Participants already logged are skipped.
-5. Each completed participant triggers a `scan_checkpoint` log entry.
-6. After all participants finish, an `END` entry is written.
+3. If it contains partial checkpoints, `ScannerModel.tunnel_systemtrials()` reads the last `SCAN`
+   entry's `len_completed_system_prompts` and computes the resume index.
+4. System prompts (one per participant, in the common case) already logged are skipped.
+5. Each completed system prompt triggers a `scan_checkpoint` log entry.
+6. After all system prompts finish, an `END` entry is written.
 
-Re-running the exact same script resumes from the next incomplete participant.
+Re-running the exact same script resumes from the next incomplete system prompt.
 No code changes are needed.
 
 ---

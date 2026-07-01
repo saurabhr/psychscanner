@@ -52,9 +52,12 @@ Provider identifier. Must match a supported family:
 | `"huggingface"` | `HUGGINGFACEHUB_API_TOKEN` |
 | `"ollama"` | `OLLAMA_API_KEY` (remote only; local needs none) |
 | `"cohere"` | `COHERE_API_KEY` |
+| `"openrouter"` | `OPENROUTER_API_KEY` (routed through the OpenAI-compatible endpoint) |
 | `"mock-llm"` | None |
 
-API keys are loaded automatically from environment variables or a `.env` file.
+API keys are read from environment variables (`os.getenv`) — psychscanner does
+**not** load a `.env` file automatically. If you keep keys in a `.env` file, call
+`load_dotenv()` (from `python-dotenv`) yourself before constructing the card.
 You can also pass `{"api_key": "..."}` directly in `parameters`.
 
 ### `parameters`
@@ -144,7 +147,7 @@ Maximum number of messages kept in the conversation context window.
 Summarization trigger for `"Convo"` memory.
 
 - `0` — disabled
-- `N` — when the context overflows, summarize the oldest `N` messages into a single summary message
+- `N` — a threshold, not a batch size: once the overflow (messages beyond `memory_k`) reaches `N` messages, the **entire overflow** is summarized into a single summary message
 
 ### `chain_type`
 **Type:** `"item"` / `"trial"` / `"task"` / `None` | **Default:** `None`
@@ -195,8 +198,11 @@ card.parser_config = {"method": "json_mode"}
 ### `feedback`
 **Type:** `bool` | **Default:** `False`
 
-Enable trial-level feedback injection. Requires `feedback_fn` to be set and
-`memory="Convo"` (feedback is appended to the conversation).
+Enable trial-level feedback injection. Requires `feedback_fn` to be set (raises
+`ValueError` at `ExpCard` construction otherwise) — accepts `True`/`False` or
+the strings `"0"`/`"1"` for backward compatibility. `memory="Convo"` is not
+enforced by the code, but feedback is only meaningful when trials share
+context, so it's typically paired with `Convo` memory and `chain_type="task"`.
 
 ### `feedback_fn`
 **Type:** `type[FeedbackBase] | None` | **Default:** `None`
@@ -246,7 +252,9 @@ Sub-directory label that groups related runs together.
 ### `tunnel_k`
 **Type:** `int` | **Default:** `-1`
 
-Checkpoint interval. `-1` = checkpoint after all trials in a participant run; `N` = every N trials.
+Accepted and stored on the card, but currently **not read anywhere** in the run
+loop — checkpointing always happens after every system prompt regardless of
+this value. Treat it as reserved for future use.
 
 ### `enabletqdm`
 **Type:** `bool` | **Default:** `False`
@@ -257,6 +265,14 @@ Show a tqdm progress bar. Can also be set at run time via `scanner.run(progress_
 **Type:** `list[str]` | **Default:** `[]`
 
 Arbitrary metadata tags attached to the card (stored in serialised output).
+
+### `login_env`
+**Type:** `type[Settings] | None` | **Default:** `None`
+
+A `pydantic_settings.Settings` **class** (not a path string), intended for
+authenticating proprietary models via a `.env` file. Currently stored on the
+card but never instantiated or read anywhere in the codebase — setting it has
+no effect. Call `load_dotenv()` yourself if you need `.env`-based API keys.
 
 ---
 
