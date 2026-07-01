@@ -27,6 +27,19 @@ classifiers = [
 requires-python = "~=3.9"
 dependencies = [
     "click",
+    "langchain",
+    "langchain-core",
+    "langgraph",
+    "loguru",
+    "numpy",
+    "ollama",
+    "pandas",
+    "polars",
+    "pydantic",
+    "pydantic-settings",
+    "tenacity",
+    "tqdm",
+    "typing-extensions",
 ]
 dynamic = ["version"]
 
