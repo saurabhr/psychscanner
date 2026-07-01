@@ -322,5 +322,5 @@ card = ExpCardInit(parser=step_dispatch, ...)
 ## See also
 
 - [Parsers API Reference](../api/parsers.md) — full class listing
-- [Example notebooks](../../examples/) — `03_parsers.ipynb`, `08_ps_parser_guide.ipynb`
+- Example notebooks — [Parsers](../tutorials/03_parsers.ipynb), [Parser System Guide](../tutorials/08_ps_parser_guide.ipynb)
 - [Reality Monitoring task guide](cognitive_tasks.md)

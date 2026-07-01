@@ -224,4 +224,4 @@ See [Custom Parsers Guide](../guides/custom_parsers.md) for design tips and exam
 ## See also
 
 - [Custom Parsers Guide](../guides/custom_parsers.md)
-- [Example notebooks](../../examples/) — `03_parsers.ipynb`, `04_parser_modules.ipynb`, `08_ps_parser_guide.ipynb`
+- Example notebooks — [Parsers](../tutorials/03_parsers.ipynb), [Parser Modules](../tutorials/04_parser_modules.ipynb), [Parser System Guide](../tutorials/08_ps_parser_guide.ipynb)

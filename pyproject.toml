@@ -42,8 +42,13 @@ docs = [
     "sphinx-copybutton",
     "sphinxext-opengraph",
 ]
+mkdocs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-jupyter>=0.24",
+]
 dev = [
-    "psychscanner[tests,docs]",
+    "psychscanner[tests,docs,mkdocs]",
 ]
 
 [project.urls]

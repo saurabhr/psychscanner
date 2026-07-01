@@ -34,6 +34,11 @@ theme:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      include: ["tutorials/*.ipynb"]
+      execute: false
+      include_source: true
+      ignore_h1_titles: true
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -61,6 +66,18 @@ nav:
     - Installation: installation.md
     - Quick Start: usage.md
     - Configuration: configuration.md
+  - Tutorials:
+    - Overview: tutorials/index.md
+    - Quickstart: tutorials/00_quickstart.ipynb
+    - Local Models with Ollama: tutorials/01_ollama_local_models.ipynb
+    - Parameters Reference: tutorials/02_parameters_reference.ipynb
+    - Parsers: tutorials/03_parsers.ipynb
+    - Parser Modules: tutorials/04_parser_modules.ipynb
+    - Reality Monitoring Task: tutorials/05_rm_task.ipynb
+    - Feedback API: tutorials/06_feedback_api.ipynb
+    - Reality Monitoring with Feedback: tutorials/07_rm_feedback_task.ipynb
+    - Parser System Guide: tutorials/08_ps_parser_guide.ipynb
+    - VVIQ-16 Study: tutorials/09_vviq16_study.ipynb
   - User Guide:
     - Overview: guides/index.md
     - PsychScanner Workflow: guides/psychscanner_workflow.md
