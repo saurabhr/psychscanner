@@ -12,7 +12,7 @@ import psychscanner
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "psychscanner-cli"
+project = "Psych Scanner"
 copyright = "2025, Saurabh Ranjan"
 author = "Saurabh Ranjan"
 release = psychscanner.__version__

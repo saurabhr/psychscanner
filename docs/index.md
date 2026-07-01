@@ -89,6 +89,6 @@ Every notebook in [`examples/`](https://github.com/saurabhr/psychscanner/tree/ma
 If you use PsychScanner in your research, please cite:
 
 ```
-Ranjan, S. (2025). PsychScanner: A framework for simulating psychological experiments
-with large language models. [Preprint]
+Ranjan, S., Makwana, M. Psych Scanner: A Framework for Systematic Cognitive Evaluation of
+Large Language Models. [Under Submission]
 ```
