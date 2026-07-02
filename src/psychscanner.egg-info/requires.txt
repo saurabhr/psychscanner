@@ -1,7 +1,22 @@
 click
+langchain
+langchain-core
+langchain-ollama
+langgraph
+loguru
+numpy
+ollama
+pandas
+polars
+pydantic
+pydantic-settings
+python-dotenv
+tenacity
+tqdm
+typing-extensions
 
 [dev]
-psychscanner[docs,tests]
+psychscanner[docs,mkdocs,multimodal,tests]
 
 [docs]
 furo
@@ -10,6 +25,15 @@ sphinx
 sphinx-autobuild
 sphinx-copybutton
 sphinxext-opengraph
+
+[mkdocs]
+mkdocs
+mkdocs-material
+mkdocs-jupyter>=0.24
+
+[multimodal]
+beautifulsoup4
+httpx
 
 [tests]
 pytest

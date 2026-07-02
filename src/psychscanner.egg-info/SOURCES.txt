@@ -16,6 +16,7 @@ src/psychscanner/datasets/__init__.py
 src/psychscanner/datasets/load_datasets.py
 src/psychscanner/datasets/prompts/__init__.py
 src/psychscanner/datasets/prompts/chat_prompts.py
+src/psychscanner/datasets/prompts/multimodal.py
 src/psychscanner/datasets/prompts/parser.py
 src/psychscanner/datasets/prompts/parser_extra.py
 src/psychscanner/datasets/prompts/parser_general.py
@@ -35,6 +36,7 @@ src/psychscanner/memories/base/mock_llm.py
 src/psychscanner/memories/base/model_provider.py
 src/psychscanner/scanner_models/__init__.py
 src/psychscanner/scanner_models/agent_config.py
+src/psychscanner/scanner_models/media_store.py
 src/psychscanner/scanner_models/psyscan_io.py
 src/psychscanner/scanner_models/scanner_data.py
 src/psychscanner/scanner_models/scanner_model.py
@@ -53,4 +55,6 @@ src/psychscanner/templates/__init__.py
 src/psychscanner/templates/tasks/__init__.py
 src/psychscanner/templates/tasks/get_task_template.py
 tests/test_cli.py
+tests/test_multimodal.py
 tests/test_readme_quickstart.py
+tests/test_tools.py
