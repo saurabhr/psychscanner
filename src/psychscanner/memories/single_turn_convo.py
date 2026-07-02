@@ -43,6 +43,25 @@ def _invoke_with_retry(runnable, invoke_input: dict):
     return runnable.invoke(invoke_input)
 
 
+def _resolve_trial_tools(trial_tool_names: list[str] | None, available_tools: list | None) -> list:
+    """Resolve a trial's ``"tools"`` name list against the card-level tool pool.
+
+    ``trial_tool_names=None`` (key absent from the trial JSON) falls back to
+    the full ``available_tools`` pool. An explicit list — including ``[]`` —
+    selects that exact subset by ``BaseTool.name`` (or ``__name__`` for plain
+    functions), letting a trial opt out of tools entirely with ``"tools": []``.
+    """
+    if trial_tool_names is None:
+        return available_tools or []
+
+    by_name = {getattr(t, "name", None) or getattr(t, "__name__", None): t for t in (available_tools or [])}
+    unknown = [name for name in trial_tool_names if name not in by_name]
+    if unknown:
+        msg = f"Trial references unknown tool name(s) {unknown}; not in card-level tools {list(by_name)}."
+        raise ValueError(msg)
+    return [by_name[name] for name in trial_tool_names]
+
+
 def _make_summary(messages: list, existing_summary: str, model) -> str:
     """Summarize a batch of messages, folding in any existing summary."""
     existing_block = (
@@ -105,6 +124,7 @@ def single_turn_convo_node(
         system_message: str
         trcode:         str
         parser:         NotRequired[str | None]   # per-trial parser name from task JSON
+        tools:          NotRequired[list[str] | None]  # per-trial tool-name subset from task JSON
         summary:        NotRequired[str]           # rolling summary of trimmed messages
 
     def call_model(state: State):
@@ -139,11 +159,22 @@ def single_turn_convo_node(
             "system_message": system_msg,
             "inputs": messages,
         }
+        # Tools bind fresh per call, same as with_structured_output below,
+        # since one agent_cfg.modelobject is reused across every trial. A
+        # trial JSON "tools" key selects a subset of agent_cfg.tools by name
+        # (falls back to the full pool when absent); combining tools with a
+        # parser is provider-dependent — both ride the tool-calling protocol
+        # and most providers only honor one enforced tool_choice at a time.
+        model = agent_cfg.modelobject
+        trial_tools = _resolve_trial_tools(state.get("tools"), agent_cfg.tools)
+        if trial_tools:
+            model = model.bind_tools(trial_tools)
+
         if parser_cls is None:
-            runnable = prompt | agent_cfg.modelobject
+            runnable = prompt | model
             response = _invoke_with_retry(runnable, invoke_input)
         else:
-            runnable = prompt | agent_cfg.modelobject.with_structured_output(
+            runnable = prompt | model.with_structured_output(
                 parser_cls,
                 include_raw=agent_cfg.parser_raw,
                 **agent_cfg.parser_config,

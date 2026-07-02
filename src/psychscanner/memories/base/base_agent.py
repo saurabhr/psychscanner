@@ -47,6 +47,7 @@ class AgentInitializer:
         self.chain_type = self.cfg.chain_type
         self.parser = self.cfg.parser
         self.trial_parsers = self.cfg.trial_parsers
+        self.tools = self.cfg.tools
         self.workflow = None
         self.ai_app = None
 

@@ -29,6 +29,7 @@ dependencies = [
     "click",
     "langchain",
     "langchain-core",
+    "langchain-ollama",
     "langgraph",
     "loguru",
     "numpy",
@@ -61,8 +62,12 @@ mkdocs = [
     "mkdocs-material",
     "mkdocs-jupyter>=0.24",
 ]
+multimodal = [
+    "beautifulsoup4",
+    "httpx",
+]
 dev = [
-    "psychscanner[tests,docs,mkdocs]",
+    "psychscanner[tests,docs,mkdocs,multimodal]",
 ]
 
 [project.urls]

@@ -22,6 +22,7 @@ from ..memories.single_turn_convo import single_turn_convo_node
 from ..staging import factory_settings
 from .agent_config import AgentConfig
 from .scanner_data import scanner_data
+from .media_store import externalize_media
 from psychscanner.task_runner import TaskRunner
 DATETIME_FMT = '%Y%m%dT%H-%M-%S'  # YYYY-MM-DD_HH-MM-SS
 class ScannerModel:
@@ -50,6 +51,7 @@ class ScannerModel:
             parser=self.expcard.parser,
             parser_raw=self.expcard.card_in.parser_raw,
             parser_config=self.expcard.card_in.parser_config,
+            tools=self.expcard.tools,
         )
 
         self.tqdm_progress_flag = expcard.card_in.enabletqdm
@@ -156,9 +158,12 @@ class ScannerModel:
         if not data_root_dir.exists():
             data_root_dir.mkdir(parents=True, exist_ok=True)
 
+        media_dir = data_root_dir / "media"
         if data_type == "session":
+            data = [externalize_media(task_trials, media_dir) for task_trials in data]
             data_string = SimulationModel(simdata=data).model_dump_json(indent=4)
         elif data_type == "task":
+            data = externalize_media(data, media_dir)
             data_string = TaskSimulationModel(taskdata=data).model_dump_json(indent=4)
         else:
             msg = f"Invalid data_type: {data_type}. Expected 'session' or 'task'."

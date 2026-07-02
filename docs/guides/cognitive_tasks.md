@@ -52,10 +52,11 @@ Every task is defined in a JSON file (or inline dict). The top-level keys are:
 | Field | Required | Description |
 |-------|----------|-------------|
 | `trcode` | Yes | Unique trial identifier. The text before the first `_` is used to look up the trial's context in `contexts_id` |
-| `stimulus` | Yes | The prompt shown to the model (string or structured dict) |
+| `stimulus` | Yes | The prompt shown to the model: a string, a structured dict, or a **list of standard content blocks** (e.g. `image_block(...)` + `{"type": "text", ...}`) for multimodal trials — see [Visual Search and Attention](#visual-search-and-attention) below |
 | `fb` | No | Whether this trial receives feedback (default: `True`) |
 | `corrAns` | No | Correct answer for validation |
 | `parser` | No | Per-trial parser name override |
+| `tools` | No | Per-trial tool subset: a list of tool names selecting from `card.tools` (see [Tool Binding](#tool-binding) below). Absent → full `card.tools` pool; `[]` → no tools for this trial |
 
 ---
 
@@ -164,6 +165,148 @@ results = scanner.run(progress_bar=True)
 Feedback settings must be passed to a fresh `ExpCardInit`/`ExpCard` — mutating
 a `card` object after it's already been passed to `ExpCard()` has no effect on
 that (or any already-run) `ScannerModel`.
+
+---
+
+## Visual Search and Attention
+
+Visual search / attention paradigms (feature search, conjunction search,
+sustained-attention vigilance blocks) need an **image stimulus**, not just
+text. The `stimulus` field accepts a list of standard content blocks
+(https://docs.langchain.com/oss/python/langchain/messages) — build them with
+`psychscanner.datasets.prompts.multimodal.image_block` (also
+`audio_block`/`file_block`/`website_block` for other modalities):
+
+```python
+from psychscanner.datasets.prompts.multimodal import image_block
+
+def search_trial(trcode, image_path, question):
+    return {
+        "trcode": trcode,
+        "stimulus": [image_block(image_path), {"type": "text", "text": question}],
+    }
+```
+
+The same multimodal stimulus works under all three memory/`chain_type`
+combinations the engine supports — see [Memory Types](memory_types.md#chain_type)
+for how `chain_type` picks the LangGraph `thread_id`
+(`TaskRunner.execute`, `chain_type == "trial"` → `trace_cfg["trial"] + trcode`;
+`chain_type in ("item", "task")` → `trace_cfg["task"]`). `thread_id` only has
+an effect under `memory="Convo"` (a checkpointer is attached); under
+`SingleTurn` it's silently ignored.
+
+| Configuration | `memory` | `chain_type` | Use for |
+|---|---|---|---|
+| Single trial | `SingleTurn` | `"item"` | Feature/pop-out search — each display independent |
+| Trial-chain | `Convo` | `"trial"` | Serial attention scan within one display |
+| Episodic chain | `Convo` | `"task"` | Sustained-attention / oddball vigilance block |
+
+### Single trial (feature search)
+
+Each display is an independent trial with no memory carry-over — standard
+for a cross-sectional accuracy/confidence design:
+
+```python
+task = {
+    "tasktype": "visual_search", "taskname": "feature_search",
+    "instructions": {"definition": ["Decide whether the red-circle target is present among the blue-circle distractors."]},
+    "contexts": ["Feature search (pop-out)"], "contexts_id": ["feat"],
+    "context_present": False, "chain_type": "item",
+    "parser": "DefaultResponseRating",
+    "items": {"feat": [
+        search_trial("feat_1", "stimuli/feature_present_01.png", "Is the target present? Answer yes/no and confidence 1-5."),
+        search_trial("feat_2", "stimuli/feature_absent_01.png",  "Is the target present? Answer yes/no and confidence 1-5."),
+    ]},
+}
+card = ExpCardInit(task_file=task, memory="SingleTurn", chain_type="item", parser="1", cogtype="no", nsim=20)
+```
+
+### Trial-chain (within-trial attention scan)
+
+Models serial covert attention shifts across quadrants of one
+conjunction-search display. Sub-stimuli **share the same `trcode`**
+(`conj_1` repeated) so they land on the same LangGraph thread and accumulate
+memory only within that trial — the next trial (`conj_2`) starts a fresh
+thread:
+
+```python
+"items": {"conj": [
+    search_trial("conj_1", "stimuli/conjunction_TL.png", "Top-left quadrant — note any target features, then say NEXT."),
+    search_trial("conj_1", "stimuli/conjunction_TR.png", "Top-right quadrant — note any target features, then say NEXT."),
+    search_trial("conj_1", "stimuli/conjunction_BL.png", "Bottom-left quadrant — note any target features, then say NEXT."),
+    search_trial("conj_1", "stimuli/conjunction_BR.png", "Bottom-right quadrant. Now judge: was the target present anywhere? yes/no + confidence."),
+]}
+```
+```python
+card = ExpCardInit(task_file=task, memory="Convo", chain_type="trial", parser="1", cogtype="no", nsim=20)
+```
+
+### Episodic chain (sustained-attention / oddball block)
+
+A vigilance block of mostly-standard displays with rare oddball targets. The
+whole block is one conversation, so expectation/fatigue effects can
+accumulate across trials — optionally paired with `FeedbackBase` for
+correctness feedback, same pattern as `RMFeedback` above:
+
+```python
+"items": {"vig": [
+    search_trial("vig_1", "stimuli/standard_01.png", "Oddball present? yes/no."),
+    search_trial("vig_2", "stimuli/standard_02.png", "Oddball present? yes/no."),
+    search_trial("vig_3", "stimuli/oddball_01.png",  "Oddball present? yes/no."),
+    # ... continues for the full block
+]}
+```
+```python
+card = ExpCardInit(task_file=task, memory="Convo", chain_type="task", parser="1",
+                    feedback=True, feedback_fn=VigilanceFeedback, cogtype="no", nsim=20)
+```
+
+### Media storage
+
+Large stimuli are stored once, content-addressed, under
+`<data_root_dir>/media/<sha256>.<ext>`, and referenced by path in the
+persisted `.psyscan` record — the same image reused across many trials or
+`nsim` participants is written only once, not duplicated into every
+checkpoint.
+
+---
+
+## Tool Binding
+
+`card.tools` binds LangChain tools to the model for the whole run — it's a
+single hyperparameter, like `parameters`, not a swept condition: every
+persona and every trial in one `ExpCard` shares the same tool pool.
+
+```python
+from langchain_core.tools import tool
+
+@tool
+def image_zoom(region: str) -> str:
+    """Return a zoomed-in crop of the display for the named region."""
+    ...
+
+card = ExpCardInit(task_file=task, tools=[image_zoom], cogtype="no", nsim=20)
+```
+
+To vary which tools are *available* trial-by-trial within that same run —
+e.g. only expose `image_zoom` on trials where zooming is part of the
+paradigm — add a `"tools"` key to individual trial dicts, naming a subset of
+`card.tools` by their `BaseTool.name`:
+
+```python
+"items": {"feat": [
+    {"trcode": "feat_1", "stimulus": [...], "tools": ["image_zoom"]},  # can zoom
+    {"trcode": "feat_2", "stimulus": [...], "tools": []},              # no tools this trial
+    {"trcode": "feat_3", "stimulus": [...]},                            # falls back to card.tools
+]}
+```
+
+An unrecognized name in a trial's `"tools"` list raises `ValueError` rather
+than silently binding nothing — it's almost always a typo against
+`card.tools`. To compare *whether tools exist at all* as an experimental
+condition (rather than which trials can use them), run two `ExpCard`s — one
+with `tools=[...]`, one with `tools=None` — the same way you'd vary
+`model` or `memory`.
 
 ---
 

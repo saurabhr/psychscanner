@@ -120,6 +120,16 @@ class ExpCardInit(BaseModel):
         default=None,
         description="Dict for parser configration. Default is method=json_schema.",
     )
+    tools: list[Any] | None = Field(
+        default=None,
+        description=(
+            "LangChain tools to bind to the chat model for every trial. "
+            "Accepts @tool-decorated callables or BaseTool instances. "
+            "Bound via model.bind_tools(tools) per invocation. Combining "
+            "tools with a structured-output parser on the same trial is "
+            "provider-dependent (both use the tool-calling protocol)."
+        ),
+    )
     proj_dir: Path | None = Field(
         default=Path.home() / "psychscanner",
         description="Project directory for saving files.",
@@ -261,6 +271,8 @@ class ExpCard:
         except (KeyError, TypeError, ValueError) as exc:
             raise ValueError(str(exc)) from exc
 
+        self.tools = self.card_in.tools
+
         if self.card_in.feedback and self.card_in.feedback_fn is None:
             raise ValueError(
                 "feedback=True requires feedback_fn to be set. "
@@ -390,6 +402,22 @@ def save_expcard(
             "qualname": getattr(fb_fn, "__qualname__", None),
         }
 
+    # ── tools ─────────────────────────────────────────────────────────────────
+    # @tool-decorated callables are BaseTool instances wrapping the original
+    # function in `.func`; plain functions passed directly have __module__/
+    # __qualname__ on themselves. Either way we recover the importable source.
+    tools = card_in.tools
+    if not tools:
+        d["tools"] = None
+    else:
+        d["tools"] = [
+            {
+                "module": getattr(getattr(t, "func", t), "__module__", None),
+                "qualname": getattr(getattr(t, "func", t), "__qualname__", None),
+            }
+            for t in tools
+        ]
+
     if path is not None:
         Path(path).write_text(json.dumps(d, indent=2, ensure_ascii=False))
 
@@ -402,6 +430,7 @@ def load_expcard(
     proj_dir: str | Path | None = None,
     parser: type[BaseModel] | Callable | None = _UNSET,
     feedback_fn: Callable | None = _UNSET,
+    tools: list[Any] | None = _UNSET,
 ) -> ExpCardInit:
     """Reconstruct an ``ExpCardInit`` from a dict or JSON file created by
     :func:`save_expcard`.
@@ -420,6 +449,10 @@ def load_expcard(
     feedback_fn:
         Override the saved feedback handler class.  Required when the original
         handler is not importable on the current machine.
+    tools:
+        Override the saved tools list.  Required when a tool is a lambda,
+        closure, or a stateful ``BaseTool`` instance that is not importable
+        on the current machine.
 
     Returns
     -------
@@ -511,5 +544,27 @@ def load_expcard(
                     f"'{saved_fn['module']}.{saved_fn['qualname']}': {exc}.\n"
                     f"Pass it explicitly: load_expcard(..., feedback_fn=MyHandler)"
                 ) from exc
+
+    # ── tools ─────────────────────────────────────────────────────────────────
+    if tools is not _UNSET:
+        kwargs["tools"] = tools
+    else:
+        saved_tools = d.get("tools")
+        if saved_tools is not None:
+            resolved_tools = []
+            for saved_tool in saved_tools:
+                try:
+                    mod = importlib.import_module(saved_tool["module"])
+                    obj = mod
+                    for part in saved_tool["qualname"].split("."):
+                        obj = getattr(obj, part)
+                    resolved_tools.append(obj)
+                except (ImportError, AttributeError) as exc:
+                    raise ImportError(
+                        f"Cannot import tool "
+                        f"'{saved_tool['module']}.{saved_tool['qualname']}': {exc}.\n"
+                        f"Pass it explicitly: load_expcard(..., tools=[...])"
+                    ) from exc
+            kwargs["tools"] = resolved_tools
 
     return ExpCardInit(**kwargs)

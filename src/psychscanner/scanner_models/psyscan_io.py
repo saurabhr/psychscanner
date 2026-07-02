@@ -81,6 +81,18 @@ def _parse_tunnel_id(tunnel_id: str) -> dict[str, str]:
 def _stimulus_str(stimulus: Any) -> str:
     if stimulus is None:
         return ""
+    if isinstance(stimulus, list):
+        # Multimodal content blocks: keep type/mime_type for auditability,
+        # drop base64/url payloads so a single stimulus doesn't bloat every row.
+        # A content list may legitimately mix plain strings with block dicts.
+        return json.dumps(
+            [
+                {k: b[k] for k in ("type", "mime_type") if k in b}
+                if isinstance(b, dict) else b
+                for b in stimulus
+            ],
+            ensure_ascii=False,
+        )
     if isinstance(stimulus, dict):
         return json.dumps(stimulus, ensure_ascii=False)
     return str(stimulus)

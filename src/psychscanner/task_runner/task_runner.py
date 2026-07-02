@@ -126,6 +126,7 @@ class TaskRunner:
                 "system_message": self.system_message,
                 "trcode": self.trial_prompt["trcode"],
                 "parser": self.trial_prompt.get("parser"),  # str or None
+                "tools": self.trial_prompt.get("tools"),  # list[str] names selecting from agent_cfg.tools, or None
             }
 
             # Inject previous trial's feedback when enabled and available.

@@ -27,6 +27,8 @@ class AgentConfig(BaseModel):
     parser_config: dict | None
     trial_parsers: list[Any] | None = None
 
+    tools: list[Any] | None = None
+
     feedback: Any | None = None
     feedback_fn: Any | None = None
     agent_prompt: None = None

@@ -123,20 +123,29 @@ def gen_symsg_promptdata(expcard: Any) -> dict:
 def gen_stimulus_prompt(
     trstim
 ):
+    stimulus = trstim["stimulus"]
+    if isinstance(stimulus, list):
+        # Multimodal content: list of standard LangChain content blocks
+        # (e.g. {"type": "image", ...} + {"type": "text", ...}). Reachable
+        # regardless of context_present/task_instruction so multimodal
+        # stimuli work for every task shape, not just context-free ones.
+        content = list(stimulus)
+        if trstim.get("context_present") and trstim.get("context_item"):
+            content = [
+                {"type": "text", "text": f"TRIAL_CONTEXT: {trstim['context_item']}"}
+            ] + content
+        return HumanMessage(content=content)
+
     trial_dict = {}
     if trstim.get("trcode") == "task_instruction":
-        trial_dict["NEXT TASK INSTRUCTION FOR TRIALS"] = trstim["stimulus"]
+        trial_dict["NEXT TASK INSTRUCTION FOR TRIALS"] = stimulus
 
     elif trstim["context_present"]:
         trial_dict["TRIAL_CONTEXT"] = trstim["context_item"]
 
-        trial_dict["TRIAL"] = trstim["stimulus"]
+        trial_dict["TRIAL"] = stimulus
 
     else:
-        stimulus = trstim["stimulus"]
-        if isinstance(stimulus, list):
-            # Multimodal content: list of {"type": ..., ...} blocks (e.g. image_url + text)
-            return HumanMessage(content=stimulus)
         trial_dict = stimulus
 
     return HumanMessage(json.dumps(trial_dict, indent = 4))

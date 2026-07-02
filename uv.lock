@@ -1415,6 +1415,47 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-ollama"
+version = "0.3.10"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+dependencies = [
+    { name = "langchain-core", version = "0.3.86", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "ollama", marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/73/c9/ff996fc5fa2d8d23136f07c56e88a1013fe1e03a35ef3e65899baa73c49e/langchain_ollama-0.3.10.tar.gz", hash = "sha256:5d942d331c44351bae5c5c5965603ceb20b0ee4d70082290f4b15bc638559756", size = 35771, upload-time = "2025-10-02T15:53:20.974Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/f2/d87767a106021206fb53faf7ae4517d365d353dc29a1649b9f3e47eef940/langchain_ollama-0.3.10-py3-none-any.whl", hash = "sha256:7550792872e8f86d362568e9ceb0f8085428bc59946c7b44e726358ba4b280f9", size = 27646, upload-time = "2025-10-02T15:53:19.89Z" },
+]
+
+[[package]]
+name = "langchain-ollama"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.11.*' and sys_platform == 'win32'",
+    "python_full_version == '3.11.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.11.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "langchain-core", version = "1.4.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "ollama", marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d4/9b/6641afe8a5bf807e454fd464eddfc7eb2f2df53cb0b29744381171f9c609/langchain_ollama-1.1.0.tar.gz", hash = "sha256:f776f56f6782ae4da7692579b94a6575906118318d1023b455d7207f9d059811", size = 133075, upload-time = "2026-04-07T02:48:00.873Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/b2/c2acb076590a98bee2816ed5f285e00df162a34238f9e276e175e14ebc35/langchain_ollama-1.1.0-py3-none-any.whl", hash = "sha256:43ac83a6eacb0f43855810739794dd55019e0d9b17bdcf3ecb3b1991ac3b59dd", size = 31413, upload-time = "2026-04-07T02:47:59.642Z" },
+]
+
+[[package]]
 name = "langchain-protocol"
 version = "0.0.18"
 source = { registry = "https://pypi.org/simple" }
@@ -3215,6 +3256,8 @@ dependencies = [
     { name = "langchain", version = "1.3.11", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "langchain-core", version = "0.3.86", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "langchain-core", version = "1.4.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "langchain-ollama", version = "0.3.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "langchain-ollama", version = "1.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "langgraph", version = "0.6.11", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "langgraph", version = "1.2.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "loguru" },
@@ -3240,7 +3283,9 @@ dependencies = [
 
 [package.optional-dependencies]
 dev = [
+    { name = "beautifulsoup4" },
     { name = "furo" },
+    { name = "httpx" },
     { name = "mkdocs" },
     { name = "mkdocs-jupyter" },
     { name = "mkdocs-material" },
@@ -3277,6 +3322,10 @@ mkdocs = [
     { name = "mkdocs-jupyter" },
     { name = "mkdocs-material" },
 ]
+multimodal = [
+    { name = "beautifulsoup4" },
+    { name = "httpx" },
+]
 tests = [
     { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pytest", version = "9.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
@@ -3284,10 +3333,13 @@ tests = [
 
 [package.metadata]
 requires-dist = [
+    { name = "beautifulsoup4", marker = "extra == 'multimodal'" },
     { name = "click" },
     { name = "furo", marker = "extra == 'docs'" },
+    { name = "httpx", marker = "extra == 'multimodal'" },
     { name = "langchain" },
     { name = "langchain-core" },
+    { name = "langchain-ollama" },
     { name = "langgraph" },
     { name = "loguru" },
     { name = "mkdocs", marker = "extra == 'mkdocs'" },
@@ -3298,7 +3350,7 @@ requires-dist = [
     { name = "ollama" },
     { name = "pandas" },
     { name = "polars" },
-    { name = "psychscanner", extras = ["docs", "mkdocs", "tests"], marker = "extra == 'dev'" },
+    { name = "psychscanner", extras = ["docs", "mkdocs", "multimodal", "tests"], marker = "extra == 'dev'" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "pytest", marker = "extra == 'tests'" },
@@ -3311,7 +3363,7 @@ requires-dist = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-provides-extras = ["tests", "docs", "mkdocs", "dev"]
+provides-extras = ["tests", "docs", "mkdocs", "multimodal", "dev"]
 
 [[package]]
 name = "ptyprocess"

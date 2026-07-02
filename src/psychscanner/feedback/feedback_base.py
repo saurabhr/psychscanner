@@ -72,6 +72,16 @@ class FeedbackBase(ABC):
             Updated ``input_dict`` with feedback injected into ``inputs``.
         """
         trial_content = input_dict["inputs"][0].content
+
+        if isinstance(trial_content, list):
+            # Multimodal content blocks: prepend feedback as a text block
+            # instead of json.dumps-flattening the list (which would turn
+            # image/audio blocks into inert text).
+            input_dict["inputs"] = [
+                HumanMessage(content=[{"type": "text", "text": fb_str}, *trial_content])
+            ]
+            return input_dict
+
         try:
             trial_dict = json.loads(trial_content)
         except (json.JSONDecodeError, TypeError):
