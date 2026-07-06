@@ -122,8 +122,9 @@ def make_reflexion_agent(
 
     def revise(state: _ReflexionState) -> dict:
         response = model_with_tools.invoke(
-            [SystemMessage(content="Revise your answer using the tool results above. List anything still "
-                                    "missing or superfluous. Call another tool only if you genuinely need to.")]
+            [SystemMessage(content="Revise your answer using the tool results above into a direct final answer "
+                                    "(no meta-commentary, no follow-up questions). Call another tool only if you "
+                                    "genuinely need to.")]
             + state["messages"]
         )
         return {"messages": [response], "iteration": state["iteration"] + 1}

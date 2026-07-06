@@ -80,6 +80,12 @@ nav:
     - VVIQ-16 Study: tutorials/09_vviq16_study.ipynb
     - Bring Your Own LLM/VLM: tutorials/10_custom_agents.ipynb
     - Conversation Memory & Context Quantization: tutorials/11_memory_context_management.ipynb
+    - Tool Binding and Multimodal Stimuli: tutorials/12_tool_binding_and_multimodal.ipynb
+    - A Real Tool-Calling Loop: tutorials/13_react_tool_agent.ipynb
+    - A Multimodal Supervisor/Planner/Worker Agent: tutorials/14_supervisor_multiagent.ipynb
+    - A Modular Planner/Executor/Validator Agent: tutorials/15_planner_executor_agent.ipynb
+    - Reflection Agents: tutorials/16_reflection_agents.ipynb
+    - "Cognitive RL: Bandits and the Prisoner's Dilemma": tutorials/17_cognitive_rl_bandits_and_pd.ipynb
   - User Guide:
     - Overview: guides/index.md
     - PsychScanner Workflow: guides/psychscanner_workflow.md

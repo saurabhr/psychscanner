@@ -44,6 +44,22 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 |---|---|
 | [Conversation Memory & Context Quantization](11_memory_context_management.ipynb) | `Convo` memory under `memory_k` (hard truncation window) and `summary_k` (folding overflow into a rolling summary) |
 
+## Tool binding, multimodal stimuli, and custom agent architectures
+
+| Notebook | What it covers |
+|---|---|
+| [Tool Binding and Multimodal Stimuli](12_tool_binding_and_multimodal.ipynb) | `card.tools`, per-trial tool subsetting, the four multimodal content-block builders, and the same stimulus run under every `chain_type`/`memory` combination |
+| [A Real Tool-Calling Loop](13_react_tool_agent.ipynb) | `psychscanner.agents.make_react_agent` — LangChain's `create_agent` ReAct loop, adapted to the `ScanningAgent` contract |
+| [A Multimodal Supervisor/Planner/Worker Agent](14_supervisor_multiagent.ipynb) | `psychscanner.agents.make_supervisor_agent` — a Jockey-style (TwelveLabs + LangGraph) routing agent generalized from video to arbitrary multimodal content blocks |
+| [A Modular Planner/Executor/Validator Agent](15_planner_executor_agent.ipynb) | `psychscanner.agents.make_planner_executor_agent` — the modular agentic architecture from arxiv:2310.00194 |
+| [Reflection Agents](16_reflection_agents.ipynb) | `psychscanner.agents.reflection_agents` — Basic Reflection, Reflexion, and LATS, after the LangChain reflection-agents blog post |
+
+## Cognitive reinforcement learning
+
+| Notebook | What it covers |
+|---|---|
+| [Cognitive RL: Bandits and the Prisoner's Dilemma](17_cognitive_rl_bandits_and_pd.ipynb) | Reusing the planner/executor/validator agent (arxiv:2310.00194) with a `FeedbackBase`-based Q-learning environment, on an n-armed bandit and an iterated Prisoner's Dilemma vs. Tit-for-Tat |
+
 ## Running these yourself
 
 ```bash
