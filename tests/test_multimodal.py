@@ -71,6 +71,26 @@ def test_gen_stimulus_prompt_multimodal_context_absent():
     assert msg.content == blocks
 
 
+def test_gen_stimulus_prompt_resolves_json_authored_path_block(tmp_path):
+    """A hand-written JSON task card can use {"path": ...} instead of image_block()."""
+    raw = b"\x89PNG\r\n"
+    path = tmp_path / "img.png"
+    path.write_bytes(raw)
+    trstim = {
+        "stimulus": [{"type": "image", "path": str(path)}, {"type": "text", "text": "q"}],
+        "trcode": "feat_1",
+        "context_present": False,
+    }
+
+    msg = gen_stimulus_prompt(trstim)
+
+    assert msg.content[0]["type"] == "image"
+    assert "path" not in msg.content[0]
+    assert base64.b64decode(msg.content[0]["base64"]) == raw
+    assert msg.content[0]["mime_type"] == "image/png"
+    assert msg.content[1] == {"type": "text", "text": "q"}
+
+
 def test_gen_stimulus_prompt_multimodal_context_present():
     """Previously dead code: context_present=True used to json.dumps-flatten list stimuli."""
     blocks = [{"type": "image", "base64": "aaaa", "mime_type": "image/png"}]

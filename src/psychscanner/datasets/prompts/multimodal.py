@@ -49,6 +49,25 @@ def file_block(path_or_url: str | Path, *, mime_type: str | None = None) -> dict
     return _block("file", path_or_url, mime_type)
 
 
+def resolve_path_block(block: dict) -> dict:
+    """Resolve a JSON-authored ``{"type": ..., "path": "local/file.png"}`` block to base64.
+
+    Lets a hand-written JSON task card reference local media by plain file
+    path, without a Python call to :func:`image_block`/:func:`audio_block`/
+    :func:`file_block`. Blocks without a ``"path"`` key (already ``base64``
+    or ``url``) pass through unchanged.
+    """
+    if "path" not in block:
+        return block
+    path = Path(block["path"])
+    mime_type = block.get("mime_type") or mimetypes.guess_type(path.name)[0]
+    resolved = {k: v for k, v in block.items() if k != "path"}
+    resolved["base64"] = base64.b64encode(path.read_bytes()).decode("ascii")
+    if mime_type:
+        resolved["mime_type"] = mime_type
+    return resolved
+
+
 def website_block(url: str) -> dict:
     """Fetch a webpage and return its visible text as a text-plain document block.
 

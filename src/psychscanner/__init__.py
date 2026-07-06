@@ -24,6 +24,7 @@ from .simulation_model.simulation_model import (
 )
 from .templates.tasks.get_task_template import get_task_template
 from .feedback import FeedbackBase
+from .agents import CustomAgent, ScanningAgent
 
 __all__ = [
     "ExpCard",
@@ -43,4 +44,6 @@ __all__ = [
     "PredSimulationModel",
     "get_task_template",
     "FeedbackBase",
+    "CustomAgent",
+    "ScanningAgent",
 ]

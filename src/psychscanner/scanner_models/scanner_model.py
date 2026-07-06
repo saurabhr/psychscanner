@@ -173,7 +173,16 @@ class ScannerModel:
             handle.write(data_string)
 
 
-    def agent(self, agent_cfg=None, memory=None):
+    def agent(self, agent_cfg=None, memory=None, custom_agent=None):
+        """Return the scanning agent, or a researcher-supplied one if given.
+
+        ``custom_agent`` bypasses the built-in LangChain/LangGraph pipeline
+        entirely; it only needs to satisfy the ``ScanningAgent`` contract
+        (``.ai_app.invoke(...)`` + ``.parser``) — see
+        ``psychscanner.agents.CustomAgent``.
+        """
+        if custom_agent is not None:
+            return custom_agent
 
         if agent_cfg is None:
             agent_cfg = self.agent_config
@@ -197,6 +206,7 @@ class ScannerModel:
         feedback_fn: Callable | None = None,
         save_str: str | None = None,
         tunnel: Any | None = None,
+        custom_agent: Any | None = None,
     ):
 
         session_id = (
@@ -233,7 +243,7 @@ class ScannerModel:
         scanning_system_data = self.scanner_data["system_prompts"]
         trace_cfg["chain_type"] = self.scanner_data["chain_type"]
         scanning_task_data = self.scanner_data["task_prompts"]
-        scan_agent = self.agent()
+        scan_agent = self.agent(custom_agent=custom_agent)
         self.current_scanner_data = []
         system_data_completed = []
         MAX_TEST_SESSION_TUNNEL = 1 #5  # for testing session tunnel otherwise -9999

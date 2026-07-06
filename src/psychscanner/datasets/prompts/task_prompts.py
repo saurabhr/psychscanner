@@ -14,6 +14,8 @@ import numpy as np
 from itertools import product
 import copy
 
+from .multimodal import resolve_path_block
+
 
 def create_symsg_data_prompt(template, inst: str, persona_role: str) -> dict:
     sys_msg = template
@@ -129,7 +131,12 @@ def gen_stimulus_prompt(
         # (e.g. {"type": "image", ...} + {"type": "text", ...}). Reachable
         # regardless of context_present/task_instruction so multimodal
         # stimuli work for every task shape, not just context-free ones.
-        content = list(stimulus)
+        # A block may carry "path" instead of "base64"/"url" when authored
+        # directly in JSON; resolve those here rather than requiring Python.
+        content = [
+            resolve_path_block(block) if isinstance(block, dict) else block
+            for block in stimulus
+        ]
         if trstim.get("context_present") and trstim.get("context_item"):
             content = [
                 {"type": "text", "text": f"TRIAL_CONTEXT: {trstim['context_item']}"}
