@@ -186,7 +186,10 @@ def single_turn_convo_node(
                 response = AIMessage(str(response.model_dump()))
 
         # ── 5. Return response + any trim/summary state updates ───────────────
-        return {**trim_updates, "inputs": [response]}
+        # trim_updates["inputs"] (RemoveMessage entries marking overflow for
+        # deletion) must ride in the SAME list as the new response — a second
+        # "inputs" key here would just overwrite the first in this dict literal.
+        return {**trim_updates, "inputs": [*trim_updates.get("inputs", []), response]}
 
     if workflow is None:
         workflow = StateGraph(state_schema=State)

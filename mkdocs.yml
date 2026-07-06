@@ -78,6 +78,8 @@ nav:
     - Reality Monitoring with Feedback: tutorials/07_rm_feedback_task.ipynb
     - Parser System Guide: tutorials/08_ps_parser_guide.ipynb
     - VVIQ-16 Study: tutorials/09_vviq16_study.ipynb
+    - Bring Your Own LLM/VLM: tutorials/10_custom_agents.ipynb
+    - Conversation Memory & Context Quantization: tutorials/11_memory_context_management.ipynb
   - User Guide:
     - Overview: guides/index.md
     - PsychScanner Workflow: guides/psychscanner_workflow.md

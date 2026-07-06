@@ -38,6 +38,12 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 |---|---|
 | [Bring Your Own LLM/VLM](10_custom_agents.ipynb) | Wrapping any custom LLM or VLM callable with `psychscanner.agents.CustomAgent` and running it through `TaskRunner` / `ScannerModel` |
 
+## Memory and context
+
+| Notebook | What it covers |
+|---|---|
+| [Conversation Memory & Context Quantization](11_memory_context_management.ipynb) | `Convo` memory under `memory_k` (hard truncation window) and `summary_k` (folding overflow into a rolling summary) |
+
 ## Running these yourself
 
 ```bash
