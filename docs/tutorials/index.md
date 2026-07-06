@@ -32,6 +32,12 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 |---|---|
 | [VVIQ-16 Study](09_vviq16_study.ipynb) | End-to-end imagery questionnaire study, from run to figure |
 
+## Extending psychscanner
+
+| Notebook | What it covers |
+|---|---|
+| [Bring Your Own LLM/VLM](10_custom_agents.ipynb) | Wrapping any custom LLM or VLM callable with `psychscanner.agents.CustomAgent` and running it through `TaskRunner` / `ScannerModel` |
+
 ## Running these yourself
 
 ```bash

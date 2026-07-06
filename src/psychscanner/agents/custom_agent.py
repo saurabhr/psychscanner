@@ -10,9 +10,10 @@ it to ``ScannerModel.run(custom_agent=...)`` or ``TaskRunner(scanning_agent=...)
 
 from __future__ import annotations
 
-from typing import Any, Callable, Protocol
+from typing import Any, Callable, Protocol, runtime_checkable
 
 
+@runtime_checkable
 class ScanningAgent(Protocol):
     """The contract ``TaskRunner`` expects from any scanning agent."""
 
