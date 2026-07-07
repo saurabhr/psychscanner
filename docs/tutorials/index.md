@@ -24,7 +24,7 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 |---|---|
 | [Reality Monitoring Task](05_rm_task.ipynb) | Reality monitoring across memory and feedback configurations |
 | [Feedback API](06_feedback_api.ipynb) | The trial-by-trial feedback/scoring mechanism |
-| [Reality Monitoring with Feedback](07_rm_feedback_task.ipynb) | Combining the RM task with feedback |
+| [Reality Monitoring with Feedback](07_rm_feedback_task.ipynb) | Combining the RM task with feedback. Reads its task JSON from `RM_TASKS_DIR` (defaults to `examples/tasks/`) — bring your own RM word-pair files with feedback fields, since these aren't bundled |
 
 ## Full study walkthrough
 
