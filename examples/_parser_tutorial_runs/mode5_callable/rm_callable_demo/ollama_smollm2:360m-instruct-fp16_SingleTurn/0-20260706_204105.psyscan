@@ -1,0 +1,304 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: APPLE | Word 2: FRUIT\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "1cb3fe6d-8190-4414-9bd0-3747558b68c6"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+            "stimulus": "Word 1: APPLE | Word 2: FRUIT",
+            "trcode": "encode_1",
+            "taskname": "rm_callable_demo",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "encode"
+            ],
+            "context_item": "encode",
+            "trid": "encode_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: APPLE | Word 2: FRUIT\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "1cb3fe6d-8190-4414-9bd0-3747558b68c6"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'FRUIT', 'Rating': 6.0}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "df146f39-13f2-41fe-b580-f0f15f63b07c",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: APPLE | Word 2: FRUIT\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "1cb3fe6d-8190-4414-9bd0-3747558b68c6"
+                    },
+                    {
+                        "content": "{'Word_2': 'FRUIT', 'Rating': 6.0}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "df146f39-13f2-41fe-b580-f0f15f63b07c",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+                "trcode": "encode_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-41-01mode5_callableSingleTurnrm_callable_demo0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-mode5_callable"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: TABLE | Word 2: ____ (imagine)\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "b80b5728-09d2-4e7a-aa38-413649275938"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+            "stimulus": "Word 1: TABLE | Word 2: ____ (imagine)",
+            "trcode": "encode_2",
+            "taskname": "rm_callable_demo",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "encode"
+            ],
+            "context_item": "encode",
+            "trid": "encode_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: TABLE | Word 2: ____ (imagine)\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "b80b5728-09d2-4e7a-aa38-413649275938"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'TABLE', 'Rating': 0.5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "cfa5113e-a7e6-47cb-bb11-ee732c9092d1",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"encode\",\n    \"TRIAL\": \"Word 1: TABLE | Word 2: ____ (imagine)\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "b80b5728-09d2-4e7a-aa38-413649275938"
+                    },
+                    {
+                        "content": "{'Word_2': 'TABLE', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "cfa5113e-a7e6-47cb-bb11-ee732c9092d1",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+                "trcode": "encode_2",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-41-01mode5_callableSingleTurnrm_callable_demo0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-mode5_callable"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"APPLE \\u2014 was the 2nd word internal or external?\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "57b6d64d-55be-4f10-aa62-7fdbccbd560c"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+            "stimulus": "APPLE — was the 2nd word internal or external?",
+            "trcode": "test_1",
+            "taskname": "rm_callable_demo",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "test"
+            ],
+            "context_item": "test",
+            "trid": "test_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"APPLE \\u2014 was the 2nd word internal or external?\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "57b6d64d-55be-4f10-aa62-7fdbccbd560c"
+            },
+            "pred_resp": {
+                "content": "{'Judgment': 'internal', 'Confidence': 1}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "8e6963b0-c4af-4872-bcf2-38d5489fe90d",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"APPLE \\u2014 was the 2nd word internal or external?\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "57b6d64d-55be-4f10-aa62-7fdbccbd560c"
+                    },
+                    {
+                        "content": "{'Judgment': 'internal', 'Confidence': 1}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "8e6963b0-c4af-4872-bcf2-38d5489fe90d",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+                "trcode": "test_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-41-01mode5_callableSingleTurnrm_callable_demo0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-mode5_callable"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"TABLE \\u2014 was the 2nd word internal or external?\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "184c59d6-50d1-4ff5-afba-b448a5e238f5"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+            "stimulus": "TABLE — was the 2nd word internal or external?",
+            "trcode": "test_2",
+            "taskname": "rm_callable_demo",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "test"
+            ],
+            "context_item": "test",
+            "trid": "test_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"TABLE \\u2014 was the 2nd word internal or external?\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "184c59d6-50d1-4ff5-afba-b448a5e238f5"
+            },
+            "pred_resp": {
+                "content": "{'Judgment': 'internal', 'Confidence': 6}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "d8c14127-e7c3-4d09-a0f2-2b301826bac6",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"test\",\n    \"TRIAL\": \"TABLE \\u2014 was the 2nd word internal or external?\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "184c59d6-50d1-4ff5-afba-b448a5e238f5"
+                    },
+                    {
+                        "content": "{'Judgment': 'internal', 'Confidence': 6}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8c14127-e7c3-4d09-a0f2-2b301826bac6",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Encoding: report the second word and rate its relatedness 0-100.\", \"Test: judge whether the word was internal/external and rate confidence 1-6.\"]}\"\n}",
+                "trcode": "test_2",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-41-01mode5_callableSingleTurnrm_callable_demo0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-mode5_callable"
+        }
+    ]
+}

@@ -1,0 +1,438 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+                }
+            ],
+            "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+            "stimulus": {
+                "Word_Pair": {
+                    "word_1": "sandpaper",
+                    "word_2": "________"
+                }
+            },
+            "trcode": "imagined_1",
+            "taskname": "rm_2op_convo_nofb",
+            "tasktype": "episodic_system",
+            "context_present": false,
+            "context": [
+                "imagined"
+            ],
+            "context_item": "imagined",
+            "trid": "imagined_1",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "c23b8910-643d-45ea-a442-bca90c6d1989",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+                    },
+                    {
+                        "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "c23b8910-643d-45ea-a442-bca90c6d1989",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+                "trcode": "imagined_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-42-10episodicConvorm_2op_convo_nofb0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "35a56baa-05bb-4cf5-8065-844a1c29975a"
+                }
+            ],
+            "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+            "stimulus": {
+                "Word_Pair": {
+                    "word_1": "sugar",
+                    "word_2": "sweet"
+                }
+            },
+            "trcode": "perceived_2",
+            "taskname": "rm_2op_convo_nofb",
+            "tasktype": "episodic_system",
+            "context_present": false,
+            "context": [
+                "perceived"
+            ],
+            "context_item": "perceived",
+            "trid": "perceived_2",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "35a56baa-05bb-4cf5-8065-844a1c29975a"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "d8f5e7ca-9d96-47b3-ae3a-318b230f145f",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+                    },
+                    {
+                        "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "c23b8910-643d-45ea-a442-bca90c6d1989",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "35a56baa-05bb-4cf5-8065-844a1c29975a"
+                    },
+                    {
+                        "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8f5e7ca-9d96-47b3-ae3a-318b230f145f",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+                "trcode": "perceived_2",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-42-10episodicConvorm_2op_convo_nofb0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "98c00c3d-a1fe-49e8-a6d7-34e2c3b3b847"
+                }
+            ],
+            "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+            "stimulus": {
+                "Word_Pair": {
+                    "word_1": "suburb",
+                    "word_2": "________"
+                }
+            },
+            "trcode": "imagined_3",
+            "taskname": "rm_2op_convo_nofb",
+            "tasktype": "episodic_system",
+            "context_present": false,
+            "context": [
+                "imagined"
+            ],
+            "context_item": "imagined",
+            "trid": "imagined_3",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "98c00c3d-a1fe-49e8-a6d7-34e2c3b3b847"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "5fdd76d6-e541-4c57-b0d1-532a4384ba99",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+                    },
+                    {
+                        "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "c23b8910-643d-45ea-a442-bca90c6d1989",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "35a56baa-05bb-4cf5-8065-844a1c29975a"
+                    },
+                    {
+                        "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8f5e7ca-9d96-47b3-ae3a-318b230f145f",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "98c00c3d-a1fe-49e8-a6d7-34e2c3b3b847"
+                    },
+                    {
+                        "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "5fdd76d6-e541-4c57-b0d1-532a4384ba99",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+                "trcode": "imagined_3",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-42-10episodicConvorm_2op_convo_nofb0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "675b957b-f789-475e-bedb-60c30be41cff"
+                }
+            ],
+            "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+            "stimulus": {
+                "Word_Pair": {
+                    "word_1": "chair",
+                    "word_2": "cushion"
+                }
+            },
+            "trcode": "perceived_4",
+            "taskname": "rm_2op_convo_nofb",
+            "tasktype": "episodic_system",
+            "context_present": false,
+            "context": [
+                "perceived"
+            ],
+            "context_item": "perceived",
+            "trid": "perceived_4",
+            "chain_type": "task",
+            "hmsg": {
+                "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "675b957b-f789-475e-bedb-60c30be41cff"
+            },
+            "pred_resp": {
+                "content": "{'Word_2': 'chair', 'Rating': 0.5}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": "4b83e9c6-e04d-4e7b-9f52-4e630370e2d8",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "acd6d92a-62ac-481a-92dc-652c58d9cc0c"
+                    },
+                    {
+                        "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "c23b8910-643d-45ea-a442-bca90c6d1989",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "35a56baa-05bb-4cf5-8065-844a1c29975a"
+                    },
+                    {
+                        "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "d8f5e7ca-9d96-47b3-ae3a-318b230f145f",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "98c00c3d-a1fe-49e8-a6d7-34e2c3b3b847"
+                    },
+                    {
+                        "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "5fdd76d6-e541-4c57-b0d1-532a4384ba99",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    },
+                    {
+                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "675b957b-f789-475e-bedb-60c30be41cff"
+                    },
+                    {
+                        "content": "{'Word_2': 'chair', 'Rating': 0.5}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": "4b83e9c6-e04d-4e7b-9f52-4e630370e2d8",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
+                "trcode": "perceived_4",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-42-10episodicConvorm_2op_convo_nofb0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
+        }
+    ]
+}

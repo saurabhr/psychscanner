@@ -4,6 +4,30 @@ All notable changes to PsychScanner are documented here.
 
 ---
 
+## Unreleased
+
+### New features
+
+- **Multimodal stimuli** — `psychscanner.datasets.prompts.multimodal` provides `image_block`, `audio_block`, `file_block`, and `website_block` helpers that turn a local path, URL, or scraped webpage into a standard LangChain content block. `resolve_path_block` lets a JSON task card reference local media by plain `{"path": ...}` instead of a Python call. Trial stimuli accept a list of these blocks for mixed image/audio/text content. See [Cognitive Tasks § Visual Search and Attention](guides/cognitive_tasks.md#visual-search-and-attention).
+- **Media externalization** — inline base64 media is written once to `<data_root>/media/<sha256>.<ext>` and replaced with a path reference before a `.psyscan` checkpoint is persisted, so repeated personas/`nsim` conditions reusing the same stimulus don't duplicate the blob (`psychscanner.scanner_models.media_store`).
+- **Tool binding** — `card.tools` binds a list of LangChain tools to the model for the whole run; a trial's `"tools"` key selects a named subset (or `[]` to opt out) for that trial only. See [Cognitive Tasks § Tool Binding](guides/cognitive_tasks.md#tool-binding).
+- **`CustomAgent` / `ScanningAgent` protocol** — `psychscanner.agents.CustomAgent` adapts any callable (a raw provider SDK call, a local model, a REST API) to the contract `TaskRunner`/`ScannerModel` expect, so a custom LLM or VLM can be dropped in via `ScannerModel.run(custom_agent=...)` without building a LangGraph graph. `ScanningAgent` is `@runtime_checkable`.
+- **Five LangGraph agent architectures**, each adapted to the `ScanningAgent` contract via `CustomAgent` (`psychscanner.agents`):
+  - `make_react_agent` — a real tool-calling loop via `langgraph.prebuilt`/`langchain.agents.create_agent`.
+  - `make_planner_executor_agent` — modular Planner/Executor/Validator loop (arxiv:2310.00194).
+  - `make_basic_reflection_agent`, `make_reflexion_agent`, `make_lats_agent` — Basic Reflection, Reflexion, and LATS (Monte Carlo tree search), after the LangChain reflection-agents blog post.
+  - `make_supervisor_agent` — Jockey-style Supervisor/Planner/Worker routing generalized from video to arbitrary multimodal content blocks.
+
+### Bug fixes
+
+- Fixed a bug in `single_turn_convo.py` where the model's response was clobbering the `RemoveMessage` list produced by history trimming, making `memory_k` a no-op and causing unbounded conversation growth in `Convo` mode. Trim updates and the new response now ride in the same state update.
+
+### Documentation
+
+- Tutorial notebooks 10–17 cover `CustomAgent`, tool binding + multimodal stimuli, and each of the five new agent architectures.
+
+---
+
 ## 0.2.0 (2025)
 
 ### New features

@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "1274861f-32a8-495f-9ba4-52bd8d831dd7"
+                    "id": "367f4628-b384-4fb7-8acf-8cf98c53c9d1"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -30,7 +30,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "1274861f-32a8-495f-9ba4-52bd8d831dd7"
+                "id": "367f4628-b384-4fb7-8acf-8cf98c53c9d1"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -41,7 +41,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fda3-7f70-8388-426200b50ecb-0",
+                "id": "lc_run--019f3a05-1a3c-76c2-b59e-6b1e8a763f0c-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -58,7 +58,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "1274861f-32a8-495f-9ba4-52bd8d831dd7"
+                        "id": "367f4628-b384-4fb7-8acf-8cf98c53c9d1"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -69,7 +69,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fda3-7f70-8388-426200b50ecb-0",
+                        "id": "lc_run--019f3a05-1a3c-76c2-b59e-6b1e8a763f0c-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -81,9 +81,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "O_1",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"
@@ -97,7 +98,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "c1bd7bb4-b435-4a06-a1d5-0daaeb012638"
+                    "id": "5b47c518-3172-476a-9ad5-d8e828180e66"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -118,7 +119,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "c1bd7bb4-b435-4a06-a1d5-0daaeb012638"
+                "id": "5b47c518-3172-476a-9ad5-d8e828180e66"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -129,7 +130,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fdb6-7773-bb92-ba9cc6f3ba3c-0",
+                "id": "lc_run--019f3a05-1a3d-7f22-ba24-35a919321cc1-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -146,7 +147,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "c1bd7bb4-b435-4a06-a1d5-0daaeb012638"
+                        "id": "5b47c518-3172-476a-9ad5-d8e828180e66"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -157,7 +158,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fdb6-7773-bb92-ba9cc6f3ba3c-0",
+                        "id": "lc_run--019f3a05-1a3d-7f22-ba24-35a919321cc1-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -169,9 +170,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "O_2",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"
@@ -185,7 +187,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "4de5c32b-9cb7-4e74-bf42-a06ccf54a46f"
+                    "id": "5e8fb416-dcbf-4bb8-93e2-04b1ed171c66"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -206,7 +208,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "4de5c32b-9cb7-4e74-bf42-a06ccf54a46f"
+                "id": "5e8fb416-dcbf-4bb8-93e2-04b1ed171c66"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -217,7 +219,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fdc4-7301-8a33-e88741c3fed0-0",
+                "id": "lc_run--019f3a05-1a3f-7913-98c3-e696945088f8-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -234,7 +236,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4de5c32b-9cb7-4e74-bf42-a06ccf54a46f"
+                        "id": "5e8fb416-dcbf-4bb8-93e2-04b1ed171c66"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -245,7 +247,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fdc4-7301-8a33-e88741c3fed0-0",
+                        "id": "lc_run--019f3a05-1a3f-7913-98c3-e696945088f8-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -257,9 +259,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "O_3",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"
@@ -273,7 +276,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "344318a0-685d-4f10-9c9c-e67f92b706d1"
+                    "id": "c8bcd623-565e-489e-8ad4-8796c0d1bb0d"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -294,7 +297,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "344318a0-685d-4f10-9c9c-e67f92b706d1"
+                "id": "c8bcd623-565e-489e-8ad4-8796c0d1bb0d"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -305,7 +308,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fdcc-7f41-82f8-75ccd76e9e59-0",
+                "id": "lc_run--019f3a05-1a41-7242-b0d8-3ac79d05ba93-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -322,7 +325,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "344318a0-685d-4f10-9c9c-e67f92b706d1"
+                        "id": "c8bcd623-565e-489e-8ad4-8796c0d1bb0d"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -333,7 +336,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fdcc-7f41-82f8-75ccd76e9e59-0",
+                        "id": "lc_run--019f3a05-1a41-7242-b0d8-3ac79d05ba93-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -345,9 +348,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "C_1",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"
@@ -361,7 +365,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "e95f7960-d0d3-4458-a313-869567e55f4b"
+                    "id": "d06caa2e-f3ef-41dd-9fd9-8cf3d2d5bcc8"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -382,7 +386,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "e95f7960-d0d3-4458-a313-869567e55f4b"
+                "id": "d06caa2e-f3ef-41dd-9fd9-8cf3d2d5bcc8"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -393,7 +397,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fdd2-7ad2-928b-ec9f14a2399f-0",
+                "id": "lc_run--019f3a05-1a42-7f00-b46b-a3c6c1c383c0-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -410,7 +414,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e95f7960-d0d3-4458-a313-869567e55f4b"
+                        "id": "d06caa2e-f3ef-41dd-9fd9-8cf3d2d5bcc8"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -421,7 +425,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fdd2-7ad2-928b-ec9f14a2399f-0",
+                        "id": "lc_run--019f3a05-1a42-7f00-b46b-a3c6c1c383c0-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -433,9 +437,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "C_2",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"
@@ -449,7 +454,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "467cf4c1-162f-4551-a9a5-6b4ae55ba6ee"
+                    "id": "e2acc436-2a81-4d1b-8a6e-e562e5b575fb"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
@@ -470,7 +475,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "467cf4c1-162f-4551-a9a5-6b4ae55ba6ee"
+                "id": "e2acc436-2a81-4d1b-8a6e-e562e5b575fb"
             },
             "pred_resp": {
                 "content": "{\n    \"TRI",
@@ -481,7 +486,7 @@
                 },
                 "type": "ai",
                 "name": null,
-                "id": "lc_run--019e02f3-fdda-7521-85df-2bdee5192a6a-0",
+                "id": "lc_run--019f3a05-1a44-7d92-9b0e-0dd32d2c1232-0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": {
@@ -498,7 +503,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "467cf4c1-162f-4551-a9a5-6b4ae55ba6ee"
+                        "id": "e2acc436-2a81-4d1b-8a6e-e562e5b575fb"
                     },
                     {
                         "content": "{\n    \"TRI",
@@ -509,7 +514,7 @@
                         },
                         "type": "ai",
                         "name": null,
-                        "id": "lc_run--019e02f3-fdda-7521-85df-2bdee5192a6a-0",
+                        "id": "lc_run--019f3a05-1a44-7d92-9b0e-0dd32d2c1232-0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": {
@@ -521,9 +526,10 @@
                 ],
                 "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
                 "trcode": "C_3",
-                "parser": null
+                "parser": null,
+                "tools": null
             },
-            "trace_id": "20260507T11-00-04all_params_demoSingleTurnexample_survey1",
+            "trace_id": "20260706T20-40-40all_params_demoSingleTurnexample_survey1",
             "system_message_idx": 1,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-all_params_demo"

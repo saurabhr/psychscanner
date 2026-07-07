@@ -1,0 +1,42 @@
+{
+  "tasktype": "survey",
+  "taskname": "form_a_demo",
+  "instructions": {
+    "definition": "Two-phase RM demo using per-trial parser field."
+  },
+  "contexts": [
+    "encode",
+    "test"
+  ],
+  "contexts_id": [
+    "encode",
+    "test"
+  ],
+  "context_present": true,
+  "chain_type": "item",
+  "parser": "0",
+  "items": {
+    "encode_1": [
+      {
+        "trcode": "encode_1",
+        "parser": "Response_part_1_rm",
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "ocean",
+            "word_2": "________"
+          }
+        }
+      }
+    ],
+    "test_1": [
+      {
+        "trcode": "test_1",
+        "parser": "Response_part_2_rm",
+        "corrAns": "internal",
+        "stimulus": {
+          "Test_Word": "ocean"
+        }
+      }
+    ]
+  }
+}

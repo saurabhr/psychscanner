@@ -193,6 +193,30 @@ card.parser_config = {"method": "json_mode"}
 
 ---
 
+## Tools
+
+### `tools`
+**Type:** `list[BaseTool | Callable] | None` | **Default:** `None`
+
+Binds LangChain tools to the model for the whole run — one hyperparameter
+shared by every persona and trial in the `ExpCard`, like `parameters`. A
+trial can select a named subset via its own `"tools"` key in the task JSON
+(`[]` opts that trial out entirely; an unrecognized name raises `ValueError`).
+See [Cognitive Tasks § Tool Binding](guides/cognitive_tasks.md#tool-binding).
+
+```python
+from langchain_core.tools import tool
+
+@tool
+def image_zoom(region: str) -> str:
+    """Return a zoomed-in crop of the display for the named region."""
+    ...
+
+card.tools = [image_zoom]
+```
+
+---
+
 ## Feedback
 
 ### `feedback`
@@ -282,3 +306,4 @@ no effect. Call `load_dotenv()` yourself if you need `.env`-based API keys.
 - [ScannerModel API](api/scanner_model.md) — running experiments
 - [Session Recovery](guides/session_recovery.md) — checkpointing guide
 - [Custom Parsers](guides/custom_parsers.md) — structured output
+- [Cognitive Tasks § Tool Binding](guides/cognitive_tasks.md#tool-binding) — per-trial tool subsetting

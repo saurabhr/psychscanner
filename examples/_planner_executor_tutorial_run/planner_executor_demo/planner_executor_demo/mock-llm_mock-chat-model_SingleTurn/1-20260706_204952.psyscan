@@ -1,0 +1,79 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "\"If a study has 40 participants and 8 drop out, what fraction completed it?\"",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": null
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Answer thoughtfully, showing your reasoning is sound.\"]}\"\n}",
+            "stimulus": "If a study has 40 participants and 8 drop out, what fraction completed it?",
+            "trcode": "gr_1",
+            "taskname": "planner_executor_demo",
+            "tasktype": "survey",
+            "context_present": false,
+            "context": [
+                "gr"
+            ],
+            "context_item": "General reasoning",
+            "trid": "gr",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "\"If a study has 40 participants and 8 drop out, what fraction completed it?\"",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": null
+            },
+            "pred_resp": {
+                "content": "A straightforward task!\n\nI will follow the plan you provided:\n\n1. Identify the total number of participants in the study: 40\n2. Determine the number of participants who dropped out: 8\n3. Subtract the number of participants who dropped out from the total number of participants to find the number of participants who completed the study:\n   40 (total) - 8 (dropped out) = 32 (completed)\n4. Express the result as a fraction, with the number of participants who completed the study as the numerator and the total number of participants as the denominator:\n   32/40\n\nTo simplify this fraction, I will find the greatest common divisor (GCD) of 32 and 40, which is 8.\n\nDivide both numbers by 8:\n   32 ÷ 8 = 4\n   40 ÷ 8 = 5\n\nSo, the simplified fraction is: 4/5",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": null,
+                "id": null,
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "\"If a study has 40 participants and 8 drop out, what fraction completed it?\"",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": null
+                    },
+                    {
+                        "content": "A straightforward task!\n\nI will follow the plan you provided:\n\n1. Identify the total number of participants in the study: 40\n2. Determine the number of participants who dropped out: 8\n3. Subtract the number of participants who dropped out from the total number of participants to find the number of participants who completed the study:\n   40 (total) - 8 (dropped out) = 32 (completed)\n4. Express the result as a fraction, with the number of participants who completed the study as the numerator and the total number of participants as the denominator:\n   32/40\n\nTo simplify this fraction, I will find the greatest common divisor (GCD) of 32 and 40, which is 8.\n\nDivide both numbers by 8:\n   32 ÷ 8 = 4\n   40 ÷ 8 = 5\n\nSo, the simplified fraction is: 4/5",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "ai",
+                        "name": null,
+                        "id": null,
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": null
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"Answer thoughtfully, showing your reasoning is sound.\"]}\"\n}",
+                "trcode": "gr_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T20-49-06planner_executor_demoSingleTurnplanner_executor_demo1",
+            "system_message_idx": 1,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[1]-model-mock-chat-model-family-mock-llm-memory-SingleTurn-planner_executor_demo"
+        }
+    ]
+}
