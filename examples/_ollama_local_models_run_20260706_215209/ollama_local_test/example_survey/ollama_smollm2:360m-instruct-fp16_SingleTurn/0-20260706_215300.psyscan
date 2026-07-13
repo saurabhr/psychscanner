@@ -1,0 +1,670 @@
+{
+    "taskdata": [
+        {
+            "trial_idx": 0,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "c6abf421-ad7b-456a-8bd1-2f5cdb58eecb"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I enjoy trying new things and exploring new ideas.",
+            "trcode": "O_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "c6abf421-ad7b-456a-8bd1-2f5cdb58eecb"
+            },
+            "pred_resp": {
+                "content": "The task is to generate a response that accurately reflects the content of the TRIAL context, using all the information available in it. The response should be structured as an answer to the question about openness to experience:\n\n{\n    \"TASK CONTEXT\": \"{\"definition\": [\"I enjoy trying new things and exploring new ideas.\"]}\n}",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:52:35.099282Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 2918780611,
+                    "load_duration": 72112726,
+                    "prompt_eval_count": 106,
+                    "prompt_eval_duration": 39113000,
+                    "eval_count": 71,
+                    "eval_duration": 2804935000,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a46-e3b3-7181-baa0-613c7fc3281a-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 106,
+                    "output_tokens": 71,
+                    "total_tokens": 177
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I enjoy trying new things and exploring new ideas.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "c6abf421-ad7b-456a-8bd1-2f5cdb58eecb"
+                    },
+                    {
+                        "content": "The task is to generate a response that accurately reflects the content of the TRIAL context, using all the information available in it. The response should be structured as an answer to the question about openness to experience:\n\n{\n    \"TASK CONTEXT\": \"{\"definition\": [\"I enjoy trying new things and exploring new ideas.\"]}\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:52:35.099282Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 2918780611,
+                            "load_duration": 72112726,
+                            "prompt_eval_count": 106,
+                            "prompt_eval_duration": 39113000,
+                            "eval_count": 71,
+                            "eval_duration": 2804935000,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a46-e3b3-7181-baa0-613c7fc3281a-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 106,
+                            "output_tokens": 71,
+                            "total_tokens": 177
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        },
+        {
+            "trial_idx": 1,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "ca099f17-576d-4ebd-ad18-6680acc5da6d"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am comfortable with ambiguity and uncertainty.",
+            "trcode": "O_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "ca099f17-576d-4ebd-ad18-6680acc5da6d"
+            },
+            "pred_resp": {
+                "content": "You are expected to answer the following question: \n\nWhat would you do in a situation where you could not tell what is happening?",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:52:36.345085Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 1241398385,
+                    "load_duration": 71664638,
+                    "prompt_eval_count": 104,
+                    "prompt_eval_duration": 80348000,
+                    "eval_count": 28,
+                    "eval_duration": 1086884000,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a46-ef1e-7b93-ab26-47595d284048-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 104,
+                    "output_tokens": 28,
+                    "total_tokens": 132
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I am comfortable with ambiguity and uncertainty.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "ca099f17-576d-4ebd-ad18-6680acc5da6d"
+                    },
+                    {
+                        "content": "You are expected to answer the following question: \n\nWhat would you do in a situation where you could not tell what is happening?",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:52:36.345085Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 1241398385,
+                            "load_duration": 71664638,
+                            "prompt_eval_count": 104,
+                            "prompt_eval_duration": 80348000,
+                            "eval_count": 28,
+                            "eval_duration": 1086884000,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a46-ef1e-7b93-ab26-47595d284048-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 104,
+                            "output_tokens": 28,
+                            "total_tokens": 132
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_2",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        },
+        {
+            "trial_idx": 2,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "1632037d-e0b3-43c4-9047-fb6e4e54c2a1"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I prefer routine and predictability.",
+            "trcode": "O_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "O"
+            ],
+            "context_item": "Openness to Experience",
+            "trid": "O_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "1632037d-e0b3-43c4-9047-fb6e4e54c2a1"
+            },
+            "pred_resp": {
+                "content": "Here is a response with an answer for the provided tria: \"Openness to Experience\".\n\nAnswer: \"Yes, I would say that you have high openness to experience. Your preference for routine and predictability suggests that you are cautious and careful in your decision-making process, but also appreciative of opportunities and experiences. Your open nature allows you to be more receptive to new ideas and perspectives, which can help you grow and develop as a person.\"",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:52:40.524477Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 4175387992,
+                    "load_duration": 72073419,
+                    "prompt_eval_count": 102,
+                    "prompt_eval_duration": 67256000,
+                    "eval_count": 93,
+                    "eval_duration": 4033726000,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a46-f3fc-75e0-aaa4-a34142132511-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 102,
+                    "output_tokens": 93,
+                    "total_tokens": 195
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Openness to Experience\",\n    \"TRIAL\": \"I prefer routine and predictability.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "1632037d-e0b3-43c4-9047-fb6e4e54c2a1"
+                    },
+                    {
+                        "content": "Here is a response with an answer for the provided tria: \"Openness to Experience\".\n\nAnswer: \"Yes, I would say that you have high openness to experience. Your preference for routine and predictability suggests that you are cautious and careful in your decision-making process, but also appreciative of opportunities and experiences. Your open nature allows you to be more receptive to new ideas and perspectives, which can help you grow and develop as a person.\"",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:52:40.524477Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 4175387992,
+                            "load_duration": 72073419,
+                            "prompt_eval_count": 102,
+                            "prompt_eval_duration": 67256000,
+                            "eval_count": 93,
+                            "eval_duration": 4033726000,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a46-f3fc-75e0-aaa4-a34142132511-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 102,
+                            "output_tokens": 93,
+                            "total_tokens": 195
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "O_3",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        },
+        {
+            "trial_idx": 3,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "7179592c-80c5-4bd3-9802-e1be7c63ed20"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I am organized and pay attention to details.",
+            "trcode": "C_1",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_1",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "7179592c-80c5-4bd3-9802-e1be7c63ed20"
+            },
+            "pred_resp": {
+                "content": "The tripartite evaluation is a system where three values are assigned to each candidate: 1, 2, or 3. These values represent the level of consistency with the target goal.\n\nHere's how the values could be interpreted for the candidate \"I am organized and pay attention to details\":\n\n1) If they get a value of 1 (strongly disagree), it means that their approach is inconsistent, as they do not meet the criteria for consistency. This would suggest that this person needs improvement in terms of organization and detail-paying skills.\n2) If they get a value of 2 (neutral or slightly agree), it suggests that they are somewhat consistent but there might be room for improvement. They could take steps to develop their organizational abilities and pay more attention to details.\n3) If they get a value of 3 (strongly agree), it indicates a high degree of consistency with the target goal, suggesting that this person has found ways to improve and is on track to meet expectations.",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:52:49.412512Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 8883997401,
+                    "load_duration": 72271730,
+                    "prompt_eval_count": 104,
+                    "prompt_eval_duration": 80348000,
+                    "eval_count": 208,
+                    "eval_duration": 8714119000,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a47-044f-78d2-b63f-461e1c13fe99-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 104,
+                    "output_tokens": 208,
+                    "total_tokens": 312
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I am organized and pay attention to details.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "7179592c-80c5-4bd3-9802-e1be7c63ed20"
+                    },
+                    {
+                        "content": "The tripartite evaluation is a system where three values are assigned to each candidate: 1, 2, or 3. These values represent the level of consistency with the target goal.\n\nHere's how the values could be interpreted for the candidate \"I am organized and pay attention to details\":\n\n1) If they get a value of 1 (strongly disagree), it means that their approach is inconsistent, as they do not meet the criteria for consistency. This would suggest that this person needs improvement in terms of organization and detail-paying skills.\n2) If they get a value of 2 (neutral or slightly agree), it suggests that they are somewhat consistent but there might be room for improvement. They could take steps to develop their organizational abilities and pay more attention to details.\n3) If they get a value of 3 (strongly agree), it indicates a high degree of consistency with the target goal, suggesting that this person has found ways to improve and is on track to meet expectations.",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:52:49.412512Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 8883997401,
+                            "load_duration": 72271730,
+                            "prompt_eval_count": 104,
+                            "prompt_eval_duration": 80348000,
+                            "eval_count": 208,
+                            "eval_duration": 8714119000,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a47-044f-78d2-b63f-461e1c13fe99-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 104,
+                            "output_tokens": 208,
+                            "total_tokens": 312
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_1",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        },
+        {
+            "trial_idx": 4,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "a20f0814-86dc-4a09-b53b-1ba8c82131e8"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I follow through on my commitments.",
+            "trcode": "C_2",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_2",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "a20f0814-86dc-4a09-b53b-1ba8c82131e8"
+            },
+            "pred_resp": {
+                "content": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements. You can use a scale from 1 (strongly disagree) to 5 (strongly agree). Be honest and thoughtful in your responses.\"]}\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:52:51.912154Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 2495808720,
+                    "load_duration": 70645281,
+                    "prompt_eval_count": 102,
+                    "prompt_eval_duration": 75519000,
+                    "eval_count": 57,
+                    "eval_duration": 2338575000,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a47-2707-7270-9a19-c03ea7e90fdc-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 102,
+                    "output_tokens": 57,
+                    "total_tokens": 159
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I follow through on my commitments.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "a20f0814-86dc-4a09-b53b-1ba8c82131e8"
+                    },
+                    {
+                        "content": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements. You can use a scale from 1 (strongly disagree) to 5 (strongly agree). Be honest and thoughtful in your responses.\"]}\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:52:51.912154Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 2495808720,
+                            "load_duration": 70645281,
+                            "prompt_eval_count": 102,
+                            "prompt_eval_duration": 75519000,
+                            "eval_count": 57,
+                            "eval_duration": 2338575000,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a47-2707-7270-9a19-c03ea7e90fdc-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 102,
+                            "output_tokens": 57,
+                            "total_tokens": 159
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_2",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        },
+        {
+            "trial_idx": 5,
+            "inputs": [
+                {
+                    "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "name": null,
+                    "id": "86e0c985-cea9-4ab3-a4db-47d2211e2a55"
+                }
+            ],
+            "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+            "stimulus": "I tend to procrastinate on important tasks.",
+            "trcode": "C_3",
+            "taskname": "example_survey",
+            "tasktype": "survey",
+            "context_present": true,
+            "context": [
+                "C"
+            ],
+            "context_item": "Conscientiousness",
+            "trid": "C_3",
+            "chain_type": "item",
+            "hmsg": {
+                "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "human",
+                "name": null,
+                "id": "86e0c985-cea9-4ab3-a4db-47d2211e2a55"
+            },
+            "pred_resp": {
+                "content": "Your trial statement \"I tend to procrastinate on important tasks.\" appears in the context of a scale from 1 (strongly disagree) to 5 (strongly agree). To assess whether this statement represents conscientiousness, you would need to analyze the given content and determine if it accurately reflects the trait. \n\nConscientiousness can be seen as one of the five personality traits identified by the Big Five model in the context of your trial statement. According to this model, conscientiousness is associated with a tendency to delay gratification, prioritize work or tasks over other factors like leisure activities, and exhibit good time management skills. However, it's also possible that you may not have taken into account other aspects of your personality when considering conscientiousness in relation to your trial statement. \n\nTo accurately assess the relationship between conscientiousness and your trial statement, a more comprehensive analysis would require information about how your behavior aligns with or differs from what is typically associated with conscientiousness in this context.",
+                "additional_kwargs": {},
+                "response_metadata": {
+                    "model": "smollm2:360m-instruct-fp16",
+                    "created_at": "2026-07-07T01:53:00.448933Z",
+                    "done": true,
+                    "done_reason": "stop",
+                    "total_duration": 8532898360,
+                    "load_duration": 75409940,
+                    "prompt_eval_count": 104,
+                    "prompt_eval_duration": 100096000,
+                    "eval_count": 198,
+                    "eval_duration": 8354398999,
+                    "logprobs": null,
+                    "model_name": "smollm2:360m-instruct-fp16",
+                    "model_provider": "ollama"
+                },
+                "type": "ai",
+                "name": null,
+                "id": "lc_run--019f3a47-30ca-7360-8a07-d55e367f9b7e-0",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": {
+                    "input_tokens": 104,
+                    "output_tokens": 198,
+                    "total_tokens": 302
+                }
+            },
+            "pred_dict": {
+                "inputs": [
+                    {
+                        "content": "{\n    \"TRIAL_CONTEXT\": \"Conscientiousness\",\n    \"TRIAL\": \"I tend to procrastinate on important tasks.\"\n}",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "name": null,
+                        "id": "86e0c985-cea9-4ab3-a4db-47d2211e2a55"
+                    },
+                    {
+                        "content": "Your trial statement \"I tend to procrastinate on important tasks.\" appears in the context of a scale from 1 (strongly disagree) to 5 (strongly agree). To assess whether this statement represents conscientiousness, you would need to analyze the given content and determine if it accurately reflects the trait. \n\nConscientiousness can be seen as one of the five personality traits identified by the Big Five model in the context of your trial statement. According to this model, conscientiousness is associated with a tendency to delay gratification, prioritize work or tasks over other factors like leisure activities, and exhibit good time management skills. However, it's also possible that you may not have taken into account other aspects of your personality when considering conscientiousness in relation to your trial statement. \n\nTo accurately assess the relationship between conscientiousness and your trial statement, a more comprehensive analysis would require information about how your behavior aligns with or differs from what is typically associated with conscientiousness in this context.",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "model": "smollm2:360m-instruct-fp16",
+                            "created_at": "2026-07-07T01:53:00.448933Z",
+                            "done": true,
+                            "done_reason": "stop",
+                            "total_duration": 8532898360,
+                            "load_duration": 75409940,
+                            "prompt_eval_count": 104,
+                            "prompt_eval_duration": 100096000,
+                            "eval_count": 198,
+                            "eval_duration": 8354398999,
+                            "logprobs": null,
+                            "model_name": "smollm2:360m-instruct-fp16",
+                            "model_provider": "ollama"
+                        },
+                        "type": "ai",
+                        "name": null,
+                        "id": "lc_run--019f3a47-30ca-7360-8a07-d55e367f9b7e-0",
+                        "tool_calls": [],
+                        "invalid_tool_calls": [],
+                        "usage_metadata": {
+                            "input_tokens": 104,
+                            "output_tokens": 198,
+                            "total_tokens": 302
+                        }
+                    }
+                ],
+                "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You will rate your agreement with the following statements.\", \"Use a scale from 1 (strongly disagree) to 5 (strongly agree).\", \"Be honest and thoughtful in your responses.\"]}\"\n}",
+                "trcode": "C_3",
+                "parser": null,
+                "tools": null
+            },
+            "trace_id": "20260706T21-52-32ollama_local_testSingleTurnexample_survey0",
+            "system_message_idx": 0,
+            "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-ollama_local_test"
+        }
+    ]
+}
