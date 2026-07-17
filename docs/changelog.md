@@ -4,7 +4,7 @@ All notable changes to PsychScanner are documented here.
 
 ---
 
-## Unreleased
+## 0.3.0 (2026-07-16)
 
 ### New features
 

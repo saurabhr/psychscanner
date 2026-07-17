@@ -12,6 +12,12 @@ src/psychscanner.egg-info/dependency_links.txt
 src/psychscanner.egg-info/entry_points.txt
 src/psychscanner.egg-info/requires.txt
 src/psychscanner.egg-info/top_level.txt
+src/psychscanner/agents/__init__.py
+src/psychscanner/agents/custom_agent.py
+src/psychscanner/agents/planner_executor_agent.py
+src/psychscanner/agents/react_agent.py
+src/psychscanner/agents/reflection_agents.py
+src/psychscanner/agents/supervisor_agent.py
 src/psychscanner/datasets/__init__.py
 src/psychscanner/datasets/load_datasets.py
 src/psychscanner/datasets/prompts/__init__.py
@@ -54,7 +60,13 @@ src/psychscanner/task_runner/task_runner_legacy_withoutfb.py
 src/psychscanner/templates/__init__.py
 src/psychscanner/templates/tasks/__init__.py
 src/psychscanner/templates/tasks/get_task_template.py
+tests/test_agents.py
 tests/test_cli.py
+tests/test_memory_trimming.py
 tests/test_multimodal.py
+tests/test_planner_executor_agent.py
+tests/test_react_agent.py
 tests/test_readme_quickstart.py
+tests/test_reflection_agents.py
+tests/test_supervisor_agent.py
 tests/test_tools.py
