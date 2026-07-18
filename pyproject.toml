@@ -66,6 +66,10 @@ multimodal = [
     "beautifulsoup4",
     "httpx",
 ]
+nnsight = [
+    "nnsight",
+    "torch",
+]
 dev = [
     "psychscanner[tests,docs,mkdocs,multimodal]",
 ]

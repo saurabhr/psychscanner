@@ -89,7 +89,7 @@ def llm_chat_model(
         ``"smollm2:360m-instruct-fp16"``).
     family:
         Provider / family string (e.g. ``"openai"``, ``"ollama"``,
-        ``"groq"``, ``"huggingface"``).
+        ``"groq"``, ``"huggingface"``, ``"nnsight"``).
     parameters:
         Optional dict of extra kwargs forwarded to the model constructor
         (e.g. ``temperature``, ``api_key``, ``base_url``).
@@ -115,6 +115,10 @@ def llm_chat_model(
             repeat_buffer_length=10,
             **parameters,
         )
+    elif family_lower == "nnsight":
+        from psychscanner.nnsight_backend import ChatNNsightModel
+
+        chat_model = ChatNNsightModel(model=model, **parameters)
     elif family_lower == "openrouter":
         # Route through the OpenAI-compatible endpoint at openrouter.ai
         params = _resolve_api_key("openrouter", parameters)
