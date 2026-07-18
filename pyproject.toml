@@ -70,6 +70,10 @@ nnsight = [
     "nnsight",
     "torch",
 ]
+nnterp = [
+    "nnterp",
+    "torch",
+]
 dev = [
     "psychscanner[tests,docs,mkdocs,multimodal]",
 ]
