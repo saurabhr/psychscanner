@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import uuid
 from pathlib import Path
-from typing import Any, Dict, TYPE_CHECKING
+from typing import Any, Dict, List, Optional, TYPE_CHECKING
 
 import click
 from langchain_core.language_models import BaseChatModel
@@ -51,18 +51,18 @@ class ChatNNterpModel(BaseChatModel):
 
     model_name: str = Field(alias="model")
     device_map: str = "auto"
-    dtype: str | None = None
+    dtype: Optional[str] = None
     trust_remote_code: bool = False
     remote: bool = False
 
     max_new_tokens: int = 128
-    temperature: float | None = None
+    temperature: Optional[float] = None
     do_sample: bool = False
 
     # Which standardized accessor(s) to read: any of "layers", "attentions", "mlps".
-    capture_kinds: list[str] = ["layers"]
+    capture_kinds: List[str] = ["layers"]
     # None captures every layer; pass indices (e.g. [5, 10]) to limit disk usage.
-    capture_layers: list[int] | None = None
+    capture_layers: Optional[List[int]] = None
     activations_dir: str = "nnterp_activations"
 
     _nn_model: Any = PrivateAttr(default=None)

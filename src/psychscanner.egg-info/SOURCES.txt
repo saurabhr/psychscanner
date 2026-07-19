@@ -40,6 +40,10 @@ src/psychscanner/memories/base/__init__.py
 src/psychscanner/memories/base/base_agent.py
 src/psychscanner/memories/base/mock_llm.py
 src/psychscanner/memories/base/model_provider.py
+src/psychscanner/nnsight_backend/__init__.py
+src/psychscanner/nnsight_backend/chat_nnsight.py
+src/psychscanner/nnterp_backend/__init__.py
+src/psychscanner/nnterp_backend/chat_nnterp.py
 src/psychscanner/scanner_models/__init__.py
 src/psychscanner/scanner_models/agent_config.py
 src/psychscanner/scanner_models/media_store.py
@@ -60,6 +64,8 @@ src/psychscanner/task_runner/task_runner_legacy_withoutfb.py
 src/psychscanner/templates/__init__.py
 src/psychscanner/templates/tasks/__init__.py
 src/psychscanner/templates/tasks/get_task_template.py
+src/psychscanner/vlm_backend/__init__.py
+src/psychscanner/vlm_backend/chat_vlm.py
 tests/test_agents.py
 tests/test_cli.py
 tests/test_memory_trimming.py

@@ -67,17 +67,17 @@ class ChatNNsightModel(BaseChatModel):
 
     model_name: str = Field(alias="model")
     device_map: str = "auto"
-    dtype: str | None = None
+    dtype: Optional[str] = None
     dispatch: bool = True
     remote: bool = False
 
     max_new_tokens: int = 128
-    temperature: float | None = None
+    temperature: Optional[float] = None
     do_sample: bool = False
 
     # None captures every module's output (nnsight's default); pass dotted
     # paths (e.g. ["model.layers.5", "model.layers.10"]) to limit disk usage.
-    capture_modules: list[str] | None = None
+    capture_modules: Optional[List[str]] = None
     activations_dir: str = "nnsight_activations"
 
     _nn_model: Any = PrivateAttr(default=None)

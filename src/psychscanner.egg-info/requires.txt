@@ -35,5 +35,18 @@ mkdocs-jupyter>=0.24
 beautifulsoup4
 httpx
 
+[nnsight]
+nnsight
+torch
+
+[nnterp]
+nnterp
+torch
+
 [tests]
 pytest
+
+[vlm]
+nnsight>=0.6
+torch>=2.4
+pillow

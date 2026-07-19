@@ -5,6 +5,8 @@ It supports multiple model families and automatically resolves API keys
 from environment variables for cloud providers.
 """
 
+from __future__ import annotations
+
 import os
 
 import click
@@ -89,7 +91,7 @@ def llm_chat_model(
         ``"smollm2:360m-instruct-fp16"``).
     family:
         Provider / family string (e.g. ``"openai"``, ``"ollama"``,
-        ``"groq"``, ``"huggingface"``, ``"nnsight"``, ``"nnterp"``).
+        ``"groq"``, ``"huggingface"``, ``"nnsight"``, ``"nnterp"``, ``"vlm"``).
     parameters:
         Optional dict of extra kwargs forwarded to the model constructor
         (e.g. ``temperature``, ``api_key``, ``base_url``).
@@ -123,6 +125,10 @@ def llm_chat_model(
         from psychscanner.nnterp_backend import ChatNNterpModel
 
         chat_model = ChatNNterpModel(model=model, **parameters)
+    elif family_lower == "vlm":
+        from psychscanner.vlm_backend import ChatVLMModel
+
+        chat_model = ChatVLMModel(model=model, **parameters)
     elif family_lower == "openrouter":
         # Route through the OpenAI-compatible endpoint at openrouter.ai
         params = _resolve_api_key("openrouter", parameters)

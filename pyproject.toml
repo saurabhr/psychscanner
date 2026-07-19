@@ -16,7 +16,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -24,7 +23,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
 ]
-requires-python = "~=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "click",
     "langchain",
@@ -74,6 +73,16 @@ nnterp = [
     "nnterp",
     "torch",
 ]
+vlm = [
+    "nnsight>=0.6",  # VisionLanguageModel was added in 0.6
+    "torch>=2.4",  # nnsight itself requires torch>=2.4
+    "torchvision",  # required by some processors (e.g. Qwen2-VL's) even for image-only use
+    # transformers>=4.53 auto-emits mm_token_type_ids from Qwen-VL processors
+    # that those same models' generate() rejects as an unknown kwarg
+    # (huggingface/transformers#39112); pin below that until upstream fixes it.
+    "transformers<4.53",
+    "pillow",
+]
 dev = [
     "psychscanner[tests,docs,mkdocs,multimodal]",
 ]
@@ -103,7 +112,7 @@ lint.ignore = [
     "INP",  # flake8-no-pep420
 ]
 src = ["src", "tests", "docs"]
-target-version = "py39"  # the minimum Python version supported, used by pyupgrade
+target-version = "py310"  # the minimum Python version supported, used by pyupgrade
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = [

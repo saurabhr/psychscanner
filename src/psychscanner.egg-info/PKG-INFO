@@ -35,14 +35,13 @@ Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Programming Language :: Python :: 3.13
 Classifier: Programming Language :: Python :: 3 :: Only
 Classifier: Typing :: Typed
-Requires-Python: ~=3.9
+Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: click
@@ -77,6 +76,16 @@ Requires-Dist: mkdocs-jupyter>=0.24; extra == "mkdocs"
 Provides-Extra: multimodal
 Requires-Dist: beautifulsoup4; extra == "multimodal"
 Requires-Dist: httpx; extra == "multimodal"
+Provides-Extra: nnsight
+Requires-Dist: nnsight; extra == "nnsight"
+Requires-Dist: torch; extra == "nnsight"
+Provides-Extra: nnterp
+Requires-Dist: nnterp; extra == "nnterp"
+Requires-Dist: torch; extra == "nnterp"
+Provides-Extra: vlm
+Requires-Dist: nnsight>=0.6; extra == "vlm"
+Requires-Dist: torch>=2.4; extra == "vlm"
+Requires-Dist: pillow; extra == "vlm"
 Provides-Extra: dev
 Requires-Dist: psychscanner[docs,mkdocs,multimodal,tests]; extra == "dev"
 Dynamic: license-file
