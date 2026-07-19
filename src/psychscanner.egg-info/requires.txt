@@ -49,4 +49,6 @@ pytest
 [vlm]
 nnsight>=0.6
 torch>=2.4
+torchvision
+transformers<4.53
 pillow

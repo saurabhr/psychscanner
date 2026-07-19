@@ -85,6 +85,8 @@ Requires-Dist: torch; extra == "nnterp"
 Provides-Extra: vlm
 Requires-Dist: nnsight>=0.6; extra == "vlm"
 Requires-Dist: torch>=2.4; extra == "vlm"
+Requires-Dist: torchvision; extra == "vlm"
+Requires-Dist: transformers<4.53; extra == "vlm"
 Requires-Dist: pillow; extra == "vlm"
 Provides-Extra: dev
 Requires-Dist: psychscanner[docs,mkdocs,multimodal,tests]; extra == "dev"
