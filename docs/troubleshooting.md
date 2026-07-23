@@ -189,15 +189,15 @@ card = ExpCardInit(
 
 ### `ModuleNotFoundError: No module named 'psychscanner'`
 
-Activate the conda environment before running:
+Activate the uv environment before running:
 ```bash
-conda activate psyscan
+source psyscan/bin/activate
 ```
 
 Or reinstall:
 ```bash
 cd /path/to/psychscanner
-pip install -e .
+uv pip install -e .
 ```
 
 ---

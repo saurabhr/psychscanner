@@ -123,7 +123,7 @@ Also generates `figures/exp2_1_vs_2_2_feedback_contrast.png` (cross-sub-exp comp
 ## Running order
 
 ```bash
-conda activate psyscan
+source psyscan/bin/activate
 
 # Set 1
 python examples/advanced/set1_surveys/exp1_1_vviq16/run.py

@@ -14,7 +14,7 @@ Model: nvidia/nemotron-nano-12b-v2-vl:free
 
 To run all experiments:
 ```bash
-conda activate psyscan
+source psyscan/bin/activate
 for exp in exp4_1_ocr_viser exp4_2_ocr_no_viser exp4_3_nonocr_viser exp4_4_nonocr_no_viser; do
     python examples/advanced/set4_viser/$exp/run.py
 done

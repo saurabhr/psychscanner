@@ -21,11 +21,18 @@ Tested on Python 3.11
 
 ## Installation
 
-### 1. Create the conda environment
+### 1. Create the uv environment
+
+Install `uv` first if you don't have it ([astral.sh/uv](https://astral.sh/uv)):
 
 ```bash
-conda env create -f environment.yml
-conda activate psyscan
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# already on conda? `conda install -c conda-forge uv` instead
+```
+
+```bash
+uv venv psyscan --python 3.11
+source psyscan/bin/activate
 ```
 
 ### 2. Install psychscanner
@@ -33,7 +40,7 @@ conda activate psyscan
 ```bash
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
-pip install -e .
+uv pip install -e .
 ```
 
 ### 3. Set API keys
