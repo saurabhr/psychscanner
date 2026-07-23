@@ -30,7 +30,7 @@ Install `uv` first if you don't have it ([astral.sh/uv](https://astral.sh/uv)):
 
 ```bash
 conda install -c conda-forge uv                    # if you use conda
-curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
+# curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
 ```
 
 ```bash
