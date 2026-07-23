@@ -22,6 +22,7 @@
 ## Installation
 
 ```bash
+conda install -c conda-forge uv                    # if you use conda
 curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
 uv venv psyscan --python 3.11
 source psyscan/bin/activate

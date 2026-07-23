@@ -29,8 +29,8 @@ Tested on Python 3.11
 Install `uv` first if you don't have it ([astral.sh/uv](https://astral.sh/uv)):
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-# already on conda? `conda install -c conda-forge uv` instead
+conda install -c conda-forge uv                    # if you use conda
+curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
 ```
 
 ```bash
