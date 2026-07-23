@@ -87,7 +87,7 @@ CSV at `analysis/benchmark_vviq.csv`. The benchmark comparison figure requires t
 
 ```bash
 # From the psychscanner project root:
-conda activate psyscan
+source psyscan/bin/activate
 python examples/advanced/set1_surveys/exp1_1_vviq16/run.py
 ```
 

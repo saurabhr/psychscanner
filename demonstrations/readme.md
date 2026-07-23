@@ -1,5 +1,7 @@
 # Psychscanner Demonstrations
 
+[00_install_from_github.ipynb](00_install_from_github.ipynb) — install psychscanner from GitHub before running any of the below.
+
 Suggested reading order, roughly increasing in complexity (not a technical dependency between subprojects — each is currently just a standalone readme + folder skeleton).
 
 1. [reward_task](01_reward_task/readme.md) — swapping different agents/models into the same task harness.
