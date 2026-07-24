@@ -6,12 +6,13 @@ PsychScanner: A framework for running psychological experiments with large langu
 
 [![Documentation Status](https://readthedocs.org/projects/psychscanner/badge/?version=latest)](https://psychscanner.readthedocs.io/en/latest/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner/pulls)
+[![Contributors](https://img.shields.io/github/contributors/saurabhr/psychscanner.svg)](https://github.com/saurabhr/psychscanner/graphs/contributors)
 
 Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-> The package is under active development. Contributions are welcome.
+> The package is under active development. [Contributions](CONTRIBUTING.md) are welcome.
 
 ## Features
 
