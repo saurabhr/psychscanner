@@ -13,6 +13,7 @@ Tested on Python 3.11
 ![image](docs/psychscanner.png)
 
 > The package is under active development. [Contributions](CONTRIBUTING.md) are welcome.
+> Archived version of psychscanner 0.1.0 can be found here: https://github.com/saurabhr/psyschscanner_v_0_1_0
 
 ## Features
 
