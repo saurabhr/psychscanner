@@ -2,7 +2,7 @@
 
 # psychscanner
 
-PsychScanner: A framework for running psychological experiments with large language models.
+Psych Scanner: A framework for running psychological experiments with large language models.
 
 [![Documentation Status](https://readthedocs.org/projects/psychscanner/badge/?version=latest)](https://psychscanner.readthedocs.io/en/latest/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner/pulls)
@@ -12,7 +12,7 @@ Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-> The package is under active development. [Contributions](CONTRIBUTING.md) are welcome.
+> The package is under active development. [Contributions](CONTRIBUTING.md) are welcome. Find the documentation here: https://readthedocs.org/projects/psychscanner/badge/?version=latest
 > Archived version of psychscanner 0.1.0 can be found here: https://github.com/saurabhr/psyschscanner_v_0_1_0
 
 ## Features
