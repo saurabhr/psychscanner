@@ -2,13 +2,20 @@
 
 # psychscanner
 
-PsychScanner: A framework for running psychological experiments with large language models.
+Psych Scanner: A framework for running psychological experiments with large language models.
+
+[![Documentation Status](https://readthedocs.org/projects/psychscanner/badge/?version=latest)](https://psychscanner.readthedocs.io/en/latest/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner/pulls)
+[![Contributors](https://img.shields.io/github/contributors/saurabhr/psychscanner.svg)](https://github.com/saurabhr/psychscanner/graphs/contributors)
 
 Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-> The package is under active development. Contributions are welcome.
+> The package is under active development. [Contributions](CONTRIBUTING.md) are welcome. Find the documentation here:https://psychscanner.readthedocs.io/en/latest/
+>
+> 
+> Archived version of psychscanner 0.1.0 can be found here: https://github.com/saurabhr/psyschscanner_v_0_1_0
 
 ## Features
 
@@ -26,8 +33,8 @@ Tested on Python 3.11
 Install `uv` first if you don't have it ([astral.sh/uv](https://astral.sh/uv)):
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-# already on conda? `conda install -c conda-forge uv` instead
+conda install -c conda-forge uv                    # if you use conda
+# curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
 ```
 
 ```bash

@@ -1,5 +1,20 @@
 # Quick Start
 
+## Installation
+
+```bash
+conda install -c conda-forge uv                    # if you use conda
+# curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
+uv venv psyscan --python 3.11
+source psyscan/bin/activate
+
+git clone https://github.com/saurabhr/psychscanner.git
+cd psychscanner
+uv pip install -e .
+```
+
+See [Installation](installation.md) for API key setup and full details.
+
 ## Minimal example
 
 ```python

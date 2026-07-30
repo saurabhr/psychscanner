@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "psychscanner"
 description = "A tool to bridge natural psychology witth  the artificial."
-authors = [{name = "Saurabh Ranjan", email = "saurabh.ctheory@proton.me"}]
+authors = [{name = "Saurabh Ranjan", email = "ranjan.saurabh@outlook.com"}]
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = []

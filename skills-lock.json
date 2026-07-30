@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "humanize-writing": {
+      "source": "jpeggdev/humanize-writing",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "664d5d3470ba6113825613afb1212d1705af7d86d5ed0b438e6961f77fb9e3bb"
+    }
+  }
+}
