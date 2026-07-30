@@ -108,6 +108,6 @@ Every notebook in [`examples/`](https://github.com/saurabhr/psychscanner/tree/ma
 If you use PsychScanner in your research, please cite:
 
 ```
-Ranjan, S., Makwana, M. Psych Scanner: A Framework for Systematic Cognitive Evaluation of
+Ranjan, S., Sokratous, K. & Makwana, M. Psych Scanner: A Framework for Systematic Cognitive Evaluation of
 Large Language Models. [Under Submission]
 ```
