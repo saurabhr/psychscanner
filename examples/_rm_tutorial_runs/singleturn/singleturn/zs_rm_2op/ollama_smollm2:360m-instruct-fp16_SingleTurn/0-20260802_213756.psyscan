@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
+                    "id": "6c923465-54e1-48d4-834f-b62ad2909c64"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -35,7 +35,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
+                "id": "6c923465-54e1-48d4-834f-b62ad2909c64"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
@@ -43,7 +43,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "fb231346-888d-4948-be70-32509e5592b7",
+                "id": "2cd37fd7-f249-438f-9f5c-cb653c027e3e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -56,7 +56,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
+                        "id": "6c923465-54e1-48d4-834f-b62ad2909c64"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
@@ -64,7 +64,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
+                        "id": "2cd37fd7-f249-438f-9f5c-cb653c027e3e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -75,10 +75,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 1,
@@ -89,7 +89,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
+                    "id": "397bb3ef-886d-4143-9d92-7d102fdbc4b4"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -115,15 +115,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
+                "id": "397bb3ef-886d-4143-9d92-7d102fdbc4b4"
             },
             "pred_resp": {
-                "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                "content": "{'Word_2': 'sweet', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
+                "id": "6fac1665-9e97-42a7-b8b8-ba0da9b8787b",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -131,39 +131,20 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
+                        "id": "397bb3ef-886d-4143-9d92-7d102fdbc4b4"
                     },
                     {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                        "content": "{'Word_2': 'sweet', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
+                        "id": "6fac1665-9e97-42a7-b8b8-ba0da9b8787b",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -174,10 +155,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 2,
@@ -188,7 +169,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
+                    "id": "be9c1932-bc89-44c4-80b1-0028a2d4e4e7"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -214,7 +195,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
+                "id": "be9c1932-bc89-44c4-80b1-0028a2d4e4e7"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -222,7 +203,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
+                "id": "bd4f1557-a1d4-41a8-8175-c1fca9ce417b",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -230,50 +211,12 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
+                        "id": "be9c1932-bc89-44c4-80b1-0028a2d4e4e7"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -281,7 +224,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
+                        "id": "bd4f1557-a1d4-41a8-8175-c1fca9ce417b",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -292,10 +235,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 3,
@@ -306,7 +249,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
+                    "id": "ef095c24-fb74-45bb-8b05-d0a62ec7e899"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -332,15 +275,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
+                "id": "ef095c24-fb74-45bb-8b05-d0a62ec7e899"
             },
             "pred_resp": {
-                "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                "content": "{'Word_2': 'cushion', 'Rating': 4.0, 'Judgment': 'external', 'Confidence': 3}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
+                "id": "55a0779e-6a71-461a-9478-26f6591b5850",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -348,77 +291,20 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
-                    },
-                    {
-                        "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
+                        "id": "ef095c24-fb74-45bb-8b05-d0a62ec7e899"
                     },
                     {
-                        "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                        "content": "{'Word_2': 'cushion', 'Rating': 4.0, 'Judgment': 'external', 'Confidence': 3}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
+                        "id": "55a0779e-6a71-461a-9478-26f6591b5850",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -429,10 +315,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 4,
@@ -443,7 +329,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "a117482d-bdff-4f2f-8fcb-864848762439"
+                    "id": "bbfa4699-f9c4-4e64-a92a-0164bbc6158d"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -469,15 +355,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "a117482d-bdff-4f2f-8fcb-864848762439"
+                "id": "bbfa4699-f9c4-4e64-a92a-0164bbc6158d"
             },
             "pred_resp": {
-                "content": "{'Word_2': 'letter', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                "content": "{'Word_2': 'tip', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "32392c49-9fb1-439e-8b07-0a424199f1e8",
+                "id": "c22f23c1-cb5b-4c3f-bd8a-0d0c03cefbee",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -485,96 +371,20 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
-                    },
-                    {
-                        "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
-                    },
-                    {
-                        "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"letter\",\n        \"word_2\": \"tip\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "a117482d-bdff-4f2f-8fcb-864848762439"
+                        "id": "bbfa4699-f9c4-4e64-a92a-0164bbc6158d"
                     },
                     {
-                        "content": "{'Word_2': 'letter', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                        "content": "{'Word_2': 'tip', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "32392c49-9fb1-439e-8b07-0a424199f1e8",
+                        "id": "c22f23c1-cb5b-4c3f-bd8a-0d0c03cefbee",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -585,10 +395,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 5,
@@ -599,7 +409,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "2f81f97a-fca7-428d-b1c0-67c23d5163a1"
+                    "id": "033f7fd3-2b5f-46ca-824d-216b61db52e7"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -625,7 +435,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "2f81f97a-fca7-428d-b1c0-67c23d5163a1"
+                "id": "033f7fd3-2b5f-46ca-824d-216b61db52e7"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'building', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -633,7 +443,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "b03bdb39-9c86-4626-8bd3-d04f4b5a49ce",
+                "id": "f0251998-d049-48f9-82ab-40b29b00b15f",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -641,107 +451,12 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
-                    },
-                    {
-                        "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
-                    },
-                    {
-                        "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"letter\",\n        \"word_2\": \"tip\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "a117482d-bdff-4f2f-8fcb-864848762439"
-                    },
-                    {
-                        "content": "{'Word_2': 'letter', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "32392c49-9fb1-439e-8b07-0a424199f1e8",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"building\",\n        \"word_2\": \"________\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "2f81f97a-fca7-428d-b1c0-67c23d5163a1"
+                        "id": "033f7fd3-2b5f-46ca-824d-216b61db52e7"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -749,7 +464,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b03bdb39-9c86-4626-8bd3-d04f4b5a49ce",
+                        "id": "f0251998-d049-48f9-82ab-40b29b00b15f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -760,10 +475,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 6,
@@ -774,7 +489,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "9d0b11d5-7bf5-434c-bbce-91898a129577"
+                    "id": "71c5bf94-f297-404e-96f6-616a885931de"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -800,7 +515,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "9d0b11d5-7bf5-434c-bbce-91898a129577"
+                "id": "71c5bf94-f297-404e-96f6-616a885931de"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'blouse', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -808,7 +523,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "535ec7f1-a72c-42f9-b79b-58cbd8a77f73",
+                "id": "1cb7e129-714d-4cc8-9dfc-46f985dfe8f1",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -816,126 +531,12 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
-                    },
-                    {
-                        "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
-                    },
-                    {
-                        "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"letter\",\n        \"word_2\": \"tip\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "a117482d-bdff-4f2f-8fcb-864848762439"
-                    },
-                    {
-                        "content": "{'Word_2': 'letter', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "32392c49-9fb1-439e-8b07-0a424199f1e8",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"building\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "2f81f97a-fca7-428d-b1c0-67c23d5163a1"
-                    },
-                    {
-                        "content": "{'Word_2': 'building', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "b03bdb39-9c86-4626-8bd3-d04f4b5a49ce",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"blouse\",\n        \"word_2\": \"________\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9d0b11d5-7bf5-434c-bbce-91898a129577"
+                        "id": "71c5bf94-f297-404e-96f6-616a885931de"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
@@ -943,7 +544,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "535ec7f1-a72c-42f9-b79b-58cbd8a77f73",
+                        "id": "1cb7e129-714d-4cc8-9dfc-46f985dfe8f1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -954,10 +555,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         },
         {
             "trial_idx": 7,
@@ -968,7 +569,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "39d08d2e-635e-459e-ad47-028a7b0f5719"
+                    "id": "d4904689-3733-4dac-99b6-33b34d071d2e"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**Imagining a Word for Blank 'word_2'**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}, \"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": \"Judge the nature of generation of the value of 'word_2' on following options:\", \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}\"\n}",
@@ -994,15 +595,15 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "39d08d2e-635e-459e-ad47-028a7b0f5719"
+                "id": "d4904689-3733-4dac-99b6-33b34d071d2e"
             },
             "pred_resp": {
-                "content": "{'Word_2': 'pin', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                "content": "{'Word_2': 'haystack', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                 "additional_kwargs": {},
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "b57b0c99-8720-4697-9528-c5e6cf981dd6",
+                "id": "97ae4f61-b804-4ccd-bd02-109aa74197c6",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1010,153 +611,20 @@
             "pred_dict": {
                 "inputs": [
                     {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sandpaper\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "7388e257-0741-4cae-abb4-2500e899fc0b"
-                    },
-                    {
-                        "content": "{'Word_2': 'sandpaper', 'Rating': 3.0, 'Judgment': 'internal', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "fb231346-888d-4948-be70-32509e5592b7",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"sugar\",\n        \"word_2\": \"sweet\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "b1c3d046-438d-4a31-a0f3-60c8532cedbe"
-                    },
-                    {
-                        "content": "{'Word_2': 'sugar', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "5afe2e7f-7ff7-433e-82b4-8bcab94d21cb",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"suburb\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "572674da-b3ea-467b-b9a6-a090b08263f3"
-                    },
-                    {
-                        "content": "{'Word_2': 'suburb', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "bd5abe01-9ca2-4136-9bcc-58e436b25795",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"chair\",\n        \"word_2\": \"cushion\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "67ddbf6d-55f2-4dea-836a-f391b5740976"
-                    },
-                    {
-                        "content": "{'Word_2': 'chair', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "cd794dcd-8b08-47f9-93a6-a97a066728ed",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"letter\",\n        \"word_2\": \"tip\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "a117482d-bdff-4f2f-8fcb-864848762439"
-                    },
-                    {
-                        "content": "{'Word_2': 'letter', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "32392c49-9fb1-439e-8b07-0a424199f1e8",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"building\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "2f81f97a-fca7-428d-b1c0-67c23d5163a1"
-                    },
-                    {
-                        "content": "{'Word_2': 'building', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "b03bdb39-9c86-4626-8bd3-d04f4b5a49ce",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
-                        "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"blouse\",\n        \"word_2\": \"________\"\n    }\n}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "human",
-                        "name": null,
-                        "id": "9d0b11d5-7bf5-434c-bbce-91898a129577"
-                    },
-                    {
-                        "content": "{'Word_2': 'blouse', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
-                        "additional_kwargs": {},
-                        "response_metadata": {},
-                        "type": "ai",
-                        "name": null,
-                        "id": "535ec7f1-a72c-42f9-b79b-58cbd8a77f73",
-                        "tool_calls": [],
-                        "invalid_tool_calls": [],
-                        "usage_metadata": null
-                    },
-                    {
                         "content": "{\n    \"Word_Pair\": {\n        \"word_1\": \"pin\",\n        \"word_2\": \"haystack\"\n    }\n}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "39d08d2e-635e-459e-ad47-028a7b0f5719"
+                        "id": "d4904689-3733-4dac-99b6-33b34d071d2e"
                     },
                     {
-                        "content": "{'Word_2': 'pin', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
+                        "content": "{'Word_2': 'haystack', 'Rating': 3.0, 'Judgment': 'external', 'Confidence': 4}",
                         "additional_kwargs": {},
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b57b0c99-8720-4697-9528-c5e6cf981dd6",
+                        "id": "97ae4f61-b804-4ccd-bd02-109aa74197c6",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1167,10 +635,10 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-40-28singleturn23200000Convozs_rm_2op0",
+            "trace_id": "20260802T21-37-30singleturnSingleTurnzs_rm_2op0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
-            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-singleturn23200000"
+            "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-SingleTurn-singleturn"
         }
     ]
 }

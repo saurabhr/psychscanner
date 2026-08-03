@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                    "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -56,7 +56,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
             },
             "pred_resp": {
                 "content": "{'response': {'Word_2': 'sandpaper'}}",
@@ -64,7 +64,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "b2cdd7b3-f907-41c4-b981-b5815c81c794",
+                "id": "b39d6581-d05a-40f9-825a-2619acd9eb67",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -77,7 +77,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                        "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sandpaper'}}",
@@ -85,7 +85,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b2cdd7b3-f907-41c4-b981-b5815c81c794",
+                        "id": "b39d6581-d05a-40f9-825a-2619acd9eb67",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -96,7 +96,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_1",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_1",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -110,7 +110,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "e65eca87-7f1c-472a-bd34-f136c1f9d42c"
+                    "id": "05c3c62e-31f6-4658-85be-17cde415b91e"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -154,7 +154,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "e65eca87-7f1c-472a-bd34-f136c1f9d42c"
+                "id": "05c3c62e-31f6-4658-85be-17cde415b91e"
             },
             "pred_resp": {
                 "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -162,7 +162,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "df5c61ea-bc59-48a3-ad18-a74535bf94d7",
+                "id": "5d43355c-e735-4674-a08f-0b81f8080c26",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -175,7 +175,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                        "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sandpaper'}}",
@@ -183,7 +183,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b2cdd7b3-f907-41c4-b981-b5815c81c794",
+                        "id": "b39d6581-d05a-40f9-825a-2619acd9eb67",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -194,7 +194,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e65eca87-7f1c-472a-bd34-f136c1f9d42c"
+                        "id": "05c3c62e-31f6-4658-85be-17cde415b91e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -202,7 +202,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "df5c61ea-bc59-48a3-ad18-a74535bf94d7",
+                        "id": "5d43355c-e735-4674-a08f-0b81f8080c26",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -213,7 +213,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_1",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_1",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -227,7 +227,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b4124879-bbf9-4d63-9a78-71d1260ddfb9"
+                    "id": "64142bc5-fff1-4577-9eb3-c72ce3a959c8"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -265,7 +265,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b4124879-bbf9-4d63-9a78-71d1260ddfb9"
+                "id": "64142bc5-fff1-4577-9eb3-c72ce3a959c8"
             },
             "pred_resp": {
                 "content": "{'response': {'Judgment': 'external'}}",
@@ -273,7 +273,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "2ac0a2be-fdc0-4d6d-83ab-0f2fcb316795",
+                "id": "26ec5b3e-21ef-459e-8d13-6ccaaa9ada4f",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -286,7 +286,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                        "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sandpaper'}}",
@@ -294,7 +294,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b2cdd7b3-f907-41c4-b981-b5815c81c794",
+                        "id": "b39d6581-d05a-40f9-825a-2619acd9eb67",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -305,7 +305,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e65eca87-7f1c-472a-bd34-f136c1f9d42c"
+                        "id": "05c3c62e-31f6-4658-85be-17cde415b91e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -313,7 +313,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "df5c61ea-bc59-48a3-ad18-a74535bf94d7",
+                        "id": "5d43355c-e735-4674-a08f-0b81f8080c26",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -324,7 +324,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b4124879-bbf9-4d63-9a78-71d1260ddfb9"
+                        "id": "64142bc5-fff1-4577-9eb3-c72ce3a959c8"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -332,7 +332,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2ac0a2be-fdc0-4d6d-83ab-0f2fcb316795",
+                        "id": "26ec5b3e-21ef-459e-8d13-6ccaaa9ada4f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -343,7 +343,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_1",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_1",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -357,7 +357,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "22c71d2c-e6fd-4d2e-b34d-960ae2c43a5a"
+                    "id": "43e5bc3e-5b77-41f2-88d0-ca7dc3aaafd3"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -410,7 +410,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "22c71d2c-e6fd-4d2e-b34d-960ae2c43a5a"
+                "id": "43e5bc3e-5b77-41f2-88d0-ca7dc3aaafd3"
             },
             "pred_resp": {
                 "content": "{'response': {'Confidence': 5}}",
@@ -418,7 +418,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "d1f945c0-b42b-49f7-bc4d-899aababd531",
+                "id": "e250e1a7-cc6f-4e15-a702-7de769cd0f90",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -431,7 +431,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "69473c2a-370b-4d46-8665-18a92b9f5891"
+                        "id": "2e3c4071-ae53-4f61-a1aa-fd94759e9243"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sandpaper'}}",
@@ -439,7 +439,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b2cdd7b3-f907-41c4-b981-b5815c81c794",
+                        "id": "b39d6581-d05a-40f9-825a-2619acd9eb67",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -450,7 +450,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e65eca87-7f1c-472a-bd34-f136c1f9d42c"
+                        "id": "05c3c62e-31f6-4658-85be-17cde415b91e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -458,7 +458,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "df5c61ea-bc59-48a3-ad18-a74535bf94d7",
+                        "id": "5d43355c-e735-4674-a08f-0b81f8080c26",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -469,7 +469,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b4124879-bbf9-4d63-9a78-71d1260ddfb9"
+                        "id": "64142bc5-fff1-4577-9eb3-c72ce3a959c8"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -477,7 +477,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2ac0a2be-fdc0-4d6d-83ab-0f2fcb316795",
+                        "id": "26ec5b3e-21ef-459e-8d13-6ccaaa9ada4f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -488,7 +488,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "22c71d2c-e6fd-4d2e-b34d-960ae2c43a5a"
+                        "id": "43e5bc3e-5b77-41f2-88d0-ca7dc3aaafd3"
                     },
                     {
                         "content": "{'response': {'Confidence': 5}}",
@@ -496,7 +496,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "d1f945c0-b42b-49f7-bc4d-899aababd531",
+                        "id": "e250e1a7-cc6f-4e15-a702-7de769cd0f90",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -507,7 +507,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_1",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_1",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -521,7 +521,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                    "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -568,7 +568,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
             },
             "pred_resp": {
                 "content": "{'response': {'Word_2': 'sweet'}}",
@@ -576,7 +576,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "9cbc415c-e74c-4860-be1e-d037b514e640",
+                "id": "b30b2b1d-1ada-478c-85fa-1b33dbfc4600",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -589,7 +589,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                        "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sweet'}}",
@@ -597,7 +597,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9cbc415c-e74c-4860-be1e-d037b514e640",
+                        "id": "b30b2b1d-1ada-478c-85fa-1b33dbfc4600",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -608,7 +608,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_2",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_2",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -622,7 +622,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "48c14ff5-457b-45d7-9290-4ea9297abc97"
+                    "id": "122294e2-603a-42d1-8cc9-a05bf14e5698"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -666,7 +666,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "48c14ff5-457b-45d7-9290-4ea9297abc97"
+                "id": "122294e2-603a-42d1-8cc9-a05bf14e5698"
             },
             "pred_resp": {
                 "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -674,7 +674,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "b4521fde-94dc-4a9f-869b-59d7e6b7c577",
+                "id": "b95a9c36-6fa0-47ac-a066-709a63d031f5",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -687,7 +687,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                        "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sweet'}}",
@@ -695,7 +695,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9cbc415c-e74c-4860-be1e-d037b514e640",
+                        "id": "b30b2b1d-1ada-478c-85fa-1b33dbfc4600",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -706,7 +706,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "48c14ff5-457b-45d7-9290-4ea9297abc97"
+                        "id": "122294e2-603a-42d1-8cc9-a05bf14e5698"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -714,7 +714,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b4521fde-94dc-4a9f-869b-59d7e6b7c577",
+                        "id": "b95a9c36-6fa0-47ac-a066-709a63d031f5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -725,7 +725,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_2",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_2",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -739,7 +739,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "bda25218-6565-45e9-8cc5-0518cf4fb57b"
+                    "id": "b51c2221-03dd-4ca8-a107-5a5ee558aa0a"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -777,7 +777,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "bda25218-6565-45e9-8cc5-0518cf4fb57b"
+                "id": "b51c2221-03dd-4ca8-a107-5a5ee558aa0a"
             },
             "pred_resp": {
                 "content": "{'response': {'Judgment': 'external'}}",
@@ -785,7 +785,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "61a4f006-f72e-4581-a861-f86006683a66",
+                "id": "a4d03294-e529-4cf7-919a-f3e84a7b14e8",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -798,7 +798,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                        "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sweet'}}",
@@ -806,7 +806,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9cbc415c-e74c-4860-be1e-d037b514e640",
+                        "id": "b30b2b1d-1ada-478c-85fa-1b33dbfc4600",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -817,7 +817,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "48c14ff5-457b-45d7-9290-4ea9297abc97"
+                        "id": "122294e2-603a-42d1-8cc9-a05bf14e5698"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -825,7 +825,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b4521fde-94dc-4a9f-869b-59d7e6b7c577",
+                        "id": "b95a9c36-6fa0-47ac-a066-709a63d031f5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -836,7 +836,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bda25218-6565-45e9-8cc5-0518cf4fb57b"
+                        "id": "b51c2221-03dd-4ca8-a107-5a5ee558aa0a"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -844,7 +844,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "61a4f006-f72e-4581-a861-f86006683a66",
+                        "id": "a4d03294-e529-4cf7-919a-f3e84a7b14e8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -855,7 +855,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_2",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_2",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -869,7 +869,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b68ce68e-834b-423b-825b-228e31e3632d"
+                    "id": "449b4a8d-7219-4edb-9d3b-d6a79a4f2ac1"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -922,7 +922,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b68ce68e-834b-423b-825b-228e31e3632d"
+                "id": "449b4a8d-7219-4edb-9d3b-d6a79a4f2ac1"
             },
             "pred_resp": {
                 "content": "{'response': {'Confidence': 5}}",
@@ -930,7 +930,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "c46350d1-ede0-4e8f-9d91-8ec77645fa36",
+                "id": "00a0a064-85a4-4418-a3ff-23318bc1680a",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -943,7 +943,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "650c65dd-7f11-43f8-aa5d-a75767ec3e06"
+                        "id": "bb5716f3-2c8f-49ad-b3f8-76b3c5596ed7"
                     },
                     {
                         "content": "{'response': {'Word_2': 'sweet'}}",
@@ -951,7 +951,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "9cbc415c-e74c-4860-be1e-d037b514e640",
+                        "id": "b30b2b1d-1ada-478c-85fa-1b33dbfc4600",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -962,7 +962,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "48c14ff5-457b-45d7-9290-4ea9297abc97"
+                        "id": "122294e2-603a-42d1-8cc9-a05bf14e5698"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -970,7 +970,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "b4521fde-94dc-4a9f-869b-59d7e6b7c577",
+                        "id": "b95a9c36-6fa0-47ac-a066-709a63d031f5",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -981,7 +981,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "bda25218-6565-45e9-8cc5-0518cf4fb57b"
+                        "id": "b51c2221-03dd-4ca8-a107-5a5ee558aa0a"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -989,7 +989,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "61a4f006-f72e-4581-a861-f86006683a66",
+                        "id": "a4d03294-e529-4cf7-919a-f3e84a7b14e8",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1000,7 +1000,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b68ce68e-834b-423b-825b-228e31e3632d"
+                        "id": "449b4a8d-7219-4edb-9d3b-d6a79a4f2ac1"
                     },
                     {
                         "content": "{'response': {'Confidence': 5}}",
@@ -1008,7 +1008,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c46350d1-ede0-4e8f-9d91-8ec77645fa36",
+                        "id": "00a0a064-85a4-4418-a3ff-23318bc1680a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1019,7 +1019,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_2",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_2",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1033,7 +1033,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                    "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1080,7 +1080,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
             },
             "pred_resp": {
                 "content": "{'response': {'Word_2': 'suburb'}}",
@@ -1088,7 +1088,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "c64d71f8-7b9d-4671-b239-55299bc4f8c1",
+                "id": "77e8c54d-ac2c-4a05-b630-609ee483d541",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1101,7 +1101,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                        "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'suburb'}}",
@@ -1109,7 +1109,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c64d71f8-7b9d-4671-b239-55299bc4f8c1",
+                        "id": "77e8c54d-ac2c-4a05-b630-609ee483d541",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1120,7 +1120,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_3",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_3",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1134,7 +1134,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "549f03e1-2d2b-4043-98d1-48ead03572bc"
+                    "id": "03ed4c2e-3de8-461a-a4b3-2f77411fa72e"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1178,7 +1178,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "549f03e1-2d2b-4043-98d1-48ead03572bc"
+                "id": "03ed4c2e-3de8-461a-a4b3-2f77411fa72e"
             },
             "pred_resp": {
                 "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1186,7 +1186,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "de6ddc98-edbf-4ac4-9b49-e100ecada57f",
+                "id": "9ebbe1d9-8a15-4d82-b21f-1313c72766a1",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1199,7 +1199,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                        "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'suburb'}}",
@@ -1207,7 +1207,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c64d71f8-7b9d-4671-b239-55299bc4f8c1",
+                        "id": "77e8c54d-ac2c-4a05-b630-609ee483d541",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1218,7 +1218,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "549f03e1-2d2b-4043-98d1-48ead03572bc"
+                        "id": "03ed4c2e-3de8-461a-a4b3-2f77411fa72e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1226,7 +1226,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "de6ddc98-edbf-4ac4-9b49-e100ecada57f",
+                        "id": "9ebbe1d9-8a15-4d82-b21f-1313c72766a1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1237,7 +1237,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_3",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_3",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1251,7 +1251,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "00e5a26b-bfe4-4915-b3ab-9b10b5b9aa9e"
+                    "id": "ce23740f-52d7-4c5a-8198-9500d3c15ad8"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1289,7 +1289,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "00e5a26b-bfe4-4915-b3ab-9b10b5b9aa9e"
+                "id": "ce23740f-52d7-4c5a-8198-9500d3c15ad8"
             },
             "pred_resp": {
                 "content": "{'response': {'Judgment': 'external'}}",
@@ -1297,7 +1297,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "e7c0d9a8-6aac-4a0f-b469-88d609613e25",
+                "id": "d546f971-6bf0-44e8-a2fa-9411e6c35db1",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1310,7 +1310,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                        "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'suburb'}}",
@@ -1318,7 +1318,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c64d71f8-7b9d-4671-b239-55299bc4f8c1",
+                        "id": "77e8c54d-ac2c-4a05-b630-609ee483d541",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1329,7 +1329,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "549f03e1-2d2b-4043-98d1-48ead03572bc"
+                        "id": "03ed4c2e-3de8-461a-a4b3-2f77411fa72e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1337,7 +1337,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "de6ddc98-edbf-4ac4-9b49-e100ecada57f",
+                        "id": "9ebbe1d9-8a15-4d82-b21f-1313c72766a1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1348,7 +1348,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00e5a26b-bfe4-4915-b3ab-9b10b5b9aa9e"
+                        "id": "ce23740f-52d7-4c5a-8198-9500d3c15ad8"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -1356,7 +1356,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e7c0d9a8-6aac-4a0f-b469-88d609613e25",
+                        "id": "d546f971-6bf0-44e8-a2fa-9411e6c35db1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1367,7 +1367,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_3",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_3",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1381,7 +1381,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "49adc88b-734e-49d7-8a8c-59bdb4628e27"
+                    "id": "67d3ce1a-29b2-472f-a41c-5ceff61b3f22"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1434,7 +1434,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "49adc88b-734e-49d7-8a8c-59bdb4628e27"
+                "id": "67d3ce1a-29b2-472f-a41c-5ceff61b3f22"
             },
             "pred_resp": {
                 "content": "{'response': {'Confidence': 5}}",
@@ -1442,7 +1442,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "17a77a5b-8dc4-4a76-9520-a7b5e9c69b30",
+                "id": "4411d29b-7f81-4389-8f34-245f613c0741",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1455,7 +1455,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "28a4a0d2-4551-46d5-8fbf-53782064ec93"
+                        "id": "f3818cbe-5e27-475c-a318-c39dd569de5d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'suburb'}}",
@@ -1463,7 +1463,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c64d71f8-7b9d-4671-b239-55299bc4f8c1",
+                        "id": "77e8c54d-ac2c-4a05-b630-609ee483d541",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1474,7 +1474,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "549f03e1-2d2b-4043-98d1-48ead03572bc"
+                        "id": "03ed4c2e-3de8-461a-a4b3-2f77411fa72e"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1482,7 +1482,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "de6ddc98-edbf-4ac4-9b49-e100ecada57f",
+                        "id": "9ebbe1d9-8a15-4d82-b21f-1313c72766a1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1493,7 +1493,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "00e5a26b-bfe4-4915-b3ab-9b10b5b9aa9e"
+                        "id": "ce23740f-52d7-4c5a-8198-9500d3c15ad8"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -1501,7 +1501,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "e7c0d9a8-6aac-4a0f-b469-88d609613e25",
+                        "id": "d546f971-6bf0-44e8-a2fa-9411e6c35db1",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1512,7 +1512,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "49adc88b-734e-49d7-8a8c-59bdb4628e27"
+                        "id": "67d3ce1a-29b2-472f-a41c-5ceff61b3f22"
                     },
                     {
                         "content": "{'response': {'Confidence': 5}}",
@@ -1520,7 +1520,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "17a77a5b-8dc4-4a76-9520-a7b5e9c69b30",
+                        "id": "4411d29b-7f81-4389-8f34-245f613c0741",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1531,7 +1531,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcimagined_3",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcimagined_3",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1545,7 +1545,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                    "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1592,7 +1592,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
             },
             "pred_resp": {
                 "content": "{'response': {'Word_2': 'cushion'}}",
@@ -1600,7 +1600,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "12ab5e40-e443-48d8-97e9-d8de75f088a3",
+                "id": "9e03c6b3-29c8-4134-9170-95bb58d5bc5a",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1613,7 +1613,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                        "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'cushion'}}",
@@ -1621,7 +1621,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "12ab5e40-e443-48d8-97e9-d8de75f088a3",
+                        "id": "9e03c6b3-29c8-4134-9170-95bb58d5bc5a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1632,7 +1632,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_4",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_4",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1646,7 +1646,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "9d3d0f4c-0d09-42e1-98ab-c65376cee9d2"
+                    "id": "bb318a13-9473-46e0-8741-07546b1eb383"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1690,7 +1690,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "9d3d0f4c-0d09-42e1-98ab-c65376cee9d2"
+                "id": "bb318a13-9473-46e0-8741-07546b1eb383"
             },
             "pred_resp": {
                 "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1698,7 +1698,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "70388bf6-643e-45c1-bb48-5149340e80ed",
+                "id": "5f07e312-94e0-49be-8f87-737e00eb9812",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1711,7 +1711,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                        "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'cushion'}}",
@@ -1719,7 +1719,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "12ab5e40-e443-48d8-97e9-d8de75f088a3",
+                        "id": "9e03c6b3-29c8-4134-9170-95bb58d5bc5a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1730,7 +1730,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9d3d0f4c-0d09-42e1-98ab-c65376cee9d2"
+                        "id": "bb318a13-9473-46e0-8741-07546b1eb383"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1738,7 +1738,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "70388bf6-643e-45c1-bb48-5149340e80ed",
+                        "id": "5f07e312-94e0-49be-8f87-737e00eb9812",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1749,7 +1749,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_4",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_4",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1763,7 +1763,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "60f1528a-198d-4ca8-89fb-0a3d2e346cb2"
+                    "id": "c4b3ba8a-d00b-44e4-b252-726391ac0a08"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1801,7 +1801,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "60f1528a-198d-4ca8-89fb-0a3d2e346cb2"
+                "id": "c4b3ba8a-d00b-44e4-b252-726391ac0a08"
             },
             "pred_resp": {
                 "content": "{'response': {'Judgment': 'external'}}",
@@ -1809,7 +1809,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "a9c22ea8-c40a-46be-958b-a4a8243863ef",
+                "id": "0fbed0a0-b4f2-4409-a708-145dda50b5a0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1822,7 +1822,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                        "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'cushion'}}",
@@ -1830,7 +1830,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "12ab5e40-e443-48d8-97e9-d8de75f088a3",
+                        "id": "9e03c6b3-29c8-4134-9170-95bb58d5bc5a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1841,7 +1841,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9d3d0f4c-0d09-42e1-98ab-c65376cee9d2"
+                        "id": "bb318a13-9473-46e0-8741-07546b1eb383"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1849,7 +1849,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "70388bf6-643e-45c1-bb48-5149340e80ed",
+                        "id": "5f07e312-94e0-49be-8f87-737e00eb9812",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1860,7 +1860,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "60f1528a-198d-4ca8-89fb-0a3d2e346cb2"
+                        "id": "c4b3ba8a-d00b-44e4-b252-726391ac0a08"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -1868,7 +1868,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a9c22ea8-c40a-46be-958b-a4a8243863ef",
+                        "id": "0fbed0a0-b4f2-4409-a708-145dda50b5a0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1879,7 +1879,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_4",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_4",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
@@ -1893,7 +1893,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "06c4fdbb-0c51-46ee-9567-d6c78cf20464"
+                    "id": "e63bf7cd-8df6-45a2-887e-39da0d7de13a"
                 }
             ],
             "system_message": "{\n    \"TASK CONTEXT\": \"{\"definition\": [\"You are a helpful participant performing a task with four different components for succesfull response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Four components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2', 'JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"]}\"\n}",
@@ -1946,7 +1946,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "06c4fdbb-0c51-46ee-9567-d6c78cf20464"
+                "id": "e63bf7cd-8df6-45a2-887e-39da0d7de13a"
             },
             "pred_resp": {
                 "content": "{'response': {'Confidence': 5}}",
@@ -1954,7 +1954,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "cd00ea23-46dc-495d-a17d-3f48b5e99773",
+                "id": "161de95c-615c-4ebd-9bae-d0568036fbc0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1967,7 +1967,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "d6bebd32-3923-4c2b-bc3e-c9a863936ad0"
+                        "id": "9f2420cb-b872-4162-a9f1-1f0d6dbfdb8d"
                     },
                     {
                         "content": "{'response': {'Word_2': 'cushion'}}",
@@ -1975,7 +1975,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "12ab5e40-e443-48d8-97e9-d8de75f088a3",
+                        "id": "9e03c6b3-29c8-4134-9170-95bb58d5bc5a",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1986,7 +1986,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "9d3d0f4c-0d09-42e1-98ab-c65376cee9d2"
+                        "id": "bb318a13-9473-46e0-8741-07546b1eb383"
                     },
                     {
                         "content": "{'response': {'Relatedness_Rating': 100.0}}",
@@ -1994,7 +1994,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "70388bf6-643e-45c1-bb48-5149340e80ed",
+                        "id": "5f07e312-94e0-49be-8f87-737e00eb9812",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2005,7 +2005,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "60f1528a-198d-4ca8-89fb-0a3d2e346cb2"
+                        "id": "c4b3ba8a-d00b-44e4-b252-726391ac0a08"
                     },
                     {
                         "content": "{'response': {'Judgment': 'external'}}",
@@ -2013,7 +2013,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a9c22ea8-c40a-46be-958b-a4a8243863ef",
+                        "id": "0fbed0a0-b4f2-4409-a708-145dda50b5a0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2024,7 +2024,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "06c4fdbb-0c51-46ee-9567-d6c78cf20464"
+                        "id": "e63bf7cd-8df6-45a2-887e-39da0d7de13a"
                     },
                     {
                         "content": "{'response': {'Confidence': 5}}",
@@ -2032,7 +2032,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "cd00ea23-46dc-495d-a17d-3f48b5e99773",
+                        "id": "161de95c-615c-4ebd-9bae-d0568036fbc0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2043,7 +2043,7 @@
                 "parser": null,
                 "tools": null
             },
-            "trace_id": "20260802T20-35-07trialchainConvozs_rm_2op_tcperceived_4",
+            "trace_id": "20260802T21-37-56trialchainConvozs_rm_2op_tcperceived_4",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-trialchain"
