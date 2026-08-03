@@ -1,0 +1,108 @@
+"""Name-based lookup for task card JSON files, shared across a project.
+
+Not a bundled registry — this searches plain directories on disk at call time,
+so any task card dropped into one of the search directories becomes available
+by its filename, with no code change. This lets users share/contribute task
+cards by filename alone: drop `<taskname>.json` into `demonstrations/` (or
+`tasks/`) and it's immediately fetchable as `task_library("<taskname>")`.
+
+Search order (first match wins):
+  1. `dirs`, if passed to the call — one directory or a list of them, checked
+     in the given order. For a task card living anywhere else on disk.
+  2. Each directory in the `PSYCHSCANNER_TASK_LIBRARY_DIRS` environment
+     variable, if set (`os.pathsep`-separated, e.g. `:` on macOS/Linux).
+  3. `./demonstrations` (relative to the current working directory) —
+     intended for shared/contributed task cards.
+  4. `./tasks` (relative to the current working directory) — where the
+     bundled tutorial task cards already live (see `examples/tasks/`).
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+from typing import Union
+
+__all__ = ["task_library", "list_task_library"]
+
+DirsArg = Union[str, "os.PathLike[str]", list, None]
+
+
+def _search_dirs(dirs: DirsArg = None) -> list[Path]:
+    result = []
+    if dirs is not None:
+        if isinstance(dirs, (str, os.PathLike)):
+            dirs = [dirs]
+        result.extend(Path(d) for d in dirs)
+
+    env = os.getenv("PSYCHSCANNER_TASK_LIBRARY_DIRS")
+    if env:
+        result.extend(Path(p) for p in env.split(os.pathsep) if p)
+
+    cwd = Path.cwd()
+    result.extend([cwd / "demonstrations", cwd / "tasks"])
+    return result
+
+
+def task_library(taskname: str, format: str = "json", dirs: DirsArg = None):
+    """Look up a task card by name across the task-library search directories.
+
+    Parameters
+    ----------
+    taskname : str
+        Base filename of the task card, without extension (e.g.
+        `"rm_singleturn_demo"` for a file named `rm_singleturn_demo.json`).
+    format : str
+        `"json"` (default) — parse the file and return a `dict`.
+        `"path"` — return the resolved `Path` without reading it (what
+        `ExpCardInit.task_file` expects).
+    dirs : str | os.PathLike | list[str | os.PathLike] | None
+        One directory, or a list of directories, to search first — for a
+        task card living anywhere on disk, not just the default locations.
+
+    Returns
+    -------
+    dict | Path
+
+    Raises
+    ------
+    FileNotFoundError
+        If no `<taskname>.json` is found in any search directory. The error
+        lists every directory that was searched.
+    ValueError
+        If `format` is not `"json"` or `"path"`.
+    """
+    if format not in ("json", "path"):
+        raise ValueError(f"format must be 'json' or 'path', got {format!r}")
+
+    search_dirs = _search_dirs(dirs)
+    for d in search_dirs:
+        candidate = d / f"{taskname}.json"
+        if candidate.is_file():
+            return candidate if format == "path" else json.loads(candidate.read_text())
+
+    searched = ", ".join(str(d) for d in search_dirs)
+    raise FileNotFoundError(
+        f"No task named {taskname!r} found. Searched: {searched}. "
+        "Pass dirs=<your directory> to search somewhere else, set "
+        f"PSYCHSCANNER_TASK_LIBRARY_DIRS, or place {taskname}.json in one "
+        "of the directories above."
+    )
+
+
+def list_task_library(dirs: DirsArg = None) -> list[str]:
+    """Return the sorted, de-duplicated names of every task card discoverable
+    across the task-library search directories (see `task_library`).
+
+    Parameters
+    ----------
+    dirs : str | os.PathLike | list[str | os.PathLike] | None
+        Extra directory (or directories) to include in the search, same as
+        `task_library`'s `dirs` argument.
+    """
+    names = set()
+    for d in _search_dirs(dirs):
+        if d.is_dir():
+            names.update(p.stem for p in d.glob("*.json"))
+    return sorted(names)

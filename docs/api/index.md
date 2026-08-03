@@ -14,6 +14,7 @@ documented inline where they're used):
 
 - `save_expcard` / `load_expcard` — see [ExpCard § Saving and loading](expcard.md#saving-and-loading-experiment-cards)
 - `FeedbackBase` — see [Configuration § Feedback](../configuration.md#feedback)
+- `task_library` / `list_task_library` — see the [Task Library guide](../guides/task_library.md)
 
 ## Quick Links
 

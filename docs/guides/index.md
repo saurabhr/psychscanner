@@ -9,6 +9,7 @@ Comprehensive guides for using PsychScanner.
 - [Custom Parsers](custom_parsers.md) - Building response parsers
 - [Memory Types](memory_types.md) - Understanding memory management
 - [Session Recovery](session_recovery.md) - Checkpoint and resume experiments
+- [Task Library](task_library.md) - Fetching task cards by name, and sharing your own
 
 ## Advanced Topics
 

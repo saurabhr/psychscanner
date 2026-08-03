@@ -94,6 +94,7 @@ nav:
     - Survey Tasks: guides/survey_tasks.md
     - Custom Parsers: guides/custom_parsers.md
     - Session Recovery: guides/session_recovery.md
+    - Task Library: guides/task_library.md
   - Examples:
     - Overview: examples/index.md
     - Basic Survey: examples/basic_survey.md

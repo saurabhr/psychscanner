@@ -23,6 +23,7 @@ from .simulation_model.simulation_model import (
     PredSimulationModel,
 )
 from .templates.tasks.get_task_template import get_task_template
+from .task_library import task_library, list_task_library
 from .feedback import FeedbackBase
 from .agents import CustomAgent, ScanningAgent
 
@@ -43,6 +44,8 @@ __all__ = [
     "InputSimulationModel",
     "PredSimulationModel",
     "get_task_template",
+    "task_library",
+    "list_task_library",
     "FeedbackBase",
     "CustomAgent",
     "ScanningAgent",

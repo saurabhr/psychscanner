@@ -1,6 +1,8 @@
 # Example Task Definitions
 
-Sample task JSON files for PsychScanner.
+Sample task JSON files for PsychScanner. Fetch any of them by name with
+`psychscanner.task_library("name")` — see [`../demonstrations/`](../demonstrations/)
+if you want to share a task card of your own instead of adding it here.
 
 ## Files
 
