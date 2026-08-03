@@ -9,7 +9,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                    "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -35,7 +35,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -43,7 +43,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -56,7 +56,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -64,7 +64,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -75,7 +75,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -89,7 +89,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                    "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -115,7 +115,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -123,7 +123,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -136,7 +136,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -144,7 +144,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -155,7 +155,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -163,7 +163,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -174,7 +174,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -188,7 +188,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                    "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -214,7 +214,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -222,7 +222,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -235,7 +235,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -243,7 +243,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -254,7 +254,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -262,7 +262,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -273,7 +273,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -281,7 +281,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -292,7 +292,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -306,7 +306,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                    "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -332,7 +332,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -340,7 +340,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -353,7 +353,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -361,7 +361,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -372,7 +372,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -380,7 +380,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -391,7 +391,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -399,7 +399,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -410,7 +410,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -418,7 +418,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -429,7 +429,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -443,7 +443,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                    "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -469,7 +469,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -477,7 +477,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -490,7 +490,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -498,7 +498,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -509,7 +509,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -517,7 +517,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -528,7 +528,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -536,7 +536,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -547,7 +547,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -555,7 +555,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -566,7 +566,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -574,7 +574,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -585,7 +585,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -599,7 +599,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                    "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -625,7 +625,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -633,7 +633,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -646,7 +646,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -654,7 +654,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -665,7 +665,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -673,7 +673,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -684,7 +684,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -692,7 +692,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -703,7 +703,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -711,7 +711,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -722,7 +722,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -730,7 +730,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -741,7 +741,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -749,7 +749,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -760,7 +760,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -774,7 +774,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                    "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -800,7 +800,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -808,7 +808,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -821,7 +821,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -829,7 +829,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -840,7 +840,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -848,7 +848,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -859,7 +859,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -867,7 +867,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -878,7 +878,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -886,7 +886,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -897,7 +897,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -905,7 +905,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -916,7 +916,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -924,7 +924,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -935,7 +935,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -943,7 +943,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -954,7 +954,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -968,7 +968,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                    "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task with two different components for successful response.\", \"Each component refers to a unique problem about the task as described in the instructions below.\", \"Two components of the task are: ['WORD_PAIR_TASK', 'RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"WORD_PAIR_TASK\": {\"**Identify the Word Pair**\": \"Look for the word pair, referred to as 'word_1' and 'word_2'.\", \"**Check if 'word_2' is Provided**\": [\"If 'word_2' is a complete and valid English word, report that word as it is.\", \"If 'word_2' contains a blank value ('_______'), proceed to the next step.\"], \"**If 'word_2' is a blank in the word-pair then imagine**\": [\"**Replace blank value of 'word_2' by using your an imagination to create **an** english word to complete the word pair.**\"], \"You are **prohibted** to imagine\": [\"Use of given 'word_1' in any form.\", \"Compound words made of smaller word,\", \"Symbols and numbers like: _/^(?=.*?[1-9])[0-9()-]+$,\", \"anything outside of the words would be not in a english dictionary.\", \"Mathmetical or algebraic equations\"], \"You are **allowed** to imagine\": \"singular english words that are **not** prohibited as described above.\"}, \"RELATEDNESS_RATING_BETWEEN_WORD_1_AND_WORD_2\": {\"definition\": [\"Numeric value in between 0 (not realated at all) and 100 (very highly related) for Relatedness between two words similarity between the values of 'word_1' and 'word_2'.\", \"It can be based on mutiple factors,for example:\", \"similar sounding (phonetics),\", \"meaning (semantics),\", \"or categorical (whether the two words can related through common categories).\", \"\"], \"relatedness_rating_scale\": [\"Use any value in the range of 0 to 100 in relatedness rating scale.\", \"**0** signifies the words are **not at all related**.\", \"**100** signifies the words **very highly related**.\", \"Intermediate values between 0 and 100 denote intermediate values.\", \"Relateness value is **stricity defined in the **range of 0: not related at all, TO 100: very highly related**.\", \"**ALWAYS FOLLOW THESE INSTRUCTION**\"], \"type\": \"number\"}}}",
@@ -994,7 +994,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                "id": "edf8995a-709b-4e46-bffc-891c5f325def"
             },
             "pred_resp": {
                 "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -1002,7 +1002,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1015,7 +1015,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -1023,7 +1023,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1034,7 +1034,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -1042,7 +1042,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1053,7 +1053,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -1061,7 +1061,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1072,7 +1072,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -1080,7 +1080,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1091,7 +1091,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -1099,7 +1099,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1110,7 +1110,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -1118,7 +1118,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1129,7 +1129,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -1137,7 +1137,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1148,7 +1148,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -1156,7 +1156,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1167,7 +1167,7 @@
                 "parser": "Response_part_1_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -1181,7 +1181,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                    "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -1204,7 +1204,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1212,7 +1212,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1225,7 +1225,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -1233,7 +1233,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1244,7 +1244,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -1252,7 +1252,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1263,7 +1263,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -1271,7 +1271,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1282,7 +1282,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -1290,7 +1290,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1301,7 +1301,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -1309,7 +1309,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1320,7 +1320,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -1328,7 +1328,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1339,7 +1339,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -1347,7 +1347,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1358,7 +1358,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -1366,7 +1366,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1377,7 +1377,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1385,7 +1385,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1396,7 +1396,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -1410,7 +1410,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                    "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -1433,7 +1433,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -1441,7 +1441,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1454,7 +1454,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -1462,7 +1462,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1473,7 +1473,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -1481,7 +1481,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1492,7 +1492,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -1500,7 +1500,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1511,7 +1511,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -1519,7 +1519,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1530,7 +1530,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -1538,7 +1538,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1549,7 +1549,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -1557,7 +1557,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1568,7 +1568,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -1576,7 +1576,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1587,7 +1587,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -1595,7 +1595,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1606,7 +1606,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1614,7 +1614,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1625,7 +1625,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -1633,7 +1633,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1644,7 +1644,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -1658,7 +1658,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                    "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -1681,7 +1681,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1689,7 +1689,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1702,7 +1702,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -1710,7 +1710,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1721,7 +1721,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -1729,7 +1729,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1740,7 +1740,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -1748,7 +1748,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1759,7 +1759,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -1767,7 +1767,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1778,7 +1778,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -1786,7 +1786,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1797,7 +1797,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -1805,7 +1805,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1816,7 +1816,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -1824,7 +1824,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1835,7 +1835,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -1843,7 +1843,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1854,7 +1854,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1862,7 +1862,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1873,7 +1873,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -1881,7 +1881,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1892,7 +1892,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1900,7 +1900,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1911,7 +1911,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -1925,7 +1925,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                    "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -1948,7 +1948,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -1956,7 +1956,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -1969,7 +1969,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -1977,7 +1977,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -1988,7 +1988,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -1996,7 +1996,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2007,7 +2007,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -2015,7 +2015,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2026,7 +2026,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -2034,7 +2034,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2045,7 +2045,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -2053,7 +2053,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2064,7 +2064,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -2072,7 +2072,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2083,7 +2083,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -2091,7 +2091,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2102,7 +2102,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -2110,7 +2110,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2121,7 +2121,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2129,7 +2129,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2140,7 +2140,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2148,7 +2148,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2159,7 +2159,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2167,7 +2167,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2178,7 +2178,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                        "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2186,7 +2186,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                        "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2197,7 +2197,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -2211,7 +2211,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                    "id": "7f8953bf-2036-4164-903a-81870d731e85"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -2234,7 +2234,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                "id": "7f8953bf-2036-4164-903a-81870d731e85"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2242,7 +2242,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "baaf9d72-3b27-4897-b8d7-24b5673bfb29",
+                "id": "8181732d-3f21-4796-bb8c-b8845cf322bb",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2255,7 +2255,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -2263,7 +2263,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2274,7 +2274,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -2282,7 +2282,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2293,7 +2293,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -2301,7 +2301,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2312,7 +2312,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -2320,7 +2320,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2331,7 +2331,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -2339,7 +2339,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2350,7 +2350,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -2358,7 +2358,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2369,7 +2369,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -2377,7 +2377,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2388,7 +2388,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -2396,7 +2396,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2407,7 +2407,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2415,7 +2415,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2426,7 +2426,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2434,7 +2434,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2445,7 +2445,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2453,7 +2453,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2464,7 +2464,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                        "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2472,7 +2472,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                        "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2483,7 +2483,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                        "id": "7f8953bf-2036-4164-903a-81870d731e85"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2491,7 +2491,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "baaf9d72-3b27-4897-b8d7-24b5673bfb29",
+                        "id": "8181732d-3f21-4796-bb8c-b8845cf322bb",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2502,7 +2502,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -2516,7 +2516,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "552af29b-ee61-43f4-bb0c-b085206e4177"
+                    "id": "50be8fd3-e6bd-40ff-b8e2-52bb199c5acc"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -2539,7 +2539,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "552af29b-ee61-43f4-bb0c-b085206e4177"
+                "id": "50be8fd3-e6bd-40ff-b8e2-52bb199c5acc"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2547,7 +2547,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "6b0780ef-e1e5-4714-8d38-a416b337e659",
+                "id": "038dd928-df06-4201-86ae-4683f8eaa4f3",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2560,7 +2560,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -2568,7 +2568,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2579,7 +2579,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -2587,7 +2587,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2598,7 +2598,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -2606,7 +2606,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2617,7 +2617,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -2625,7 +2625,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2636,7 +2636,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -2644,7 +2644,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2655,7 +2655,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -2663,7 +2663,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2674,7 +2674,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -2682,7 +2682,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2693,7 +2693,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -2701,7 +2701,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2712,7 +2712,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2720,7 +2720,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2731,7 +2731,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2739,7 +2739,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2750,7 +2750,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2758,7 +2758,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2769,7 +2769,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                        "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2777,7 +2777,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                        "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2788,7 +2788,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                        "id": "7f8953bf-2036-4164-903a-81870d731e85"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2796,7 +2796,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "baaf9d72-3b27-4897-b8d7-24b5673bfb29",
+                        "id": "8181732d-3f21-4796-bb8c-b8845cf322bb",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2807,7 +2807,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "552af29b-ee61-43f4-bb0c-b085206e4177"
+                        "id": "50be8fd3-e6bd-40ff-b8e2-52bb199c5acc"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -2815,7 +2815,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "6b0780ef-e1e5-4714-8d38-a416b337e659",
+                        "id": "038dd928-df06-4201-86ae-4683f8eaa4f3",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2826,7 +2826,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -2840,7 +2840,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "49649ea6-a017-422d-90cd-b075ac174bd6"
+                    "id": "597e74ea-6ae5-4412-97c6-cdeddb498dee"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -2863,7 +2863,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "49649ea6-a017-422d-90cd-b075ac174bd6"
+                "id": "597e74ea-6ae5-4412-97c6-cdeddb498dee"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -2871,7 +2871,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "0f2318b7-6275-4e59-aaa6-9895d7f04909",
+                "id": "2e9ba4c8-2b4a-4bdc-bbfa-28456fb16cf0",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -2884,7 +2884,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -2892,7 +2892,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2903,7 +2903,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -2911,7 +2911,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2922,7 +2922,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -2930,7 +2930,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2941,7 +2941,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -2949,7 +2949,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2960,7 +2960,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -2968,7 +2968,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2979,7 +2979,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -2987,7 +2987,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -2998,7 +2998,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -3006,7 +3006,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3017,7 +3017,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -3025,7 +3025,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3036,7 +3036,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3044,7 +3044,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3055,7 +3055,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3063,7 +3063,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3074,7 +3074,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3082,7 +3082,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3093,7 +3093,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                        "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3101,7 +3101,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                        "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3112,7 +3112,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                        "id": "7f8953bf-2036-4164-903a-81870d731e85"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3120,7 +3120,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "baaf9d72-3b27-4897-b8d7-24b5673bfb29",
+                        "id": "8181732d-3f21-4796-bb8c-b8845cf322bb",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3131,7 +3131,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "552af29b-ee61-43f4-bb0c-b085206e4177"
+                        "id": "50be8fd3-e6bd-40ff-b8e2-52bb199c5acc"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3139,7 +3139,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "6b0780ef-e1e5-4714-8d38-a416b337e659",
+                        "id": "038dd928-df06-4201-86ae-4683f8eaa4f3",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3150,7 +3150,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "49649ea6-a017-422d-90cd-b075ac174bd6"
+                        "id": "597e74ea-6ae5-4412-97c6-cdeddb498dee"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3158,7 +3158,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "0f2318b7-6275-4e59-aaa6-9895d7f04909",
+                        "id": "2e9ba4c8-2b4a-4bdc-bbfa-28456fb16cf0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3169,7 +3169,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"
@@ -3183,7 +3183,7 @@
                     "response_metadata": {},
                     "type": "human",
                     "name": null,
-                    "id": "d30184d5-bede-49ea-8886-8341655ef0dd"
+                    "id": "459bf8bf-a52b-40eb-aed6-bd9e3bdfe582"
                 }
             ],
             "system_message": "{\"task_definition\": [\"You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.\", \"Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**\", \"Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']\", \"Follow all the instructions related to different components of the task to give accurate response.\", \"**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.\"], \"INSTRUCTIONS\": {\"JUDGE_GENERATION_TYPE_OF_WORD_2\": {\"definition\": [\"During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.\", \"Judge the nature of generation of the value of 'word_2' on following options:\"], \"options\": {\"enum\": [\"external\", \"internal\"]}, \"option_descriptions\": {\"external\": \"**Only If** the 'word_2' was **provided in the task as an english word.**.\", \"internal\": \"**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**\"}}, \"CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE\": {\"definition\": [\"Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.\", \"**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.\", \"In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.\", \"Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.\", \"The ordinal values of the confidence scale from 1 to 6.\", \"Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.\", \"**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'.\"], \"enum\": [1, 2, 3, 4, 5, 6], \"confidence_scale\": {\"**1**\": \"**Not at all confident.**\", \"**2**\": \"**Slightly confident.**\", \"**3**\": \"**Moderately confident.**\", \"**4**\": \"**Fairly confident.**\", \"**5**\": \"**Very confident.**\", \"**6**\": \"**Highly confident.**\"}, \"type\": \"number\"}}}",
@@ -3206,7 +3206,7 @@
                 "response_metadata": {},
                 "type": "human",
                 "name": null,
-                "id": "d30184d5-bede-49ea-8886-8341655ef0dd"
+                "id": "459bf8bf-a52b-40eb-aed6-bd9e3bdfe582"
             },
             "pred_resp": {
                 "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3214,7 +3214,7 @@
                 "response_metadata": {},
                 "type": "ai",
                 "name": null,
-                "id": "c6b52f54-e74f-4c7c-9158-65ae566684e7",
+                "id": "ff0ebf8b-8676-4c7c-bffb-4c64ccba12a7",
                 "tool_calls": [],
                 "invalid_tool_calls": [],
                 "usage_metadata": null
@@ -3227,7 +3227,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "267acc37-ab12-46c5-b7fb-61b1271cca9a"
+                        "id": "955ac848-6106-4ea8-bb87-0c9558c05503"
                     },
                     {
                         "content": "{'Word_2': 'sandpaper', 'Rating': 0.5}",
@@ -3235,7 +3235,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "73b8a30d-3516-4598-b4a1-b655136e29d5",
+                        "id": "97b2544d-4078-4ffd-a4da-6cc1fbee7f52",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3246,7 +3246,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b18b529f-7536-4573-b529-e134d44fcfb2"
+                        "id": "39dd19d0-dd86-442f-9f4d-5e1680c39bde"
                     },
                     {
                         "content": "{'Word_2': 'sugar', 'Rating': 0.5}",
@@ -3254,7 +3254,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "bedb75bf-ceff-4d91-ab9d-0368a65dead1",
+                        "id": "c62a1d23-4f20-4861-97f4-aa936ece2c2c",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3265,7 +3265,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b9d0c66d-dc22-447f-9beb-ad3292cc0a57"
+                        "id": "59e76e9d-9aea-42fa-a80f-987d07246796"
                     },
                     {
                         "content": "{'Word_2': 'suburb', 'Rating': 0.5}",
@@ -3273,7 +3273,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "08c9bef8-96a4-40bc-9ddf-88b49c2867be",
+                        "id": "64a9529c-8138-4337-aafd-d0a1cbda583e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3284,7 +3284,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cccc069a-329f-4f38-a0d1-212cfb10cbee"
+                        "id": "8804bf82-f48f-4236-be54-ac053c8f0e76"
                     },
                     {
                         "content": "{'Word_2': 'chair', 'Rating': 0.5}",
@@ -3292,7 +3292,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "fefaae39-9b39-4e2e-914b-0fbec777f1c9",
+                        "id": "69b2cf75-dcac-4942-9b3a-48d8f990bb3d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3303,7 +3303,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "30ecfbf1-4ef0-46f1-826d-7239c162085c"
+                        "id": "dd3194ee-9ce3-4bf7-8711-bbc4b7a581ef"
                     },
                     {
                         "content": "{'Word_2': 'letter', 'Rating': 0.5}",
@@ -3311,7 +3311,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "64bb64d9-643d-4f70-8f65-f06ed6518a0c",
+                        "id": "af40e8a5-6ee3-445d-9c85-0c2f63a53d7f",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3322,7 +3322,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "6feb6fd1-37a7-42c4-b047-5c4445f6ee80"
+                        "id": "d035866a-21f4-4356-a353-b2d0b265a96e"
                     },
                     {
                         "content": "{'Word_2': 'building', 'Rating': 0.5}",
@@ -3330,7 +3330,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "1d78054c-ec5a-4439-a839-288adebbe91d",
+                        "id": "6d39f574-eb62-4959-88b8-f96deffa21c7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3341,7 +3341,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "cbcbe2a9-844e-431c-a4b4-77e01daed6f9"
+                        "id": "555086a9-aa65-47b6-88ce-87bbfef20aa3"
                     },
                     {
                         "content": "{'Word_2': 'blouse', 'Rating': 0.5}",
@@ -3349,7 +3349,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "11e3b7fd-3502-46a3-b6c2-0e046f9abed4",
+                        "id": "fd3bd7fc-57bf-4a4f-9feb-7b94d1403801",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3360,7 +3360,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "e996d3e3-8339-4cfb-9147-ea43d6ce1baf"
+                        "id": "edf8995a-709b-4e46-bffc-891c5f325def"
                     },
                     {
                         "content": "{'Word_2': 'pin', 'Rating': 0.5}",
@@ -3368,7 +3368,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "970fd143-f8a4-4662-bb27-cb338a397781",
+                        "id": "c25ae9be-1d05-419f-aac9-09e17659e1ce",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3379,7 +3379,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "5903a491-8f56-45dd-be82-e7ffacdacc25"
+                        "id": "a71f632a-b38e-4490-ae0c-08e3277d2f8c"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3387,7 +3387,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "91113afe-df89-4c08-ad00-a816adcf429c",
+                        "id": "4049dc0a-3d26-40ec-8996-3444ee593509",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3398,7 +3398,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "863e8151-be7a-4db9-af1d-f08cb8d5149e"
+                        "id": "7719517c-d1f5-41a3-99b4-bc14f1877c74"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3406,7 +3406,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "2455d78c-f5fe-4656-87aa-3069e4b95882",
+                        "id": "61ab75f2-8e16-49f5-a502-dc70d348b345",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3417,7 +3417,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "b2f7e06c-43f4-40b0-bd2d-0c4416817fc4"
+                        "id": "c5ea24c7-e92f-4f75-97cf-1fcd5aadb984"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3425,7 +3425,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "198dbfdd-d89f-4af8-aca8-0b621103898f",
+                        "id": "ecf50442-7dd2-458f-aa5b-311232bfdf7e",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3436,7 +3436,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "4ab9789a-c38f-47be-a74f-62b401a389f0"
+                        "id": "ef977388-264a-476a-b4a8-45bee866bc9d"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3444,7 +3444,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "a139af18-48bc-4de9-9284-a353d3ce4c66",
+                        "id": "ce67856f-d64f-4b2d-bc3a-73465dd5c68d",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3455,7 +3455,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "aaff12a7-f89c-4f0e-a02e-17728aac6acd"
+                        "id": "7f8953bf-2036-4164-903a-81870d731e85"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3463,7 +3463,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "baaf9d72-3b27-4897-b8d7-24b5673bfb29",
+                        "id": "8181732d-3f21-4796-bb8c-b8845cf322bb",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3474,7 +3474,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "552af29b-ee61-43f4-bb0c-b085206e4177"
+                        "id": "50be8fd3-e6bd-40ff-b8e2-52bb199c5acc"
                     },
                     {
                         "content": "{'Judgment': 'external', 'Confidence': 1}",
@@ -3482,7 +3482,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "6b0780ef-e1e5-4714-8d38-a416b337e659",
+                        "id": "038dd928-df06-4201-86ae-4683f8eaa4f3",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3493,7 +3493,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "49649ea6-a017-422d-90cd-b075ac174bd6"
+                        "id": "597e74ea-6ae5-4412-97c6-cdeddb498dee"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3501,7 +3501,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "0f2318b7-6275-4e59-aaa6-9895d7f04909",
+                        "id": "2e9ba4c8-2b4a-4bdc-bbfa-28456fb16cf0",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3512,7 +3512,7 @@
                         "response_metadata": {},
                         "type": "human",
                         "name": null,
-                        "id": "d30184d5-bede-49ea-8886-8341655ef0dd"
+                        "id": "459bf8bf-a52b-40eb-aed6-bd9e3bdfe582"
                     },
                     {
                         "content": "{'Judgment': 'internal', 'Confidence': 1}",
@@ -3520,7 +3520,7 @@
                         "response_metadata": {},
                         "type": "ai",
                         "name": null,
-                        "id": "c6b52f54-e74f-4c7c-9158-65ae566684e7",
+                        "id": "ff0ebf8b-8676-4c7c-bffb-4c64ccba12a7",
                         "tool_calls": [],
                         "invalid_tool_calls": [],
                         "usage_metadata": null
@@ -3531,7 +3531,7 @@
                 "parser": "Response_part_2_rm",
                 "tools": null
             },
-            "trace_id": "20260803T11-02-31episodicConvorm_2op_convo_nofb0",
+            "trace_id": "20260803T12-23-38episodicConvorm_2op_convo_nofb0",
             "system_message_idx": 0,
             "system_template": "{\n    \"TASK CONTEXT\": \"{instructions}\"\n}",
             "tunnel_id": "sidx-[0]-model-smollm2:360m-instruct-fp16-family-ollama-memory-Convo-episodic"

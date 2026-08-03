@@ -77,7 +77,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "perceived_2": [
@@ -139,7 +140,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "imagined_3": [
@@ -201,7 +203,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "perceived_4": [
@@ -263,7 +266,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "perceived_5": [
@@ -325,7 +329,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "imagined_6": [
@@ -387,7 +392,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "imagined_7": [
@@ -449,7 +455,8 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
       }
     ],
     "perceived_8": [
@@ -511,16 +518,609 @@
               "type": "number"
             }
           }
-        }
+        },
+        "parser": "Response_part_1_rm"
+      }
+    ],
+    "test:imagined_1": [
+      {
+        "stimulus": {
+          "Test_Word": "sandpaper"
+        },
+        "trcode": "test:imagined_1",
+        "corrAns": "internal",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "sandpaper",
+            "word_2": "________"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:perceived_2": [
+      {
+        "stimulus": {
+          "Test_Word": "sugar"
+        },
+        "trcode": "test:perceived_2",
+        "corrAns": "external",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "sugar",
+            "word_2": "sweet"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:imagined_3": [
+      {
+        "stimulus": {
+          "Test_Word": "suburb"
+        },
+        "trcode": "test:imagined_3",
+        "corrAns": "internal",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "suburb",
+            "word_2": "________"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:perceived_4": [
+      {
+        "stimulus": {
+          "Test_Word": "chair"
+        },
+        "trcode": "test:perceived_4",
+        "corrAns": "external",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "chair",
+            "word_2": "cushion"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:perceived_5": [
+      {
+        "stimulus": {
+          "Test_Word": "letter"
+        },
+        "trcode": "test:perceived_5",
+        "corrAns": "external",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "letter",
+            "word_2": "tip"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:imagined_6": [
+      {
+        "stimulus": {
+          "Test_Word": "building"
+        },
+        "trcode": "test:imagined_6",
+        "corrAns": "internal",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "building",
+            "word_2": "________"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:imagined_7": [
+      {
+        "stimulus": {
+          "Test_Word": "blouse"
+        },
+        "trcode": "test:imagined_7",
+        "corrAns": "internal",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "blouse",
+            "word_2": "________"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
+      }
+    ],
+    "test:perceived_8": [
+      {
+        "stimulus": {
+          "Test_Word": "pin"
+        },
+        "trcode": "test:perceived_8",
+        "corrAns": "external",
+        "og_source": {
+          "Word_Pair": {
+            "word_1": "pin",
+            "word_2": "haystack"
+          }
+        },
+        "system_message": {
+          "task_definition": [
+            "You are a helpful participant performing a task based on **previously completed word-pair task** with two different components for successful response.",
+            "Here, you will be asked to make judgements about the word you reported as **word_2** in the previous task based on the **Test_Word**",
+            "Two components of the current task are: ['JUDGE_GENERATION_TYPE_OF_WORD_2', 'CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE']",
+            "Follow all the instructions related to different components of the task to give accurate response.",
+            "**COMMITMENT** You have made the commitment to make sure to follow all the the instructions for each of the components and formatting your task response.",
+            "You will also be provided with feedback on previous trials from now on for your response to the test-word.",
+            "Try to use the feedback to improve your performance on the task.",
+            "Try to be as accurate as possible."
+          ],
+          "INSTRUCTIONS": {
+            "JUDGE_GENERATION_TYPE_OF_WORD_2": {
+              "definition": [
+                "During the word-pair task, **Test_Word** would have appeared as **Word_1** in one of the pair for which you reported the same word as **word_2** or imagined it.",
+                "Judge the nature of generation of the value of 'word_2' on following options:"
+              ],
+              "options": {
+                "enum": [
+                  "external",
+                  "internal"
+                ]
+              },
+              "option_descriptions": {
+                "external": "**Only If** the 'word_2' was **provided in the task as an english word.**.",
+                "internal": "**Only If** the 'word_2' was **imagined by you to complete the word-pair and replace the blank.**"
+              }
+            },
+            "CONFIDENCE_ON_JUDGEMENT_OF_GENERATION_TYPE": {
+              "definition": [
+                "Report the **confidence level** about the **selected option** for the judgment of generation type of the 'word_2'.",
+                "**Confidence level** indexes your ability **to know** the **level of certainty** that your reported **generation judgment is correct**.",
+                "In the context of this task, it is your ability to report **level of certainty** in your judgments about the the generation type for the value of 'word_2'.",
+                "Use the confidence rating scale faithfully to report the **level of certainty** as your confidence rating in the ordinal confidence scale described below.",
+                "The ordinal values of the confidence scale from 1 to 6.",
+                "Higher the numberic value of confidence, higher is your confidence level in the judgment about the generation type being correct.",
+                "**Follow the instructions and confidence scale be able to able to be able to faithfully report the confidence level in your selected generation type for the value of 'word_2'."
+              ],
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "confidence_scale": {
+                "**1**": "**Not at all confident.**",
+                "**2**": "**Slightly confident.**",
+                "**3**": "**Moderately confident.**",
+                "**4**": "**Fairly confident.**",
+                "**5**": "**Very confident.**",
+                "**6**": "**Highly confident.**"
+              },
+              "type": "number"
+            }
+          }
+        },
+        "parser": "Response_part_2_rm"
       }
     ]
   },
   "chain_type": "task",
   "trial_parsers": [],
-  "parser": "Response_part_1_rm",
+  "parser": "0",
   "postfix": "",
   "prefix": "",
-  "_source_file": "rm_2op_convo_feedback_allparts.json",
-  "_source_repo": "rmllm/data/raw/run_tasks",
-  "_n_items_trimmed_to": 8
+  "_source_file": "rm_2op_convo_5t_feedback_allparts.json",
+  "_source_repo": "osf/LLM-RM/data/raw/rm_tasks",
+  "_n_items_trimmed_to": "4 imagined + 4 perceived encoding, matching 8 test trials"
 }
