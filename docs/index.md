@@ -103,6 +103,18 @@ Every notebook in [`examples/`](https://github.com/saurabhr/psychscanner/tree/ma
 
 ---
 
+## References
+
+Papers that motivate PsychScanner's design and the instruments it ships:
+
+- Lin, Z. **Large Language Models as Psychological Simulators: A Methodological Guide.** [arXiv:2506.16702](https://arxiv.org/abs/2506.16702), 2025 — methodology for using LLMs as simulated participants, the core premise behind `ScannerModel`.
+- Santurkar, S., Durmus, E., Ladhak, F., Lee, C., Liang, P. & Hashimoto, T. **Whose Opinions Do Language Models Reflect?** [arXiv:2303.17548](https://arxiv.org/abs/2303.17548), 2023 — how persona/steering choices shift which population a model's simulated responses resemble; relevant to `cogtype`/`persona_files`.
+- **Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory.** [arXiv:2607.23927](https://arxiv.org/abs/2607.23927), 2026 — LLM source-monitoring accuracy, the paradigm behind the bundled Reality Monitoring (RM) task.
+- **Artificial Phantasia: Emergent Mental Imagery in Large Language Models.** [arXiv:2509.23108](https://arxiv.org/abs/2509.23108), 2025 — uses the VVIQ (the package's default task) to probe emergent mental imagery in LLMs.
+- **LLMs Simulate Big Five Personality Traits: Further Evidence.** [arXiv:2402.01765](https://arxiv.org/abs/2402.01765), 2024 — Big Five / BFI trait simulation, relevant to the bundled `bfi44` task.
+
+---
+
 ## Citation
 
 If you use PsychScanner in your research, please cite:

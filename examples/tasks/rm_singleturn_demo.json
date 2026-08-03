@@ -143,6 +143,50 @@
         },
         "trcode": "perceived_4"
       }
+    ],
+    "perceived_5": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "letter",
+            "word_2": "tip"
+          }
+        },
+        "trcode": "perceived_5"
+      }
+    ],
+    "imagined_6": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "building",
+            "word_2": "________"
+          }
+        },
+        "trcode": "imagined_6"
+      }
+    ],
+    "imagined_7": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "blouse",
+            "word_2": "________"
+          }
+        },
+        "trcode": "imagined_7"
+      }
+    ],
+    "perceived_8": [
+      {
+        "stimulus": {
+          "Word_Pair": {
+            "word_1": "pin",
+            "word_2": "haystack"
+          }
+        },
+        "trcode": "perceived_8"
+      }
     ]
   },
   "chain_type": "item",
@@ -152,5 +196,5 @@
   "prefix": "",
   "_source_file": "rm_2op.json",
   "_source_repo": "rmllm/data/raw/run_tasks",
-  "_n_items_trimmed_to": 4
+  "_n_items_trimmed_to": 8
 }
