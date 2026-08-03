@@ -70,3 +70,7 @@ jupyter lab examples/
 ```
 
 For narrative, task-oriented walkthroughs (rather than notebook cell-by-cell tutorials), see the [Examples](../examples/index.md) section.
+
+## Further reading
+
+Each notebook above ends with a "Further reading" cell citing two papers showing advanced applications of that notebook's technique. BibTeX entries for every paper cited across the tutorials are collected in [`references.bib`](../references.bib).
