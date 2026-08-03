@@ -61,19 +61,42 @@ session will search it automatically.
 
 The [`examples/demonstrations/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstrations)
 directory exists specifically for sharing task cards with anyone else using
-this repo:
+this repo. Getting one in is the standard GitHub fork-and-PR flow — nothing
+psychscanner-specific:
 
-1. Write your task card as JSON (see the [Cognitive Tasks](cognitive_tasks.md)
+1. **Fork** [saurabhr/psychscanner](https://github.com/saurabhr/psychscanner)
+   on GitHub, then clone your fork and branch:
+
+   ```bash
+   git clone https://github.com/<your-username>/psychscanner.git
+   cd psychscanner
+   git checkout -b add-<your_task_name>-task
+   ```
+
+2. **Write your task card** as JSON (see the [Cognitive Tasks](cognitive_tasks.md)
    and [Survey Tasks](survey_tasks.md) guides for the structure, or copy one
    of the files in [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
-   as a starting point).
-2. Save it as `examples/demonstrations/<your_task_name>.json`.
-3. Open a pull request. Once merged, anyone with the repo checked out can
-   fetch it immediately: `task_library("your_task_name")`.
+   as a starting point), and **save it at the exact path**
+   `examples/demonstrations/<your_task_name>.json` — that path is what makes
+   it discoverable; there's no separate registration step.
 
-No index file to update, no name to register anywhere — `list_task_library()`
-discovers it by scanning the directory, so the moment the file exists it's
-part of the library.
+3. **Commit, push, and open the PR:**
+
+   ```bash
+   git add examples/demonstrations/<your_task_name>.json
+   git commit -m "Add <your_task_name> task card"
+   git push -u origin add-<your_task_name>-task
+   gh pr create --title "Add <your_task_name> task card" --fill
+   # or open the PR from the compare-changes page GitHub links to after the push
+   ```
+
+   See [CONTRIBUTING.md](https://github.com/saurabhr/psychscanner/blob/main/CONTRIBUTING.md)
+   for the general setup/test steps expected before a PR.
+
+Once merged, anyone with the repo checked out can fetch it immediately —
+`task_library("your_task_name")` — with no index file to update and no name
+to register anywhere: `list_task_library()` discovers it by scanning the
+directory, so the moment the file exists on `main`, it's part of the library.
 
 ## Errors
 
