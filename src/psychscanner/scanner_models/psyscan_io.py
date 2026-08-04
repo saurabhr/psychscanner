@@ -173,7 +173,13 @@ def _trials_to_rows(trials: list[dict], meta: dict[str, Any]) -> list[dict[str, 
             "context_item": t.get("context_item"),
             "stimulus": _stimulus_str(t.get("stimulus")),
             "pred_resp_raw": raw_content,
-            **{f"resp_{k}": v for k, v in resp_fields.items()},
+            # Union-type parsers (e.g. AllResponseRMEI) nest their payload under
+            # one key, e.g. {"response": {"Judgment": "external"}} -- CSV/polars
+            # can't hold a nested value in a cell, so flatten it to a JSON string.
+            **{
+                f"resp_{k}": json.dumps(v, default=str) if isinstance(v, (dict, list)) else v
+                for k, v in resp_fields.items()
+            },
             "fb_response": t.get("fb_response"),
         }
         rows.append(row)

@@ -87,7 +87,7 @@ Wire it into an experiment card:
 from psychscanner import ExpCardInit, ExpCard, ScannerModel
 
 card = ExpCardInit(
-    model="smollm2:360m-instruct-fp16",
+    model="gemma3:12b",
     family="ollama",
     parameters={"temperature": 0},
     parser=Agreement7,          # pass the class directly

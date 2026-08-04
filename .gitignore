@@ -225,3 +225,10 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,jekyll
+
+# psychscanner tutorial/demo run outputs (regenerable session data -- task
+# JSONs and notebooks are source, everything these runs produce is not)
+examples/_*/
+examples/archive/_*/
+*.psyscan
+*-tunnel.json
