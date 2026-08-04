@@ -120,9 +120,62 @@ Every paper cited here and across the [Tutorials](tutorials/index.md) is collect
 
 ## Citation
 
-If you use PsychScanner in your research, please cite:
+If you use PsychScanner in your research, please cite the framework paper:
 
 ```
 Ranjan, S., Sokratous, K. & Makwana, M. Psych Scanner: A Framework for Systematic Cognitive Evaluation of
 Large Language Models. [Under Submission]
 ```
+
+```bibtex
+@unpublished{ranjan2026psychscanner,
+  author = {Ranjan, Saurabh and Sokratous, Konstantina and Makwana, Mukesh},
+  title  = {Psych Scanner: A Framework for Systematic Cognitive Evaluation of Large Language Models},
+  note   = {Manuscript submitted for publication},
+  year   = {2026},
+}
+```
+
+If you use the bundled Reality Monitoring (RM) task, please also cite:
+
+```
+Ranjan, S., Sokratous, K., & Odegaard, B. (2026). Reality Monitoring in Large Language Models: Self-Knowledge
+That Transforms with Conversation Memory. arXiv preprint arXiv:2607.23927.
+```
+
+```bibtex
+@misc{ranjan2026reality,
+      title={Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory},
+      author={Saurabh Ranjan and Konstantina Sokratous and Brian Odegaard},
+      year={2026},
+      eprint={2607.23927},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2607.23927},
+}
+```
+
+If you use the bundled VVIQ / imagination-network analysis, please also cite:
+
+```
+Ranjan, S., & Odegaard, B. (2025). Psychological Imagination Networks Show Cross-Population Centrality and
+Clustering Alignment in Humans That Large Language Models Fail to Replicate. arXiv preprint arXiv:2510.04391.
+```
+
+```bibtex
+@misc{ranjan2025psychological,
+      title={Psychological Imagination Networks Show Cross-Population Centrality and Clustering Alignment in Humans That Large Language Models Fail to Replicate},
+      author={Saurabh Ranjan and Brian Odegaard},
+      year={2025},
+      eprint={2510.04391},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.04391},
+}
+```
+
+---
+
+## Related Projects
+
+- **[metasignal](https://metasignal.readthedocs.io/en/latest/)** — a companion package from the same metacognitive-science group, for comprehensive metacognitive analysis and decision-making. Ranjan, S., Makwana, M., Sokratous, K. & Odegaard, B. **metasignal: A Python Package for Comprehensive Metacognitive Analysis and Decision-Making.** [arXiv:2607.29093](https://arxiv.org/abs/2607.29093), 2026.
