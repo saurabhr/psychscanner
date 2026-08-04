@@ -178,4 +178,4 @@ Clustering Alignment in Humans That Large Language Models Fail to Replicate. arX
 
 ## Related Projects
 
-- **[metasignal](https://metasignal.readthedocs.io/en/latest/)** — a companion package from the same metacognitive-science group, for comprehensive metacognitive analysis and decision-making. Ranjan, S., Makwana, M., Sokratous, K. & Odegaard, B. **metasignal: A Python Package for Comprehensive Metacognitive Analysis and Decision-Making.** [arXiv:2607.29093](https://arxiv.org/abs/2607.29093), 2026.
+- **[metasignal](https://metasignal.readthedocs.io/en/latest/)** — a companion package from the Psych Scanner group on metacognitive science, for comprehensive metacognitive analysis and decision-making. Ranjan, S., Makwana, M., Sokratous, K. & Odegaard, B. **metasignal: A Python Package for Comprehensive Metacognitive Analysis and Decision-Making.** [arXiv:2607.29093](https://arxiv.org/abs/2607.29093), 2026.
