@@ -143,6 +143,8 @@ Ranjan, S., Sokratous, K., & Odegaard, B. (2026). Reality Monitoring in Large La
 That Transforms with Conversation Memory. arXiv preprint arXiv:2607.23927.
 ```
 
+arXiv: [2607.23927](https://arxiv.org/abs/2607.23927)
+
 ```bibtex
 @misc{ranjan2026reality,
       title={Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory},
@@ -162,6 +164,8 @@ Ranjan, S., & Odegaard, B. (2025). Psychological Imagination Networks Show Cross
 Clustering Alignment in Humans That Large Language Models Fail to Replicate. arXiv preprint arXiv:2510.04391.
 ```
 
+arXiv: [2510.04391](https://arxiv.org/abs/2510.04391)
+
 ```bibtex
 @misc{ranjan2025psychological,
       title={Psychological Imagination Networks Show Cross-Population Centrality and Clustering Alignment in Humans That Large Language Models Fail to Replicate},
@@ -178,9 +182,12 @@ Clustering Alignment in Humans That Large Language Models Fail to Replicate. arX
 
 ## Related Projects
 
-- **[metasignal](https://metasignal.readthedocs.io/en/latest/)** — a companion package from the Psych Scanner group on metacognitive science.
+- **metasignal** — a companion package from the Psych Scanner group on metacognitive science.
 
 ```
 Ranjan, S., Makwana, M., Sokratous, K. & Odegaard, B. (2026). metasignal: A Python Package for Comprehensive
 Metacognitive Analysis and Decision-Making. arXiv preprint arXiv:2607.29093.
 ```
+
+Docs: [metasignal.readthedocs.io](https://metasignal.readthedocs.io/en/latest/)
+arXiv: [2607.29093](https://arxiv.org/abs/2607.29093)
