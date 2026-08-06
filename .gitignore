@@ -232,3 +232,7 @@ examples/_*/
 examples/archive/_*/
 *.psyscan
 *-tunnel.json
+
+# in-progress journal/workshop submissions -- not for the public repo
+# (NeurIPS NeuroAI workshop is double-blind; NC manuscript is pre-submission)
+papers/

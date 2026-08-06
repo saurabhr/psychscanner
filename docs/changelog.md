@@ -4,6 +4,14 @@ All notable changes to PsychScanner are documented here.
 
 ---
 
+## Unreleased
+
+### New features
+
+- **Task library** — `psychscanner.task_library()` fetches a task card JSON file by name, searching `dirs=`, `PSYCHSCANNER_TASK_LIBRARY_DIRS`, `./demonstrations`, then `./tasks` (first match wins); `list_task_library()` lists every name discoverable across those directories. Lets contributors share a task card by dropping `<name>.json` into `examples/demonstrations/`, no registration step or code change required. See the [Task Library guide](guides/task_library.md).
+
+---
+
 ## 0.3.0 (2026-07-16)
 
 ### New features

@@ -67,7 +67,7 @@ HUGGINGFACEHUB_API_TOKEN=hf_...
 OLLAMA_API_KEY=...
 ```
 
-Keys are loaded automatically from the environment for each provider family. Ollama running locally needs no key.
+Keys are read automatically from `os.environ` for each provider family — psychscanner does not load `.env` files itself, so either `export` the variables in your shell or call `load_dotenv()` (from `python-dotenv`) before constructing the card. Ollama running locally needs no key.
 
 ## Quick Start
 
@@ -103,6 +103,8 @@ df = to_csv(scanner, path=card.proj_dir)
 
 ## Supported Providers
 
+Only `ollama` ships out of the box (`langchain-ollama` is a base dependency). Every other family needs its own LangChain integration package too, e.g. `uv pip install langchain-openai` for `openai`, `langchain-anthropic` for `anthropic` — see [LangChain's provider list](https://docs.langchain.com/oss/python/integrations/providers) for the rest.
+
 | Family | Env var | Notes |
 |---|---|---|
 | `openai` | `OPENAI_API_KEY` | GPT-4o, GPT-4o-mini, o1, … |
@@ -131,4 +133,18 @@ df = to_csv(scanner, path=card.proj_dir)
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
 
+## Citation
+
+If you use PsychScanner in your research, please cite the framework paper:
+
+```bibtex
+@unpublished{ranjan2026psychscanner,
+  author = {Ranjan, Saurabh and Sokratous, Konstantina and Makwana, Mukesh},
+  title  = {Psych Scanner: A Framework for Systematic Cognitive Evaluation of Large Language Models},
+  note   = {Manuscript submitted for publication},
+  year   = {2026},
+}
+```
+
+Task-specific citations (Reality Monitoring, VVIQ) and the full reference list live in [`CITATION.cff`](CITATION.cff) and the [docs](https://psychscanner.readthedocs.io/en/latest/#citation) — or use GitHub's "Cite this repository" button.
 

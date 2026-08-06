@@ -2,7 +2,7 @@ Metadata-Version: 2.4
 Name: psychscanner
 Version: 0.3.0
 Summary: A tool to bridge natural psychology witth  the artificial.
-Author-email: Saurabh Ranjan <saurabh.ctheory@proton.me>
+Author-email: Saurabh Ranjan <ranjan.saurabh@outlook.com>
 License: MIT License
         
         Copyright (c) 2025 Saurabh Ranjan
@@ -96,13 +96,20 @@ Dynamic: license-file
 
 # psychscanner
 
-PsychScanner: A framework for running psychological experiments with large language models.
+Psych Scanner: A framework for running psychological experiments with large language models.
+
+[![Documentation Status](https://readthedocs.org/projects/psychscanner/badge/?version=latest)](https://psychscanner.readthedocs.io/en/latest/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner/pulls)
+[![Contributors](https://img.shields.io/github/contributors/saurabhr/psychscanner.svg)](https://github.com/saurabhr/psychscanner/graphs/contributors)
 
 Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-> The package is under active development. Contributions are welcome.
+> The package is under active development. [Contributions](CONTRIBUTING.md) are welcome. Find the documentation here:https://psychscanner.readthedocs.io/en/latest/
+>
+> 
+> Archived version of psychscanner 0.1.0 can be found here: https://github.com/saurabhr/psyschscanner_v_0_1_0
 
 ## Features
 
@@ -115,11 +122,18 @@ Tested on Python 3.11
 
 ## Installation
 
-### 1. Create the conda environment
+### 1. Create the uv environment
+
+Install `uv` first if you don't have it ([astral.sh/uv](https://astral.sh/uv)):
 
 ```bash
-conda env create -f environment.yml
-conda activate psyscan
+conda install -c conda-forge uv                    # if you use conda
+# curl -LsSf https://astral.sh/uv/install.sh | sh   # skip if you already have uv
+```
+
+```bash
+uv venv psyscan --python 3.11
+source psyscan/bin/activate
 ```
 
 ### 2. Install psychscanner
@@ -127,7 +141,7 @@ conda activate psyscan
 ```bash
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
-pip install -e .
+uv pip install -e .
 ```
 
 ### 3. Set API keys
@@ -147,7 +161,7 @@ HUGGINGFACEHUB_API_TOKEN=hf_...
 OLLAMA_API_KEY=...
 ```
 
-Keys are loaded automatically from the environment for each provider family. Ollama running locally needs no key.
+Keys are read automatically from `os.environ` for each provider family — psychscanner does not load `.env` files itself, so either `export` the variables in your shell or call `load_dotenv()` (from `python-dotenv`) before constructing the card. Ollama running locally needs no key.
 
 ## Quick Start
 
@@ -183,6 +197,8 @@ df = to_csv(scanner, path=card.proj_dir)
 
 ## Supported Providers
 
+Only `ollama` ships out of the box (`langchain-ollama` is a base dependency). Every other family needs its own LangChain integration package too, e.g. `uv pip install langchain-openai` for `openai`, `langchain-anthropic` for `anthropic` — see [LangChain's provider list](https://docs.langchain.com/oss/python/integrations/providers) for the rest.
+
 | Family | Env var | Notes |
 |---|---|---|
 | `openai` | `OPENAI_API_KEY` | GPT-4o, GPT-4o-mini, o1, … |
@@ -211,4 +227,18 @@ df = to_csv(scanner, path=card.proj_dir)
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
 
+## Citation
+
+If you use PsychScanner in your research, please cite the framework paper:
+
+```bibtex
+@unpublished{ranjan2026psychscanner,
+  author = {Ranjan, Saurabh and Sokratous, Konstantina and Makwana, Mukesh},
+  title  = {Psych Scanner: A Framework for Systematic Cognitive Evaluation of Large Language Models},
+  note   = {Manuscript submitted for publication},
+  year   = {2026},
+}
+```
+
+Task-specific citations (Reality Monitoring, VVIQ) and the full reference list live in [`CITATION.cff`](CITATION.cff) and the [docs](https://psychscanner.readthedocs.io/en/latest/#citation) — or use GitHub's "Cite this repository" button.
 

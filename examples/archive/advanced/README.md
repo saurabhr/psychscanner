@@ -10,8 +10,12 @@ Complex examples demonstrating advanced features.
 
 ## Prerequisites
 
+psychscanner isn't published on PyPI — install from source (see [Installation](https://psychscanner.readthedocs.io/en/latest/installation/)):
+
 ```bash
-pip install psychscanner
+git clone https://github.com/saurabhr/psychscanner.git
+cd psychscanner
+uv pip install -e .
 export OPENAI_API_KEY="your-key"  # or other provider
 ```
 

@@ -49,6 +49,13 @@ def test_task_library_invalid_format_raises():
         task_library("anything", format="yaml")
 
 
+def test_task_library_malformed_json_raises_with_path(cwd_with_task_dirs):
+    (cwd_with_task_dirs / "tasks" / "broken_task.json").write_text("{not valid json")
+
+    with pytest.raises(ValueError, match="broken_task.json"):
+        task_library("broken_task")
+
+
 def test_task_library_env_var_dir_takes_priority(cwd_with_task_dirs, tmp_path, monkeypatch):
     override_dir = tmp_path / "override"
     override_dir.mkdir()

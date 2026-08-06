@@ -65,7 +65,7 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 ```bash
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 jupyter lab examples/
 ```
 

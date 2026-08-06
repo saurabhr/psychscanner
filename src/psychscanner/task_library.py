@@ -24,7 +24,7 @@ import os
 from pathlib import Path
 from typing import Union
 
-__all__ = ["task_library", "list_task_library"]
+__all__ = ["list_task_library", "task_library"]
 
 DirsArg = Union[str, "os.PathLike[str]", list, None]
 
@@ -45,7 +45,7 @@ def _search_dirs(dirs: DirsArg = None) -> list[Path]:
     return result
 
 
-def task_library(taskname: str, format: str = "json", dirs: DirsArg = None):
+def task_library(taskname: str, format: str = "json", dirs: DirsArg = None) -> dict | Path:
     """Look up a task card by name across the task-library search directories.
 
     Parameters
@@ -71,7 +71,8 @@ def task_library(taskname: str, format: str = "json", dirs: DirsArg = None):
         If no `<taskname>.json` is found in any search directory. The error
         lists every directory that was searched.
     ValueError
-        If `format` is not `"json"` or `"path"`.
+        If `format` is not `"json"` or `"path"`, or the matched file is not
+        valid JSON.
     """
     if format not in ("json", "path"):
         raise ValueError(f"format must be 'json' or 'path', got {format!r}")
@@ -80,7 +81,13 @@ def task_library(taskname: str, format: str = "json", dirs: DirsArg = None):
     for d in search_dirs:
         candidate = d / f"{taskname}.json"
         if candidate.is_file():
-            return candidate if format == "path" else json.loads(candidate.read_text())
+            if format == "path":
+                return candidate
+            try:
+                return json.loads(candidate.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as e:
+                msg = f"Task card {candidate} is not valid JSON: {e}"
+                raise ValueError(msg) from e
 
     searched = ", ".join(str(d) for d in search_dirs)
     raise FileNotFoundError(

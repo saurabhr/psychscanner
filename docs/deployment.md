@@ -41,8 +41,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install mkdocs-material
-        run: pip install mkdocs-material==9.7.6
+      - name: Install mkdocs
+        run: pip install ".[mkdocs]"
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
 ```
@@ -54,8 +54,8 @@ jobs:
 To deploy from your local machine:
 
 ```bash
-# Install mkdocs-material
-pip install mkdocs-material
+# Install mkdocs
+pip install ".[mkdocs]"
 
 # Build and deploy in one step
 mkdocs gh-deploy --force

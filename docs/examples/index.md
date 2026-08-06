@@ -21,7 +21,7 @@ from [`examples/`](https://github.com/saurabhr/psychscanner/tree/main/examples).
 # Clone the repository
 git clone https://github.com/saurabhr/psychscanner.git
 cd psychscanner
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 
 # Launch the notebooks
 jupyter lab examples/

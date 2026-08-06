@@ -67,6 +67,8 @@ to_csv(scanner, path=card.proj_dir)
 
 ## Supported Providers
 
+Only `ollama` ships out of the box (`langchain-ollama` is a base dependency). Every other family needs its own LangChain integration package too, e.g. `uv pip install langchain-openai` for `openai`, `langchain-anthropic` for `anthropic` — see [LangChain's provider list](https://docs.langchain.com/oss/python/integrations/providers) for the rest.
+
 | Family | Env var | Notes |
 |---|---|---|
 | `openai` | `OPENAI_API_KEY` | GPT-4o, GPT-4o-mini, o1, … |

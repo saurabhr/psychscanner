@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: >-
+  If you use PsychScanner in your research, please cite the framework paper
+  below. Task-specific instruments (Reality Monitoring, VVIQ) have their own
+  citations under "references" — cite those alongside the framework paper if
+  you use the corresponding bundled task.
+title: PsychScanner
+type: software
+version: 0.3.0
+date-released: "2026-07-16"
+authors:
+  - family-names: Ranjan
+    given-names: Saurabh
+    email: ranjan.saurabh@outlook.com
+repository-code: "https://github.com/saurabhr/psychscanner"
+url: "https://psychscanner.readthedocs.io/en/stable/"
+license: MIT
+keywords:
+  - large-language-models
+  - psychology
+  - cognitive-science
+  - llm-evaluation
+  - psychometrics
+preferred-citation:
+  type: unpublished
+  title: "Psych Scanner: A Framework for Systematic Cognitive Evaluation of Large Language Models"
+  year: 2026
+  notes: "Manuscript submitted for publication"
+  authors:
+    - family-names: Ranjan
+      given-names: Saurabh
+    - family-names: Sokratous
+      given-names: Konstantina
+    - family-names: Makwana
+      given-names: Mukesh
+references:
+  - type: generic
+    title: "Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory"
+    year: 2026
+    notes: "Cite alongside the framework paper if you use the bundled Reality Monitoring (RM) task."
+    url: "https://arxiv.org/abs/2607.23927"
+    identifiers:
+      - type: other
+        value: "arXiv:2607.23927"
+    authors:
+      - family-names: Ranjan
+        given-names: Saurabh
+      - family-names: Sokratous
+        given-names: Konstantina
+      - family-names: Odegaard
+        given-names: Brian
+  - type: generic
+    title: "Psychological Imagination Networks Show Cross-Population Centrality and Clustering Alignment in Humans That Large Language Models Fail to Replicate"
+    year: 2025
+    notes: "Cite alongside the framework paper if you use the bundled VVIQ / imagination-network analysis."
+    url: "https://arxiv.org/abs/2510.04391"
+    identifiers:
+      - type: other
+        value: "arXiv:2510.04391"
+    authors:
+      - family-names: Ranjan
+        given-names: Saurabh
+      - family-names: Odegaard
+        given-names: Brian

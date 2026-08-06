@@ -6,6 +6,7 @@ src/psychscanner/__main__.py
 src/psychscanner/cli.py
 src/psychscanner/parsers.py
 src/psychscanner/py.typed
+src/psychscanner/task_library.py
 src/psychscanner.egg-info/PKG-INFO
 src/psychscanner.egg-info/SOURCES.txt
 src/psychscanner.egg-info/dependency_links.txt
@@ -68,11 +69,14 @@ src/psychscanner/vlm_backend/__init__.py
 src/psychscanner/vlm_backend/chat_vlm.py
 tests/test_agents.py
 tests/test_cli.py
+tests/test_inference_backends.py
 tests/test_memory_trimming.py
 tests/test_multimodal.py
 tests/test_planner_executor_agent.py
+tests/test_psyscan_io.py
 tests/test_react_agent.py
 tests/test_readme_quickstart.py
 tests/test_reflection_agents.py
 tests/test_supervisor_agent.py
+tests/test_task_library.py
 tests/test_tools.py

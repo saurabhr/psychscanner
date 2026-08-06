@@ -7,7 +7,14 @@ if you want to share a task card of your own instead of adding it here.
 ## Files
 
 - `example_survey.json` - Simple survey template
-- `example_cognitive.json` - Cognitive task template
+- `bfi44.json` - Big Five Inventory personality survey (44 items)
+- `pal50.json` - Paired-associate learning task (50 word pairs, study + test phases)
+- `vviq16.json` - Vividness of Visual Imagery Questionnaire (16 items)
+- `rm_singleturn_demo.json` - Relational-memory task, single-turn trial
+- `rm_trialchain_demo.json` - Relational-memory task, chained trials
+- `rm_dynamic_demo.json` - Relational-memory task, dynamic encoding/test trials
+- `rm_episodic_demo.json` - Relational-memory task, episodic conversation (no feedback)
+- `rm_episodic_fb_demo.json` - Relational-memory task, episodic conversation with feedback
 
 ## Structure
 
