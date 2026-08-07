@@ -4,10 +4,11 @@ All notable changes to PsychScanner are documented here.
 
 ---
 
-## Unreleased
+## 0.4.0 (2026-08-07)
 
 ### New features
 
+- **Conditional next-trial branching** — `psychscanner.NextTrialBase` lets a handler insert a new trial after any trial based on the model's response, before the task card's own next one — for adaptive/staircase designs or retry-on-invalid-response paradigms. Mirrors `FeedbackBase`'s lifecycle (one instance per participant simulation); enable via `ExpCardInit(next_trial=True, next_trial_fn=YourHandler)`. A repeat guard (`max_repeat`, default 3) resumes the task card's own sequence if the handler keeps proposing the same stimulus. Round-trips through `save_expcard`/`load_expcard` like `feedback_fn`. See the [Conditional Next Trial guide](examples/conditional_next_trial.md).
 - **Task library** — `psychscanner.task_library()` fetches a task card JSON file by name, searching `dirs=`, `PSYCHSCANNER_TASK_LIBRARY_DIRS`, `./demonstrations`, then `./tasks` (first match wins); `list_task_library()` lists every name discoverable across those directories. Lets contributors share a task card by dropping `<name>.json` into `examples/tasks/`, no registration step or code change required. See the [Task Library guide](guides/task_library.md).
 
 ---

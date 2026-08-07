@@ -35,6 +35,7 @@ src/psychscanner/datasets/prompts/defaults/__init__.py
 src/psychscanner/datasets/prompts/defaults/load_default_json.py
 src/psychscanner/feedback/__init__.py
 src/psychscanner/feedback/feedback_base.py
+src/psychscanner/feedback/next_trial_base.py
 src/psychscanner/memories/__init__.py
 src/psychscanner/memories/single_turn_convo.py
 src/psychscanner/memories/base/__init__.py
@@ -69,6 +70,7 @@ src/psychscanner/vlm_backend/__init__.py
 src/psychscanner/vlm_backend/chat_vlm.py
 tests/test_agents.py
 tests/test_cli.py
+tests/test_conditional_next_trial.py
 tests/test_inference_backends.py
 tests/test_memory_trimming.py
 tests/test_multimodal.py
