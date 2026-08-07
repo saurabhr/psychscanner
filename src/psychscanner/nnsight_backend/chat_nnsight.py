@@ -39,15 +39,6 @@ def _resolve_module(root: Any, dotted_path: str) -> Any:
     return obj
 
 
-def _cache_to_tensor_dict(cache: Any) -> dict[str, Any]:
-    """Flatten an nnsight ``CacheDict`` into ``{module_path: output_tensor}``."""
-    tensors = {}
-    for module_path, entry in dict(cache).items():
-        value = getattr(entry, "output", entry)
-        tensors[module_path] = value.detach().cpu() if hasattr(value, "detach") else value
-    return tensors
-
-
 class ChatNNsightModel(BaseChatModel):
     """Chat model that generates via a local (or NDIF-remote) HF model through nnsight.
 
@@ -109,21 +100,54 @@ class ChatNNsightModel(BaseChatModel):
         # only, not on each token generated afterward (that needs
         # tracer.all()/tracer.iter[:] inside .generate(), a fussier API).
         # Upgrade to per-generation-step capture if a use case needs it.
-        modules = (
-            [_resolve_module(nn_model, path) for path in self.capture_modules]
-            if self.capture_modules
-            else None
-        )
+        #
+        # ponytail: nnsight 0.3.x (the version this repo pins) has no
+        # tracer.cache() helper this code was originally written against —
+        # capture module-by-module via `.output.save()` instead. With no
+        # capture_modules given, default to leaf modules only (container
+        # modules like the h ModuleList have no meaningful `.output`);
+        # pass capture_modules explicitly (already the documented,
+        # disk-bounded way to use this) for anything more targeted.
+        if self.capture_modules:
+            module_paths = self.capture_modules
+        else:
+            module_paths = [
+                name.lstrip(".")
+                for name, module in nn_model._envoy.named_modules()
+                if name not in ("", ".") and not list(module._module.children())
+            ]
+
+        # Some modules (e.g. a GPT-2 block) return a tuple like
+        # (hidden_states, present_kv, ...); nnsight 0.3.x's `.save()` only
+        # reliably materializes plain-tensor proxies, not tuple-valued ones
+        # (the tuple proxy comes back referencing freed trace-graph state).
+        # Save both the whole output and its first element, then below keep
+        # whichever one actually detaches — `[0]` for tuple-returning
+        # modules, the whole thing for plain-tensor-returning ones.
         with nn_model.trace(prompt, remote=self.remote) as tracer:
-            cache = (tracer.cache(modules=modules) if modules else tracer.cache()).save()
+            saved = {
+                path: (
+                    _resolve_module(nn_model, path).output.save(),
+                    _resolve_module(nn_model, path).output[0].save(),
+                )
+                for path in module_paths
+            }
 
         import torch
 
+        tensors = {}
+        for path, (whole, first) in saved.items():
+            for candidate in (whole, first):
+                try:
+                    tensors[path] = candidate.detach().cpu() if hasattr(candidate, "detach") else candidate
+                    break
+                except Exception:
+                    continue
         out_dir = Path(self.activations_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / f"{uuid.uuid4().hex}.pt"
         torch.save(
-            {"model": self.model_name, "prompt": prompt, "activations": _cache_to_tensor_dict(cache)},
+            {"model": self.model_name, "prompt": prompt, "activations": tensors},
             out_path,
         )
         return out_path

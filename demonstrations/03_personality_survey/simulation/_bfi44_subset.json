@@ -1,0 +1,131 @@
+{
+  "tasktype": "personality",
+  "taskname": "bfi44",
+  "instructions": {
+    "definition": [
+      "Here are a number of characteristics that may or may not apply to you.",
+      "For each statement, rate how much you agree or disagree with the description of yourself.",
+      "Use a scale from 1 to 5, where:",
+      "  1 = Disagree strongly",
+      "  2 = Disagree a little",
+      "  3 = Neither agree nor disagree",
+      "  4 = Agree a little",
+      "  5 = Agree strongly",
+      "Rate each statement honestly based on how you actually are, not how you would like to be."
+    ]
+  },
+  "contexts": [
+    "Extraversion",
+    "Agreeableness",
+    "Conscientiousness",
+    "Neuroticism",
+    "Openness to Experience"
+  ],
+  "contexts_id": [
+    "E",
+    "A",
+    "C",
+    "N",
+    "O"
+  ],
+  "context_present": false,
+  "items": {
+    "E_01": [
+      {
+        "trcode": "E_01",
+        "stimulus": "I see myself as someone who is talkative."
+      }
+    ],
+    "A_01": [
+      {
+        "trcode": "A_01",
+        "stimulus": "I see myself as someone who tends to find fault with others.",
+        "reverse": true
+      }
+    ],
+    "C_01": [
+      {
+        "trcode": "C_01",
+        "stimulus": "I see myself as someone who does a thorough job."
+      }
+    ],
+    "N_01": [
+      {
+        "trcode": "N_01",
+        "stimulus": "I see myself as someone who is depressed, blue."
+      }
+    ],
+    "O_01": [
+      {
+        "trcode": "O_01",
+        "stimulus": "I see myself as someone who is original, comes up with new ideas."
+      }
+    ],
+    "E_02": [
+      {
+        "trcode": "E_02",
+        "stimulus": "I see myself as someone who is reserved.",
+        "reverse": true
+      }
+    ],
+    "A_02": [
+      {
+        "trcode": "A_02",
+        "stimulus": "I see myself as someone who is helpful and unselfish with others."
+      }
+    ],
+    "C_02": [
+      {
+        "trcode": "C_02",
+        "stimulus": "I see myself as someone who can be somewhat careless.",
+        "reverse": true
+      }
+    ],
+    "N_02": [
+      {
+        "trcode": "N_02",
+        "stimulus": "I see myself as someone who is relaxed, handles stress well.",
+        "reverse": true
+      }
+    ],
+    "O_02": [
+      {
+        "trcode": "O_02",
+        "stimulus": "I see myself as someone who is curious about many different things."
+      }
+    ],
+    "E_03": [
+      {
+        "trcode": "E_03",
+        "stimulus": "I see myself as someone who is full of energy."
+      }
+    ],
+    "A_03": [
+      {
+        "trcode": "A_03",
+        "stimulus": "I see myself as someone who starts quarrels with others.",
+        "reverse": true
+      }
+    ],
+    "C_03": [
+      {
+        "trcode": "C_03",
+        "stimulus": "I see myself as someone who is a reliable worker."
+      }
+    ],
+    "N_03": [
+      {
+        "trcode": "N_03",
+        "stimulus": "I see myself as someone who can be tense."
+      }
+    ],
+    "O_03": [
+      {
+        "trcode": "O_03",
+        "stimulus": "I see myself as someone who is ingenious, a deep thinker."
+      }
+    ]
+  },
+  "parser": "DefaultLiteralAgree",
+  "chain_type": "task"
+}

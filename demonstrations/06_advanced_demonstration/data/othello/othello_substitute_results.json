@@ -1,0 +1,41 @@
+{
+  "config": {
+    "n_cells": 10,
+    "start_pos": 5,
+    "seq_len": 24,
+    "n_train_games": 4000,
+    "n_probe_games": 400,
+    "n_layer": 4,
+    "d_model": 64,
+    "n_head": 4,
+    "n_epochs": 12
+  },
+  "legality_check": {
+    "mean_prob_mass_on_legal_move": 0.9975785008406577,
+    "boundary_top1_accuracy": 1.0,
+    "n_boundary_steps_checked": 728,
+    "random_baseline_prob_mass_on_legal": 0.75
+  },
+  "per_layer": [
+    {
+      "layer": 0,
+      "probe_accuracy": 0.4234375059604645,
+      "shuffled_label_baseline": 0.14010415971279144
+    },
+    {
+      "layer": 1,
+      "probe_accuracy": 0.9411458373069763,
+      "shuffled_label_baseline": 0.1484375
+    },
+    {
+      "layer": 2,
+      "probe_accuracy": 0.9526041746139526,
+      "shuffled_label_baseline": 0.14895834028720856
+    },
+    {
+      "layer": 3,
+      "probe_accuracy": 0.9307291507720947,
+      "shuffled_label_baseline": 0.14114584028720856
+    }
+  ]
+}

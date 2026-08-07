@@ -1,0 +1,41 @@
+Rounds parsed: 18
+Optimal arm: B (true mean 6.0)
+
+Per-agent summary:
+shape: (3, 5)
+┌──────────────────┬──────────┬─────────────┬──────────────┬─────────────────┐
+│ agent            ┆ n_rounds ┆ mean_reward ┆ total_reward ┆ pct_optimal_arm │
+│ ---              ┆ ---      ┆ ---         ┆ ---          ┆ ---             │
+│ str              ┆ u32      ┆ f64         ┆ f64          ┆ f64             │
+╞══════════════════╪══════════╪═════════════╪══════════════╪═════════════════╡
+│ custom_direct    ┆ 6        ┆ 2.69        ┆ 16.14        ┆ 0.0             │
+│ basic_reflection ┆ 6        ┆ 2.356667    ┆ 14.14        ┆ 0.166667        │
+│ planner_executor ┆ 6        ┆ 2.023333    ┆ 12.14        ┆ 0.0             │
+└──────────────────┴──────────┴─────────────┴──────────────┴─────────────────┘
+
+Arm selection counts:
+shape: (6, 3)
+┌──────────────────┬─────┬─────┐
+│ agent            ┆ arm ┆ n   │
+│ ---              ┆ --- ┆ --- │
+│ str              ┆ str ┆ u32 │
+╞══════════════════╪═════╪═════╡
+│ basic_reflection ┆ A   ┆ 5   │
+│ basic_reflection ┆ B   ┆ 1   │
+│ custom_direct    ┆ A   ┆ 3   │
+│ custom_direct    ┆ C   ┆ 3   │
+│ planner_executor ┆ A   ┆ 5   │
+│ planner_executor ┆ C   ┆ 1   │
+└──────────────────┴─────┴─────┘
+
+Late-game (trial_idx >= 4) summary:
+shape: (3, 3)
+┌──────────────────┬──────────────────┬──────────────────────┐
+│ agent            ┆ late_mean_reward ┆ late_pct_optimal_arm │
+│ ---              ┆ ---              ┆ ---                  │
+│ str              ┆ f64              ┆ f64                  │
+╞══════════════════╪══════════════════╪══════════════════════╡
+│ basic_reflection ┆ 3.455            ┆ 0.5                  │
+│ custom_direct    ┆ 2.455            ┆ 0.0                  │
+│ planner_executor ┆ 1.455            ┆ 0.0                  │
+└──────────────────┴──────────────────┴──────────────────────┘
