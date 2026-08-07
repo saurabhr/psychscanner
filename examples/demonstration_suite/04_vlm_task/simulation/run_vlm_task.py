@@ -22,7 +22,7 @@ smoke test, so this run uses gemma instead -- see reports/report.md.
 Run with a real OpenRouter API key (OPENROUTER_API_KEY in .env at repo root):
 
     source .venv/bin/activate
-    python demonstrations/04_vlm_task/simulation/run_vlm_task.py
+    python examples/demonstration_suite/04_vlm_task/simulation/run_vlm_task.py
 """
 from __future__ import annotations
 

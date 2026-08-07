@@ -26,6 +26,6 @@ A BFI-44 (Big Five Inventory, 44 items / OCEAN traits) survey run across
 Run order:
 ```bash
 source .venv/bin/activate
-python demonstrations/03_personality_survey/simulation/run_personality_survey.py
-python demonstrations/03_personality_survey/analysis/analyze_personality_survey.py
+python examples/demonstration_suite/03_personality_survey/simulation/run_personality_survey.py
+python examples/demonstration_suite/03_personality_survey/analysis/analyze_personality_survey.py
 ```

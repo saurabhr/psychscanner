@@ -16,7 +16,7 @@ Run with real Groq + OpenRouter API keys (`GROQ_API_KEY`, `OPENROUTER_API_KEY`
 in `.env` at repo root):
 
     source .venv311/bin/activate   # this is the env with langchain-groq/-openai installed
-    python demonstrations/02_association_memory/simulation/run_simulation.py
+    python examples/demonstration_suite/02_association_memory/simulation/run_simulation.py
 """
 from __future__ import annotations
 

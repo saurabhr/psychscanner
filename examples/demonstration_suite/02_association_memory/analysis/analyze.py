@@ -24,7 +24,7 @@ survive), so this script re-derives:
 
 Usage:
     source .venv311/bin/activate
-    python demonstrations/02_association_memory/analysis/analyze.py
+    python examples/demonstration_suite/02_association_memory/analysis/analyze.py
 """
 from __future__ import annotations
 

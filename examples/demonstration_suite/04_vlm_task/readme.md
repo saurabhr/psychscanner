@@ -23,6 +23,6 @@ conditions, using real vision-model calls (OpenRouter, `google/gemma-4-26b-a4b-i
 Run order:
 ```bash
 source .venv/bin/activate
-python demonstrations/04_vlm_task/simulation/run_vlm_task.py
-python demonstrations/04_vlm_task/analysis/analyze.py
+python examples/demonstration_suite/04_vlm_task/simulation/run_vlm_task.py
+python examples/demonstration_suite/04_vlm_task/analysis/analyze.py
 ```

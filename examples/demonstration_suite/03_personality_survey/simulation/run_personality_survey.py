@@ -18,7 +18,7 @@ what we rely on here rather than adding a second retry layer on top.
 
 Run from the psychscanner repo root:
     source .venv/bin/activate
-    python demonstrations/03_personality_survey/simulation/run_personality_survey.py
+    python examples/demonstration_suite/03_personality_survey/simulation/run_personality_survey.py
 
 Design
 ------
@@ -63,7 +63,7 @@ from psychscanner import ExpCard, ExpCardInit, ScannerModel, to_csv
 
 # ── paths ─────────────────────────────────────────────────────────────────
 HERE      = Path(__file__).parent
-DEMO_ROOT = HERE.parent                      # demonstrations/03_personality_survey/
+DEMO_ROOT = HERE.parent                      # examples/demonstration_suite/03_personality_survey/
 REPO_ROOT = DEMO_ROOT.parents[1]             # psychscanner/
 
 load_dotenv(REPO_ROOT / ".env")
@@ -90,15 +90,15 @@ TASK_FILE = HERE / "_bfi44_subset.json"
 TASK_FILE.write_text(json.dumps(task_subset, indent=2))
 print(f"BFI-44 subset: {len(kept)} items ({ITEMS_PER_TRAIT}/trait) -> {TASK_FILE.name}")
 
-# ── trim traits_n5.json (5 statements) down to 1 -> 1 sim/persona ───────────
-# ponytail: nsim=1 (not the 5 in examples/advanced/set1_surveys) purely to
-# fit Groq's free-tier daily token cap -- llama-3.3-70b-versatile burned its
-# entire 100k TPD budget partway through a single nsim=2/15-item dry run, so
-# the account has near-zero headroom left today. Bump back to traits_n5.json
-# (or a 2-3 statement slice) once quota resets / on a paid tier.
+# ── trim traits_n5.json (5 statements) down to 2 -> 2 sims/persona ──────────
+# ponytail: nsim=2 (not the 5 in examples/advanced/set1_surveys) to fit
+# Groq's free-tier daily token cap -- llama-3.3-70b-versatile burned its
+# entire 100k TPD budget partway through a dry run, hence the model switch
+# below too. Bump back to the full traits_n5.json for a richer n once on a
+# paid tier / after quota resets.
 traits_full = json.loads((PERSONA_DIR / "traits_n5.json").read_text())
-TRAITS_N1 = HERE / "_traits_n1.json"
-TRAITS_N1.write_text(json.dumps({"persona_statements": traits_full["persona_statements"][:1]}, indent=2))
+TRAITS_N2 = HERE / "_traits_n2.json"
+TRAITS_N2.write_text(json.dumps({"persona_statements": traits_full["persona_statements"][:2]}, indent=2))
 
 # ── experiment parameters ────────────────────────────────────────────────
 # llama-3.3-70b-versatile hit Groq's 100k-token/day cap mid-run (see note
@@ -152,7 +152,7 @@ for persona_name, persona_files in PERSONAS.items():
             persona_files = persona_files,
             task_file     = TASK_FILE,
             parser        = "1",                 # -> DefaultLiteralAgree from task JSON
-            parser_config = {"method": "function_calling"},
+            parser_config = {"method": "json_schema"},
             memory        = cond["memory"],
             chain_type    = cond["chain_type"],
             summary_k     = cond["summary_k"],
@@ -161,9 +161,25 @@ for persona_name, persona_files in PERSONAS.items():
             proj_dir      = RAW_DIR,
             tunnel_status = "0",
         )
-        expcard = ExpCard(card)
-        scanner = ScannerModel(expcard=expcard)
-        scanner.run()
+        # gpt-oss-120b occasionally emits an unparseable structured-output
+        # response (see script docstring); one retry from scratch is enough
+        # in practice, and a failing cell is skipped rather than aborting
+        # the whole run -- ponytail: no backoff/queue here, just try twice.
+        try:
+            expcard = ExpCard(card)
+            scanner = ScannerModel(expcard=expcard)
+            scanner.run()
+        except Exception as exc:
+            print(f"  FAILED once ({exc}); retrying {run_label}...")
+            if session_dir.exists():
+                shutil.rmtree(session_dir)
+            try:
+                expcard = ExpCard(card)
+                scanner = ScannerModel(expcard=expcard)
+                scanner.run()
+            except Exception as exc2:
+                print(f"  SKIPPING {run_label} after 2 failures: {exc2}")
+                continue
 
         df = to_csv(scanner, path=csv_path)
         df = df.with_columns([

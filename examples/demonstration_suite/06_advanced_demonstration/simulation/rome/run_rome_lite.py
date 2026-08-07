@@ -199,7 +199,9 @@ def get_mlp_key_and_value(nn_model, prompt: str, layer: int, position: int) -> t
     (the MLP's additive contribution to the residual stream), both at
     (layer, position), from a clean forward pass."""
     with nn_model.trace(prompt) as tracer:
-        k = nn_model.transformer.h[layer].mlp.c_proj.input[0][0][:, position, :].save()
+        # nnsight's `.input` on a single-positional-arg module (Conv1D.forward(x))
+        # returns the tensor directly, not a nested (args, kwargs) tuple.
+        k = nn_model.transformer.h[layer].mlp.c_proj.input[:, position, :].save()
         v = nn_model.transformer.h[layer].mlp.c_proj.output[:, position, :].save()
     return k[0].detach().clone(), v[0].detach().clone()
 

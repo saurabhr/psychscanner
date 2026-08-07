@@ -30,15 +30,18 @@ In order, first match wins:
 2. Each directory in the `PSYCHSCANNER_TASK_LIBRARY_DIRS` environment
    variable, if set (`os.pathsep`-separated — `:` on macOS/Linux, `;` on
    Windows).
-3. `./demonstrations` (relative to the current working directory) —
-   shared/contributed task cards (see below).
+3. `./demonstrations` (relative to the current working directory) — a
+   generic default for a project-local "shared task cards" folder. This repo
+   doesn't populate one (see below — contributed cards go straight into
+   `examples/tasks/`), but the check is harmless if the directory doesn't
+   exist; it's there for your own project's use.
 4. `./tasks` (relative to the current working directory) — the bundled
    tutorial task cards in [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks).
 
 Because 3 and 4 are resolved relative to the current working directory, this
 works the same way the tutorials themselves already expect task files to be
 found — run from inside `examples/` (as `jupyter lab examples/` does) and
-both directories resolve correctly with no configuration.
+`./tasks` resolves to `examples/tasks/` with no configuration.
 
 ## Fetching from your own directory
 
@@ -59,10 +62,10 @@ session will search it automatically.
 
 ## Contributing a task card
 
-The [`examples/demonstrations/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstrations)
-directory exists specifically for sharing task cards with anyone else using
-this repo. Getting one in is the standard GitHub fork-and-PR flow — nothing
-psychscanner-specific:
+[`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
+holds both the bundled tutorial task cards and anything contributed by
+others — there's no separate "shared cards" folder to keep in sync. Getting
+one in is the standard GitHub fork-and-PR flow — nothing psychscanner-specific:
 
 1. **Fork** [saurabhr/psychscanner](https://github.com/saurabhr/psychscanner)
    on GitHub, then clone your fork and branch:
@@ -77,13 +80,13 @@ psychscanner-specific:
    and [Survey Tasks](survey_tasks.md) guides for the structure, or copy one
    of the files in [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
    as a starting point), and **save it at the exact path**
-   `examples/demonstrations/<your_task_name>.json` — that path is what makes
+   `examples/tasks/<your_task_name>.json` — that path is what makes
    it discoverable; there's no separate registration step.
 
 3. **Commit, push, and open the PR:**
 
    ```bash
-   git add examples/demonstrations/<your_task_name>.json
+   git add examples/tasks/<your_task_name>.json
    git commit -m "Add <your_task_name> task card"
    git push -u origin add-<your_task_name>-task
    gh pr create --title "Add <your_task_name> task card" --fill
@@ -115,4 +118,3 @@ does_not_exist.json in one of the directories above.
 
 - [Cognitive Tasks](cognitive_tasks.md) / [Survey Tasks](survey_tasks.md) — writing a task card
 - [`examples/tasks/README.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/tasks/README.md)
-- [`examples/demonstrations/README.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstrations/README.md)

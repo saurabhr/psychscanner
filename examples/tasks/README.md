@@ -1,8 +1,7 @@
 # Example Task Definitions
 
 Sample task JSON files for PsychScanner. Fetch any of them by name with
-`psychscanner.task_library("name")` — see [`../demonstrations/`](../demonstrations/)
-if you want to share a task card of your own instead of adding it here.
+`psychscanner.task_library("name")`.
 
 ## Files
 
@@ -64,3 +63,11 @@ results = scanner.run()
 4. Test with mock model first
 
 See [Task Guide](../../docs/guides/survey_tasks.md) for details.
+
+## Sharing a task card
+
+Drop `<your_task_name>.json` directly into this directory (see [Structure](#structure)
+above for the JSON shape) — `task_library("your_task_name")` and
+`list_task_library()` pick it up immediately, no registration step. See the
+[Task Library guide](../../docs/guides/task_library.md) for the fork-and-PR
+workflow to contribute it back.

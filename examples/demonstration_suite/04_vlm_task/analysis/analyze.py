@@ -1,6 +1,6 @@
 """Score the 4 VLM-task condition CSVs and summarize accuracy by memory x feedback.
 
-Reads demonstrations/04_vlm_task/data/{singleturn,summary}_{reward,accuracy}.csv
+Reads examples/demonstration_suite/04_vlm_task/data/{singleturn,summary}_{reward,accuracy}.csv
 (written by simulation/run_vlm_task.py), scores each trial's raw response
 against its ground-truth color/shape (same loose word-match used by the
 feedback handlers), and writes:
@@ -10,7 +10,7 @@ feedback handlers), and writes:
 
 Run with:
     source .venv/bin/activate
-    python demonstrations/04_vlm_task/analysis/analyze.py
+    python examples/demonstration_suite/04_vlm_task/analysis/analyze.py
 """
 from __future__ import annotations
 
