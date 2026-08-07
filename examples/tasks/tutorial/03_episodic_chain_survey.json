@@ -1,0 +1,25 @@
+{
+    "tasktype": "survey",
+    "taskname": "tutorial_episodic_chain_survey",
+    "instructions": {
+        "definition": [
+            "You will rate your agreement with the following statements.",
+            "Use a scale from 1 (strongly disagree) to 5 (strongly agree).",
+            "This is one continuous conversation - stay consistent with ratings you already gave."
+        ]
+    },
+    "contexts": [
+        "Openness to Experience",
+        "Conscientiousness"
+    ],
+    "contexts_id": ["O", "C"],
+    "context_present": true,
+    "chain_type": "task",
+    "items": {
+        "O_1": [{"trcode": "O_1", "stimulus": "I enjoy trying new things and exploring new ideas."}],
+        "O_2": [{"trcode": "O_2", "stimulus": "I am comfortable with ambiguity and uncertainty."}],
+        "C_1": [{"trcode": "C_1", "stimulus": "I am organized and pay attention to details."}],
+        "C_2": [{"trcode": "C_2", "stimulus": "Given your earlier answers, do you follow through on commitments?"}]
+    },
+    "parser": "DefaultLiteralAgree"
+}

@@ -66,6 +66,7 @@ class ScannerModel:
         self.current_scanner_data = None
 
         self.feedback = expcard.card_in.feedback
+        self.next_trial = expcard.card_in.next_trial
 
     def tunnel_systemtrials(self, tunnel: Any | None = None) -> int | None:
         """Process tunnel data and determine the resume index.
@@ -204,6 +205,8 @@ class ScannerModel:
         progress_bar: bool = False,
         feedback: Any | None = None,
         feedback_fn: Callable | None = None,
+        next_trial: Any | None = None,
+        next_trial_fn: Callable | None = None,
         save_str: str | None = None,
         tunnel: Any | None = None,
         custom_agent: Any | None = None,
@@ -227,6 +230,13 @@ class ScannerModel:
         if feedback_fn is None:
             if feedback:
                 feedback_fn = self.expcard.card_in.feedback_fn
+
+        if next_trial is None:
+            next_trial = self.next_trial
+
+        if next_trial_fn is None:
+            if next_trial:
+                next_trial_fn = self.expcard.card_in.next_trial_fn
 
         # self.tunnel_data
         if not progress_bar:  # if false then overwritten by tqdm_progress_flag (see __init__ above) based on expcard.
@@ -266,6 +276,8 @@ class ScannerModel:
                 tasktrials=scanning_task_data,
                 feedback=feedback,
                 feedback_fn=feedback_fn,
+                next_trial=next_trial,
+                next_trial_fn=next_trial_fn,
             )
             scan_i_data = scan_sys_i.execute(disable_tqdm=progress_bar)
             scan_i_data = [

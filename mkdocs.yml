@@ -100,6 +100,7 @@ nav:
     - Basic Survey: examples/basic_survey.md
     - Reality Monitoring: examples/reality_monitoring.md
     - Feedback Loop: examples/feedback_loop.md
+    - Conditional Next Trial: examples/conditional_next_trial.md
     - Multi-Persona: examples/multi_persona.md
   - API Reference:
     - Overview: api/index.md

@@ -75,6 +75,8 @@ card = ExpCardInit(model="gpt-4o-mini", family="openai", nsim=20)
 |-------|------|---------|-------------|
 | `feedback` | `bool` | `False` | Enable trial-level feedback injection |
 | `feedback_fn` | `type[FeedbackBase] \| None` | `None` | **Class** (not instance) of a `FeedbackBase` subclass — required when `feedback=True` |
+| `next_trial` | `bool` | `False` | Enable conditional intermediate trials |
+| `next_trial_fn` | `type[NextTrialBase] \| None` | `None` | **Class** (not instance) of a `NextTrialBase` subclass — required when `next_trial=True`. See [Conditional Next Trial](../examples/conditional_next_trial.md) |
 
 ### Output & Checkpointing
 
@@ -113,6 +115,7 @@ ExpCard(cls: ExpCardInit | None = None, **kwargs)
 
 **Raises `ValueError`** if:
 - `feedback=True` but `feedback_fn` is not set.
+- `next_trial=True` but `next_trial_fn` is not set.
 - The resolved parser name is not in the registry (when `parser="1"` or a string name).
 
 ### Key attributes after construction

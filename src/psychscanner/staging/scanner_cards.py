@@ -197,6 +197,35 @@ class ExpCardInit(BaseModel):
         ),
     )
 
+    next_trial: bool = Field(
+        default=False,
+        description=(
+            "Enable conditional intermediate trials. Set True (or '1' for backward "
+            "compatibility) to activate. When enabled, next_trial_fn must also be provided. "
+            "After each trial, the handler may insert a new trial before the task card's "
+            "next one, e.g. for adaptive/staircase designs."
+        ),
+    )
+
+    @field_validator("next_trial", mode="before")
+    @classmethod
+    def _coerce_next_trial(cls, v):
+        if v in ("0", False, 0, None, ""):
+            return False
+        if v in ("1", True, 1):
+            return True
+        raise ValueError(f"next_trial must be a bool or '0'/'1', got {v!r}")
+
+    next_trial_fn: Callable | None = Field(
+        default=None,
+        description=(
+            "A NextTrialBase subclass (the class itself, not an instance). "
+            "Required when next_trial=True. psychscanner instantiates it once per "
+            "participant simulation so cross-trial state can live safely in self. "
+            "Must implement next_trial(trial, response) -> dict | None."
+        ),
+    )
+
 
 class ExpCard:
     """Dynamic class for creating an experiment card.
@@ -279,6 +308,12 @@ class ExpCard:
                 "Provide a FeedbackBase subclass (not an instance) as feedback_fn."
             )
 
+        if self.card_in.next_trial and self.card_in.next_trial_fn is None:
+            raise ValueError(
+                "next_trial=True requires next_trial_fn to be set. "
+                "Provide a NextTrialBase subclass (not an instance) as next_trial_fn."
+            )
+
         click.echo("----<PROJECT AND DATA ROOT DIRECTORY>----")
         click.echo(f"\tProject root dir: {self.card_in.proj_dir}")
         click.echo(f"\tSimulation data root dir: {self.data_root_dir}")
@@ -290,7 +325,7 @@ _SCALAR_FIELDS: tuple[str, ...] = (
     "model", "family", "parameters", "memory", "memory_k", "summary_k",
     "task_context", "tunnel_status", "tunnel_k", "projectname", "tags",
     "parser_raw", "parser_config", "cogtype", "nsim", "chain_type",
-    "feedback", "enabletqdm",
+    "feedback", "next_trial", "enabletqdm",
 )
 
 
@@ -310,7 +345,7 @@ def save_expcard(
     - Custom parser classes and callable dispatch functions are stored as
       ``module + qualname`` so they can be re-imported if the module is
       installed on the recipient's machine.
-    - ``feedback_fn`` is stored the same way.
+    - ``feedback_fn`` and ``next_trial_fn`` are stored the same way.
 
     Machine-specific fields (``proj_dir``, ``login_env``) and runtime-only
     fields (``session_tunnel``, ``persona_data``, ``task_data``,
@@ -402,6 +437,16 @@ def save_expcard(
             "qualname": getattr(fb_fn, "__qualname__", None),
         }
 
+    # ── next_trial_fn ─────────────────────────────────────────────────────────
+    nt_fn = card_in.next_trial_fn
+    if nt_fn is None:
+        d["next_trial_fn"] = None
+    else:
+        d["next_trial_fn"] = {
+            "module": getattr(nt_fn, "__module__", None),
+            "qualname": getattr(nt_fn, "__qualname__", None),
+        }
+
     # ── tools ─────────────────────────────────────────────────────────────────
     # @tool-decorated callables are BaseTool instances wrapping the original
     # function in `.func`; plain functions passed directly have __module__/
@@ -430,6 +475,7 @@ def load_expcard(
     proj_dir: str | Path | None = None,
     parser: type[BaseModel] | Callable | None = _UNSET,
     feedback_fn: Callable | None = _UNSET,
+    next_trial_fn: Callable | None = _UNSET,
     tools: list[Any] | None = _UNSET,
 ) -> ExpCardInit:
     """Reconstruct an ``ExpCardInit`` from a dict or JSON file created by
@@ -449,6 +495,9 @@ def load_expcard(
     feedback_fn:
         Override the saved feedback handler class.  Required when the original
         handler is not importable on the current machine.
+    next_trial_fn:
+        Override the saved conditional-next-trial handler class.  Required
+        when the original handler is not importable on the current machine.
     tools:
         Override the saved tools list.  Required when a tool is a lambda,
         closure, or a stateful ``BaseTool`` instance that is not importable
@@ -543,6 +592,25 @@ def load_expcard(
                     f"Cannot import feedback handler "
                     f"'{saved_fn['module']}.{saved_fn['qualname']}': {exc}.\n"
                     f"Pass it explicitly: load_expcard(..., feedback_fn=MyHandler)"
+                ) from exc
+
+    # ── next_trial_fn ────────────────────────────────────────────────────────
+    if next_trial_fn is not _UNSET:
+        kwargs["next_trial_fn"] = next_trial_fn
+    else:
+        saved_nt_fn = d.get("next_trial_fn")
+        if saved_nt_fn is not None:
+            try:
+                mod = importlib.import_module(saved_nt_fn["module"])
+                obj = mod
+                for part in saved_nt_fn["qualname"].split("."):
+                    obj = getattr(obj, part)
+                kwargs["next_trial_fn"] = obj
+            except (ImportError, AttributeError) as exc:
+                raise ImportError(
+                    f"Cannot import next-trial handler "
+                    f"'{saved_nt_fn['module']}.{saved_nt_fn['qualname']}': {exc}.\n"
+                    f"Pass it explicitly: load_expcard(..., next_trial_fn=MyHandler)"
                 ) from exc
 
     # ── tools ─────────────────────────────────────────────────────────────────
