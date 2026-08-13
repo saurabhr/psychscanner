@@ -69,6 +69,16 @@ nav:
     - Installation: installation.md
     - Quick Start: usage.md
     - Configuration: configuration.md
+  - User Guide:
+    - Overview: guides/index.md
+    - PsychScanner Workflow: guides/psychscanner_workflow.md
+    - Memory Types: guides/memory_types.md
+    - Cognitive Tasks: guides/cognitive_tasks.md
+    - Survey Tasks: guides/survey_tasks.md
+    - Custom Parsers: guides/custom_parsers.md
+    - Session Recovery: guides/session_recovery.md
+    - Task Library: guides/task_library.md
+    - Generating Task Cards with SweetPea: guides/sweetpea_task_cards.md
   - Tutorials:
     - Overview: tutorials/index.md
     - Quickstart: tutorials/00_quickstart.ipynb
@@ -89,16 +99,6 @@ nav:
     - A Modular Planner/Executor/Validator Agent: tutorials/15_planner_executor_agent.ipynb
     - Reflection Agents: tutorials/16_reflection_agents.ipynb
     - "Cognitive RL: Bandits and the Prisoner's Dilemma": tutorials/17_cognitive_rl_bandits_and_pd.ipynb
-  - User Guide:
-    - Overview: guides/index.md
-    - PsychScanner Workflow: guides/psychscanner_workflow.md
-    - Memory Types: guides/memory_types.md
-    - Cognitive Tasks: guides/cognitive_tasks.md
-    - Survey Tasks: guides/survey_tasks.md
-    - Custom Parsers: guides/custom_parsers.md
-    - Session Recovery: guides/session_recovery.md
-    - Task Library: guides/task_library.md
-    - Generating Task Cards with SweetPea: guides/sweetpea_task_cards.md
   - Examples:
     - Overview: examples/index.md
     - Basic Survey: examples/basic_survey.md
