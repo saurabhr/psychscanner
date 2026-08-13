@@ -138,6 +138,7 @@ Add it to `crossing` (and an `AtMostKInARow` constraint) the same way as
   runnable Colab notebooks, basic (first sequence, balancing factors,
   balancing transitions) through advanced (Stroop, task switching).
 
+{% raw %}
 ```bibtex
 @article{musslick2021sweetpea,
   title   = {{SweetPea}: A standard language for factorial experimental design},
@@ -150,6 +151,7 @@ Add it to `crossing` (and an `AtMostKInARow` constraint) the same way as
   doi     = {10.3758/s13428-021-01598-2},
 }
 ```
+{% endraw %}
 
 ## See also
 
