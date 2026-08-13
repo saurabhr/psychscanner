@@ -1,0 +1,11 @@
+Introspection reports parsed: 200 (agent x attribute x rep rows)
+Averaged agent x attribute points: 50
+
+Self-report accuracy (reported vs target attribute weight):
+  trained (worked-example preamble): r = 0.031 (p = 0.885, n = 25)
+  control: r = 0.223 (p = 0.283, n = 25)
+  Paper's own numbers for reference (GPT-4o, Fig. 2/3): r=.54 before / .74 after introspection-training fine-tuning (Exp 1 -> 2); r=.46 -> .71 for generalization to native preferences (Exp 3). This demo's 'trained' condition is a same-context worked-example analog, not fine-tuning -- see readme.md.
+
+Decision trials: 60 total, 0 with a parseable choice + confidence
+  No valid decision trials -- skipping accuracy/SDT analysis.
+

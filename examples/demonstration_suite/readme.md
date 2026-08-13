@@ -10,3 +10,4 @@ Suggested reading order, roughly increasing in complexity (not a technical depen
 4. [vlm_task](04_vlm_task/readme.md) — the same trial/summary/feedback machinery extended to vision-language models.
 5. [extracting_internals](05_extracting_internals/readme.md) — mechanistic interpretability: extracting and steering internal activations (Persona Vectors).
 6. [advanced_demonstration](06_advanced_demonstration/readme.md) — capstone: reproduces three classic interpretability studies (Othello-GPT, ROME, CCS) on top of everything above.
+7. [introspective_selfreport](07_introspective_selfreport/readme.md) — adapts Plunkett et al. (2025)'s LLM self-interpretability paradigm (instilled attribute-weight preferences + introspective self-report), plus an SDT/metacognition extension via `metasignal` and a `psychscanner-primal` task-card integration.

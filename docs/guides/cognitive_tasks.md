@@ -357,7 +357,16 @@ card = ExpCardInit(task_file=task, parser="1", ...)
 
 ## See also
 
+- [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
+  (`ExpCard`) that wraps a task card with model, memory, and persona config
 - [Survey Tasks](survey_tasks.md) — simple questionnaire tasks
+- [Cognitive Tasks with SweetPea](sweetpea_task_cards.md#3-convert-the-sampled-sequence-into-items) —
+  generate a counterbalanced `items` sequence instead of hand-writing one,
+  then export it into a task card exactly like the ones on this page
+- [Task Library](task_library.md) — fetch a saved task card by name once
+  it's written to disk, instead of hardcoding a path
+- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+  crossing a task card with multiple simulated personas
 - [Memory Types](memory_types.md) — Convo vs. SingleTurn
 - [Parsers API](../api/parsers.md) — RM parser classes
 - [Feedback API](../examples/feedback_loop.md) — feedback examples
