@@ -1,6 +1,6 @@
 {
   "tasktype": "sc",
-  "taskname": "zs_rm_2op_tc",
+  "taskname": "rm_trialchain_demo",
   "instructions": {
     "definition": [
       "You are a helpful participant performing a task with four different components for succesfull response.",

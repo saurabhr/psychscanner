@@ -1,6 +1,6 @@
 {
   "tasktype": "episodic_system",
-  "taskname": "rm_2op_convo_nofb",
+  "taskname": "rm_episodic_demo",
   "instructions": {
     "definition": ""
   },

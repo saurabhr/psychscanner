@@ -1,6 +1,6 @@
 {
   "tasktype": "sc",
-  "taskname": "zs_rm_2op",
+  "taskname": "rm_singleturn_demo",
   "instructions": {
     "definition": [
       "You are a helpful participant performing a task with four different components for succesfull response.",
