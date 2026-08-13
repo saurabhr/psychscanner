@@ -1,6 +1,11 @@
 # PsychScanner Workflow
 
-A slide-ready summary of the PsychScanner execution path.
+How a task card and a persona become a running session. The `ExpCard` is
+the **experiment card** — the full specification of one experimental
+session (model, task, memory architecture, persona conditioning), the same
+role a pre-registration or session protocol plays in a human study. This
+page traces what happens to it end to end, from your inputs to the trial
+records written to disk.
 
 ## Slide 1 — High-level flow
 
