@@ -1,0 +1,62 @@
+#!/bin/bash
+#SBATCH --job-name=job_rm_gemma
+##SBATCH --mail-type=ALL
+##SBATCH --mail-user=your_gatorlink@ufl.edu
+#SBATCH --ntasks=1
+#SBATCH --account=<your_pi_group>
+#SBATCH --mem=100gb
+#SBATCH --partition=hpg-b200
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=50:00:00
+#SBATCH --output=out_rm_gemma_%j.log
+#SBATCH --error=err_rm_gemma_%j.log
+
+pwd; hostname; date
+
+module purge
+module load ollama/0.9.0
+
+# Activate environment
+export PATH=/blue/<your_pi_group>/<your_gatorlink>/ollama_exps/ollamaenv/bin:$PATH
+
+module load conda
+# ADD LOCAL ENIRONMENT
+cd /blue/<your_pi_group>/<your_gatorlink>/modelimg
+echo "changeing present working dir to:"
+pwd
+echo "activate project uv venv, python version:"
+source .venv/bin/activate
+python -V
+
+# Start Ollama server in the background
+env OLLAMA_MODELS=/blue/<your_pi_group>/<your_gatorlink>/ollama_exps/models/ ollama serve >> ollama_server_rm_gemma.log 2>&1 &
+sleep 10  # Allow server to initialize
+
+taskname_file=./models/runs_ollama/op3tcr.txt
+modelname_file=./models/runs_ollama/llmmodels.txt.txt
+
+
+while IFS= read -r modelname
+do
+	while IFS= read -r taskname
+	do
+        echo "Simulation task and model"
+        echo $modelname
+        echo $taskname
+        echo "========================="
+        
+        # Pull model if not present
+        ollama pull $modelname || echo "Model already exists"
+
+        # Run Python script with given modelname and taskname
+        #uv run run_simulation.py --taskname $taskname --modelname $modelname --familyname ollama >> out_$taskname_$modelname_ollama.txt 2>&1
+        # bash scrpit testing
+        python ./models/runs_ollama/run_rm_task.py --taskjson $taskname --modelname $modelname --familyname ollama >> ./models/runs_ollama/runouts/out_rmtask_"$taskname"_"$modelname".txt 2>&1
+        sleep 200
+        ollama rm $modelname
+        done < "$taskname_file"
+	sleep 50
+    ollama rm $modelname
+done < "$modelname_file"
+sleep 200
