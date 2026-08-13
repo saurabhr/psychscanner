@@ -130,3 +130,33 @@ def test_list_task_library_warns_on_shadowed_name(cwd_with_task_dirs):
         names = list_task_library()
 
     assert names == ["builtin_task", "shared_task"]
+
+
+def test_task_library_finds_tcard_psyscan_file(cwd_with_task_dirs):
+    """task_library() must also discover the newer .tcard.psyscan
+    convention (save_task_card()), not just plain .json."""
+    from psychscanner.staging.scanner_cards import TASK_CARD_EXT
+
+    (cwd_with_task_dirs / "tasks" / f"new_style{TASK_CARD_EXT}").write_text(
+        json.dumps({"taskname": "new_style"})
+    )
+    assert task_library("new_style") == {"taskname": "new_style"}
+
+
+def test_list_task_library_includes_tcard_psyscan_files(cwd_with_task_dirs):
+    from psychscanner.staging.scanner_cards import TASK_CARD_EXT
+
+    (cwd_with_task_dirs / "tasks" / f"new_style{TASK_CARD_EXT}").write_text(
+        json.dumps({"taskname": "new_style"})
+    )
+    assert list_task_library() == ["builtin_task", "new_style", "shared_task"]
+
+
+def test_task_library_json_wins_over_tcard_psyscan_when_both_present(cwd_with_task_dirs):
+    """Same name, same directory, both extensions: .json wins (checked first)."""
+    from psychscanner.staging.scanner_cards import TASK_CARD_EXT
+
+    (cwd_with_task_dirs / "tasks" / f"builtin_task{TASK_CARD_EXT}").write_text(
+        json.dumps({"taskname": "from_tcard_psyscan"})
+    )
+    assert task_library("builtin_task") == {"taskname": "builtin_task"}

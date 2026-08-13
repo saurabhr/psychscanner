@@ -33,9 +33,17 @@ import warnings
 from pathlib import Path
 from typing import Union
 
+from .staging.scanner_cards import TASK_CARD_EXT
+
 __all__ = ["list_task_library", "task_library"]
 
 DirsArg = Union[str, "os.PathLike[str]", list, None]
+
+# Checked in this order: plain .json first (the original, still-supported
+# convention), then .tcard.psyscan (the newer save_task_card() convention).
+# A name matching both in the same directory is unusual enough not to
+# special-case -- .json wins, same as any other shadowed-name resolution.
+_TASK_FILE_EXTS: tuple[str, ...] = (".json", TASK_CARD_EXT)
 
 
 def _search_dirs(dirs: DirsArg = None) -> list[Path]:
@@ -103,7 +111,12 @@ def task_library(taskname: str, format: str = "json", dirs: DirsArg = None) -> d
         raise ValueError(f"format must be 'json' or 'path', got {format!r}")
 
     search_dirs = _search_dirs(dirs)
-    matches = [d / f"{taskname}.json" for d in search_dirs if (d / f"{taskname}.json").is_file()]
+    matches = [
+        d / f"{taskname}{ext}"
+        for d in search_dirs
+        for ext in _TASK_FILE_EXTS
+        if (d / f"{taskname}{ext}").is_file()
+    ]
 
     if matches:
         _warn_if_shadowed(taskname, matches)
@@ -120,8 +133,8 @@ def task_library(taskname: str, format: str = "json", dirs: DirsArg = None) -> d
     raise FileNotFoundError(
         f"No task named {taskname!r} found. Searched: {searched}. "
         "Pass dirs=<your directory> to search somewhere else, set "
-        f"PSYCHSCANNER_TASK_LIBRARY_DIRS, or place {taskname}.json in one "
-        "of the directories above."
+        f"PSYCHSCANNER_TASK_LIBRARY_DIRS, or place {taskname}.json / "
+        f"{taskname}{TASK_CARD_EXT} in one of the directories above."
     )
 
 
@@ -143,8 +156,9 @@ def list_task_library(dirs: DirsArg = None) -> list[str]:
     sources: dict[str, list[Path]] = {}
     for d in _search_dirs(dirs):
         if d.is_dir():
-            for p in d.glob("*.json"):
-                sources.setdefault(p.stem, []).append(p)
+            for ext in _TASK_FILE_EXTS:
+                for p in d.glob(f"*{ext}"):
+                    sources.setdefault(p.name.removesuffix(ext), []).append(p)
 
     for taskname, matches in sources.items():
         if len(matches) > 1:
