@@ -39,6 +39,15 @@ def _resolve_module(root: Any, dotted_path: str) -> Any:
     return obj
 
 
+def _cache_to_tensor_dict(cache: Any) -> Dict[str, Any]:
+    """Flatten an nnsight ``tracer.cache()`` result to detached CPU tensors."""
+    result: Dict[str, Any] = {}
+    for path, entry in cache.items():
+        value = entry.output if hasattr(entry, "output") else entry
+        result[path] = value.detach().cpu() if hasattr(value, "detach") else value
+    return result
+
+
 class ChatNNsightModel(BaseChatModel):
     """Chat model that generates via a local (or NDIF-remote) HF model through nnsight.
 
