@@ -69,6 +69,12 @@ See [Task Guide](../../docs/guides/survey_tasks.md) for details.
 
 Drop `<your_task_name>.json` directly into this directory (see [Structure](#structure)
 above for the JSON shape) — `task_library("your_task_name")` and
-`list_task_library()` pick it up immediately, no registration step. See the
-[Task Library guide](../../docs/guides/task_library.md) for the fork-and-PR
-workflow to contribute it back.
+`list_task_library()` pick it up immediately, no registration step, for local
+use in your own checkout.
+
+To contribute a card back as an official, vetted one, submit it to
+[`psyscan-library`](https://github.com/saurabhr/psyscan-library) instead of
+opening a PR against this folder — the public, versioned index of task and
+experiment cards for psychscanner. Every submission there is validated
+structurally, checked for duplicates, and actually run end-to-end against the
+mock LLM before being merged. See that repo's `CONTRIBUTING.md` for the steps.
