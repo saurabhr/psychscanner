@@ -1,0 +1,160 @@
+{
+  "tasktype": "sc",
+  "taskname": "nback_sweetpea_n4",
+  "instructions": {
+    "definition": [
+      "You are taking part in an n-back working-memory task. Letters are shown one at a time, in one continuous conversation, so you can rely on your memory of prior letters (no letter list is repeated to you). For each letter, judge whether it is identical to the letter shown exactly 4 letter(s) earlier. Reply with only 'match' or 'no-match'."
+    ]
+  },
+  "contexts": [
+    "nback"
+  ],
+  "contexts_id": [
+    "nback"
+  ],
+  "context_present": false,
+  "chain_type": "trial",
+  "parser": null,
+  "items": {
+    "nback_sweetpea_n4_01": [
+      {
+        "trcode": "nback_sweetpea_n4_01",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_02": [
+      {
+        "trcode": "nback_sweetpea_n4_02",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_03": [
+      {
+        "trcode": "nback_sweetpea_n4_03",
+        "stimulus": "Current letter: B",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n4_04": [
+      {
+        "trcode": "nback_sweetpea_n4_04",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_05": [
+      {
+        "trcode": "nback_sweetpea_n4_05",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_06": [
+      {
+        "trcode": "nback_sweetpea_n4_06",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_07": [
+      {
+        "trcode": "nback_sweetpea_n4_07",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_08": [
+      {
+        "trcode": "nback_sweetpea_n4_08",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_09": [
+      {
+        "trcode": "nback_sweetpea_n4_09",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_10": [
+      {
+        "trcode": "nback_sweetpea_n4_10",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_11": [
+      {
+        "trcode": "nback_sweetpea_n4_11",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_12": [
+      {
+        "trcode": "nback_sweetpea_n4_12",
+        "stimulus": "Current letter: C",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n4_13": [
+      {
+        "trcode": "nback_sweetpea_n4_13",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_14": [
+      {
+        "trcode": "nback_sweetpea_n4_14",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_15": [
+      {
+        "trcode": "nback_sweetpea_n4_15",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_16": [
+      {
+        "trcode": "nback_sweetpea_n4_16",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_17": [
+      {
+        "trcode": "nback_sweetpea_n4_17",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_18": [
+      {
+        "trcode": "nback_sweetpea_n4_18",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n4_19": [
+      {
+        "trcode": "nback_sweetpea_n4_19",
+        "stimulus": "Current letter: B",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n4_20": [
+      {
+        "trcode": "nback_sweetpea_n4_20",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ]
+  }
+}

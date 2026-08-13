@@ -235,6 +235,11 @@ examples/_*/
 examples/archive/_*/
 *.psyscan
 *-tunnel.json
+# ...except .tcard.psyscan / .xcard.psyscan (save_task_card()/
+# save_experiment_card()) -- these are source, not runtime session output,
+# despite the shared suffix. Un-ignore them explicitly.
+!*.tcard.psyscan
+!*.xcard.psyscan
 
 # in-progress journal/workshop submissions -- not for the public repo
 # (NeurIPS NeuroAI workshop is double-blind; NC manuscript is pre-submission)

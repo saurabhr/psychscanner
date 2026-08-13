@@ -1,0 +1,174 @@
+{
+  "tasktype": "sc",
+  "taskname": "nback_sweetpea_n2",
+  "instructions": {
+    "definition": [
+      "You are taking part in an n-back working-memory task. Letters are shown one at a time, in one continuous conversation, so you can rely on your memory of prior letters (no letter list is repeated to you). For each letter, judge whether it is identical to the letter shown exactly 2 letter(s) earlier. Reply with only 'match' or 'no-match'."
+    ]
+  },
+  "contexts": [
+    "nback"
+  ],
+  "contexts_id": [
+    "nback"
+  ],
+  "context_present": false,
+  "chain_type": "trial",
+  "parser": null,
+  "items": {
+    "nback_sweetpea_n2_01": [
+      {
+        "trcode": "nback_sweetpea_n2_01",
+        "stimulus": "Current letter: D",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n2_02": [
+      {
+        "trcode": "nback_sweetpea_n2_02",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_03": [
+      {
+        "trcode": "nback_sweetpea_n2_03",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_04": [
+      {
+        "trcode": "nback_sweetpea_n2_04",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_05": [
+      {
+        "trcode": "nback_sweetpea_n2_05",
+        "stimulus": "Current letter: A",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n2_06": [
+      {
+        "trcode": "nback_sweetpea_n2_06",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_07": [
+      {
+        "trcode": "nback_sweetpea_n2_07",
+        "stimulus": "Current letter: A",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n2_08": [
+      {
+        "trcode": "nback_sweetpea_n2_08",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_09": [
+      {
+        "trcode": "nback_sweetpea_n2_09",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_10": [
+      {
+        "trcode": "nback_sweetpea_n2_10",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_11": [
+      {
+        "trcode": "nback_sweetpea_n2_11",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_12": [
+      {
+        "trcode": "nback_sweetpea_n2_12",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_13": [
+      {
+        "trcode": "nback_sweetpea_n2_13",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_14": [
+      {
+        "trcode": "nback_sweetpea_n2_14",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_15": [
+      {
+        "trcode": "nback_sweetpea_n2_15",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_16": [
+      {
+        "trcode": "nback_sweetpea_n2_16",
+        "stimulus": "Current letter: C",
+        "corrAns": "match"
+      }
+    ],
+    "nback_sweetpea_n2_17": [
+      {
+        "trcode": "nback_sweetpea_n2_17",
+        "stimulus": "Current letter: C",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_18": [
+      {
+        "trcode": "nback_sweetpea_n2_18",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_19": [
+      {
+        "trcode": "nback_sweetpea_n2_19",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_20": [
+      {
+        "trcode": "nback_sweetpea_n2_20",
+        "stimulus": "Current letter: B",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_21": [
+      {
+        "trcode": "nback_sweetpea_n2_21",
+        "stimulus": "Current letter: A",
+        "corrAns": "no-match"
+      }
+    ],
+    "nback_sweetpea_n2_22": [
+      {
+        "trcode": "nback_sweetpea_n2_22",
+        "stimulus": "Current letter: D",
+        "corrAns": "no-match"
+      }
+    ]
+  }
+}
