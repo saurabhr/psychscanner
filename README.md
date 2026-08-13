@@ -14,6 +14,16 @@ Tested on Python 3.11
 
 > Looking for the slim, [Prime Intellect Environments Hub](https://app.primeintellect.ai/dashboard/environments)-optimized distribution? See [psychscanner-primal docs](https://saurabhr.github.io/psychscanner-primal/).
 
+<p>
+  <a href="https://github.com/saurabhr/psyscan-library"><img src="docs/logo_library.png" alt="psyscan-library" height="28"></a>
+  &nbsp;Vetted task/experiment cards for this package live in <a href="https://github.com/saurabhr/psyscan-library"><code>psyscan-library</code></a>.
+</p>
+<p>
+  Published Docker images (<code>ghcr.io/saurabhr/psychscanner</code>):
+  <a href="https://github.com/saurabhr/psychscanner/pkgs/container/psychscanner"><img src="docs/images/docker/ps-general.png" alt="ps-general" height="22"></a>
+  <a href="https://github.com/saurabhr/psychscanner/pkgs/container/psychscanner"><img src="docs/images/docker/ps-neuroscanner.png" alt="ps-neuroscanner" height="22"></a>
+</p>
+
 > The package is under active development. [Contributions](CONTRIBUTING.md) are welcome. Find the documentation here:https://psychscanner.readthedocs.io/en/latest/
 >
 > 
