@@ -117,32 +117,25 @@ class ChatNNsightModel(BaseChatModel):
                 if name not in ("", ".") and not list(module._module.children())
             ]
 
-        # Some modules (e.g. a GPT-2 block) return a tuple like
-        # (hidden_states, present_kv, ...); nnsight 0.3.x's `.save()` only
-        # reliably materializes plain-tensor proxies, not tuple-valued ones
-        # (the tuple proxy comes back referencing freed trace-graph state).
-        # Save both the whole output and its first element, then below keep
-        # whichever one actually detaches — `[0]` for tuple-returning
-        # modules, the whole thing for plain-tensor-returning ones.
         with nn_model.trace(prompt, remote=self.remote) as tracer:
-            saved = {
-                path: (
-                    _resolve_module(nn_model, path).output.save(),
-                    _resolve_module(nn_model, path).output[0].save(),
-                )
-                for path in module_paths
-            }
+            saved = {path: _resolve_module(nn_model, path).output.save() for path in module_paths}
 
         import torch
 
+        # Some modules (e.g. a GPT-2 block) return a tuple like
+        # (hidden_states, present_kv, ...). `.save()` on a tuple-valued node
+        # gives back a proxy whose operators (`.detach()` etc.) silently
+        # rebuild dead graph references in nnsight 0.3.x instead of running
+        # against real data — the break only surfaces later, at pickle
+        # time. `.value` reads the already-materialized object directly, no
+        # operator delegation, so it doesn't hit that path. Tuple outputs
+        # keep just the first element (the hidden-state tensor).
         tensors = {}
-        for path, (whole, first) in saved.items():
-            for candidate in (whole, first):
-                try:
-                    tensors[path] = candidate.detach().cpu() if hasattr(candidate, "detach") else candidate
-                    break
-                except Exception:
-                    continue
+        for path, proxy in saved.items():
+            value = proxy.value if hasattr(proxy, "value") else proxy
+            if isinstance(value, tuple):
+                value = value[0]
+            tensors[path] = value.detach().cpu() if hasattr(value, "detach") else value
         out_dir = Path(self.activations_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / f"{uuid.uuid4().hex}.pt"
