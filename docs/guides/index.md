@@ -10,6 +10,7 @@ Comprehensive guides for using PsychScanner.
 - [Memory Types](memory_types.md) - Understanding memory management
 - [Session Recovery](session_recovery.md) - Checkpoint and resume experiments
 - [Task Library](task_library.md) - Fetching task cards by name, and sharing your own
+- [Generating Task Cards with SweetPea](sweetpea_task_cards.md) - Factorial counterbalancing for a task's `items` sequence
 
 ## Advanced Topics
 
