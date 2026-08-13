@@ -9,14 +9,18 @@ package. Both functions search plain directories on disk at call time, so any
 task card file placed in one of those directories becomes fetchable by its
 filename immediately, with no registration step and no code change.
 
+**The pattern every example in this repo actually uses** — pass `dirs=`
+explicitly, since it's the only search tier that doesn't depend on which
+directory your shell happened to be in when you called it:
+
 ```python
 from psychscanner import task_library, list_task_library
 
-list_task_library()
+list_task_library(dirs="examples/tasks")
 # ['bfi44', 'example_survey', 'pal50', 'rm_singleturn_demo', 'vviq16', ...]
 
-task = task_library("rm_singleturn_demo")           # -> dict (parsed JSON)
-path = task_library("rm_singleturn_demo", format="path")  # -> Path
+task = task_library("rm_singleturn_demo", dirs="examples/tasks")           # -> dict (parsed JSON)
+path = task_library("rm_singleturn_demo", format="path", dirs="examples/tasks")  # -> Path
 
 card = ExpCardInit(task_file=path, ...)
 ```
@@ -27,21 +31,29 @@ In order, first match wins:
 
 1. `dirs=` passed to the call — a single directory or a list of them. For a
    task card living anywhere on disk, including outside this repo entirely.
+   **This is the reliable option** — the two below depend on your current
+   working directory at call time, which varies by how you launched Python
+   (JupyterLab from the repo root vs. a notebook's own directory vs. an IDE's
+   Jupyter extension all set it differently).
 2. Each directory in the `PSYCHSCANNER_TASK_LIBRARY_DIRS` environment
    variable, if set (`os.pathsep`-separated — `:` on macOS/Linux, `;` on
-   Windows).
+   Windows). Set this once (e.g. in `.env`) if you don't want to pass `dirs=`
+   on every call.
 3. `./demonstrations` (relative to the current working directory) — a
    generic default for a project-local "shared task cards" folder. This repo
    doesn't populate one (see below — contributed cards go straight into
    `examples/tasks/`), but the check is harmless if the directory doesn't
    exist; it's there for your own project's use.
-4. `./tasks` (relative to the current working directory) — the bundled
-   tutorial task cards in [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks).
+4. `./tasks` (relative to the current working directory) — a project-local
+   "bundled task cards" convention. In this repo, that's
+   [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks) —
+   which only resolves via this tier if your cwd is `examples/` (e.g.
+   `jupyter lab examples/`). From anywhere else, pass `dirs="examples/tasks"`
+   as shown above.
 
-Because 3 and 4 are resolved relative to the current working directory, this
-works the same way the tutorials themselves already expect task files to be
-found — run from inside `examples/` (as `jupyter lab examples/` does) and
-`./tasks` resolves to `examples/tasks/` with no configuration.
+If the same task name turns up in more than one search directory, the first
+(by the order above) wins and a `UserWarning` names which directory was
+shadowed — so a silent collision doesn't go unnoticed.
 
 ## Fetching from your own directory
 
@@ -112,6 +124,15 @@ FileNotFoundError: No task named 'does_not_exist' found. Searched:
 .../examples/demonstrations, .../examples/tasks. Pass dirs=<your directory>
 to search somewhere else, set PSYCHSCANNER_TASK_LIBRARY_DIRS, or place
 does_not_exist.json in one of the directories above.
+```
+
+A name found in more than one search directory doesn't error — it warns:
+
+```pycon
+>>> task_library("my_task")  # exists in both dirs= and PSYCHSCANNER_TASK_LIBRARY_DIRS
+UserWarning: Task 'my_task' found in more than one search directory. Using
+/path/from/dirs/my_task.json — shadowed: /path/from/env/my_task.json.
+{'taskname': 'my_task', ...}
 ```
 
 ## See also

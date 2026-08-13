@@ -2,25 +2,34 @@
 
 Not a bundled registry — this searches plain directories on disk at call time,
 so any task card dropped into one of the search directories becomes available
-by its filename, with no code change. This lets users share/contribute task
-cards by filename alone: drop `<taskname>.json` into `demonstrations/` (or
-`tasks/`) and it's immediately fetchable as `task_library("<taskname>")`.
+by its filename, with no code change.
+
+Quick recipe (what every example in this repo actually uses)::
+
+    task_library("rm_singleturn_demo", dirs="examples/tasks")
 
 Search order (first match wins):
   1. `dirs`, if passed to the call — one directory or a list of them, checked
-     in the given order. For a task card living anywhere else on disk.
+     in the given order. For a task card living anywhere else on disk. This
+     is the reliable way to call it, since 3/4 below depend on your shell's
+     current directory at call time.
   2. Each directory in the `PSYCHSCANNER_TASK_LIBRARY_DIRS` environment
      variable, if set (`os.pathsep`-separated, e.g. `:` on macOS/Linux).
-  3. `./demonstrations` (relative to the current working directory) —
-     intended for shared/contributed task cards.
-  4. `./tasks` (relative to the current working directory) — where the
-     bundled tutorial task cards already live (see `examples/tasks/`).
+  3. `./demonstrations` (relative to the current working directory) — a
+     project-local "shared task cards" convention, if your own project uses
+     one.
+  4. `./tasks` (relative to the current working directory) — a project-local
+     "bundled task cards" convention.
+
+If the same task name is found in more than one search directory, the first
+one wins and a `UserWarning` names the directory that was shadowed.
 """
 
 from __future__ import annotations
 
 import json
 import os
+import warnings
 from pathlib import Path
 from typing import Union
 
@@ -43,6 +52,16 @@ def _search_dirs(dirs: DirsArg = None) -> list[Path]:
     cwd = Path.cwd()
     result.extend([cwd / "demonstrations", cwd / "tasks"])
     return result
+
+
+def _warn_if_shadowed(taskname: str, matches: list[Path]) -> None:
+    if len(matches) > 1:
+        warnings.warn(
+            f"Task {taskname!r} found in more than one search directory. "
+            f"Using {matches[0]} — shadowed: "
+            f"{', '.join(str(m) for m in matches[1:])}.",
+            stacklevel=3,
+        )
 
 
 def task_library(taskname: str, format: str = "json", dirs: DirsArg = None) -> dict | Path:
@@ -73,21 +92,29 @@ def task_library(taskname: str, format: str = "json", dirs: DirsArg = None) -> d
     ValueError
         If `format` is not `"json"` or `"path"`, or the matched file is not
         valid JSON.
+
+    Warns
+    -----
+    UserWarning
+        If `<taskname>.json` exists in more than one search directory — the
+        first (by search order) is used silently otherwise.
     """
     if format not in ("json", "path"):
         raise ValueError(f"format must be 'json' or 'path', got {format!r}")
 
     search_dirs = _search_dirs(dirs)
-    for d in search_dirs:
-        candidate = d / f"{taskname}.json"
-        if candidate.is_file():
-            if format == "path":
-                return candidate
-            try:
-                return json.loads(candidate.read_text(encoding="utf-8"))
-            except json.JSONDecodeError as e:
-                msg = f"Task card {candidate} is not valid JSON: {e}"
-                raise ValueError(msg) from e
+    matches = [d / f"{taskname}.json" for d in search_dirs if (d / f"{taskname}.json").is_file()]
+
+    if matches:
+        _warn_if_shadowed(taskname, matches)
+        candidate = matches[0]
+        if format == "path":
+            return candidate
+        try:
+            return json.loads(candidate.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            msg = f"Task card {candidate} is not valid JSON: {e}"
+            raise ValueError(msg) from e
 
     searched = ", ".join(str(d) for d in search_dirs)
     raise FileNotFoundError(
@@ -107,9 +134,20 @@ def list_task_library(dirs: DirsArg = None) -> list[str]:
     dirs : str | os.PathLike | list[str | os.PathLike] | None
         Extra directory (or directories) to include in the search, same as
         `task_library`'s `dirs` argument.
+
+    Warns
+    -----
+    UserWarning
+        For every task name found in more than one search directory.
     """
-    names = set()
+    sources: dict[str, list[Path]] = {}
     for d in _search_dirs(dirs):
         if d.is_dir():
-            names.update(p.stem for p in d.glob("*.json"))
-    return sorted(names)
+            for p in d.glob("*.json"):
+                sources.setdefault(p.stem, []).append(p)
+
+    for taskname, matches in sources.items():
+        if len(matches) > 1:
+            _warn_if_shadowed(taskname, matches)
+
+    return sorted(sources)

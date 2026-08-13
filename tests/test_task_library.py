@@ -102,3 +102,31 @@ def test_list_task_library_includes_custom_dir(cwd_with_task_dirs, tmp_path):
     (custom / "custom_task.json").write_text(json.dumps({"taskname": "x"}))
 
     assert list_task_library(dirs=custom) == ["builtin_task", "custom_task", "shared_task"]
+
+
+def test_task_library_warns_on_shadowed_name(cwd_with_task_dirs):
+    (cwd_with_task_dirs / "tasks" / "shared_task.json").write_text(
+        json.dumps({"taskname": "shadowed_copy"})
+    )
+
+    with pytest.warns(UserWarning, match="shared_task.*more than one"):
+        result = task_library("shared_task")
+
+    # demonstrations/ still wins (search order), the warning is informational only
+    assert result == {"taskname": "shared_task"}
+
+
+def test_task_library_no_warning_when_name_is_unique(cwd_with_task_dirs, recwarn):
+    task_library("shared_task")
+    assert len(recwarn) == 0
+
+
+def test_list_task_library_warns_on_shadowed_name(cwd_with_task_dirs):
+    (cwd_with_task_dirs / "tasks" / "shared_task.json").write_text(
+        json.dumps({"taskname": "shadowed_copy"})
+    )
+
+    with pytest.warns(UserWarning, match="shared_task.*more than one"):
+        names = list_task_library()
+
+    assert names == ["builtin_task", "shared_task"]
