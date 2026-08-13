@@ -33,7 +33,7 @@ theme:
     repo: fontawesome/brands/github
 
 extra_javascript:
-  - javascripts/nav-new-tab.js
+  - javascripts/open-links-new-tab.js
 
 plugins:
   - search
