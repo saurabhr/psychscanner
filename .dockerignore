@@ -1,0 +1,14 @@
+.git
+.venv*
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+.cache
+build
+dist
+site
+docs
+papers
+papers.zip
+*.zip
