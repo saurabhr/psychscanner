@@ -99,6 +99,16 @@ psychscanner = "psychscanner.cli:cli"
 [tool.setuptools.dynamic]
 version = {attr = "psychscanner.__version__"}
 
+# Deliberately no [tool.setuptools.package-data] / include_package_data /
+# MANIFEST.in here. The task/experiment library (examples/tasks/,
+# examples/experiments/, and the bundled defaults under
+# src/psychscanner/datasets/prompts/defaults/*.json) is meant to be a
+# dev-clone/individual-download thing, not part of a `pip install
+# psychscanner` wheel from PyPI -- verified empirically that the built
+# wheel ships 0 .json files. Adding package-data for those .json files
+# would silently change that contract; don't, unless that's an intentional
+# decision documented in docs/installation.md too.
+
 [tool.ruff]
 lint.select = ["ALL"]
 lint.ignore = [

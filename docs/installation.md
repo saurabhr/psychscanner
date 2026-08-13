@@ -24,6 +24,19 @@ cd psychscanner
 uv pip install -e .
 ```
 
+> **The task/experiment library is dev-only, by design.** `task_library()`
+> and `experiment_library()` search plain directories on disk
+> (`examples/tasks/`, `examples/experiments/`, or your own) — those
+> directories, and the bundled default task cards under
+> `src/psychscanner/datasets/prompts/defaults/`, are **not** included in a
+> `pip install psychscanner` from PyPI (verified: 0 `.json` files ship in
+> the built wheel). They're only present when you clone the repo, as
+> above. If you just need one task card without a full clone, download it
+> directly from
+> [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
+> on GitHub and pass it to `ExpCardInit(task_file=...)` or
+> `task_library(..., dirs=<wherever you saved it>)`.
+
 ## 3. Set API keys
 
 Create a `.env` file in your project directory (or export variables in your shell):
