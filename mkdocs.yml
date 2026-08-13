@@ -71,14 +71,14 @@ nav:
     - Configuration: configuration.md
   - User Guide:
     - Overview: guides/index.md
-    - PsychScanner Workflow: guides/psychscanner_workflow.md
-    - Memory Types: guides/memory_types.md
     - Cognitive Tasks: guides/cognitive_tasks.md
     - Survey Tasks: guides/survey_tasks.md
+    - Generating Task Cards with SweetPea: guides/sweetpea_task_cards.md
+    - Task Library: guides/task_library.md
+    - PsychScanner Workflow: guides/psychscanner_workflow.md
+    - Memory Types: guides/memory_types.md
     - Custom Parsers: guides/custom_parsers.md
     - Session Recovery: guides/session_recovery.md
-    - Task Library: guides/task_library.md
-    - Generating Task Cards with SweetPea: guides/sweetpea_task_cards.md
   - Tutorials:
     - Overview: tutorials/index.md
     - Quickstart: tutorials/00_quickstart.ipynb
