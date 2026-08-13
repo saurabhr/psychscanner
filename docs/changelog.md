@@ -4,6 +4,25 @@ All notable changes to PsychScanner are documented here.
 
 ---
 
+## 0.5.0 (2026-08-13)
+
+### New features
+
+- **CLI now runs real experiments** — the `psychscanner` console command previously just echoed its parsed options back to stdout. It now builds an `ExpCardInit` from the CLI flags and runs a real simulation, writing results to `--proj-dir`.
+- **Shadowed task-name warning** — `task_library()`/`list_task_library()` previously picked silently between duplicate task names across search directories. They now emit a `UserWarning` naming the winning path and the shadowed one(s); resolution order is unchanged.
+
+### Bug fixes
+
+- Fixed activation capture for tuple-valued module outputs (nnsight) — modules that return a tuple (e.g. a GPT-2 block) no longer produce dead trace-graph references that only surfaced later, at pickle time.
+- Restored `_cache_to_tensor_dict` in `chat_nnsight.py`, missing since the nnsight 0.3.x rewrite and breaking both `chat_vlm.py`'s activation flattening and test collection.
+- Fixed four bundled `rm_*` task cards whose internal `taskname` didn't match their filename stem, plus a registered-parser name typo in `vviq_pol.json` (`DefaultLiteralVivid15_Pol` → `DefaultLiteralVivid15Pol`).
+
+### Documentation
+
+- Added an RA guide covering four deployment paths plus a custom-experiment cookbook.
+
+---
+
 ## 0.4.0 (2026-08-07)
 
 ### New features
