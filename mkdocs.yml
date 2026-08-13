@@ -71,11 +71,12 @@ nav:
     - Configuration: configuration.md
   - User Guide:
     - Overview: guides/index.md
-    - Cognitive Tasks: guides/cognitive_tasks.md
+    - Cognitive Tasks (task card): guides/cognitive_tasks.md
+    - PsychScanner Workflow (experiment card): guides/psychscanner_workflow.md
     - Survey Tasks: guides/survey_tasks.md
-    - Generating Task Cards with SweetPea: guides/sweetpea_task_cards.md
+    - Running a Survey with Persona Levels: examples/multi_persona.md
+    - Cognitive Tasks with SweetPea: guides/sweetpea_task_cards.md
     - Task Library: guides/task_library.md
-    - PsychScanner Workflow: guides/psychscanner_workflow.md
     - Memory Types: guides/memory_types.md
     - Custom Parsers: guides/custom_parsers.md
     - Session Recovery: guides/session_recovery.md
