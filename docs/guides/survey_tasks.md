@@ -157,7 +157,16 @@ print(json.dumps(template, indent=2))
 
 ## See also
 
-- [Cognitive Tasks](cognitive_tasks.md) — multi-phase paradigms
+- [Cognitive Tasks](cognitive_tasks.md) — multi-phase paradigms; also
+  covers the task JSON schema this page's surveys are an instance of
+- [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
+  (`ExpCard`) that wraps a survey task with model, memory, and persona config
+- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+  crossing a survey task card with multiple simulated personas
+- [Cognitive Tasks with SweetPea](sweetpea_task_cards.md) — generate a
+  counterbalanced item sequence instead of hand-writing one
+- [Task Library](task_library.md) — fetch a saved survey task by name
+  once it's written to disk
 - [Memory Types](memory_types.md) — SingleTurn vs. Convo
 - [Parsers API](../api/parsers.md) — all bundled parser classes
 - [Configuration Reference](../configuration.md) — full parameter list

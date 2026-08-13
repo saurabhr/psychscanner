@@ -333,26 +333,68 @@ classDiagram
 
 Note: `ExpCard` and `TaskRunner` do the work described above inline in `__init__`/`execute` — they don't expose separate `validate_inputs()`/`run_trials()`-style methods. The method names above are the real public methods on each class.
 
+## Comparison with Inspect
 
+Based on the architecture of PsychScanner compared to the
+[Inspect](https://inspect.aisi.org.uk/) framework from the UK AI Security
+Institute (AISI), there are several fundamental differences in their
+purpose, target domain, and core abstractions.
 
-Based on the architecture of PsychScanner compared to the Inspect framework from the UK AI Security Institute (AISI), there are several fundamental differences in their purpose, target domain, and core abstractions.
+While both are frameworks that run language models through a pipeline of
+tasks, Inspect is a generalized machine-learning benchmarking tool, whereas
+PsychScanner is a domain-specific framework tailored for simulating
+psychological experiments and cognitive-behavioral paradigms.
 
-While both are frameworks that run Language Models through a pipeline of tasks, Inspect is a generalized machine learning benchmarking tool, whereas PsychScanner is a domain-specific framework tailored for simulating psychological experiments and cognitive behavioral paradigms.
+**1. Core focus & domain**
+- Inspect: built to evaluate generalized capabilities and safety of large
+  language models. It targets benchmarks like coding tasks, advanced
+  reasoning, and agentic problem solving, with out-of-the-box support for
+  standard AI benchmarks (e.g. MMLU, SWE-bench).
+- PsychScanner: built explicitly to simulate human psychological behaviors
+  across surveys and cognitive tasks — evaluating how an LLM acts when
+  prompted with human-like personas and subjective items (e.g. the VVIQ
+  survey, ranking emotional relatedness).
 
-Here is a breakdown of how they differ:
+**2. Architecture & abstractions**
+- Inspect: generic concepts — Datasets, Solvers (prompts/strategies applied
+  to the model), Scorers (evaluating accuracy against a known target), and
+  Tasks.
+- PsychScanner: psychology-experiment semantics — an experiment card
+  (`ExpCard`, see Slide 1 above) configures experimental conditions, Persona data assigns
+  subjective human traits to the model, and `TaskRunner` simulates
+  experimental trials.
 
-1. Core Focus & Domain
-Inspect: Built to evaluate generalized capabilities and safety of large language models. It targets benchmarks like coding tasks, advanced reasoning, and agentic problem solving. It provides out-of-the-box support for taking standard AI benchmarks (like MMLU or SWE-bench) and evaluating models against them.
-PsychScanner: Built explicitly to simulate human psychological behaviors across surveys and cognitive tasks. Its focus is on evaluating how an LLM acts when prompted with human-like personas and subjective items (like taking the VVIQ survey or ranking emotional relatedness).
-2. Architecture & Abstractions
-Inspect Models: Uses generic concepts like Datasets, Solvers (prompts/strategies applied to the model), Scorers (evaluating accuracy against a known target), and Tasks.
-PsychScanner Models: Uses psychology experiment-based semantics. It relies on an ExpCard to configure experimental conditions, defines Persona data to assign subjective human traits to the model, and runs a TaskRunner (simulating experimental trials).
-3. Memory & Trial Continuity
-Inspect: Primarily evaluates interactions based on agent behavior and tool usages (like bash, Python, browser manipulation).
-PsychScanner: Deeply focuses on stateful psychological persistence. It utilizes memory settings (`memory`: `SingleTurn` vs `Convo`) and a `feedback_fn` handler to monitor how a "participant's" beliefs, context, or fatigue might dynamically change from trial to trial across an experiment session.
-4. Sandboxing vs. Logging
-Inspect: Emphasizes heavily secure sandboxing (via Docker or Kubernetes) to safely execute untrusted code that an LLM generates during evaluation tasks.
+**3. Memory & trial continuity**
+- Inspect: primarily evaluates interactions based on agent behavior and
+  tool use (bash, Python, browser manipulation).
+- PsychScanner: focuses on stateful psychological persistence — `memory`
+  (`SingleTurn` vs. `Convo`) and a `feedback_fn` handler track how a
+  "participant's" beliefs, context, or fatigue might change from trial to
+  trial across a session.
 
-PsychScanner: Doesn’t prioritize code execution infrastructure. Instead, it prioritizes the SessionTunnel which acts almost like a neurological/behavioral tracking log. It checkpoints cognitive processes, prompts, agent state, and creates .psyscan archives of simulated human-like responses.
+**4. Sandboxing vs. logging**
+- Inspect: emphasizes secure sandboxing (Docker/Kubernetes) to safely
+  execute untrusted code an LLM generates during evaluation.
+- PsychScanner: doesn't prioritize code-execution infrastructure. Instead,
+  `SessionTunnel` acts as a behavioral tracking log — it checkpoints
+  prompts and agent state, and creates `.psyscan` archives of simulated
+  responses.
 
-Summary: If you wanted to test how well Claude or GPT-4 could write a Python script or navigate a website, you would use Inspect. If you wanted to simulate how a group of 50 anxious teenagers would rate their visualization capacity on a validated psychological questionnaire over 10 trials, you would use PsychScanner!
+**Summary**: to test how well a model writes a Python script or navigates a
+website, use Inspect. To simulate how a group of simulated participants
+would rate their visualization capacity on a validated psychological
+questionnaire over 10 trials, use PsychScanner.
+
+## See also
+
+- [Cognitive Tasks](cognitive_tasks.md) — the task card (task JSON schema)
+  that an experiment card wraps
+- [Survey Tasks](survey_tasks.md) — the most common task-card instance
+- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+  a worked example combining a task card with persona-conditioned
+  experiment cards
+- [Cognitive Tasks with SweetPea](sweetpea_task_cards.md) — generating a
+  counterbalanced task card to run through this same workflow
+- [Task Library](task_library.md) — fetching a saved task card by name
+- [Memory Types](memory_types.md) — `memory`/`memory_k`/`summary_k` in depth
+- [Session Recovery](session_recovery.md) — the `SessionTunnel` mentioned above

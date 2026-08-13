@@ -131,5 +131,11 @@ print(df.groupby("persona")["rating"].agg(["mean", "std"]))
 ## See also
 
 - [Configuration Reference](../configuration.md) — `cogtype`, `persona_files`, `nsim`
+- [Cognitive Tasks](../guides/cognitive_tasks.md) — the task card (task
+  JSON schema) this page crosses with personas
+- [PsychScanner Workflow](../guides/psychscanner_workflow.md) — the
+  experiment card (`ExpCard`) that `cogtype`/`persona_files` are fields on
 - [Survey Tasks](../guides/survey_tasks.md) — task JSON structure
+- [Task Library](../guides/task_library.md) — fetch a saved task card by
+  name instead of hardcoding a path, as this page's examples do
 - [Session Recovery](../guides/session_recovery.md) — for large persona × item designs

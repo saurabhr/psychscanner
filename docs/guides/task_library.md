@@ -138,4 +138,12 @@ UserWarning: Task 'my_task' found in more than one search directory. Using
 ## See also
 
 - [Cognitive Tasks](cognitive_tasks.md) / [Survey Tasks](survey_tasks.md) — writing a task card
+- [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
+  (`ExpCard`) that a fetched task card gets wrapped into
+- [Cognitive Tasks with SweetPea](sweetpea_task_cards.md#3-convert-the-sampled-sequence-into-items) —
+  generate a task card's `items` sequence, then save it here for lookup
+  by name
+- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+  a worked example that fetches a task card this way before crossing it
+  with personas
 - [`examples/tasks/README.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/tasks/README.md)

@@ -157,6 +157,10 @@ Add it to `crossing` (and an `AtMostKInARow` constraint) the same way as
 
 - [Cognitive Tasks](cognitive_tasks.md) — the full task JSON schema and
   worked examples (Reality Monitoring, visual search)
+- [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
+  (`ExpCard`) a SweetPea-generated task card gets wrapped into to run
+- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+  crossing a SweetPea-generated task with multiple simulated personas
 - [Task Library](task_library.md) — fetching task cards by name once saved
   to disk
 - [Feedback API](../examples/feedback_loop.md) — scoring trials against a
