@@ -32,6 +32,9 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
+extra_javascript:
+  - javascripts/nav-new-tab.js
+
 plugins:
   - search
   - mkdocs-jupyter:

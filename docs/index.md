@@ -184,6 +184,10 @@ arXiv: [2510.04391](https://arxiv.org/abs/2510.04391)
 
 ## Related Projects
 
+- **psychscanner-primal** — the slim, Hub-optimized alternative distribution of this package, for RL/eval tooling like the Prime Intellect Environments Hub.
+
+Docs: [saurabhr.github.io/psychscanner-primal](https://saurabhr.github.io/psychscanner-primal/)
+
 - **metasignal** — a companion package from the Psych Scanner group on metacognitive science.
 
 ```
