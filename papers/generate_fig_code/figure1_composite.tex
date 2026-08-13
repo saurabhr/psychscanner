@@ -1,0 +1,131 @@
+% Manuscript Figure 1, three panels, same TikZ family/colour convention as
+% psychscanner_blueprint.tex and execution_flow.tex in this directory.
+%
+% Panel A (left, ~28% width): brand hierarchy of the whole PsychScanner
+%   family (2 framework repos, 2 card-library repos, 3 docker images),
+%   built from the actual logo PDFs in ../figures/logos/ (regenerate those
+%   first via `python3 branding_assets.py`).
+% Panel B: the psychscanner_blueprint.tex execution pipeline, redrawn as a
+%   microservices diagram (each stage = a service; box border colour =
+%   the docker image that hosts it).
+% Panel C: the multi-agent reward-comparison run behind reward_by_agent.png,
+%   redrawn as a microservices diagram (env service -> N agent services in
+%   parallel -> aggregator -> logger -> figure output).
+%
+% Compile: pdflatex figure1_composite.tex  (run twice if node refs shift)
+
+\documentclass[border=6pt,tikz]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,fit,backgrounds,arrows.meta,calc}
+
+\definecolor{maroon}{HTML}{7A1B4A}
+\definecolor{maroontint}{HTML}{B05E8C}
+\definecolor{blueprimal}{HTML}{1E88C4}
+\definecolor{bluetint}{HTML}{6FBBE0}
+\definecolor{dockercore}{HTML}{1F4E79}
+\definecolor{dockerinterp}{HTML}{6B21A8}
+\definecolor{extcol}{HTML}{B45309}
+\definecolor{artcol}{HTML}{15803D}
+\definecolor{bandcol}{HTML}{F3F4F6}
+
+\begin{document}
+\begin{tikzpicture}[
+  font=\sffamily\scriptsize,
+  base/.style={rounded corners=2pt, draw, align=center, inner sep=3.2pt,
+               minimum height=7.5mm, fill=white, line width=0.8pt},
+  fw/.style={base, draw=maroon, fill=maroon!10, text=maroon!80!black, font=\sffamily\scriptsize\bfseries},
+  lib/.style={base, draw=maroontint, fill=maroontint!12, dashed, text=maroontint!70!black},
+  libp/.style={base, draw=bluetint, fill=bluetint!14, dashed, text=bluetint!55!black},
+  dcore/.style={base, draw=dockercore, fill=dockercore!12, text=dockercore},
+  dinterp/.style={base, draw=dockerinterp, fill=dockerinterp!10, text=dockerinterp},
+  dprimal/.style={base, draw=blueprimal, fill=blueprimal!12, text=blueprimal!70!black},
+  ext/.style={base, draw=extcol, fill=extcol!8, text=extcol!80!black},
+  art/.style={base, draw=artcol, fill=artcol!9, text=artcol!80!black},
+  panel/.style={rounded corners=4pt, draw=black!25, fill=black!2, inner sep=6pt},
+  ptitle/.style={font=\sffamily\bfseries\large, anchor=north west},
+  flow/.style={-{Stealth[length=2.2mm,width=1.7mm]}, draw=black!65, line width=0.8pt},
+]
+
+%% =====================================================================
+%% PANEL A -- stacked logo hierarchy (~28% width), actual brand marks.
+%% NOT drawn in TikZ: this is a single raster/vector composite built by
+%% cropping and stacking the real logo files with PIL
+%% (panel_a_logo_stack.py -> ../figures/logos/panel_a_stack_rgb.pdf).
+%% Regenerate with: python3 branding_assets.py && python3 panel_a_logo_stack.py
+%% =====================================================================
+\node[coordinate] (specA) at (0,1.7) {};
+\node[inner sep=0, anchor=north] (stack) at ($(specA)+(0,-0.4)$)
+  {\includegraphics[width=4.6cm]{../figures/logos/panel_a_stack_rgb.pdf}};
+
+\begin{scope}[on background layer]
+  \node[panel, fit=(specA)(stack), label={[ptitle]north west:A}] (panelA) {};
+\end{scope}
+\node[font=\sffamily\scriptsize\itshape, text=black!55] at (specA) {brand hierarchy};
+
+%% =====================================================================
+%% PANEL B -- execution pipeline as microservices
+%% =====================================================================
+\node[coordinate] (specB) at (5.7,0.9) {};
+\node[dcore, minimum width=3.5cm, text width=3.2cm] (author) at (5.7,0) {Task / Persona\\authoring};
+\node[dcore, minimum width=3.5cm, text width=3.2cm, below=4mm of author] (config) {ExpCard config\\service};
+\node[dcore, minimum width=3.5cm, text width=3.2cm, below=4mm of config] (mat) {Prompt\\materialisation};
+\node[dcore, minimum width=3.5cm, text width=3.2cm, below=4mm of mat] (orch) {Agent orchestration\\(LangGraph)};
+\node[ext, minimum width=3.5cm, text width=3.2cm, below=4mm of orch] (dispatch) {Model dispatch};
+\node[art, minimum width=3.5cm, text width=3.2cm, below=4mm of dispatch] (persist) {Persistence\\(.psyscan / CSV)};
+
+\node[dcore, minimum width=2.1cm, text width=1.9cm, right=9mm of dispatch, yshift=4mm] (hosted) {hosted API\\/ mock};
+\node[dinterp, minimum width=2.1cm, text width=1.9cm, below=2mm of hosted] (interp) {nnsight /\\nnterp / VLM};
+
+\draw[flow] (author) -- (config);
+\draw[flow] (config) -- (mat);
+\draw[flow] (mat) -- (orch);
+\draw[flow] (orch) -- (dispatch);
+\draw[flow] (dispatch) -- (persist);
+\draw[flow, draw=dockercore] (hosted) -- (dispatch);
+\draw[flow, draw=dockerinterp] (interp) -- (dispatch);
+
+\node[font=\sffamily\tiny\itshape, text=black!55, below=3mm of persist] (capB)
+  {arrow = call/data flow \quad border colour = docker image hosting the stage};
+
+\begin{scope}[on background layer]
+  \node[panel, fit=(specB)(author)(config)(mat)(orch)(dispatch)(persist)(hosted)(interp)(capB),
+        label={[ptitle]north west:B}] (panelB) {};
+\end{scope}
+\node[font=\sffamily\scriptsize\itshape, text=black!55] at (specB)
+  {execution pipeline as microservices};
+
+%% =====================================================================
+%% PANEL C -- agent-comparison run as microservices
+%% =====================================================================
+\node[coordinate] (specC) at (12.5,0.9) {};
+\node[dcore, minimum width=5.2cm, text width=4.9cm] (env) at (12.5,0) {3-armed bandit\\environment service};
+\node[ext, minimum width=1.6cm, text width=1.4cm, below=6mm of env, xshift=-3.4cm] (react) {ReAct\\agent};
+\node[ext, minimum width=1.6cm, text width=1.4cm, below=6mm of env] (reflex) {Reflexion\\agent};
+\node[ext, minimum width=1.6cm, text width=1.4cm, below=6mm of env, xshift=3.4cm] (lats) {LATS\\agent};
+\node[art, minimum width=5.2cm, text width=4.9cm, below=8mm of reflex] (agg) {reward aggregator\\(running-average service)};
+\node[dprimal, minimum width=4.4cm, text width=4.1cm, below=4mm of agg] (logger) {metrics logger\\(loguru JSON-lines)};
+\node[lib, minimum width=4.4cm, text width=4.1cm, below=4mm of logger] (outfig) {reward\_by\_agent\\figure output};
+
+\draw[flow] (env) -- (react);
+\draw[flow] (env) -- (reflex);
+\draw[flow] (env) -- (lats);
+\draw[flow] (react.south) -- (agg.north);
+\draw[flow] (reflex.south) -- (agg.north);
+\draw[flow] (lats.south) -- (agg.north);
+\draw[flow] (agg) -- (logger);
+\draw[flow] (logger) -- (outfig);
+
+\node[font=\sffamily\tiny\itshape, text=black!55, below=3mm of outfig] (capC)
+  {N=18 rounds \quad 3 agent architectures \quad 1 shared environment service};
+
+\begin{scope}[on background layer]
+  \node[panel, fit=(specC)(env)(react)(reflex)(lats)(agg)(logger)(outfig)(capC),
+        label={[ptitle]north west:C}] (panelC) {};
+\end{scope}
+\node[font=\sffamily\scriptsize\itshape, text=black!55] at (specC)
+  {agent-comparison run as microservices};
+
+\end{tikzpicture}
+\end{document}
