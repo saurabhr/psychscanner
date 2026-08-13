@@ -1,5 +1,6 @@
 from importlib import import_module
 from importlib.metadata import version
+from pathlib import Path
 
 import pytest
 from click.testing import CliRunner
@@ -38,3 +39,24 @@ def test_version_runner(runner: CliRunner) -> None:
     assert (
         result.output == f"cli, version {version('psychscanner')}\n"
     )
+
+
+def test_cli_runs_experiment_with_mock_llm(
+    tmp_path: Path, runner: CliRunner
+) -> None:
+    """Does the CLI actually run an experiment, not just echo the flags?"""
+    result = runner.invoke(
+        cli,
+        [
+            "-m", "mock-chat-model",
+            "-f", "mock-llm",
+            "-projname", "cli_smoke",
+            "-pd", str(tmp_path),
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "Ran 1 result batch" in result.output
+
+    csv_files = list(tmp_path.rglob("*.csv"))
+    assert csv_files, f"expected a saved CSV under {tmp_path}, got: {result.output}"

@@ -4,8 +4,9 @@ from __future__ import annotations
 from pathlib import Path
 
 import click
+from dotenv import load_dotenv
 
-from . import __version__
+from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 
 
 @click.command(
@@ -155,8 +156,49 @@ def cli(model: str,
         proj_dir: click.Path,
         login_env: click.Path|None,
         enabletqdm: bool) -> None:
-    """Repeat the input.
+    """Run a psychscanner experiment.
 
     A tool to bridge natural psychology with the artificial.
     """
-    click.echo(f"Model: {model}, Family: {family}, Parameters: {parameters}, Memory: {memory}, Memory K: {memory_k}, Persona: {persona_files}, Task File: {task_file}, Task Context: {task_context}, Tunnel Status: {tunnel_status}, Tunnel K: {tunnel_k}, Project Name: {projectname}, Tags: {tags}, Parser: {parser}, Parser Raw: {parser_raw}, Parser Config: {parser_config}, Project Dir: {proj_dir}, Login Env: {login_env}, Enable tqdm: {enabletqdm}")
+    if login_env is not None:
+        load_dotenv(login_env)
+
+    card_kwargs = {
+        "memory": memory,
+        "memory_k": memory_k,
+        "persona_files": persona_files,
+        "task_context": task_context,
+        "tunnel_status": tunnel_status,
+        "tunnel_k": tunnel_k,
+        "projectname": projectname,
+        "tags": tags,
+        "parser": parser,
+        "parser_raw": parser_raw,
+        "parser_config": parser_config,
+        "proj_dir": Path(proj_dir),
+        "enabletqdm": enabletqdm,
+    }
+    if model is not None:
+        card_kwargs["model"] = model
+    if family is not None:
+        card_kwargs["family"] = family
+    if parameters is not None:
+        card_kwargs["parameters"] = parameters
+    if task_file is not None:
+        card_kwargs["task_file"] = task_file
+
+    # No persona files -> nothing to drive "custom" personas from, so run
+    # a single no-persona simulation instead (mirrors the README quickstart).
+    if persona_files:
+        card_kwargs["cogtype"] = "custom"
+    else:
+        card_kwargs["cogtype"] = "no"
+        card_kwargs["nsim"] = 1
+
+    card = ExpCardInit(**card_kwargs)
+    scanner = ScannerModel(expcard=ExpCard(card))
+    results = scanner.run(progress_bar=enabletqdm)
+    df = to_csv(scanner, path=card.proj_dir)
+    click.echo(
+        f"Ran {len(results)} result batch(es); saved {len(df)} row(s) to {card.proj_dir}"
+    )
