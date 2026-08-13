@@ -91,7 +91,7 @@ TASK_FILE.write_text(json.dumps(task_subset, indent=2))
 print(f"BFI-44 subset: {len(kept)} items ({ITEMS_PER_TRAIT}/trait) -> {TASK_FILE.name}")
 
 # ── trim traits_n5.json (5 statements) down to 2 -> 2 sims/persona ──────────
-# ponytail: nsim=2 (not the 5 in examples/advanced/set1_surveys) to fit
+# ponytail: nsim=2 (not the 5 in examples/demonstration_suite/03_personality_survey/advanced) to fit
 # Groq's free-tier daily token cap -- llama-3.3-70b-versatile burned its
 # entire 100k TPD budget partway through a dry run, hence the model switch
 # below too. Bump back to the full traits_n5.json for a richer n once on a

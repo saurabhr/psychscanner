@@ -14,7 +14,7 @@ Conditions (2x2, run separately, same vision model):
             Accuracy (explicit correct/incorrect + the right answer)
 
 Model: google/gemma-4-26b-a4b-it:free via OpenRouter (free, vision-capable).
-nvidia/nemotron-nano-12b-v2-vl:free (used in examples/advanced/set3_multimodal)
+nvidia/nemotron-nano-12b-v2-vl:free (used in examples/demonstration_suite/04_vlm_task/advanced/set3_multimodal)
 was tried first but its free-tier route repeatedly 504'd ("upstream idle
 timeout") after ~2 minutes; gemma answered correctly in ~3s in the same
 smoke test, so this run uses gemma instead -- see reports/report.md.

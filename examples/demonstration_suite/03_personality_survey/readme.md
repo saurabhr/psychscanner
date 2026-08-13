@@ -13,7 +13,7 @@ A BFI-44 (Big Five Inventory, 44 items / OCEAN traits) survey run across
 
 | Feature bullet | Condition(s) |
 |---|---|
-| 1. Two levels of persona | `weird`, `non_weird_jung` (axis files from `examples/advanced/personas/`) |
+| 1. Two levels of persona | `weird`, `non_weird_jung` (axis files from `examples/demonstration_suite/03_personality_survey/advanced/personas/`) |
 | 2. Independent stateless sampling | `stateless` (`memory=SingleTurn`) |
 | 3. Conversation / Summary memory | `conversation` (`memory=Convo`, unbounded); `summary_windowed` (`memory=Convo` + `summary_k`) |
 | 4. Windowing Convo / Summary memory | `conversation_windowed` (`memory_k=8`, no summary); `summary_windowed` (`memory_k=8`, `summary_k=4`) |

@@ -27,10 +27,11 @@ uv pip install -e ".[dev]"
 jupyter lab examples/
 ```
 
-The `examples/advanced/` directory also contains larger, multi-experiment
-study scripts (organized by `set1_surveys/`, `set2_episodic/`, etc.) — see
-[`examples/advanced/README.md`](https://github.com/saurabhr/psychscanner/tree/main/examples/advanced)
-for their current status.
+[`examples/demonstration_suite/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite)
+also contains larger, multi-experiment study scripts, each nested under its
+topically matching demo (`03_personality_survey/advanced/`,
+`02_association_memory/advanced/`, `04_vlm_task/advanced/`) — see each
+subfolder's own `README.md` for status and factorial design details.
 
 ## Contributing Examples
 
