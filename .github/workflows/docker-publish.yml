@@ -12,6 +12,13 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - tag: ps-general
+            extras: dev
+          - tag: ps-neuroscanner
+            extras: "nnsight,nnterp,vlm"
     steps:
       - uses: actions/checkout@v4
 
@@ -25,10 +32,17 @@ jobs:
         id: meta
         with:
           images: ghcr.io/${{ github.repository }}
+          flavor: |
+            suffix=-${{ matrix.tag }},onlatest=true
+          tags: |
+            type=raw,value=${{ matrix.tag }}
+            type=ref,event=tag
 
       - uses: docker/build-push-action@v6
         with:
           context: .
           push: true
+          build-args: |
+            EXTRAS=${{ matrix.extras }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
