@@ -1,6 +1,6 @@
 {
     "tasktype": "survey",
-    "taskname": "tutorial_episodic_chain_survey",
+    "taskname": "03_episodic_chain_survey",
     "instructions": {
         "definition": [
             "You will rate your agreement with the following statements.",

@@ -1,6 +1,6 @@
 {
     "tasktype": "task",
-    "taskname": "nback",
+    "taskname": "nback_demo",
     "instructions": [
         "You are a participant in a psychological experiment. Perform the task as instructed."
     ],
