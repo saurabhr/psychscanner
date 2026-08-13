@@ -12,7 +12,7 @@ Tested on Python 3.11
 
 ![image](docs/psychscanner.png)
 
-> Looking for the slim, Hub-optimized distribution? See [psychscanner-primal docs](https://saurabhr.github.io/psychscanner-primal/).
+> Looking for the slim, [Prime Intellect Environments Hub](https://app.primeintellect.ai/dashboard/environments)-optimized distribution? See [psychscanner-primal docs](https://saurabhr.github.io/psychscanner-primal/).
 
 > The package is under active development. [Contributions](CONTRIBUTING.md) are welcome. Find the documentation here:https://psychscanner.readthedocs.io/en/latest/
 >
