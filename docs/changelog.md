@@ -17,10 +17,6 @@ All notable changes to PsychScanner are documented here.
 - Restored `_cache_to_tensor_dict` in `chat_nnsight.py`, missing since the nnsight 0.3.x rewrite and breaking both `chat_vlm.py`'s activation flattening and test collection.
 - Fixed four bundled `rm_*` task cards whose internal `taskname` didn't match their filename stem, plus a registered-parser name typo in `vviq_pol.json` (`DefaultLiteralVivid15_Pol` → `DefaultLiteralVivid15Pol`).
 
-### Documentation
-
-- Added an RA guide covering four deployment paths plus a custom-experiment cookbook.
-
 ---
 
 ## 0.4.0 (2026-08-07)
