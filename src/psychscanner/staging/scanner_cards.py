@@ -8,6 +8,7 @@ Classes for ExpCard, ModelCard, DataCard and their validation.
 from __future__ import annotations
 
 import json
+import warnings
 from ast import literal_eval
 from pathlib import Path
 from typing import Any, Literal, Callable
@@ -636,3 +637,104 @@ def load_expcard(
             kwargs["tools"] = resolved_tools
 
     return ExpCardInit(**kwargs)
+
+
+# ── Portable file-extension convention ───────────────────────────────────────
+#
+# .tcard.psyscan — a task card (plain dict: taskname, items, instructions, …)
+# .xcard.psyscan — an experiment card (an ExpCardInit, saved via save_expcard)
+#
+# Both are plain JSON under the hood; the extensions exist to make the two
+# object kinds visually distinguishable in a directory listing and in
+# tutorials, not to introduce a new file format.
+TASK_CARD_EXT = ".tcard.psyscan"
+EXPERIMENT_CARD_EXT = ".xcard.psyscan"
+
+
+def save_task_card(task: dict, path: str | Path) -> Path:
+    """Write a task card dict to *path* as JSON.
+
+    ``.tcard.psyscan`` is the recommended extension (see
+    :data:`TASK_CARD_EXT`) — any path works, since the content is plain
+    JSON, but a mismatched extension gets a warning, not an error.
+
+    Also warns — does not raise — if ``task["taskname"]`` doesn't match
+    *path*'s filename stem. :func:`psychscanner.task_library` resolves
+    tasks by filename alone and never reads this field, so a mismatch
+    doesn't break lookup, but it has repeatedly caused confusion in this
+    project's own bundled task cards (four were found and fixed this way
+    already) — catching it at save time is cheaper than at debug time.
+
+    Parameters
+    ----------
+    task:
+        A task card dict — must have ``taskname`` and ``items``.
+    path:
+        Output file path.
+
+    Returns
+    -------
+    Path
+        *path*, as a :class:`~pathlib.Path`.
+
+    Raises
+    ------
+    ValueError
+        If ``task`` is missing ``taskname`` or ``items``.
+
+    Examples
+    --------
+    >>> save_task_card(task, "my_task.tcard.psyscan")
+    """
+    if "taskname" not in task:
+        raise ValueError("task card is missing required field 'taskname'")
+    if "items" not in task:
+        raise ValueError("task card is missing required field 'items'")
+
+    path = Path(path)
+    if not path.name.endswith(TASK_CARD_EXT) and path.suffix != ".json":
+        warnings.warn(
+            f"{path.name!r} doesn't end in {TASK_CARD_EXT!r} or '.json' — "
+            f"the file will still be written, but {TASK_CARD_EXT!r} is the "
+            f"recommended extension for task cards.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    stem = path.name.split(".", 1)[0]
+    if task["taskname"] != stem:
+        warnings.warn(
+            f"task['taskname'] is {task['taskname']!r} but the filename stem "
+            f"is {stem!r} — task_library() resolves by filename, not this "
+            f"field, so this won't break lookup, but it will silently "
+            f"register the task under a different name than 'taskname' says.",
+            UserWarning,
+            stacklevel=2,
+        )
+
+    path.write_text(json.dumps(task, indent=2, ensure_ascii=False))
+    return path
+
+
+def load_task_card(path: str | Path) -> dict:
+    """Read a task card JSON file (``.tcard.psyscan`` or plain ``.json``).
+
+    Thin wrapper over ``json.loads`` — task cards are plain dicts with no
+    reconstruction step, unlike :func:`load_expcard`. Provided so the two
+    kinds of card have matching, discoverable function names.
+
+    Examples
+    --------
+    >>> task = load_task_card("my_task.tcard.psyscan")
+    """
+    return json.loads(Path(path).read_text())
+
+
+# save_experiment_card / load_experiment_card: pure naming aliases for
+# save_expcard / load_expcard, so "task card" and "experiment card" have
+# matching save_*/load_* names. No behavior differs — see save_expcard's
+# and load_expcard's own docstrings for the full contract (.xcard.psyscan
+# is the recommended, not enforced, extension for the same reason
+# TASK_CARD_EXT isn't enforced above).
+save_experiment_card = save_expcard
+load_experiment_card = load_expcard

@@ -7,6 +7,12 @@ from .staging.scanner_cards import (
     ExpCardInit,
     save_expcard,
     load_expcard,
+    save_task_card,
+    load_task_card,
+    save_experiment_card,
+    load_experiment_card,
+    TASK_CARD_EXT,
+    EXPERIMENT_CARD_EXT,
 )
 from .session_tunnel import SessionTunnel
 from .datasets.prompts import parser
@@ -32,6 +38,12 @@ __all__ = [
     "ExpCardInit",
     "save_expcard",
     "load_expcard",
+    "save_task_card",
+    "load_task_card",
+    "save_experiment_card",
+    "load_experiment_card",
+    "TASK_CARD_EXT",
+    "EXPERIMENT_CARD_EXT",
     "factory_settings",
     "ScannerModel",
     "to_csv",
