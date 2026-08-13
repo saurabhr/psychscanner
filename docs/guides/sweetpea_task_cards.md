@@ -88,14 +88,27 @@ task = {
 }
 ```
 
-From here it's a normal task card — hand it to `ExpCardInit(task_file=task,
-...)` as in [Building a custom cognitive task](cognitive_tasks.md#building-a-custom-cognitive-task).
-If you want per-trial correctness scoring, keep the SweetPea-derived fields
-(`color`, `congruency`, the correct response, …) somewhere you can look them
-up in a [`FeedbackBase`](../api/index.md) handler — either stash them in the
-trial dict under a key psychscanner ignores (e.g. `"meta"`) or keep the
-`trials` list from `experiments_to_dicts` alongside the task card and index
-into it by `trcode`.
+From here it's a normal task card. For a quick one-off run, hand the dict
+straight to `ExpCardInit(task_file=task, ...)` as in [Building a custom
+cognitive task](cognitive_tasks.md#building-a-custom-cognitive-task). To
+persist it for reuse, write it to disk with `save_task_card()` and fetch it
+later by name with `task_library()` — see [Task
+Library](task_library.md). This is the pattern
+[`generate_nback_sweetpea.py`](https://github.com/saurabhr/psychscanner/blob/main/examples/tasks/generators/generate_nback_sweetpea.py)
+follows: it derives a SweetPea-counterbalanced letter sequence, computes
+per-trial ground truth in plain Python, and calls
+`save_task_card(card, path)` to write a `.tcard.psyscan` file.
+
+If you want per-trial correctness scoring, put the correct answer straight in
+the trial dict's `corrAns` field — a first-class, documented field (see
+[Trial dict fields](cognitive_tasks.md#trial-dict-fields)) that a
+[`FeedbackBase`](../api/index.md) handler reads with `trial.get("corrAns")`;
+this is what `generate_nback_sweetpea.py` does. `corrAns` only fits a single
+"the correct answer is X" value, though — if you need to keep richer
+SweetPea-derived fields around (`color`, `congruency`, …) for scoring, stash
+them in the trial dict under a key psychscanner ignores (e.g. `"meta"`), or
+keep the `trials` list from `experiments_to_dicts` alongside the task card
+and index into it by `trcode`.
 
 ## 4. Task-switching / transition designs
 

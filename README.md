@@ -144,6 +144,14 @@ Only `ollama` ships out of the box (`langchain-ollama` is a base dependency). Ev
 | `07_rm_feedback_task.ipynb` | Reality monitoring with feedback |
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
+| `10_custom_agents.ipynb` | Bringing your own LLM or VLM |
+| `11_memory_context_management.ipynb` | Conversation memory & context quantization (`memory_k` / `summary_k`) |
+| `12_tool_binding_and_multimodal.ipynb` | Tool binding and multimodal stimuli |
+| `13_react_tool_agent.ipynb` | A real tool-calling loop (`make_react_agent`) |
+| `14_supervisor_multiagent.ipynb` | Multimodal supervisor/planner/worker agent |
+| `15_planner_executor_agent.ipynb` | Modular planner/executor/validator agent |
+| `16_reflection_agents.ipynb` | Reflection agents: Basic Reflection, Reflexion, LATS |
+| `17_cognitive_rl_bandits_and_pd.ipynb` | Cognitive RL: bandits and the Prisoner's Dilemma |
 
 ## Citation
 
