@@ -6,6 +6,10 @@ Self-report accuracy (reported vs target attribute weight):
   control: r = 0.223 (p = 0.283, n = 25)
   Paper's own numbers for reference (GPT-4o, Fig. 2/3): r=.54 before / .74 after introspection-training fine-tuning (Exp 1 -> 2); r=.46 -> .71 for generalization to native preferences (Exp 3). This demo's 'trained' condition is a same-context worked-example analog, not fine-tuning -- see readme.md.
 
-Decision trials: 60 total, 0 with a parseable choice + confidence
-  No valid decision trials -- skipping accuracy/SDT analysis.
+Decision trials: 60 total, 60 with a parseable choice + confidence
+  Choice accuracy (matches the option the agent's target weights favor): 0.367
 
+  Response distribution: resp=A 100%, confidence values used: [4]
+  All decision-trial responses fall in one class (the model never chose B), so hit/false-alarm rates are degenerate and d'/meta-d' are mathematically undefined -- not a bug, a real finding: this local model shows no discrimination on this task (see reports/report.md).
+
+Plot note: 7/50 reported-weight points fall outside the requested [-100, 100] scale (up to 4060) and are clipped to the axis for readability -- the small local model doesn't reliably respect the requested numeric range.

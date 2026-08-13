@@ -81,28 +81,48 @@ def decision_sdt(decisions: pd.DataFrame, lines: list[str]) -> pd.DataFrame | No
     resp = (valid["model_choice"] == "A").astype(int).to_numpy()
     conf = valid["confidence"].astype(int).clip(1, N_RATINGS).to_numpy()
 
+    lines.append(f"  Response distribution: resp=A {(resp == 1).mean():.0%}, confidence values used: {sorted(set(conf.tolist()))}")
+    if len(set(resp.tolist())) < 2:
+        lines.append(
+            "  All decision-trial responses fall in one class (the model never chose B), so hit/false-alarm "
+            "rates are degenerate and d'/meta-d' are mathematically undefined -- not a bug, a real finding: "
+            "this local model shows no discrimination on this task (see reports/report.md).\n"
+        )
+        return valid
+
     from metasignal import stdpy
     measures = stdpy.compute_all_measures(stim, resp, conf, n_ratings=N_RATINGS, return_type="dict")
     lines.append("SDT / metacognition measures on the decision trials (via metasignal):")
     for key in ["dprime", "criterion", "meta_d", "M_ratio", "AUC2", "mean_conf"]:
-        lines.append(f"  {key}: {measures.get(key):.3f}" if measures.get(key) is not None else f"  {key}: n/a")
+        val = measures.get(key)
+        lines.append(f"  {key}: {val:.3f}" if val is not None and not np.isnan(val) else f"  {key}: n/a")
     lines.append("")
     return valid
 
 
-def plot(avg: pd.DataFrame) -> None:
+def plot(avg: pd.DataFrame, lines: list[str]) -> None:
     use_agg_backend()
     import matplotlib.pyplot as plt
+
+    lo, hi = -100, 100  # matches the paper's own Fig. 2/3 axis range (the requested report scale)
+    out_of_range = avg[(avg["reported_weight"] < lo) | (avg["reported_weight"] > hi)]
+    if not out_of_range.empty:
+        lines.append(
+            f"Plot note: {len(out_of_range)}/{len(avg)} reported-weight points fall outside the requested "
+            f"[-100, 100] scale (up to {avg['reported_weight'].abs().max():.0f}) and are clipped to the axis "
+            "for readability -- the small local model doesn't reliably respect the requested numeric range."
+        )
 
     fig, ax = plt.subplots(figsize=(6, 6))
     for trained, color, label in [(True, "tab:purple", "trained"), (False, "tab:blue", "control")]:
         sub = avg[avg["trained"] == trained]
-        ax.scatter(sub["target_weight"], sub["reported_weight"], color=color, alpha=0.7, label=label)
+        ax.scatter(sub["target_weight"].clip(lo, hi), sub["reported_weight"].clip(lo, hi), color=color, alpha=0.7, label=label)
 
-    lo, hi = -100, 100
     ax.plot([lo, hi], [lo, hi], color="gray", linestyle="--", linewidth=1, label="perfect report")
+    ax.set_xlim(lo, hi)
+    ax.set_ylim(lo, hi)
     ax.set_xlabel("target attribute weight")
-    ax.set_ylabel("reported attribute weight")
+    ax.set_ylabel("reported attribute weight (clipped to ±100)")
     ax.set_title("Self-report accuracy: reported vs. target attribute weights")
     ax.legend()
     fig.tight_layout()
@@ -116,10 +136,9 @@ def main() -> None:
     lines: list[str] = []
     avg = self_report_accuracy(reports, lines) if not reports.empty else None
     decision_sdt(decisions, lines) if not decisions.empty else None
-    write_summary(OUT_DIR, lines)
-
     if avg is not None and not avg.empty:
-        plot(avg)
+        plot(avg, lines)
+    write_summary(OUT_DIR, lines)
 
 
 if __name__ == "__main__":

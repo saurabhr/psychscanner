@@ -12,6 +12,51 @@ from __future__ import annotations
 
 from pathlib import Path
 
+# Okabe & Ito (2008) colorblind-safe categorical palette — the standard
+# recommendation for scientific figures (Nature Methods 2011 palette note).
+PALETTE = {
+    "black": "#000000",
+    "orange": "#E69F00",
+    "sky_blue": "#56B4E9",
+    "bluish_green": "#009E73",
+    "yellow": "#F0E442",
+    "blue": "#0072B2",
+    "vermillion": "#D55E00",
+    "reddish_purple": "#CC79A7",
+}
+PALETTE_ORDER = ["blue", "vermillion", "bluish_green", "orange",
+                  "reddish_purple", "sky_blue", "black", "yellow"]
+
+
+def set_pub_style() -> None:
+    """Apply a consistent, print-legible matplotlib style.
+
+    Call after ``use_agg_backend()`` and the ``pyplot`` import. Sets the
+    Okabe-Ito colorblind-safe cycle, 300 dpi savefig default, and font
+    sizes legible at single-column print width (matches the ~11pt body
+    text of the LaTeX manuscripts these figures are embedded in).
+    """
+    import matplotlib.pyplot as plt
+    from cycler import cycler
+
+    plt.rcParams.update({
+        "figure.dpi": 300,
+        "savefig.dpi": 300,
+        "savefig.bbox": "tight",
+        "font.size": 11,
+        "axes.titlesize": 12,
+        "axes.labelsize": 11,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "legend.fontsize": 9,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.prop_cycle": cycler(color=[PALETTE[k] for k in PALETTE_ORDER]),
+        "axes.grid": True,
+        "grid.alpha": 0.25,
+        "grid.linewidth": 0.5,
+    })
+
 
 def demo_dirs(analysis_file: str | Path, *, data_subdir: str = "data") -> tuple[Path, Path]:
     """Return ``(DATA_DIR, OUT_DIR)`` for an ``analyze.py`` living in ``<demo>/analysis/``.
@@ -48,7 +93,7 @@ def use_agg_backend() -> None:
     matplotlib.use("Agg")
 
 
-def save_figure(fig, out_dir: Path, filename: str, *, dpi: int = 150, **savefig_kwargs) -> Path:
+def save_figure(fig, out_dir: Path, filename: str, *, dpi: int = 300, **savefig_kwargs) -> Path:
     """Save a matplotlib figure to ``out_dir/filename`` at a consistent dpi, print the path."""
     out = out_dir / filename
     fig.savefig(out, dpi=dpi, **savefig_kwargs)

@@ -15,13 +15,20 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import sys
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import polars as pl
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from _analysis_common import PALETTE, set_pub_style
+
 from psychscanner import ExpCard, ExpCardInit, ScannerModel, to_csv
+
+set_pub_style()
 
 # ── paths ──────────────────────────────────────────────────────────────────────
 HERE = Path(__file__).parent
@@ -109,7 +116,7 @@ else:
     df_pd["trial_num"] = df_pd["trial_idx"].astype(int) + 1
 
     cond_labels = [c["label"] for c in CONDITIONS]
-    persona_colors = {"weird": "steelblue", "non_weird": "tomato"}
+    persona_colors = {"weird": PALETTE["blue"], "non_weird": PALETTE["vermillion"]}
 
     # ── Figure 1: trial trajectory ─────────────────────────────────────────────
     fig, axes = plt.subplots(1, 3, figsize=(15, 4), sharey=True)
@@ -131,7 +138,7 @@ else:
         ax.set_ylim(0.5, 5.5)
         ax.set_xticks(range(1, 17))
         ax.set_xticklabels(range(1, 17), fontsize=7)
-        ax.legend(fontsize=8)
+        ax.legend(fontsize=8, frameon=False)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
         ax.spines[["top", "right"]].set_visible(False)
 
@@ -140,7 +147,7 @@ else:
         fontsize=12, y=1.02,
     )
     plt.tight_layout()
-    fig.savefig(FIG_DIR / "trial_trajectory.png", dpi=150, bbox_inches="tight")
+    fig.savefig(FIG_DIR / "trial_trajectory.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("Saved figures/trial_trajectory.png")
 
@@ -189,7 +196,7 @@ else:
     ax.grid(axis="y", linestyle="--", alpha=0.35)
     ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
-    fig.savefig(FIG_DIR / "total_vviq_violin.png", dpi=150, bbox_inches="tight")
+    fig.savefig(FIG_DIR / "total_vviq_violin.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("Saved figures/total_vviq_violin.png")
 

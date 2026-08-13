@@ -17,7 +17,9 @@ from pathlib import Path
 import polars as pl
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from _analysis_common import demo_dirs, require_data, save_figure, use_agg_backend, write_summary
+from _analysis_common import (
+    PALETTE, demo_dirs, require_data, save_figure, set_pub_style, use_agg_backend, write_summary,
+)
 
 DATA_DIR, OUT_DIR = demo_dirs(__file__)
 
@@ -91,6 +93,7 @@ def summarize(rounds: pl.DataFrame) -> None:
 def plot(rounds: pl.DataFrame) -> None:
     use_agg_backend()
     import matplotlib.pyplot as plt
+    set_pub_style()
 
     fig, ax = plt.subplots(figsize=(7, 4.5))
     for agent in sorted(rounds["agent"].unique()):
@@ -101,13 +104,14 @@ def plot(rounds: pl.DataFrame) -> None:
             .sort("trial_idx")
         )
         cum = avg_by_trial["mean_reward"].cum_sum() / (avg_by_trial["trial_idx"] + 1)
-        ax.plot(avg_by_trial["trial_idx"], cum, marker="o", label=agent)
+        ax.plot(avg_by_trial["trial_idx"], cum, marker="o", markersize=5, linewidth=1.8, label=agent)
 
-    ax.axhline(OPTIMAL_MEAN, color="gray", linestyle="--", linewidth=1, label=f"optimal arm ({OPTIMAL_ARM}) mean")
-    ax.set_xlabel("round")
-    ax.set_ylabel("running average reward")
+    ax.axhline(OPTIMAL_MEAN, color=PALETTE["black"], linestyle="--", linewidth=1,
+               label=f"optimal arm ({OPTIMAL_ARM}) mean")
+    ax.set_xlabel("Round")
+    ax.set_ylabel("Running average reward")
     ax.set_title("3-armed bandit: running average reward by agent type")
-    ax.legend()
+    ax.legend(frameon=False)
     fig.tight_layout()
     save_figure(fig, OUT_DIR, "reward_by_agent.png")
 
