@@ -29,13 +29,16 @@ Usage:
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from _analysis_common import demo_dirs, require_data, write_summary
+
 DEMO_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = DEMO_DIR / "data"
-OUT_DIR = Path(__file__).resolve().parent
+DATA_DIR, OUT_DIR = demo_dirs(__file__)
 PAL50_PATH = DEMO_DIR.parent.parent / "examples" / "tasks" / "pal50.json"
 
 LEVEL_TO_SIM = {"L0": 0.0, "L25": 0.25, "L50": 0.5, "L75": 0.75, "L100": 1.0}
@@ -57,8 +60,7 @@ def resolve_word2(trcode: str, w2: dict[str, str], ordinal_map: dict[tuple[str, 
 
 def load_scored_trials() -> pd.DataFrame:
     csvs = sorted(DATA_DIR.glob("*__*.csv"))
-    if not csvs:
-        raise SystemExit(f"No result CSVs found in {DATA_DIR} — run simulation/run_simulation.py first.")
+    require_data(csvs, DATA_DIR, "run simulation/run_simulation.py first.")
 
     w2 = word2_by_test_trcode()
     ordinal_map = {tuple(trcode.split("_tst_")): word2 for trcode, word2 in w2.items()}
@@ -127,9 +129,7 @@ def main() -> None:
         lines.append("(resp_confidence column not present)")
     lines.append("")
 
-    report = "\n".join(lines)
-    print(report)
-    (OUT_DIR / "analysis_output.txt").write_text(report + "\n")
+    write_summary(OUT_DIR, lines, filename="analysis_output.txt")
     by_cond.to_csv(OUT_DIR / "accuracy_by_condition.csv")
     pivot.to_csv(OUT_DIR / "accuracy_by_condition_x_similarity.csv")
 

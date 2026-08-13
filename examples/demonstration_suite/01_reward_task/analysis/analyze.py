@@ -11,12 +11,15 @@ lazy and correct source of truth here.
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 import polars as pl
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-OUT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from _analysis_common import demo_dirs, require_data, save_figure, use_agg_backend, write_summary
+
+DATA_DIR, OUT_DIR = demo_dirs(__file__)
 
 ARM_MEANS = {"A": 2.0, "B": 6.0, "C": 4.0}
 OPTIMAL_ARM = max(ARM_MEANS, key=ARM_MEANS.get)  # "B"
@@ -82,14 +85,11 @@ def summarize(rounds: pl.DataFrame) -> None:
     lines.append(f"Late-game (trial_idx >= {cutoff}) summary:")
     lines.append(str(late_summary))
 
-    text = "\n".join(lines)
-    print(text)
-    (OUT_DIR / "summary.txt").write_text(text + "\n")
+    write_summary(OUT_DIR, lines)
 
 
 def plot(rounds: pl.DataFrame) -> None:
-    import matplotlib
-    matplotlib.use("Agg")
+    use_agg_backend()
     import matplotlib.pyplot as plt
 
     fig, ax = plt.subplots(figsize=(7, 4.5))
@@ -109,15 +109,12 @@ def plot(rounds: pl.DataFrame) -> None:
     ax.set_title("3-armed bandit: running average reward by agent type")
     ax.legend()
     fig.tight_layout()
-    out = OUT_DIR / "reward_by_agent.png"
-    fig.savefig(out, dpi=150)
-    print(f"-> {out}")
+    save_figure(fig, OUT_DIR, "reward_by_agent.png")
 
 
 def main() -> None:
     rounds = load_rounds()
-    if rounds.is_empty():
-        raise SystemExit(f"No parseable rounds found in {DATA_DIR} -- run the simulation first.")
+    require_data(not rounds.is_empty(), DATA_DIR, "run the simulation first.")
     summarize(rounds)
     plot(rounds)
 

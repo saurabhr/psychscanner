@@ -20,9 +20,11 @@ from pathlib import Path
 
 import polars as pl
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from _analysis_common import demo_dirs, require_data
+
 DEMO_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = DEMO_DIR / "data"
-OUT_DIR = Path(__file__).resolve().parent
+DATA_DIR, OUT_DIR = demo_dirs(__file__)
 
 sys.path.insert(0, str(DEMO_DIR / "simulation"))
 from stimuli import generate  # noqa: E402
@@ -73,8 +75,7 @@ def load_scored() -> pl.DataFrame:
             pl.Series("correct", corrects).cast(pl.Int64),
         ])
         frames.append(df)
-    if not frames:
-        raise SystemExit("No condition CSVs found under data/ -- run simulation/run_vlm_task.py first.")
+    require_data(frames, DATA_DIR, "run simulation/run_vlm_task.py first.")
     return pl.concat(frames, how="diagonal_relaxed")
 
 

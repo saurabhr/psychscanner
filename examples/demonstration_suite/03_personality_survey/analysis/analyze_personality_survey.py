@@ -14,10 +14,13 @@ Outputs (this directory):
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from _analysis_common import save_figure, use_agg_backend
+
+use_agg_backend()
 import matplotlib.pyplot as plt
 import numpy as np
 import polars as pl
@@ -153,6 +156,5 @@ for ax, trait in zip(axes, TRAITS):
 fig.suptitle("BFI-44 per-trait scores by persona x memory condition (mean +/- SD, n=5/cell)",
              fontsize=11, y=1.03)
 plt.tight_layout()
-fig.savefig(FIG_DIR / "trait_by_condition.png", dpi=150, bbox_inches="tight")
+save_figure(fig, FIG_DIR, "trait_by_condition.png", bbox_inches="tight")
 plt.close()
-print("Saved figures/trait_by_condition.png")
