@@ -167,8 +167,3 @@ If you use PsychScanner in your research, please cite the framework paper:
 ```
 
 Task-specific citations (Reality Monitoring, VVIQ) and the full reference list live in [`CITATION.cff`](CITATION.cff) and the [docs](https://psychscanner.readthedocs.io/en/latest/#citation) — or use GitHub's "Cite this repository" button.
-
-## To-do
-
-- [ ] Add LLM cognitive experiment scoring: pairs with PsychScanner to score confidence data from LLM cognitive experiments; the same SDT/metacognition math applies whether the confidence-rated decisions come from a human participant or a model.
-
