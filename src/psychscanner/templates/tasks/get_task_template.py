@@ -26,7 +26,8 @@ def get_task_template(ttype=None):
         return ttemplate
 
     if ttype in tasktypes:
-        with Path("sc.json").open(encoding="utf-8") as f:
+        template_path = Path(__file__).parent / "sc.json"
+        with template_path.open(encoding="utf-8") as f:
             ttemplate = json.load(f)
     else:
         click.echo("Task type not found in the template collection. Returning default task template.")
