@@ -200,10 +200,13 @@ def gen_trial_promptdata(expcard: Any) -> dict:
             trstim["taskname"] = task_data["on_file"]["taskname"]
             trstim["tasktype"] = task_data["on_file"]["tasktype"]
             trstim["context_present"] = task_data["on_file"]["context_present"]
-            trstim["context"] = trstim["trcode"].split("_")[0],
-            trstim["context_item"] = task_data["on_file"]["contexts"][
-                task_data["on_file"]["contexts_id"].index(trstim["trcode"].split("_")[0])
-            ]
+            trstim["context"] = trstim["trcode"].split("_")[0]
+            if trstim["context_present"]:
+                trstim["context_item"] = task_data["on_file"]["contexts"][
+                    task_data["on_file"]["contexts_id"].index(trstim["context"])
+                ]
+            else:
+                trstim["context_item"] = ""
             trstim["trid"] = trid
             trstim["chain_type"] = task_data["chain_type"]
             trstim["hmsg"] = gen_stimulus_prompt(trstim)
