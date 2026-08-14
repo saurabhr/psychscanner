@@ -1,0 +1,195 @@
+sim_idx,model,family,memory,memory_k,projectname,cogtype,parser,taskname,tasktype,chain_type,trace_id,tunnel_id,trial_idx,trcode,context_item,stimulus,pred_resp_raw,fb_response
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,0,prospect_01,prospect,"Left: 43% chance to gain 84.4, otherwise lose 75.8.
+Right: 41% chance to gain 25.9, otherwise lose 51.1.","To analyze the given information, let's break it down into two scenarios:
+
+**Left:**
+- Chance of gain: 43% 
+- Gain amount: 84.4 
+- Chance of loss: 57% (100% - 43%)
+- Loss amount: 75.8
+
+**Right:**
+- Chance of gain: 41% 
+- Gain amount: 25.9 
+- Chance of loss: 59% (100% - 41%)
+- Loss amount: 51.1
+
+To compare the two options, we need to calculate the expected value (EV) for each scenario. The expected value is the average gain or loss you can expect from a decision, taking into account all possible outcomes and their probabilities.
+
+**Left Expected Value (EV) = (43% * 84.4) + (57% * -75.8)**
+**Left EV = 0.43 * 84.4 - 0.57 * 75.8**
+**Left EV = 36.2992 - 43.106 - 6.8068**
+**Left EV ≈ -13.614**
+
+**Right Expected Value (EV) = (41% * 25.9) + (59% * -51.1)**
+**Right EV = 0.41 * 25.9 - 0.59 * 51.1**
+**Right EV = 10.619 - 30.079 - 18.2969**
+**Right EV ≈ -37.7569**
+
+Based on the calculations, the left option has a slightly lower expected value (-13.614) compared to the right option (-37.7569). However, neither option seems to be very favorable, as both have a negative expected value.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,1,prospect_02,prospect,"Left: 48% chance to gain 78.4, otherwise lose 30.3.
+Right: 50% chance to gain 58.3, otherwise lose 90.8.","To determine the expected value (EV) for each option, we multiply the probability of each outcome by its corresponding value, and then sum the results.
+
+For the left option:
+
+1. Gain: 0.48 (probability) * 78.4 (gain) = 37.6312
+2. Lose: 0.52 (probability) * -30.3 (loss) = -15.756
+
+EV (Left) = 37.6312 - 15.756 = 21.8752
+
+For the right option:
+
+1. Gain: 0.5 (probability) * 58.3 (gain) = 29.15
+2. Lose: 0.5 (probability) * -90.8 (loss) = -45.4
+
+EV (Right) = 29.15 - 45.4 = -16.25
+
+Based on the expected values, the left option is likely to yield a higher return.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,2,prospect_03,prospect,"Left: 61% chance to gain 28.2, otherwise lose 75.6.
+Right: 94% chance to gain 25.1, otherwise lose 91.0.","To calculate the expected value (EV) of this situation, we need to multiply the probability of each outcome by the value of the outcome and then add the results.
+
+Left:
+- Gain: 61% of 28.2 = 0.61 * 28.2 = 17.22
+- Loss: 39% of -75.6 = 0.39 * -75.6 = -29.544
+EV (Left): 17.22 - 29.544 = -12.324
+
+Right:
+- Gain: 94% of 25.1 = 0.94 * 25.1 = 23.594
+- Loss: 6% of -91.0 = 0.06 * -91.0 = -5.46
+EV (Right): 23.594 - 5.46 = 18.134
+
+In this situation, the expected value of choosing the Right option is higher (18.134) than the Left option (-12.324).",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,3,prospect_04,prospect,"Left: 33% chance to gain 81.0, otherwise lose 90.2.
+Right: 67% chance to gain 73.0, otherwise lose 89.9.","To analyze the given probabilities, we'll break down the situation into its components:
+
+- Left:
+  - Chance to gain: 33%
+  - Gain amount: 81.0
+  - Chance to lose: 67% (since the total probability is 100%)
+  - Loss amount: 90.2
+
+- Right:
+  - Chance to gain: 67%
+  - Gain amount: 73.0
+  - Chance to lose: 33% (since the total probability is 100%)
+  - Loss amount: 89.9
+
+Now, let's calculate the expected value for both options:
+
+- Left Expected Value (EV) = (33% * 81.0) + (67% * -90.2)
+  EV = 0.33 * 81 + 0.67 * -90.2
+  EV = 26.73 - 60.494
+  EV = -33.724 (approximately)
+
+- Right Expected Value (EV) = (67% * 73.0) + (33% * -89.9)
+  EV = 0.67 * 73 + 0.33 * -89.9
+  EV = 48.91 - 29.737
+  EV = 19.173 (approximately)
+
+Based on these calculations, the expected value for the Right option is higher than the Left option, indicating that the Right option might be a better choice. However, this is just one aspect to consider, and the actual decision should be based on a more comprehensive analysis of the situation.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,4,prospect_05,prospect,"Left: 44% chance to gain 47.2, otherwise lose 10.1.
+Right: 92% chance to gain 61.1, otherwise lose 91.3.","To analyze this situation, we need to calculate the expected value (EV) of each option. The expected value is the average value one can expect to gain (or lose) per unit. 
+
+For the left option, we have a 44% chance to gain 47.2 and a 56% (100% - 44%) chance to lose 10.1. 
+
+Expected value (EV) = (probability of gain * amount gained) + (probability of loss * amount lost)
+EV = (0.44 * 47.2) + (0.56 * -10.1)
+
+EV = 20.808 + (-5.656)
+EV = 15.152
+
+For the right option, we have a 92% chance to gain 61.1 and an 8% (100% - 92%) chance to lose 91.3.
+
+EV = (0.92 * 61.1) + (0.08 * -91.3)
+EV = 56.192 + (-7.304)
+EV = 48.888
+
+Based on these calculations, the right option has a higher expected value (48.888) compared to the left option (15.152). This means that, on average, you can expect a higher gain (or lower loss) from the right option.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,5,prospect_06,prospect,"Left: 28% chance to gain 47.7, otherwise lose 86.5.
+Right: 6% chance to gain 80.5, otherwise lose 54.9.","To analyze the information, we need to consider the expected value (EV) of each option. The expected value is a measure of the average return you can expect to get from each option. 
+
+For the Left option:
+- There's a 28% chance to gain 47.7.
+- Otherwise, there's a 72% chance to lose 86.5.
+
+Expected value (EV) for Left = (0.28 * 47.7) + (0.72 * -86.5)
+= 13.356 + (-62.52)
+= -49.164
+
+For the Right option:
+- There's a 6% chance to gain 80.5.
+- Otherwise, there's a 94% chance to lose 54.9.
+
+Expected value (EV) for Right = (0.06 * 80.5) + (0.94 * -54.9)
+= 4.83 + (-51.621)
+= -46.791
+
+Based on the expected values, the Left option has a lower expected return (-49.164) compared to the Right option (-46.791).",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,6,prospect_07,prospect,"Left: 79% chance to gain 72.0, otherwise lose 39.9.
+Right: 49% chance to gain 66.8, otherwise lose 0.1.","To analyze the given probabilities, we need to calculate the expected value for both the left and right sides. The expected value (EV) is a measure of the average return or value that we can expect from a particular action or situation.
+
+For the left side:
+
+1. Gain 72.0 with a 79% chance: 72.0 * 0.79 = 56.88
+2. Lose 39.9 with a 21% chance (1 - 0.79): -39.9 * 0.21 = -8.379
+3. Expected Value (EV) for the left side: 56.88 - 8.379 = 48.501
+
+For the right side:
+
+1. Gain 66.8 with a 49% chance: 66.8 * 0.49 = 32.652
+2. Lose 0.1 with a 51% chance (1 - 0.49): -0.1 * 0.51 = -0.051
+3. Expected Value (EV) for the right side: 32.652 - 0.051 = 32.601
+
+Comparing the expected values, we can see that the left side has a higher expected value of 48.501, while the right side has an expected value of 32.601.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,7,prospect_08,prospect,"Left: 34% chance to gain 86.8, otherwise lose 24.4.
+Right: 56% chance to gain 87.0, otherwise lose 19.1.","To calculate the expected gain or loss from each option, we need to multiply the probability by the potential gain or loss and then sum the results.
+
+For the Left option:
+- Gain: 34% * 86.8 = 0.34 * 86.8 = 29.55
+- Loss: 66% * 24.4 = 0.66 * 24.4 = 16.14
+- Expected gain/loss: 29.55 - 16.14 = 13.41
+
+For the Right option:
+- Gain: 56% * 87.0 = 0.56 * 87.0 = 48.48
+- Loss: 44% * 19.1 = 0.44 * 19.1 = 8.404
+- Expected gain/loss: 48.48 - 8.404 = 40.076
+
+In this scenario, the Right option has a higher expected gain.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,8,prospect_09,prospect,"Left: 77% chance to gain 23.9, otherwise lose 96.8.
+Right: 34% chance to gain 44.8, otherwise lose 8.0.","To determine the expected value for both the ""Left"" and ""Right"" options, we need to take into account both the probabilities and the potential outcomes.
+
+For the ""Left"" option:
+- 77% chance to gain 23.9
+- 23% chance to lose 96.8
+
+Expected Value (Left) = (77% * 23.9) + (23% * -96.8)
+Expected Value (Left) = 0.77 * 23.9 + 0.23 * -96.8
+Expected Value (Left) = 18.383 + -22.244
+Expected Value (Left) = -3.861
+
+For the ""Right"" option:
+- 34% chance to gain 44.8
+- 66% chance to lose 8.0
+
+Expected Value (Right) = (34% * 44.8) + (66% * -8.0)
+Expected Value (Right) = 0.34 * 44.8 + 0.66 * -8.0
+Expected Value (Right) = 15.192 - 5.28
+Expected Value (Right) = 9.912
+
+Comparing the two, the ""Right"" option has a higher expected value, indicating that it is more favorable in the long run.",
+0,llama-3.1-8b-instant,groq,Convo,-1,prospect_convo_memory,no,none,prospect_theory_demo,sc,item,20260813T21-23-41prospect_convo_memoryConvoprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-Convo-prospect_convo_memory,9,prospect_10,prospect,"Left: 15% chance to gain 50.8, otherwise lose 93.3.
+Right: 54% chance to gain 55.1, otherwise lose 70.7.","To understand the given information, we need to calculate the expected value for both the left and right sides.
+
+Expected value (EV) is calculated by multiplying each outcome by its probability and then summing these products.
+
+For the left side:
+- Gain: 50.8 * 0.15 = 7.62
+- Loss: 93.3 * 0.85 = 79.385
+Expected value (EV) for the left side: 7.62 - 79.385 = -71.725
+
+For the right side:
+- Gain: 55.1 * 0.54 = 29.794
+- Loss: 70.7 * 0.46 = 32.502
+Expected value (EV) for the right side: 29.794 - 32.502 = -2.708
+
+This means that over a large number of trials, you can expect to lose approximately 71.725 units on average on the left side and approximately 2.708 units on average on the right side.",

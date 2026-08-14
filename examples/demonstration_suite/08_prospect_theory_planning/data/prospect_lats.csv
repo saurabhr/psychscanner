@@ -1,0 +1,188 @@
+sim_idx,model,family,memory,memory_k,projectname,cogtype,parser,taskname,tasktype,chain_type,trace_id,tunnel_id,trial_idx,trcode,context_item,stimulus,pred_resp_raw,fb_response
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,0,prospect_01,prospect,"Left: 43% chance to gain 84.4, otherwise lose 75.8.
+Right: 41% chance to gain 25.9, otherwise lose 51.1.","To solve this problem, we'll calculate the expected value for each option and then compare them. 
+
+For the left option:
+- 43% chance to gain 84.4
+- 57% chance to lose 75.8
+
+Expected value for the left option = (0.43 * 84.4) + (0.57 * -75.8)
+Expected value for the left option = 36.292 + -43.106
+Expected value for the left option = -6.814
+
+For the right option:
+- 41% chance to gain 25.9
+- 59% chance to lose 51.1
+
+Expected value for the right option = (0.41 * 25.9) + (0.59 * -51.1)
+Expected value for the right option = 10.639 - 30.089
+Expected value for the right option = -19.450
+
+Since the expected value for the left option (-6.814) is greater than the expected value for the right option (-19.450), the best choice is the left option.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,1,prospect_02,prospect,"Left: 48% chance to gain 78.4, otherwise lose 30.3.
+Right: 50% chance to gain 58.3, otherwise lose 90.8.","To solve this problem, we need to calculate the expected value for each option. 
+
+For the left option:
+- 48% chance to gain 78.4: 0.48 * 78.4 = 37.6992
+- 52% chance to lose 30.3: 0.52 * -30.3 = -15.756
+
+Expected value for the left option: 37.6992 - 15.756 = 21.9432
+
+For the right option:
+- 50% chance to gain 58.3: 0.5 * 58.3 = 29.15
+- 50% chance to lose 90.8: 0.5 * -90.8 = -45.4
+
+Expected value for the right option: 29.15 - 45.4 = -16.25
+
+Since 21.9432 is greater than -16.25, the left option has a higher expected value.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,2,prospect_03,prospect,"Left: 61% chance to gain 28.2, otherwise lose 75.6.
+Right: 94% chance to gain 25.1, otherwise lose 91.0.","To make a decision, let's calculate the expected value (EV) for both options.
+
+Left option EV:
+61% chance to gain 28.2 = 0.61 * 28.2 = 17.22
+39% chance to lose 75.6 = 0.39 * -75.6 = -29.55
+Left option EV: 17.22 - 29.55 = -12.33
+
+Right option EV:
+94% chance to gain 25.1 = 0.94 * 25.1 = 23.61
+6% chance to lose 91.0 = 0.06 * -91.0 = -5.46
+Right option EV: 23.61 - 5.46 = 18.15
+
+Based on the expected value calculations, the Right option has a higher expected value of 18.15 compared to the Left option's expected value of -12.33. Therefore, the recommended choice is the Right option.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,3,prospect_04,prospect,"Left: 33% chance to gain 81.0, otherwise lose 90.2.
+Right: 67% chance to gain 73.0, otherwise lose 89.9.","To make a decision, let's calculate the expected values for both options.
+
+For Left:
+- 33% chance to gain 81.0: 0.33 * 81.0 = 26.73
+- 67% chance to lose 90.2: 0.67 * -90.2 = -60.534
+Expected Value for Left: 26.73 - 60.534 = -33.804
+
+For Right:
+- 67% chance to gain 73.0: 0.67 * 73.0 = 48.9
+- 33% chance to lose 89.9: 0.33 * -89.9 = -29.683
+Expected Value for Right: 48.9 - 29.683 = 19.217
+
+Considering the expected values, the best option is the ""Right"" choice with an expected value of 19.217.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,4,prospect_05,prospect,"Left: 44% chance to gain 47.2, otherwise lose 10.1.
+Right: 92% chance to gain 61.1, otherwise lose 91.3.","To evaluate the expected value of the given options, we calculate the average outcome for each choice.
+
+For the left option: 
+- The probability of gaining 47.2 is 44% or 0.44.
+- The probability of losing 10.1 is 56% or 0.56.
+
+Expected value of the left option = (probability of gaining) * (gain) + (probability of losing) * (loss)
+Expected value of the left option = (0.44 * 47.2) + (0.56 * -10.1)
+Expected value of the left option = 20.768 + -5.656
+Expected value of the left option = 15.112
+
+For the right option: 
+- The probability of gaining 61.1 is 92% or 0.92.
+- The probability of losing 91.3 is 8% or 0.08.
+
+Expected value of the right option = (probability of gaining) * (gain) + (probability of losing) * (loss)
+Expected value of the right option = (0.92 * 61.1) + (0.08 * -91.3)
+Expected value of the right option = 56.172 + -7.304
+Expected value of the right option = 48.868
+
+Based on the expected values, the right option has a higher expected value of 48.868 compared to the left option with a value of 15.112.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,5,prospect_06,prospect,"Left: 28% chance to gain 47.7, otherwise lose 86.5.
+Right: 6% chance to gain 80.5, otherwise lose 54.9.","To analyze the given situation, let's break down the probabilities and outcomes for both the 'Left' and 'Right' options.
+
+For 'Left':
+- 28% chance to gain 47.7
+- 72% chance to lose 86.5
+
+For 'Right':
+- 6% chance to gain 80.5
+- 94% chance to lose 54.9
+
+To calculate the expected value for each option, we'll multiply the probability of each outcome by the outcome value, then sum these products.
+
+Expected value for 'Left':
+- (0.28 * 47.7) = 13.376
+- (0.72 * -86.5) = -62.22
+Expected value for 'Left': 13.376 - 62.22 = -48.844
+
+Expected value for 'Right':
+- (0.06 * 80.5) = 4.83
+- (0.94 * -54.9) = -51.706
+Expected value for 'Right': 4.83 - 51.706 = -46.876
+
+Based on these calculations, the 'Left' option has an expected value of approximately -48.844, and the 'Right' option has an expected value of approximately -46.876.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,6,prospect_07,prospect,"Left: 79% chance to gain 72.0, otherwise lose 39.9.
+Right: 49% chance to gain 66.8, otherwise lose 0.1.","To compare the two options, we need to calculate their expected values. 
+
+For Left:
+- Probability of gaining 72.0: 79% = 0.79
+- Probability of losing 39.9: 21% = 0.21
+Expected value = (0.79 * 72.0) + (0.21 * -39.9)
+Expected value = 56.88 - 8.379
+Expected value ≈ 48.40
+
+For Right:
+- Probability of gaining 66.8: 49% = 0.49
+- Probability of losing 0.1: 51% = 0.51
+Expected value = (0.49 * 66.8) + (0.51 * -0.1)
+Expected value = 32.692 + (-0.051)
+Expected value ≈ 32.64
+
+Comparing the two expected values, Left has an expected value of approximately 48.40 and Right has an expected value of approximately 32.64. Therefore, Left has a higher expected value and is likely a better option.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,7,prospect_08,prospect,"Left: 34% chance to gain 86.8, otherwise lose 24.4.
+Right: 56% chance to gain 87.0, otherwise lose 19.1.","To solve this problem, we'll calculate the expected gain (or loss) for each option.
+
+**Left Option:**
+- Gain: 34% of 86.8 = 0.34 * 86.8 = 29.55
+- Loss: 66% of 24.4 = 0.66 * 24.4 = 16.104 (round to 16.1)
+- Expected Value: 29.55 - 16.1 = 13.45
+
+**Right Option:**
+- Gain: 56% of 87.0 = 0.56 * 87.0 = 48.72
+- Loss: 44% of 19.1 = 0.44 * 19.1 = 8.404 (round to 8.4)
+- Expected Value: 48.72 - 8.4 = 40.32
+
+Based on these calculations, the right option has a higher expected value of 40.32 compared to the left option's 13.45. Therefore, the best choice is the **Right Option**.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,8,prospect_09,prospect,"Left: 77% chance to gain 23.9, otherwise lose 96.8.
+Right: 34% chance to gain 44.8, otherwise lose 8.0.","To solve this problem, we need to calculate the expected gain or loss for both options.
+
+Left Option:
+77% chance to gain 23.9
+23% chance to lose 96.8
+
+Expected value for the Left Option = (77% * 23.9) + (23% * (-96.8))
+Expected value for the Left Option = 0.77 * 23.9 + 0.23 * (-96.8)
+Expected value for the Left Option = 18.383 + (-22.284)
+Expected value for the Left Option = -3.901
+
+Right Option:
+34% chance to gain 44.8
+66% chance to lose 8.0
+
+Expected value for the Right Option = (34% * 44.8) + (66% * (-8.0))
+Expected value for the Right Option = 0.34 * 44.8 + 0.66 * (-8.0)
+Expected value for the Right Option = 15.192 + (-5.28)
+Expected value for the Right Option = 9.912
+
+Since the Expected value of the Right Option is greater than the Expected value of the Left Option, it is better to choose the Right Option.",
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_lats,no,none,prospect_theory_demo,sc,item,20260813T21-24-08prospect_latsSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_lats,9,prospect_10,prospect,"Left: 15% chance to gain 50.8, otherwise lose 93.3.
+Right: 54% chance to gain 55.1, otherwise lose 70.7.","To solve this problem, we'll calculate the expected value (EV) for both options: Left and Right. The EV is a weighted average of the possible outcomes, taking into account the probability of each outcome.
+
+For Left:
+- Probability of gaining 50.8: 15% or 0.15
+- Probability of losing 93.3: 85% or 0.85
+Expected Value (EV_Left) = (0.15 * 50.8) + (0.85 * -93.3)
+= 7.62 + (-79.485)
+= -71.83
+
+For Right:
+- Probability of gaining 55.1: 54% or 0.54
+- Probability of losing 70.7: 46% or 0.46
+Expected Value (EV_Right) = (0.54 * 55.1) + (0.46 * -70.7)
+= 29.794 + (-32.522)
+= -2.728
+
+Since EV_Left = -71.83 and EV_Right = -2.728, we can conclude that:
+
+- Option Left is expected to result in a loss of 71.83 units.
+- Option Right is expected to result in a loss of 2.728 units.
+
+Considering these results, Option Right is the better choice, as it is expected to result in a smaller loss.",

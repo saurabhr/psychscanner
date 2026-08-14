@@ -1,0 +1,41 @@
+Choices parsed: 30 (agents: ['convo_memory', 'lats', 'map'])
+Unparsed responses (no left/right mention at all), by agent: {'convo_memory': 0, 'lats': 0, 'map': 0}
+
+EV-consistency (chose the higher-expected-value gamble):
+shape: (3, 2)
+┌──────────────┬─────────────────┐
+│ agent        ┆ chose_higher_ev │
+│ ---          ┆ ---             │
+│ str          ┆ f64             │
+╞══════════════╪═════════════════╡
+│ convo_memory ┆ 0.7             │
+│ lats         ┆ 0.9             │
+│ map          ┆ 0.7             │
+└──────────────┴─────────────────┘
+
+Dominance trials: 6. Chose the dominant (strictly better) gamble:
+shape: (3, 2)
+┌──────────────┬────────────────┐
+│ agent        ┆ chose_dominant │
+│ ---          ┆ ---            │
+│ str          ┆ f64            │
+╞══════════════╪════════════════╡
+│ convo_memory ┆ 1.0            │
+│ lats         ┆ 1.0            │
+│ map          ┆ 1.0            │
+└──────────────┴────────────────┘
+
+Own choice-switch rate, by ground-truth EV-transition label:
+shape: (6, 3)
+┌──────────────┬───────────────┬────────────┐
+│ agent        ┆ ev_transition ┆ own_switch │
+│ ---          ┆ ---           ┆ ---        │
+│ str          ┆ str           ┆ f64        │
+╞══════════════╪═══════════════╪════════════╡
+│ convo_memory ┆ repeat        ┆ 0.2        │
+│ convo_memory ┆ switch        ┆ 0.0        │
+│ lats         ┆ repeat        ┆ 0.4        │
+│ lats         ┆ switch        ┆ 1.0        │
+│ map          ┆ repeat        ┆ 1.0        │
+│ map          ┆ switch        ┆ 0.666667   │
+└──────────────┴───────────────┴────────────┘

@@ -1,0 +1,21 @@
+sim_idx,model,family,memory,memory_k,projectname,cogtype,parser,taskname,tasktype,chain_type,trace_id,tunnel_id,trial_idx,trcode,context_item,stimulus,pred_resp_raw,fb_response
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,0,prospect_01,prospect,"Left: 43% chance to gain 84.4, otherwise lose 75.8.
+Right: 41% chance to gain 25.9, otherwise lose 51.1.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,1,prospect_02,prospect,"Left: 48% chance to gain 78.4, otherwise lose 30.3.
+Right: 50% chance to gain 58.3, otherwise lose 90.8.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,2,prospect_03,prospect,"Left: 61% chance to gain 28.2, otherwise lose 75.6.
+Right: 94% chance to gain 25.1, otherwise lose 91.0.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,3,prospect_04,prospect,"Left: 33% chance to gain 81.0, otherwise lose 90.2.
+Right: 67% chance to gain 73.0, otherwise lose 89.9.",right,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,4,prospect_05,prospect,"Left: 44% chance to gain 47.2, otherwise lose 10.1.
+Right: 92% chance to gain 61.1, otherwise lose 91.3.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,5,prospect_06,prospect,"Left: 28% chance to gain 47.7, otherwise lose 86.5.
+Right: 6% chance to gain 80.5, otherwise lose 54.9.",right,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,6,prospect_07,prospect,"Left: 79% chance to gain 72.0, otherwise lose 39.9.
+Right: 49% chance to gain 66.8, otherwise lose 0.1.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,7,prospect_08,prospect,"Left: 34% chance to gain 86.8, otherwise lose 24.4.
+Right: 56% chance to gain 87.0, otherwise lose 19.1.",right,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,8,prospect_09,prospect,"Left: 77% chance to gain 23.9, otherwise lose 96.8.
+Right: 34% chance to gain 44.8, otherwise lose 8.0.",left,
+0,llama-3.1-8b-instant,groq,SingleTurn,-1,prospect_map,no,none,prospect_theory_demo,sc,item,20260813T21-21-43prospect_mapSingleTurnprospect_theory_demo0,sidx-[0]-model-llama-3.1-8b-instant-family-groq-memory-SingleTurn-prospect_map,9,prospect_10,prospect,"Left: 15% chance to gain 50.8, otherwise lose 93.3.
+Right: 54% chance to gain 55.1, otherwise lose 70.7.",right,
