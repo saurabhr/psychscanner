@@ -225,10 +225,20 @@ class SessionTunnel:
         logs_serialized = []
         with tunnel_file.open(encoding="utf-8") as file:
             for _i, line in enumerate(file.readlines()):
-                all_logs.append(json.loads(line))
-                logs_serialized.append(
-                    json.loads(all_logs[-1]["record"]["extra"]["serialized"])
-                )
+                if not line.strip():
+                    continue
+                try:
+                    record = json.loads(line)
+                    serialized = json.loads(record["record"]["extra"]["serialized"])
+                except (json.JSONDecodeError, KeyError) as e:
+                    # A run killed mid-write can leave a truncated trailing
+                    # line -- exactly the interruption checkpointing exists
+                    # to survive. Skip it rather than crashing every
+                    # subsequent resume attempt on this file.
+                    logger.warning(f"Skipping malformed tunnel log line {_i} in {tunnel_file}: {e}")
+                    continue
+                all_logs.append(record)
+                logs_serialized.append(serialized)
 
         if to_frame:
             all_logs = pd.DataFrame(all_logs)

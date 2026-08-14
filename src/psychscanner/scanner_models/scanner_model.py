@@ -6,6 +6,7 @@ and generates system and trial prompt data for tasks.
 from __future__ import annotations
 
 import uuid
+import warnings
 from datetime import datetime
 from typing import Any, Literal, Callable
 from pathlib import Path
@@ -54,6 +55,14 @@ class ScannerModel:
             tools=self.expcard.tools,
         )
 
+        if self.expcard.card_in.tunnel_k not in (None, -1):
+            warnings.warn(
+                "tunnel_k is not currently implemented -- data is saved once "
+                "per simulated participant regardless of the value set. "
+                "Passing a non-default tunnel_k has no effect.",
+                UserWarning,
+                stacklevel=2,
+            )
         self.tqdm_progress_flag = expcard.card_in.enabletqdm
         self.tunnel_status = self.expcard.card_in.tunnel_status
         self.tunnel = expcard.session_tunnel
@@ -100,7 +109,7 @@ class ScannerModel:
 
         except IndexError:
             last_scan_on_off_events = None
-        if last_scan_on_off_events["run_type"] == "END":
+        if last_scan_on_off_events is not None and last_scan_on_off_events["run_type"] == "END":
             msg = "Session already has ended. Delete old files to run."
             raise ValueError(msg)
 
@@ -266,7 +275,15 @@ class ScannerModel:
                 system_data_completed.append(sys_msg_i)
                 continue
 
+            # Refresh every per-participant thread-id component, not just
+            # "task" -- "trial" feeds chain_type="trial"'s thread_id
+            # (task_runner.py) and was previously left at the session-wide
+            # value set once before this loop, so every participant running
+            # the same trcode under Convo memory shared one real
+            # conversation thread with every other participant.
             trace_cfg["task"] = session_id + str(sys_sim_i)
+            trace_cfg["trial"] = session_id + str(sys_sim_i)
+            trace_cfg["item"] = session_id + str(sys_sim_i)
             tunnel_id = f"sidx-[{sys_sim_i}]-model-{self.expcard.card_in.model}-family-{self.expcard.card_in.family}-memory-{self.expcard.card_in.memory}-{self.projectname}"
 
             scan_sys_i = TaskRunner(
@@ -279,7 +296,7 @@ class ScannerModel:
                 next_trial=next_trial,
                 next_trial_fn=next_trial_fn,
             )
-            scan_i_data = scan_sys_i.execute(disable_tqdm=progress_bar)
+            scan_i_data = scan_sys_i.execute(disable_tqdm=not progress_bar)
             scan_i_data = [
                 {
                     **i,

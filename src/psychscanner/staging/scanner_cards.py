@@ -60,8 +60,9 @@ class ExpCardInit(BaseModel):
         default=-1,
         description=(
             "Max number of messages kept in full in the conversation context. "
-            "Default -1 keeps unlimited history. "
-            "When set to N, only the last N messages are passed to the model."
+            "Default -1 keeps unlimited history; 0 or None also disable trimming "
+            "(trimming is only active for memory_k > 0). "
+            "When set to N > 0, only the last N messages are passed to the model."
         ),
     )
     summary_k: int | None = Field(
@@ -92,7 +93,7 @@ class ExpCardInit(BaseModel):
     )
     tunnel_k: int | None = Field(
         default=-1,
-        description="Tunnel k. Default is -1. If not default, should be correctly provided. Tunnel k is the number of checkpoints to be created after every k trials. When -1 ckeckpoints created after all the trials in the simulation. If k is more than the trials the k is set to -1. If tunnel is off then the session tunnel related files are stored as DEFAULT_<timestamp>.log in subpackare datasets/no_tunnel_runs/<session tunnel files>.",
+        description="Not currently implemented -- accepted for forward-compatibility only. Data is saved once per simulated participant regardless of this value; ScannerModel warns if it's set to anything but the default.",
     )
     projectname: str | None = Field(
         default="DEFAULTPROJ",
