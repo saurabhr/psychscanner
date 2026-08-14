@@ -98,11 +98,22 @@ def _trim_history(state, agent_cfg) -> dict:
     overflow = messages[:-memory_k]
     updates = {}
 
-    if summary_k > 0 and len(overflow) >= summary_k:
+    if summary_k > 0:
+        if len(overflow) < summary_k:
+            # Threshold not reached yet -- per docs/guides/memory_types.md,
+            # "summary_k is a threshold, not a batch size: once the overflow
+            # reaches summary_k messages, the entire overflow is
+            # summarized". Leave overflow in state (don't remove it) so it
+            # keeps accumulating toward the threshold on a later call,
+            # instead of being silently deleted before ever being folded
+            # into a summary.
+            return {}
         existing = state.get("summary") or ""
         updates["summary"] = _make_summary(overflow, existing, agent_cfg.modelobject)
 
-    # Remove overflow messages from LangGraph state regardless of summarization
+    # Remove overflow messages from LangGraph state: unconditionally when
+    # summarization is disabled (summary_k=0, plain hard truncation), or
+    # once the threshold above was actually met and summarized.
     updates["inputs"] = [RemoveMessage(id=m.id) for m in overflow]
     return updates
 
