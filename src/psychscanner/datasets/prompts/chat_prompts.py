@@ -53,13 +53,3 @@ TOT_CONV_PROMPT = ChatPromptTemplate.from_messages(
     ],
 ).partial(candidate="")
 
-
-
-def get_chat_template(agentconfig):
-
-    memory_type = agentconfig.memory_type
-    thought_expansion = agentconfig.thought_expansion
-
-def get_trial_state_chat_template(agentconfig,instructions):
-    pass
-
