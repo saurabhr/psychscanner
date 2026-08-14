@@ -35,7 +35,12 @@ def _block_types(stimulus: Any) -> set[str]:
     for block in _blocks(stimulus):
         block_type = block.get("type") if isinstance(block, dict) else None
         types.add(block_type if block_type in ("image", "audio") else "text")
-    return types
+    # An empty content list (stimulus.content == []) has no blocks to loop
+    # over, so this would otherwise return an empty set -- and
+    # route_after_supervisor's `(single_type,) = _block_types(...)` crashes
+    # unpacking it. Treat "no blocks" the same as "one text block", matching
+    # the loop's own default-to-text handling above.
+    return types or {"text"}
 
 
 def _blocks_of_type(stimulus: Any, block_type: str) -> list:

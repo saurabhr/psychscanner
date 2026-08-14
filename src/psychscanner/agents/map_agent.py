@@ -168,7 +168,17 @@ def _search(model: Any, state: _MAPState) -> dict:
         return {"plan": [*state["plan"], "left"], "predicted_state": "", "value": 0.0}
 
     best_side, best_predicted, best_value = max(candidates, key=lambda c: c[2])
-    return {"plan": [*state["plan"], best_side], "predicted_state": best_predicted, "value": best_value}
+    # Advance state_text to the chosen action's predicted next state, so a
+    # subsequent round (max_actions > 1, route_after_orchestrate -> "search")
+    # plans against the state that action produced, not the original state
+    # every round -- matches "Predictor(state, action) -> predicted_state"
+    # feeding Algorithm 1's growing plan, per the module docstring above.
+    return {
+        "plan": [*state["plan"], best_side],
+        "state_text": best_predicted,
+        "predicted_state": best_predicted,
+        "value": best_value,
+    }
 
 
 def make_map_agent(

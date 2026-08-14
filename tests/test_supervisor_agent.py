@@ -46,3 +46,12 @@ def test_mixed_blocks_route_through_planner_and_aggregate():
         HumanMessage(content=[{"type": "image", "base64": "x"}, {"type": "text", "text": "describe this"}]),
     )
     assert "vision_worker:" in content and "text_worker:" in content
+
+
+def test_empty_content_list_does_not_crash_routing():
+    """Regression: content=[] made _block_types return an empty set, and
+    route_after_supervisor's `(single_type,) = _block_types(...)` crashed
+    unpacking it -- ValueError: not enough values to unpack."""
+    agent = make_supervisor_agent(_EchoModel())
+    content = _run(agent, HumanMessage(content=[]))
+    assert content.startswith("[text_worker]")

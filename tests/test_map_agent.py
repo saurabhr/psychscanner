@@ -21,6 +21,7 @@ class _RoutedModel:
         self.evaluator_by_call = iter(evaluator_by_call or [])
         self.orchestrator = orchestrator
         self.calls = 0
+        self.actor_situations = []
 
     def invoke(self, messages):
         self.calls += 1
@@ -28,6 +29,7 @@ class _RoutedModel:
         if "TaskDecomposer" in system:
             return AIMessage(content=self.decompose)
         if "Actor" in system:
+            self.actor_situations.append(messages[1].content)
             return AIMessage(content=next(self.actor_by_call))
         if "Predictor" in system:
             return AIMessage(content=self.predictor)
@@ -78,3 +80,10 @@ def test_map_loops_back_to_search_when_orchestrator_says_not_done():
     assert _run(agent) == "left"
     # decompose(1) + 2 search rounds x (actor2 + predictor2 + evaluator2 = 6) + orchestrator(2)
     assert model.calls == 1 + 2 * 6 + 2
+    # Regression: round 2's Actor call must plan against round 1's
+    # predicted_state ("outcome", from _RoutedModel's default predictor
+    # response), not the original trial stimulus ("task") every round.
+    round1_situations = model.actor_situations[:2]
+    round2_situations = model.actor_situations[2:]
+    assert all("Situation: task" in s for s in round1_situations)
+    assert all("Situation: outcome" in s for s in round2_situations), model.actor_situations
