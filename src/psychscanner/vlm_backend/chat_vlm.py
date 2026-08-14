@@ -11,8 +11,10 @@ Wraps it behind the same ``BaseChatModel`` contract every other psychscanner
 backend uses, so it drops into ``model_provider.llm_chat_model`` and the
 rest of the scanning pipeline unchanged. Activation capture mirrors
 ``nnsight_backend``'s ``_capture_activations``/``_resolve_module`` exactly
-(reused from there, since ``VisionLanguageModel`` shares the same trace/cache
-API as ``LanguageModel``); this module only adds image handling.
+(module-by-module via ``.output.save()``, not ``tracer.cache()`` -- see the
+``ponytail`` note in ``chat_nnsight.py`` on why -- since ``VisionLanguageModel``
+shares the same trace API as ``LanguageModel``); this module only adds image
+handling.
 
 Example:
 
@@ -124,23 +126,39 @@ class ChatVLMModel(BaseChatModel):
         )
 
     def _capture_activations(self, nn_model: Any, prompt: str, images: list) -> Path:
-        from psychscanner.nnsight_backend.chat_nnsight import _cache_to_tensor_dict, _resolve_module
+        # See chat_nnsight.py's _capture_activations: nnsight 0.3.x (the
+        # version this repo pins) has no tracer.cache() helper -- capture
+        # module-by-module via `.output.save()` instead. Same reasoning and
+        # tuple-output handling as the sibling backend, just with images=
+        # threaded through the trace call.
+        from psychscanner.nnsight_backend.chat_nnsight import _resolve_module
 
-        modules = (
-            [_resolve_module(nn_model, path) for path in self.capture_modules]
-            if self.capture_modules
-            else None
-        )
+        if self.capture_modules:
+            module_paths = self.capture_modules
+        else:
+            module_paths = [
+                name.lstrip(".")
+                for name, module in nn_model._envoy.named_modules()
+                if name not in ("", ".") and not list(module._module.children())
+            ]
+
         with nn_model.trace(prompt, images=images or None, remote=self.remote) as tracer:
-            cache = (tracer.cache(modules=modules) if modules else tracer.cache()).save()
+            saved = {path: _resolve_module(nn_model, path).output.save() for path in module_paths}
 
         import torch
+
+        tensors = {}
+        for path, proxy in saved.items():
+            value = proxy.value if hasattr(proxy, "value") else proxy
+            if isinstance(value, tuple):
+                value = value[0]
+            tensors[path] = value.detach().cpu() if hasattr(value, "detach") else value
 
         out_dir = Path(self.activations_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / f"{uuid.uuid4().hex}.pt"
         torch.save(
-            {"model": self.model_name, "prompt": prompt, "activations": _cache_to_tensor_dict(cache)},
+            {"model": self.model_name, "prompt": prompt, "activations": tensors},
             out_path,
         )
         return out_path
