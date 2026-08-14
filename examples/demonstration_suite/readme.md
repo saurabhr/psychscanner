@@ -2,13 +2,13 @@
 
 [00_install_from_github.ipynb](00_install_from_github.ipynb) — install psychscanner from GitHub before running any of the below.
 
-Suggested reading order, roughly increasing in complexity (not a technical dependency between subprojects — each is currently just a standalone readme + folder skeleton).
+Suggested reading order, roughly increasing in complexity (not a technical dependency between subprojects). Status as of 2026-08-14 — "complete" means real, non-mock run data and an analyzed `reports/report.md` exist; "skeleton" means readme + folder only, no simulation run yet.
 
-1. [reward_task](01_reward_task/readme.md) — swapping different agents/models into the same task harness.
-2. [association_memory](02_association_memory/readme.md) — core trial structures (single-turn, trial-chain, episodic-chain) and feedback types (correct/incorrect, reward).
-3. [personality_survey](03_personality_survey/readme.md) — persona conditioning plus stateful (conversation/summary, windowed) memory.
-4. [vlm_task](04_vlm_task/readme.md) — the same trial/summary/feedback machinery extended to vision-language models.
-5. [extracting_internals](05_extracting_internals/readme.md) — mechanistic interpretability: extracting and steering internal activations (Persona Vectors).
-6. [advanced_demonstration](06_advanced_demonstration/readme.md) — capstone: reproduces three classic interpretability studies (Othello-GPT, ROME, CCS) on top of everything above.
-7. [introspective_selfreport](07_introspective_selfreport/readme.md) — adapts Plunkett et al. (2025)'s LLM self-interpretability paradigm (instilled attribute-weight preferences + introspective self-report), plus an SDT/metacognition extension via `metasignal` and a `psychscanner-primal` task-card integration.
-8. [prospect_theory_planning](08_prospect_theory_planning/readme.md) — a Prospect Theory risky-choice task (SweetPea-adjacent generation, see `examples/tasks/generators/generate_prospect_theory.py`) run through 3 agent architectures: `make_map_agent` (new — Webb, Mondal & Momennejad 2025's Modular Agentic Planner, built faithfully from the *Nature Communications* paper), a conversation-memory baseline, and the pre-existing `make_lats_agent` (Monte Carlo tree search).
+1. [reward_task](01_reward_task/readme.md) — swapping different agents/models into the same task harness. **Complete.**
+2. [association_memory](02_association_memory/readme.md) — core trial structures (single-turn, trial-chain, episodic-chain) and feedback types (correct/incorrect, reward). Skeleton — not yet run.
+3. [personality_survey](03_personality_survey/readme.md) — persona conditioning plus stateful (conversation/summary, windowed) memory. Core BFI-44 design: 1 of 8 cells collected. Its `advanced/exp1_1_vviq16` arm (VVIQ-16) is complete and reported in the main manuscript.
+4. [vlm_task](04_vlm_task/readme.md) — the same trial/summary/feedback machinery extended to vision-language models. 1 of 4 conditions collected; the 2×2 `advanced/set3`/`set4` factorial figures exist on disk but are excluded from the papers as unreproducible (source CSVs no longer present).
+5. [extracting_internals](05_extracting_internals/readme.md) — mechanistic interpretability: extracting and steering internal activations (Persona Vectors). Skeleton — not yet run.
+6. [advanced_demonstration](06_advanced_demonstration/readme.md) — capstone: reproduces three classic interpretability studies (Othello-GPT, ROME, CCS) on top of everything above. Othello-GPT complete and reported; ROME and CCS not yet run.
+7. [introspective_selfreport](07_introspective_selfreport/readme.md) — adapts Plunkett et al. (2025)'s LLM self-interpretability paradigm (instilled attribute-weight preferences + introspective self-report), plus an SDT/metacognition extension via `metasignal` and a `psychscanner-primal` task-card integration. **Complete**, reported in `preprint-full`/NC.
+8. [prospect_theory_planning](08_prospect_theory_planning/readme.md) — a Prospect Theory risky-choice task (SweetPea-adjacent generation, see `examples/tasks/generators/generate_prospect_theory.py`) run through 3 agent architectures: `make_map_agent` (new — Webb, Mondal & Momennejad 2025's Modular Agentic Planner, built faithfully from the *Nature Communications* paper), a conversation-memory baseline, and the pre-existing `make_lats_agent` (Monte Carlo tree search). **Complete**, reported in `preprint-full`/NC.
