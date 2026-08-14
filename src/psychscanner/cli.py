@@ -1,12 +1,43 @@
 """Main CLI for psychscanner."""
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import click
 from dotenv import load_dotenv
 
 from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
+
+
+def _parse_json_option(ctx: click.Context, param: click.Parameter, value: str | None) -> dict | None:
+    """Parse a CLI string as a JSON object. `type=dict` on a click.Option
+    does not do this -- it calls dict() on the raw string, which only ever
+    succeeds on "" -> {}."""
+    if not value:
+        return None
+    try:
+        return json.loads(value)
+    except json.JSONDecodeError as e:
+        raise click.BadParameter(f"must be valid JSON, e.g. '{{\"temperature\": 0.5}}': {e}") from e
+
+
+def _parse_csv_option(ctx: click.Context, param: click.Parameter, value: str | None) -> list[str] | None:
+    """Parse a comma-separated CLI string into a list. `type=list[str]`/
+    `type=list[click.Path(...)]` on a click.Option does not do this --
+    Click calls list() on the raw string, exploding it into characters.
+    Returns None (not []) on no input, matching the pre-fix default so
+    downstream None-checks (e.g. embedding persona files) are unaffected."""
+    if not value:
+        return None
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def _parse_bool_or_none(ctx: click.Context, param: click.Parameter, value: str | None) -> bool | None:
+    """Map the string choices "true"/"false"/"none" to their Python values."""
+    if value is None:
+        return None
+    return {"true": True, "false": False, "none": None}[value]
 
 
 @click.command(
@@ -28,8 +59,9 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 @click.option(
     "-p",
     "--parameters",
-    type=dict,
-    help="Additional parameters for the model.",
+    type=str,
+    callback=_parse_json_option,
+    help="Additional parameters for the model, as a JSON object, e.g. '{\"temperature\": 0.5}'.",
     default=None,
 )
 @click.option(
@@ -49,9 +81,10 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 @click.option(
     "-pers",
     "--persona_files",
-    type=list[click.Path(exists=False)],
+    type=str,
+    callback=_parse_csv_option,
     default=None,
-    help="Persona files to use.",
+    help="Comma-separated persona file paths to use.",
 )
 @click.option(
     "-t",
@@ -63,9 +96,10 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 @click.option(
     "-tc",
     "--task_context",
-    type=click.Choice([True, False, None]),
+    type=click.Choice(["true", "false", "none"], case_sensitive=False),
+    callback=_parse_bool_or_none,
     default=None,
-    help="Task context to use.",
+    help="Task context to use: true, false, or none.",
 )
 @click.option(
     "-tus",
@@ -79,7 +113,7 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
     "--tunnel_k",
     default=-1,
     type=int,
-    help="To control after how many trials data is saved. When = 0 then after all trials a simulation is saved. Use this with care.",
+    help="Not currently implemented (accepted for forward-compatibility only; setting it to anything but the default logs a warning). Data is saved once per simulated participant regardless of this value.",
 )
 @click.option(
     "-projname",
@@ -91,9 +125,10 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 @click.option(
     "-tg",
     "--tags",
-    default=[],
-    type=list[str],
-    help="Tags for added information, could be used to save data in the experiment. Part of only experiment card. Can be used when saving data.",
+    default=None,
+    type=str,
+    callback=_parse_csv_option,
+    help="Comma-separated tags for added information, could be used to save data in the experiment. Part of only experiment card. Can be used when saving data.",
 )
 @click.option(
     "-pa",
@@ -112,9 +147,10 @@ from . import ExpCard, ExpCardInit, ScannerModel, __version__, to_csv
 @click.option(
     "-pcon",
     "--parser_config",
-    type=dict,
+    type=str,
+    callback=_parse_json_option,
     default=None,  # callable should be specified in the function
-    help="Dict for parser configration. Default is method=json_schema",
+    help="Parser configuration as a JSON object. Default is method=json_schema",
 )
 @click.option(
     "-pd",
@@ -143,13 +179,13 @@ def cli(model: str,
         parameters: dict|None,
         memory: str,
         memory_k: int,
-        persona_files: list[click.Path],
+        persona_files: list[str]|None,
         task_file: click.Path|None,
         task_context: bool|None,
         tunnel_status: str,
         tunnel_k: int,
         projectname: str,
-        tags: list[str],
+        tags: list[str]|None,
         parser: str,
         parser_raw: bool,
         parser_config: dict|None,
