@@ -7,7 +7,6 @@ Sample task JSON files for PsychScanner. Fetch any of them by name with
 
 - `example_survey.json` - Simple survey template
 - `bfi44.json` - Big Five Inventory personality survey (44 items)
-- `nback_demo.json` - N-back working-memory task (n=1,2,3 routines), default task card — run with `memory="Convo"` (`memory_k=5` for conversation memory, or add `summary_k=10` for summary memory). **Known issue**: uses a `"routines"`/`"routines_flow"` schema that no code in `src/psychscanner` actually reads — can't currently run via `ExpCardInit`/`ScannerModel`. Use `nback_sweetpea_n2`–`n5` below instead.
 - `pal50.json` - Paired-associate learning task (50 word pairs, study + test phases)
 - `vviq16.json` - Vividness of Visual Imagery Questionnaire (16 items, simplified wording). See also the bundled `src/psychscanner/datasets/prompts/defaults/vviq.json` (taskname `vviqen`, official VVIQ wording) — kept as a separate variant, not merged.
 - `rm_singleturn_demo.json` - Relational-memory task, single-turn trial
