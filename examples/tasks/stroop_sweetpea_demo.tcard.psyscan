@@ -1,0 +1,132 @@
+{
+  "tasktype": "sc",
+  "taskname": "stroop_sweetpea_demo",
+  "instructions": {
+    "definition": [
+      "You will see a color word printed in a colored ink. Name the ink color, ignoring what the word says. Reply with only the ink color."
+    ]
+  },
+  "contexts": [
+    "stroop"
+  ],
+  "contexts_id": [
+    "stroop"
+  ],
+  "context_present": false,
+  "chain_type": "item",
+  "parser": null,
+  "items": {
+    "stroop_01": [
+      {
+        "trcode": "stroop_01",
+        "stimulus": "The word 'BLUE' is shown in blue ink.",
+        "corrAns": "blue"
+      }
+    ],
+    "stroop_02": [
+      {
+        "trcode": "stroop_02",
+        "stimulus": "The word 'BLUE' is shown in red ink.",
+        "corrAns": "red"
+      }
+    ],
+    "stroop_03": [
+      {
+        "trcode": "stroop_03",
+        "stimulus": "The word 'BROWN' is shown in blue ink.",
+        "corrAns": "blue"
+      }
+    ],
+    "stroop_04": [
+      {
+        "trcode": "stroop_04",
+        "stimulus": "The word 'BLUE' is shown in brown ink.",
+        "corrAns": "brown"
+      }
+    ],
+    "stroop_05": [
+      {
+        "trcode": "stroop_05",
+        "stimulus": "The word 'BROWN' is shown in brown ink.",
+        "corrAns": "brown"
+      }
+    ],
+    "stroop_06": [
+      {
+        "trcode": "stroop_06",
+        "stimulus": "The word 'BLUE' is shown in green ink.",
+        "corrAns": "green"
+      }
+    ],
+    "stroop_07": [
+      {
+        "trcode": "stroop_07",
+        "stimulus": "The word 'RED' is shown in red ink.",
+        "corrAns": "red"
+      }
+    ],
+    "stroop_08": [
+      {
+        "trcode": "stroop_08",
+        "stimulus": "The word 'RED' is shown in green ink.",
+        "corrAns": "green"
+      }
+    ],
+    "stroop_09": [
+      {
+        "trcode": "stroop_09",
+        "stimulus": "The word 'GREEN' is shown in brown ink.",
+        "corrAns": "brown"
+      }
+    ],
+    "stroop_10": [
+      {
+        "trcode": "stroop_10",
+        "stimulus": "The word 'RED' is shown in brown ink.",
+        "corrAns": "brown"
+      }
+    ],
+    "stroop_11": [
+      {
+        "trcode": "stroop_11",
+        "stimulus": "The word 'BROWN' is shown in red ink.",
+        "corrAns": "red"
+      }
+    ],
+    "stroop_12": [
+      {
+        "trcode": "stroop_12",
+        "stimulus": "The word 'GREEN' is shown in green ink.",
+        "corrAns": "green"
+      }
+    ],
+    "stroop_13": [
+      {
+        "trcode": "stroop_13",
+        "stimulus": "The word 'BROWN' is shown in green ink.",
+        "corrAns": "green"
+      }
+    ],
+    "stroop_14": [
+      {
+        "trcode": "stroop_14",
+        "stimulus": "The word 'GREEN' is shown in blue ink.",
+        "corrAns": "blue"
+      }
+    ],
+    "stroop_15": [
+      {
+        "trcode": "stroop_15",
+        "stimulus": "The word 'GREEN' is shown in red ink.",
+        "corrAns": "red"
+      }
+    ],
+    "stroop_16": [
+      {
+        "trcode": "stroop_16",
+        "stimulus": "The word 'RED' is shown in blue ink.",
+        "corrAns": "blue"
+      }
+    ]
+  }
+}

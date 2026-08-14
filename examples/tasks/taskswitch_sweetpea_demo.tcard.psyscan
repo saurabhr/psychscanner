@@ -1,0 +1,188 @@
+{
+  "tasktype": "sc",
+  "taskname": "taskswitch_sweetpea_demo",
+  "instructions": {
+    "definition": [
+      "Each trial shows a letter+digit pair and a task cue. If the cue is LETTER, say 'vowel' if the letter is a vowel, else 'consonant' (ignore the digit). If the cue is NUMBER, say 'odd' or 'even' for the digit (ignore the letter). Reply with only your answer."
+    ]
+  },
+  "contexts": [
+    "taskswitch"
+  ],
+  "contexts_id": [
+    "taskswitch"
+  ],
+  "context_present": false,
+  "chain_type": "item",
+  "parser": null,
+  "items": {
+    "taskswitch_01": [
+      {
+        "trcode": "taskswitch_01",
+        "stimulus": "Cue: LETTER. Stimulus: R1",
+        "corrAns": "consonant"
+      }
+    ],
+    "taskswitch_02": [
+      {
+        "trcode": "taskswitch_02",
+        "stimulus": "Cue: LETTER. Stimulus: U4",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_03": [
+      {
+        "trcode": "taskswitch_03",
+        "stimulus": "Cue: NUMBER. Stimulus: N5",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_04": [
+      {
+        "trcode": "taskswitch_04",
+        "stimulus": "Cue: LETTER. Stimulus: E6",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_05": [
+      {
+        "trcode": "taskswitch_05",
+        "stimulus": "Cue: NUMBER. Stimulus: Y3",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_06": [
+      {
+        "trcode": "taskswitch_06",
+        "stimulus": "Cue: NUMBER. Stimulus: Q5",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_07": [
+      {
+        "trcode": "taskswitch_07",
+        "stimulus": "Cue: NUMBER. Stimulus: U8",
+        "corrAns": "even"
+      }
+    ],
+    "taskswitch_08": [
+      {
+        "trcode": "taskswitch_08",
+        "stimulus": "Cue: NUMBER. Stimulus: V1",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_09": [
+      {
+        "trcode": "taskswitch_09",
+        "stimulus": "Cue: NUMBER. Stimulus: O9",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_10": [
+      {
+        "trcode": "taskswitch_10",
+        "stimulus": "Cue: NUMBER. Stimulus: S5",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_11": [
+      {
+        "trcode": "taskswitch_11",
+        "stimulus": "Cue: NUMBER. Stimulus: Q2",
+        "corrAns": "even"
+      }
+    ],
+    "taskswitch_12": [
+      {
+        "trcode": "taskswitch_12",
+        "stimulus": "Cue: LETTER. Stimulus: U9",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_13": [
+      {
+        "trcode": "taskswitch_13",
+        "stimulus": "Cue: LETTER. Stimulus: U1",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_14": [
+      {
+        "trcode": "taskswitch_14",
+        "stimulus": "Cue: LETTER. Stimulus: O1",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_15": [
+      {
+        "trcode": "taskswitch_15",
+        "stimulus": "Cue: LETTER. Stimulus: N7",
+        "corrAns": "consonant"
+      }
+    ],
+    "taskswitch_16": [
+      {
+        "trcode": "taskswitch_16",
+        "stimulus": "Cue: LETTER. Stimulus: D7",
+        "corrAns": "consonant"
+      }
+    ],
+    "taskswitch_17": [
+      {
+        "trcode": "taskswitch_17",
+        "stimulus": "Cue: NUMBER. Stimulus: D2",
+        "corrAns": "even"
+      }
+    ],
+    "taskswitch_18": [
+      {
+        "trcode": "taskswitch_18",
+        "stimulus": "Cue: LETTER. Stimulus: G6",
+        "corrAns": "consonant"
+      }
+    ],
+    "taskswitch_19": [
+      {
+        "trcode": "taskswitch_19",
+        "stimulus": "Cue: NUMBER. Stimulus: H1",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_20": [
+      {
+        "trcode": "taskswitch_20",
+        "stimulus": "Cue: NUMBER. Stimulus: O6",
+        "corrAns": "even"
+      }
+    ],
+    "taskswitch_21": [
+      {
+        "trcode": "taskswitch_21",
+        "stimulus": "Cue: NUMBER. Stimulus: W5",
+        "corrAns": "odd"
+      }
+    ],
+    "taskswitch_22": [
+      {
+        "trcode": "taskswitch_22",
+        "stimulus": "Cue: LETTER. Stimulus: I6",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_23": [
+      {
+        "trcode": "taskswitch_23",
+        "stimulus": "Cue: LETTER. Stimulus: U6",
+        "corrAns": "vowel"
+      }
+    ],
+    "taskswitch_24": [
+      {
+        "trcode": "taskswitch_24",
+        "stimulus": "Cue: LETTER. Stimulus: S3",
+        "corrAns": "consonant"
+      }
+    ]
+  }
+}
