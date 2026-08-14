@@ -1,0 +1,140 @@
+{
+  "tasktype": "sc",
+  "taskname": "prospect_theory_demo",
+  "instructions": {
+    "definition": [
+      "On each trial you will see two gambles, Left and Right. Each gamble has a chance of a gain and a chance of a loss. Choose the gamble you prefer. Reply with only 'left' or 'right'."
+    ]
+  },
+  "contexts": [
+    "prospect"
+  ],
+  "contexts_id": [
+    "prospect"
+  ],
+  "context_present": false,
+  "chain_type": "item",
+  "parser": null,
+  "items": {
+    "prospect_01": [
+      {
+        "trcode": "prospect_01",
+        "stimulus": "Left: 43% chance to gain 84.4, otherwise lose 75.8.\nRight: 41% chance to gain 25.9, otherwise lose 51.1."
+      }
+    ],
+    "prospect_02": [
+      {
+        "trcode": "prospect_02",
+        "stimulus": "Left: 48% chance to gain 78.4, otherwise lose 30.3.\nRight: 50% chance to gain 58.3, otherwise lose 90.8."
+      }
+    ],
+    "prospect_03": [
+      {
+        "trcode": "prospect_03",
+        "stimulus": "Left: 61% chance to gain 28.2, otherwise lose 75.6.\nRight: 94% chance to gain 25.1, otherwise lose 91.0."
+      }
+    ],
+    "prospect_04": [
+      {
+        "trcode": "prospect_04",
+        "stimulus": "Left: 33% chance to gain 81.0, otherwise lose 90.2.\nRight: 67% chance to gain 73.0, otherwise lose 89.9."
+      }
+    ],
+    "prospect_05": [
+      {
+        "trcode": "prospect_05",
+        "stimulus": "Left: 44% chance to gain 47.2, otherwise lose 10.1.\nRight: 92% chance to gain 61.1, otherwise lose 91.3."
+      }
+    ],
+    "prospect_06": [
+      {
+        "trcode": "prospect_06",
+        "stimulus": "Left: 28% chance to gain 47.7, otherwise lose 86.5.\nRight: 6% chance to gain 80.5, otherwise lose 54.9."
+      }
+    ],
+    "prospect_07": [
+      {
+        "trcode": "prospect_07",
+        "stimulus": "Left: 79% chance to gain 72.0, otherwise lose 39.9.\nRight: 49% chance to gain 66.8, otherwise lose 0.1."
+      }
+    ],
+    "prospect_08": [
+      {
+        "trcode": "prospect_08",
+        "stimulus": "Left: 34% chance to gain 86.8, otherwise lose 24.4.\nRight: 56% chance to gain 87.0, otherwise lose 19.1."
+      }
+    ],
+    "prospect_09": [
+      {
+        "trcode": "prospect_09",
+        "stimulus": "Left: 77% chance to gain 23.9, otherwise lose 96.8.\nRight: 34% chance to gain 44.8, otherwise lose 8.0."
+      }
+    ],
+    "prospect_10": [
+      {
+        "trcode": "prospect_10",
+        "stimulus": "Left: 15% chance to gain 50.8, otherwise lose 93.3.\nRight: 54% chance to gain 55.1, otherwise lose 70.7."
+      }
+    ],
+    "prospect_11": [
+      {
+        "trcode": "prospect_11",
+        "stimulus": "Left: 92% chance to gain 81.4, otherwise lose 54.0.\nRight: 45% chance to gain 60.3, otherwise lose 58.8."
+      }
+    ],
+    "prospect_12": [
+      {
+        "trcode": "prospect_12",
+        "stimulus": "Left: 57% chance to gain 59.6, otherwise lose 38.5.\nRight: 22% chance to gain 29.0, otherwise lose 18.9."
+      }
+    ],
+    "prospect_13": [
+      {
+        "trcode": "prospect_13",
+        "stimulus": "Left: 48% chance to gain 61.3, otherwise lose 65.7.\nRight: 84% chance to gain 9.0, otherwise lose 75.8."
+      }
+    ],
+    "prospect_14": [
+      {
+        "trcode": "prospect_14",
+        "stimulus": "Left: 86% chance to gain 92.3, otherwise lose 84.2.\nRight: 40% chance to gain 92.3, otherwise lose 54.1."
+      }
+    ],
+    "prospect_15": [
+      {
+        "trcode": "prospect_15",
+        "stimulus": "Left: 78% chance to gain 70.5, otherwise lose 27.6.\nRight: 58% chance to gain 84.9, otherwise lose 89.5."
+      }
+    ],
+    "prospect_16": [
+      {
+        "trcode": "prospect_16",
+        "stimulus": "Left: 46% chance to gain 95.0, otherwise lose 58.0.\nRight: 88% chance to gain 66.0, otherwise lose 99.6."
+      }
+    ],
+    "prospect_17": [
+      {
+        "trcode": "prospect_17",
+        "stimulus": "Left: 60% chance to gain 79.3, otherwise lose 8.2.\nRight: 81% chance to gain 48.6, otherwise lose 63.0."
+      }
+    ],
+    "prospect_18": [
+      {
+        "trcode": "prospect_18",
+        "stimulus": "Left: 16% chance to gain 24.3, otherwise lose 73.1.\nRight: 35% chance to gain 22.0, otherwise lose 79.5."
+      }
+    ],
+    "prospect_19": [
+      {
+        "trcode": "prospect_19",
+        "stimulus": "Left: 18% chance to gain 81.6, otherwise lose 10.1.\nRight: 57% chance to gain 69.8, otherwise lose 4.5."
+      }
+    ],
+    "prospect_20": [
+      {
+        "trcode": "prospect_20",
+        "stimulus": "Left: 66% chance to gain 91.0, otherwise lose 53.4.\nRight: 60% chance to gain 2.7, otherwise lose 63.5."
+      }
+    ]
+  }
+}
