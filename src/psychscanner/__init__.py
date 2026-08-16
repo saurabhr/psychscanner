@@ -31,6 +31,7 @@ from .simulation_model.simulation_model import (
 from .templates.tasks.get_task_template import get_task_template
 from .task_library import task_library, list_task_library
 from .experiment_library import experiment_library, list_experiment_library
+from .library_download import download_lib
 from .feedback import FeedbackBase, NextTrialBase
 from .agents import CustomAgent, ScanningAgent
 
@@ -61,6 +62,7 @@ __all__ = [
     "list_task_library",
     "experiment_library",
     "list_experiment_library",
+    "download_lib",
     "FeedbackBase",
     "NextTrialBase",
     "CustomAgent",

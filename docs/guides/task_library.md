@@ -135,6 +135,29 @@ UserWarning: Task 'my_task' found in more than one search directory. Using
 {'taskname': 'my_task', ...}
 ```
 
+## Fetching the vetted card index (`download_lib`)
+
+The recipes above assume you already have a directory of cards on disk (a
+checkout of this repo, or your own project's `tasks/`). For the separate,
+versioned index of vetted cards —
+[psyscan-library](https://github.com/saurabhr/psyscan-library) — `download_lib()`
+clones/updates a checkout for you and returns paths ready to pass to
+`dirs=`:
+
+```python
+from psychscanner import download_lib, task_library
+
+paths = download_lib()  # library="psychscanner", kind="both"
+card = task_library("example_survey", dirs=paths["tasks"])
+```
+
+`download_lib()` checks that the `library=` you asked for matches the
+package actually installed (`psychscanner` vs. `psychscanner-primal` — cards
+aren't portable between them) and raises rather than handing back cards that
+won't run. See psyscan-library's
+[`download_lib()` docs](https://psyscan-library.readthedocs.io/en/latest/download_lib/)
+for the full parameter reference.
+
 ## See also
 
 - [Cognitive Tasks](cognitive_tasks.md) / [Survey Tasks](survey_tasks.md) — writing a task card
