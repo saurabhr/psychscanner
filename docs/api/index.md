@@ -9,6 +9,10 @@ Complete API documentation for PsychScanner.
 - [SessionTunnel](session_tunnel.md) - Session management
 - [Parsers](parsers.md) - Response parsers
 
+## Functions
+
+- [run_card](run_card.md) - Task name to results in one call
+
 Also exported from the top-level `psychscanner` package (no dedicated page —
 documented inline where they're used):
 

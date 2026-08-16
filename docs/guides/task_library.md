@@ -144,6 +144,51 @@ won't run. See psyscan-library's
 [`download_lib()` docs](https://psyscan-library.readthedocs.io/en/latest/download_lib/)
 for the full parameter reference.
 
+## Running a fetched card in one call (`run_card`)
+
+Everything above gets you a task card. Running it still means building an
+`ExpCardInit`, wrapping it in `ExpCard`, and calling `ScannerModel(...).run()`
+by hand — three more names to import for the common case. `run_card()`
+chains all four steps (`task_library` included) into one call:
+
+```python
+from psychscanner import run_card
+
+results = run_card("rm_singleturn_demo", dirs="examples/tasks")
+```
+
+Equivalent to:
+
+```python
+from psychscanner import task_library, ExpCardInit, ExpCard, ScannerModel
+
+task_file = task_library("rm_singleturn_demo", format="path", dirs="examples/tasks")
+card = ExpCardInit(task_file=task_file, model="mock-chat-model", family="mock-llm",
+                    cogtype="no", nsim=1)
+results = ScannerModel(expcard=ExpCard(card)).run()
+```
+
+`run_card`'s keyword defaults (`model`, `family`, `memory`, `cogtype`, `nsim`)
+match `ExpCardInit`'s own defaults — override any of them, or pass through
+anything else `ExpCardInit` accepts (`parser`, `parameters`, `feedback_fn`,
+...) as extra keyword arguments:
+
+```python
+results = run_card(
+    "vviq16",
+    dirs=paths["tasks"],       # from download_lib()
+    model="gpt-4o-mini",
+    family="openai",
+    nsim=10,
+    parser="DefaultLiteralVivid15",
+)
+```
+
+Reach for the longer, four-step form instead when you need the `ExpCard` or
+`ScannerModel` object itself — e.g. to call `to_csv(scanner, ...)` after
+`.run()`, or to inspect `card_in`/`data_root_dir` before running. See the
+[API reference](../api/run_card.md) for the full signature.
+
 ## See also
 
 - [Cognitive Tasks](cognitive_tasks.md) / [Survey Tasks](survey_tasks.md) — writing a task card

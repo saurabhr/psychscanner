@@ -32,6 +32,7 @@ from .templates.tasks.get_task_template import get_task_template
 from .task_library import task_library, list_task_library
 from .experiment_library import experiment_library, list_experiment_library
 from .library_download import download_lib
+from .run_card import run_card
 from .feedback import FeedbackBase, NextTrialBase
 from .agents import CustomAgent, ScanningAgent
 
@@ -63,6 +64,7 @@ __all__ = [
     "experiment_library",
     "list_experiment_library",
     "download_lib",
+    "run_card",
     "FeedbackBase",
     "NextTrialBase",
     "CustomAgent",

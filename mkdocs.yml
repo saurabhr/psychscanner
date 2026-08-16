@@ -111,6 +111,7 @@ nav:
     - Overview: api/index.md
     - ExpCard: api/expcard.md
     - ScannerModel: api/scanner_model.md
+    - run_card: api/run_card.md
     - Parsers: api/parsers.md
     - SessionTunnel: api/session_tunnel.md
   - CLI: cli.md
