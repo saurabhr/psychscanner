@@ -74,44 +74,30 @@ session will search it automatically.
 
 ## Contributing a task card
 
-[`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
-holds both the bundled tutorial task cards and anything contributed by
-others — there's no separate "shared cards" folder to keep in sync. Getting
-one in is the standard GitHub fork-and-PR flow — nothing psychscanner-specific:
+New task/experiment cards no longer go through a PR against
+`examples/tasks/` in this repo — that path is now reserved for the bundled
+tutorial cards only. Contribute to
+[`psyscan-library`](https://github.com/saurabhr/psyscan-library) instead,
+the public, versioned index of vetted cards for this package:
 
-1. **Fork** [saurabhr/psychscanner](https://github.com/saurabhr/psychscanner)
-   on GitHub, then clone your fork and branch:
-
-   ```bash
-   git clone https://github.com/<your-username>/psychscanner.git
-   cd psychscanner
-   git checkout -b add-<your_task_name>-task
-   ```
-
-2. **Write your task card** as JSON (see the [Cognitive Tasks](cognitive_tasks.md)
-   and [Survey Tasks](survey_tasks.md) guides for the structure, or copy one
-   of the files in [`examples/tasks/`](https://github.com/saurabhr/psychscanner/tree/main/examples/tasks)
-   as a starting point), and **save it at the exact path**
-   `examples/tasks/<your_task_name>.json` — that path is what makes
-   it discoverable; there's no separate registration step.
-
-3. **Commit, push, and open the PR:**
+1. Add your card as a single file at `tasks/psychscanner/<name>.json` (or
+   `.tcard.psyscan`) in that repo — see the [Cognitive Tasks](cognitive_tasks.md)
+   and [Survey Tasks](survey_tasks.md) guides here for the card structure.
+2. Validate it locally with `psychscanner` installed:
 
    ```bash
-   git add examples/tasks/<your_task_name>.json
-   git commit -m "Add <your_task_name> task card"
-   git push -u origin add-<your_task_name>-task
-   gh pr create --title "Add <your_task_name> task card" --fill
-   # or open the PR from the compare-changes page GitHub links to after the push
+   python scripts/validate_contribution.py tasks/psychscanner/<name>.json
    ```
 
-   See [CONTRIBUTING.md](https://github.com/saurabhr/psychscanner/blob/main/CONTRIBUTING.md)
-   for the general setup/test steps expected before a PR.
+   This checks required fields, rejects duplicates, and — the hard
+   requirement — runs the card end-to-end against the mock LLM.
+3. Open a PR against `psyscan-library`. See that repo's
+   [`CONTRIBUTING.md`](https://github.com/saurabhr/psyscan-library/blob/main/CONTRIBUTING.md)
+   for the full process.
 
-Once merged, anyone with the repo checked out can fetch it immediately —
-`task_library("your_task_name")` — with no index file to update and no name
-to register anywhere: `list_task_library()` discovers it by scanning the
-directory, so the moment the file exists on `main`, it's part of the library.
+Once merged, fetch it with [`download_lib()`](#fetching-the-vetted-card-index-download_lib)
+to get a local `tasks/` path, then pass that as `dirs=` to `task_library()`
+as shown below.
 
 ## Errors
 

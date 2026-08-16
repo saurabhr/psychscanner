@@ -35,8 +35,11 @@ scanner.run(
     progress_bar: bool = False,
     feedback: Any | None = None,
     feedback_fn: Callable | None = None,
+    next_trial: Any | None = None,
+    next_trial_fn: Callable | None = None,
     save_str: str | None = None,
     tunnel: Any | None = None,
+    custom_agent: Any | None = None,
 ) -> list[list[dict]]
 ```
 
@@ -49,8 +52,11 @@ Executes the full simulation.
 | `progress_bar` | `bool` | `False` | Show tqdm bar per system message (overrides `expcard.enabletqdm`) |
 | `feedback` | `Any` | `None` | Runtime override for `expcard.card_in.feedback` — leave `None` to use the card setting |
 | `feedback_fn` | `Callable` | `None` | Runtime override for `expcard.card_in.feedback_fn` |
+| `next_trial` | `Any` | `None` | Runtime override for `expcard.card_in.next_trial` — leave `None` to use the card setting |
+| `next_trial_fn` | `Callable` | `None` | Runtime override for `expcard.card_in.next_trial_fn` — see [Conditional Next Trial](../examples/conditional_next_trial.md) |
 | `save_str` | `str` | `None` | Custom suffix appended to `.psyscan` output filenames |
 | `tunnel` | `Any` | `None` | Override the session tunnel at runtime |
+| `custom_agent` | `Any` | `None` | Bring-your-own agent satisfying the `ScanningAgent` contract (`.ai_app.invoke(...)` + `.parser`) — bypasses the built-in LangChain/LangGraph pipeline entirely. See `psychscanner.agents.CustomAgent`. |
 
 ### Return value
 

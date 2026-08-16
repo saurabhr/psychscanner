@@ -100,7 +100,7 @@ Returns two fields:
 | Field | Type | Description |
 |-------|------|-------------|
 | `Word_2` | `str` | The second word (given or generated) |
-| `Rating` | `int` (0–100) | Relatedness rating |
+| `Rating` | `float` (0–100) | Relatedness rating |
 
 ### Test phase — `Response_part_2_rm`
 

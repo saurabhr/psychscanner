@@ -161,7 +161,7 @@ tunnel = SessionTunnel(
 )
 
 logs = tunnel.load_tunnel_logs(to_frame=True)
-print(logs[["time", "level", "run_type", "state"]])
+print(logs[["timestamp", "level", "run_type", "state"]])
 
 print("Completed participants:", len(tunnel.all_past_scans()))
 print("Last checkpoint:",       tunnel.last_scan()["state"])

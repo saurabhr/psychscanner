@@ -13,8 +13,8 @@ Also exported from the top-level `psychscanner` package (no dedicated page —
 documented inline where they're used):
 
 - `save_expcard` / `load_expcard` — see [ExpCard § Saving and loading](expcard.md#saving-and-loading-experiment-cards)
-- `FeedbackBase` — see [Configuration § Feedback](../configuration.md#feedback)
-- `task_library` / `list_task_library` — see the [Task Library guide](../guides/task_library.md)
+- `FeedbackBase` / `NextTrialBase` — see [Configuration § Feedback](../configuration.md#feedback) and the [Conditional Next Trial example](../examples/conditional_next_trial.md)
+- `task_library` / `list_task_library` / `download_lib` — see the [Task Library guide](../guides/task_library.md)
 
 ## Quick Links
 

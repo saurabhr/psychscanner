@@ -169,6 +169,10 @@ Overrides the `chain_type` field in the task JSON.
 
 Controls structured output. See [ExpCard API](api/expcard.md) for parser modes.
 
+> The built-in `mock-llm` model does not implement `with_structured_output()`
+> and raises `NotImplementedError` if a parser is set while `family="mock-llm"`.
+> Leave `parser=None` (or `"0"`) for mock-backend test runs.
+
 ### `parser_raw`
 **Type:** `bool` | **Default:** `False`
 

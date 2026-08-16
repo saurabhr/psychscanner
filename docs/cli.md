@@ -5,10 +5,12 @@ Installing the package registers a `psychscanner` console command
 as `python -m psychscanner`. Both forms run the same `click` command defined in
 `src/psychscanner/cli.py`.
 
-> **Current behavior:** the CLI currently just parses and echoes its options
-> back to stdout — it does **not** build an `ExpCard`/`ScannerModel` or run an
-> experiment yet. Use it to sanity-check option parsing, or use the Python API
-> below to actually run experiments.
+> **Current behavior:** the CLI builds an `ExpCard`/`ScannerModel` from the
+> parsed options and runs the experiment, saving results with `to_csv()`. With
+> no options passed it runs the default mock-llm/VVIQ-16 experiment (1
+> participant) — useful to sanity-check option parsing without an API key.
+> The Python API below gives more control (e.g. custom parsers, feedback,
+> multiple personas).
 
 ---
 
@@ -37,13 +39,13 @@ psychscanner --help
 | `-p, --parameters` | `dict` | `None` | Extra kwargs forwarded to the model constructor |
 | `-mem, --memory` | `Choice(SingleTurn, Convo)` | `SingleTurn` | Memory mode |
 | `-memk, --memory_k` | `int` | `-1` | Number of past interactions to keep |
-| `-pers, --persona_files` | `list[Path]` | `None` | Persona JSON file(s) |
+| `-pers, --persona_files` | comma-separated `str` -> `list[str]` | `None` | Persona JSON file(s) |
 | `-t, --task_file` | `Path` | `None` | Task JSON file |
 | `-tc, --task_context` | `Choice(True, False, None)` | `None` | Whether to include context text in prompts |
 | `-tus, --tunnel_status` | `Choice("0", "1")` | `"0"` | Enable checkpointing (`"1"`) |
 | `-tuk, --tunnel_k` | `int` | `-1` | Accepted but currently unused by the run loop |
 | `-projname, --projectname` | `str` | `"DEFAULTPROJ"` | Project name / output sub-folder |
-| `-tg, --tags` | `list[str]` | `[]` | Arbitrary metadata tags |
+| `-tg, --tags` | comma-separated `str` -> `list[str]` | `None` | Arbitrary metadata tags |
 | `-pa, --parser` | `str` | `"0"` | Parser name, or `"0"` for none |
 | `-praw, --parser_raw` | `bool` | `False` | Keep the raw `AIMessage` alongside the parsed response |
 | `-pcon, --parser_config` | `dict` | `None` | Forwarded to `with_structured_output()` |
@@ -133,9 +135,11 @@ export OPENAI_API_KEY=sk-...
 export GROQ_API_KEY=gsk_...
 ```
 
-Or keep them in a `.env` file and load it yourself before constructing the
-card — psychscanner does **not** load `.env` files automatically (the
-`login_env` field exists but is currently unused):
+Or keep them in a `.env` file. The CLI's `-le/--login_env` flag loads it for
+you (calls `load_dotenv(login_env)` before running). The Python API does
+**not** load `.env` files automatically — `ExpCardInit`'s `login_env` field
+exists but is currently unused, so call `load_dotenv()` yourself before
+constructing the card:
 
 ```python
 from dotenv import load_dotenv

@@ -12,8 +12,11 @@ This matches notebooks `06_feedback_api.ipynb` and `07_rm_feedback_task.ipynb`.
 
 1. Set `feedback=True` and provide a `feedback_fn` class on the card.
 2. After each trial, the scanner calls `feedback_fn.on_response(trial, response)`.
-3. The returned string is injected as an assistant message into the conversation.
-4. Requires `memory="Convo"` (feedback is part of the conversation history).
+3. The returned string is merged into the *next* trial's `HumanMessage` (by
+   default `FeedbackBase.inject_feedback`), not sent as a separate turn —
+   override `inject_feedback` to change the format.
+4. Not enforced by the code, but feedback is only meaningful when trials
+   share context, so it's typically paired with `memory="Convo"`.
 
 ---
 
@@ -145,14 +148,14 @@ class StatefulFeedback(FeedbackBase):
 
 ---
 
-## Required card settings for feedback
+## Card settings for feedback
 
-| Parameter | Required value |
+| Parameter | Value |
 |-----------|---------------|
-| `memory` | `"Convo"` |
-| `chain_type` | `"task"` |
-| `feedback` | `True` |
-| `feedback_fn` | Your `FeedbackBase` subclass (class, not instance) |
+| `feedback` | `True` — required |
+| `feedback_fn` | Your `FeedbackBase` subclass (class, not instance) — required |
+| `memory` | `"Convo"` — not enforced by the code, but feedback only carries over into the *next* trial's `HumanMessage`, so it's only meaningful when trials share context |
+| `chain_type` | `"task"` — typical pairing, not enforced; `chain_type` only changes which LangGraph thread trials share |
 
 ---
 

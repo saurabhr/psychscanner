@@ -8,7 +8,7 @@ All notable changes to PsychScanner are documented here.
 
 ### New features
 
-- **CLI now runs real experiments** — the `psychscanner` console command previously just echoed its parsed options back to stdout. It now builds an `ExpCardInit` from the CLI flags and runs a real simulation, writing results to `--proj-dir`.
+- **CLI now runs real experiments** — the `psychscanner` console command previously just echoed its parsed options back to stdout. It now builds an `ExpCardInit` from the CLI flags and runs a real simulation, writing results to `--proj_dir`.
 - **Shadowed task-name warning** — `task_library()`/`list_task_library()` previously picked silently between duplicate task names across search directories. They now emit a `UserWarning` naming the winning path and the shadowed one(s); resolution order is unchanged.
 
 ### Bug fixes
