@@ -31,8 +31,8 @@ independent re-derivation of every `corrAns` straight from the saved file.
 
 Not yet done: LLM-text vs. VLM-image *variants of the same three SweetPea
 designs* (currently text-only) — `vlm_shapes_demo` above is a separate task,
-not a visual version of Stroop/Task-Switching/N-back. Tracked in the
-project's `TODO.md`.
+not a visual version of Stroop/Task-Switching/N-back. Tracked on the
+project's [issue tracker](https://github.com/saurabhr/psychscanner/issues).
 
 ## Structure
 
