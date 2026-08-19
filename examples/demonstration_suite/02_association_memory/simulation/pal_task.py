@@ -30,7 +30,7 @@ from pathlib import Path
 
 from psychscanner import FeedbackBase
 
-PAL50_PATH = Path(__file__).resolve().parents[3] / "examples" / "tasks" / "pal50.json"
+PAL50_PATH = Path(__file__).resolve().parents[4] / "examples" / "tasks" / "pal50.json"
 LEVELS = ["L0", "L25", "L50", "L75", "L100"]
 PAIRS_PER_LEVEL = 3  # subset size: 3 of 10 pairs/level -> 15 pairs, 30 trials/run
 

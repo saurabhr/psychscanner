@@ -39,7 +39,7 @@ from psychscanner.feedback import FeedbackBase
 
 from stimuli import generate
 
-load_dotenv(Path(__file__).resolve().parents[3] / ".env")
+load_dotenv(Path(__file__).resolve().parents[4] / ".env")
 
 DEMO_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = DEMO_DIR / "data"

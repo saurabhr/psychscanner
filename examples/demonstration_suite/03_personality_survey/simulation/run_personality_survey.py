@@ -64,11 +64,11 @@ from psychscanner import ExpCard, ExpCardInit, ScannerModel, to_csv
 # ── paths ─────────────────────────────────────────────────────────────────
 HERE      = Path(__file__).parent
 DEMO_ROOT = HERE.parent                      # examples/demonstration_suite/03_personality_survey/
-REPO_ROOT = DEMO_ROOT.parents[1]             # psychscanner/
+REPO_ROOT = DEMO_ROOT.parents[2]             # psychscanner/
 
 load_dotenv(REPO_ROOT / ".env")
 
-PERSONA_DIR = REPO_ROOT / "examples" / "advanced" / "personas"
+PERSONA_DIR = DEMO_ROOT / "advanced" / "personas"
 RAW_DIR     = DEMO_ROOT / "data" / "raw"
 PROC_DIR    = DEMO_ROOT / "data" / "processed"
 
