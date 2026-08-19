@@ -197,7 +197,7 @@ Reach for the longer, four-step form instead when you need the `ExpCard` or
 - [Cognitive Tasks with SweetPea](sweetpea_task_cards.md#3-convert-the-sampled-sequence-into-items) —
   generate a task card's `items` sequence, then save it here for lookup
   by name
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   a worked example that fetches a task card this way before crossing it
   with personas
 - [`examples/tasks/README.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/tasks/README.md)

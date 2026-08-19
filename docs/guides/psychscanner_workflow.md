@@ -390,7 +390,7 @@ questionnaire over 10 trials, use PsychScanner.
 - [Cognitive Tasks](cognitive_tasks.md) — the task card (task JSON schema)
   that an experiment card wraps
 - [Survey Tasks](survey_tasks.md) — the most common task-card instance
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   a worked example combining a task card with persona-conditioned
   experiment cards
 - [Cognitive Tasks with SweetPea](sweetpea_task_cards.md) — generating a

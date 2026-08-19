@@ -365,8 +365,8 @@ card = ExpCardInit(task_file=task, parser="1", ...)
   then export it into a task card exactly like the ones on this page
 - [Task Library](task_library.md) — fetch a saved task card by name once
   it's written to disk, instead of hardcoding a path
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   crossing a task card with multiple simulated personas
 - [Memory Types](memory_types.md) — Convo vs. SingleTurn
 - [Parsers API](../api/parsers.md) — RM parser classes
-- [Feedback API](../examples/feedback_loop.md) — feedback examples
+- [Feedback API](../examples/demonstration_suite/02_association_memory.md) — feedback examples

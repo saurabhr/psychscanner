@@ -172,9 +172,9 @@ Add it to `crossing` (and an `AtMostKInARow` constraint) the same way as
   worked examples (Reality Monitoring, visual search)
 - [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
   (`ExpCard`) a SweetPea-generated task card gets wrapped into to run
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   crossing a SweetPea-generated task with multiple simulated personas
 - [Task Library](task_library.md) — fetching task cards by name once saved
   to disk
-- [Feedback API](../examples/feedback_loop.md) — scoring trials against a
+- [Feedback API](../examples/demonstration_suite/02_association_memory.md) — scoring trials against a
   `corrAns` or condition, e.g. congruency

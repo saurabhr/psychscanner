@@ -5,15 +5,19 @@ narrative, code-snippet walkthroughs — for runnable code, see the
 [Tutorials](../tutorials/index.md) section, which renders the actual notebooks
 from [`examples/`](https://github.com/saurabhr/psychscanner/tree/main/examples).
 
-## Basic Examples
-
-- [Simple Survey](basic_survey.md) — running a basic questionnaire
-
 ## Advanced Examples
 
-- [Multi-Persona Study](multi_persona.md) — testing multiple personas
-- [Reality Monitoring Task](reality_monitoring.md) — complex cognitive task
-- [Feedback Loop System](feedback_loop.md) — trial-by-trial feedback
+- [Conditional Next-Trial](conditional_next_trial.md) — dynamic trial insertion
+
+## Demonstration Suite
+
+Real, multi-experiment studies with actual run data and reports — see the
+[Demonstration Suite overview](demonstration_suite/index.md). Covers surveys
+with persona conditioning (formerly "Simple Survey" / "Multi-Persona Study"
+above) and trial-by-trial feedback (formerly "Feedback Loop System") with
+real data behind them, plus reward-learning, VLM, and mechanistic
+interpretability demos this page didn't previously have narrative examples
+for.
 
 ## Running the tutorial notebooks
 

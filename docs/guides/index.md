@@ -7,7 +7,7 @@ Comprehensive guides for using PsychScanner.
 - [Cognitive Tasks](cognitive_tasks.md) - The task JSON schema (task card), plus the Reality Monitoring paradigm and visual search examples
 - [PsychScanner Workflow](psychscanner_workflow.md) - A slide-ready summary of the execution path (experiment card)
 - [Survey Tasks](survey_tasks.md) - Creating and running surveys
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) - Simulating participants with distinct personas
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) - Simulating participants with distinct personas
 - [Generating Task Cards with SweetPea](sweetpea_task_cards.md) - Factorial counterbalancing for a task's `items` sequence
 - [Task Library](task_library.md) - Fetching task cards by name, and sharing your own
 - [Memory Types](memory_types.md) - Understanding memory management

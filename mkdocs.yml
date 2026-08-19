@@ -74,7 +74,7 @@ nav:
     - Cognitive Tasks (task card): guides/cognitive_tasks.md
     - PsychScanner Workflow (experiment card): guides/psychscanner_workflow.md
     - Survey Tasks: guides/survey_tasks.md
-    - Running a Survey with Persona Levels: examples/multi_persona.md
+    - Running a Survey with Persona Levels: examples/demonstration_suite/03_personality_survey.md
     - Cognitive Tasks with SweetPea: guides/sweetpea_task_cards.md
     - Task Library: guides/task_library.md
     - Memory Types: guides/memory_types.md
@@ -87,9 +87,7 @@ nav:
     - Parameters Reference: tutorials/02_parameters_reference.ipynb
     - Parsers: tutorials/03_parsers.ipynb
     - Parser Modules: tutorials/04_parser_modules.ipynb
-    - Reality Monitoring Task: tutorials/05_rm_task.ipynb
     - Feedback API: tutorials/06_feedback_api.ipynb
-    - Reality Monitoring with Feedback: tutorials/07_rm_feedback_task.ipynb
     - Parser System Guide: tutorials/08_ps_parser_guide.ipynb
     - VVIQ-16 Study: tutorials/09_vviq16_study.ipynb
     - Bring Your Own LLM/VLM: tutorials/10_custom_agents.ipynb
@@ -102,11 +100,17 @@ nav:
     - "Cognitive RL: Bandits and the Prisoner's Dilemma": tutorials/17_cognitive_rl_bandits_and_pd.ipynb
   - Examples:
     - Overview: examples/index.md
-    - Basic Survey: examples/basic_survey.md
-    - Reality Monitoring: examples/reality_monitoring.md
-    - Feedback Loop: examples/feedback_loop.md
     - Conditional Next Trial: examples/conditional_next_trial.md
-    - Multi-Persona: examples/multi_persona.md
+    - Demonstration Suite:
+      - Overview: examples/demonstration_suite/index.md
+      - Reward Task: examples/demonstration_suite/01_reward_task.md
+      - Association Memory: examples/demonstration_suite/02_association_memory.md
+      - Personality Survey: examples/demonstration_suite/03_personality_survey.md
+      - VLM Task: examples/demonstration_suite/04_vlm_task.md
+      - Extracting Internals: examples/demonstration_suite/05_extracting_internals.md
+      - Advanced Demonstration: examples/demonstration_suite/06_advanced_demonstration.md
+      - Introspective Self-Report: examples/demonstration_suite/07_introspective_selfreport.md
+      - Prospect Theory Planning: examples/demonstration_suite/08_prospect_theory_planning.md
   - API Reference:
     - Overview: api/index.md
     - ExpCard: api/expcard.md

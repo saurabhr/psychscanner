@@ -161,7 +161,7 @@ print(json.dumps(template, indent=2))
   covers the task JSON schema this page's surveys are an instance of
 - [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
   (`ExpCard`) that wraps a survey task with model, memory, and persona config
-- [Running a Survey with Persona Levels](../examples/multi_persona.md) —
+- [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   crossing a survey task card with multiple simulated personas
 - [Cognitive Tasks with SweetPea](sweetpea_task_cards.md) — generate a
   counterbalanced item sequence instead of hand-writing one
