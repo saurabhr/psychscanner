@@ -48,10 +48,8 @@ DOC_STRUCTURE = {
         ],
         'examples': [
             'index.md',
-            'basic_survey.md',
-            'multi_persona.md',
-            'reality_monitoring.md',
-            'feedback_loop.md',
+            'conditional_next_trial.md',
+            'demonstration_suite/index.md',
         ],
     },
     'examples': {
@@ -526,10 +524,8 @@ def setup_documentation(dry_run: bool = False) -> Tuple[int, int]:
         'docs/guides/custom_parsers.md',
         'docs/guides/memory_types.md',
         'docs/guides/session_recovery.md',
-        'docs/examples/basic_survey.md',
-        'docs/examples/multi_persona.md',
-        'docs/examples/reality_monitoring.md',
-        'docs/examples/feedback_loop.md',
+        'docs/examples/conditional_next_trial.md',
+        'docs/examples/demonstration_suite/index.md',
     ]
     
     for file_path_str in placeholder_files:
