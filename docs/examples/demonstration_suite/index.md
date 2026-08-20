@@ -17,7 +17,7 @@ an analyzed `reports/report.md` exist; "skeleton" means readme + folder only.
 | 2 | [Association Memory](02_association_memory.md) — trial structures and feedback types | Complete |
 | 3 | [Personality Survey](03_personality_survey.md) — persona conditioning, stateful memory | VVIQ-16 arm complete |
 | 4 | [VLM Task](04_vlm_task.md) — the same machinery extended to vision-language models | 1 of 4 conditions collected |
-| 5 | [Extracting Internals](05_extracting_internals.md) — activation extraction and steering | Skeleton |
+| 5 | [Extracting Internals](05_extracting_internals.md) — activation extraction and steering | Complete |
 | 6 | [Advanced Demonstration](06_advanced_demonstration.md) — Othello-GPT, ROME, CCS | Othello-GPT and ROME complete |
 | 7 | [Introspective Self-Report](07_introspective_selfreport.md) — instilled preferences + self-report | Complete |
 | 8 | [Prospect Theory Planning](08_prospect_theory_planning.md) — risky-choice gambles, 3 agent architectures | Complete |

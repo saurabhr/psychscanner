@@ -1,0 +1,78 @@
+{
+  "per_layer": [
+    {
+      "layer": 0,
+      "probe_accuracy": 0.800000011920929,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.6000000089406967
+    },
+    {
+      "layer": 1,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.7999999970197678
+    },
+    {
+      "layer": 2,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.7999999970197678
+    },
+    {
+      "layer": 3,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.7999999970197678
+    },
+    {
+      "layer": 4,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.7999999970197678
+    },
+    {
+      "layer": 5,
+      "probe_accuracy": 0.800000011920929,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.6000000089406967
+    },
+    {
+      "layer": 6,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.7999999970197678
+    },
+    {
+      "layer": 7,
+      "probe_accuracy": 1.0,
+      "shuffled_label_baseline": 0.4000000059604645,
+      "gap": 0.5999999940395355
+    },
+    {
+      "layer": 8,
+      "probe_accuracy": 0.6000000238418579,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.40000002086162567
+    },
+    {
+      "layer": 9,
+      "probe_accuracy": 0.6000000238418579,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.40000002086162567
+    },
+    {
+      "layer": 10,
+      "probe_accuracy": 0.6000000238418579,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.40000002086162567
+    },
+    {
+      "layer": 11,
+      "probe_accuracy": 0.6000000238418579,
+      "shuffled_label_baseline": 0.20000000298023224,
+      "gap": 0.40000002086162567
+    }
+  ],
+  "best_layer": 1,
+  "best_layer_gap": 0.7999999970197678
+}
