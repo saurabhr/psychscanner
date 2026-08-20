@@ -16,14 +16,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "click",
     "langchain",
@@ -122,7 +121,7 @@ lint.ignore = [
     "INP",  # flake8-no-pep420
 ]
 src = ["src", "tests", "docs"]
-target-version = "py310"  # the minimum Python version supported, used by pyupgrade
+target-version = "py311"  # the minimum Python version supported, used by pyupgrade
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = [
