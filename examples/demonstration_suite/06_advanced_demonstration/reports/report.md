@@ -68,3 +68,82 @@ python examples/demonstration_suite/06_advanced_demonstration/simulation/rome/ru
 
 - `data/rome/rome_lite_results.json` — verified facts, full causal-trace
   grids, and per-edit pre/post top-1 + collateral counts
+
+---
+
+# Results: CCS — Contrast-Consistent Search on GPT-2
+
+We ran `simulation/ccs/run_ccs.py`, a toy-scale reproduction of Burns et al.
+2022/2023 ("Discovering Latent Knowledge in Language Models Without
+Supervision") on GPT-2 small (12 layers), the third and last of Demo 06's
+three interpretability reproductions. 20 declarative statements (10 true,
+10 false; capitals, astronomy, physics, geometry, arithmetic — deliberately
+spanning topics rather than negating one fact family, unlike ROME's
+capital-city set, so truth value isn't confounded with subject matter) were
+each templated as `"{statement}\nTrue or False? True"` and `"...False"`,
+with the residual-stream activation captured at each prompt's last token,
+every layer. A per-layer linear probe was trained with Burns et al.'s
+unsupervised consistency+confidence loss (no truth label ever enters the
+loss — see the script's own docstring for the exact objective) and,
+separately, a supervised logistic-regression probe was trained directly on
+the same activations with real labels, as an accuracy-ceiling reference.
+
+**CCS collapsed to a trivial, non-truth-tracking solution — robustly, not
+as a code bug.** With no regularization, the probe reached zero loss by
+learning p(True-completion)=1.0 and p(False-completion)=0.0 for literally
+every one of the 20 statements, true or false alike — it had simply learned
+to detect which literal token ("True" vs "False") was present, the easiest
+possible way to satisfy a loss built only from consistency and confidence,
+with nothing in the objective preventing it. This is a real, previously
+published critique of CCS in exactly this form (surface answer-token
+identity is itself perfectly "consistent and confident," so the loss alone
+can't distinguish it from genuine truth-tracking — see e.g. Levinstein &
+Herrmann 2023, "Still No Lie Detector for Language Models"), now
+empirically reproduced rather than assumed. We tested the standard
+mitigation, weight decay, sweeping 0/0.01/0.1/1/10 on one layer before
+settling on 1.0 as the script's default: even at decay=10, p(True) stayed
+uniformly high (0.83–0.88) and p(False) uniformly low (0.12–0.14) across
+*all* 20 statements regardless of truth value — accuracy resolved to
+exactly 0.500 at every one of the 12 layers, with or without regularization.
+The collapse is structural, not a training-instability fluke.
+
+**The supervised "ceiling" baseline also failed to generalize — a second,
+distinct finding.** With only 20 examples in 768 GPT-2-small dimensions,
+even a single linear layer is wildly overparameterized; a fixed 80/20 split
+would put only 4 examples in the test set (quantized to steps of 0.25 and
+noisy enough to flip on one example), so this was run as leave-one-out
+cross-validation (train on 19, test on 1, averaged over all 20 folds)
+instead. Real-label LOO accuracy ranged 0.0–0.3 across layers — at or
+*below* its own shuffled-label control (0.40–0.60, correctly centered near
+chance, confirming the harness itself isn't biased) at every single layer.
+This is a distinct failure mode from CCS's: not a degenerate-solution
+collapse, but a sample-size/dimensionality problem — 19 training points in
+a 768-dimensional space is too underdetermined for a linear probe to
+generalize at all, whether the signal it's chasing is real or spurious.
+
+**Takeaways.** (1) The mechanical claim holds: nnsight's `trace()` API and
+a torch-only linear probe (same no-scikit-learn pattern as
+`run_othello_probe.py` and `probe_persona_direction.py`) support CCS's
+exact unsupervised objective, entirely on a small local model with no GPU.
+(2) The demo reproduces a genuine, previously-documented weakness of CCS —
+its loss alone doesn't rule out latching onto surface answer-token identity
+— rather than a successful "truth direction," and does so with an explicit,
+disclosed regularization sweep rather than reporting the first result that
+compiled. (3) The supervised control meant to sanity-check CCS revealed its
+own, independent problem (N=20 is too small for this probe/dimensionality
+to generalize at all), which matters for reading the CCS null correctly:
+the failure to beat chance isn't strong evidence GPT-2-small lacks any
+truth-tracking representation, since the supervised ceiling couldn't detect
+one either, at this sample size, even with real labels.
+
+## Reproduce (CCS)
+
+```bash
+source .venv311/bin/activate
+python examples/demonstration_suite/06_advanced_demonstration/simulation/ccs/run_ccs.py
+```
+
+## Data (CCS)
+
+- `data/ccs/ccs_results.json` — per-layer CCS accuracy, supervised LOO-CV
+  accuracy, and shuffled-label control

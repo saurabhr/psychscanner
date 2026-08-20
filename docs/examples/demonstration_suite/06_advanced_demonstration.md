@@ -1,9 +1,12 @@
 # Advanced Demonstration
 
-**Status:** Othello-GPT and ROME complete and reported (see
-[ROME's report.md](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/06_advanced_demonstration/reports/report.md) —
-3/3 rank-one edits succeeded on GPT-2 small, ~44% mean collateral-change
-rate); CCS not yet run.
+**Status:** All three complete and reported — see
+[reports/report.md](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/06_advanced_demonstration/reports/report.md).
+Othello-GPT: linear probing succeeded. ROME: 3/3 rank-one edits succeeded
+on GPT-2 small, ~44% mean collateral-change rate. CCS: robustly collapsed
+to a known degenerate solution (trivial answer-token detection, confirmed
+across a weight-decay sweep) rather than finding a truth direction — a
+real, disclosed reproduction of a published CCS critique, not a bug.
 
 Source: [`examples/demonstration_suite/06_advanced_demonstration/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration)
 
@@ -22,9 +25,10 @@ Capstone: reproduces three classic interpretability studies on top of
 ## Run it
 
 ```bash
-source .venv/bin/activate
+source .venv311/bin/activate
 python examples/demonstration_suite/06_advanced_demonstration/simulation/othello/run_othello_probe.py
 python examples/demonstration_suite/06_advanced_demonstration/simulation/rome/run_rome_lite.py
+python examples/demonstration_suite/06_advanced_demonstration/simulation/ccs/run_ccs.py
 ```
 
-Results: [`data/othello/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration/data/othello), [`reports/report.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/06_advanced_demonstration/reports/report.md).
+Results: [`data/othello/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration/data/othello), [`data/rome/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration/data/rome), [`data/ccs/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration/data/ccs), [`reports/report.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/06_advanced_demonstration/reports/report.md).

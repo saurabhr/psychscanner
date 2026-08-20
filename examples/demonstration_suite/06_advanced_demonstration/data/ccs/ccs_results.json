@@ -1,0 +1,82 @@
+{
+  "config": {
+    "n_statements": 20,
+    "n_layer": 12
+  },
+  "per_layer": [
+    {
+      "layer": 0,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.0,
+      "shuffled_label_baseline": 0.55
+    },
+    {
+      "layer": 1,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.1,
+      "shuffled_label_baseline": 0.55
+    },
+    {
+      "layer": 2,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.1,
+      "shuffled_label_baseline": 0.6
+    },
+    {
+      "layer": 3,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.1,
+      "shuffled_label_baseline": 0.55
+    },
+    {
+      "layer": 4,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.1,
+      "shuffled_label_baseline": 0.5
+    },
+    {
+      "layer": 5,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.2,
+      "shuffled_label_baseline": 0.5
+    },
+    {
+      "layer": 6,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.3,
+      "shuffled_label_baseline": 0.45
+    },
+    {
+      "layer": 7,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.3,
+      "shuffled_label_baseline": 0.5
+    },
+    {
+      "layer": 8,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.3,
+      "shuffled_label_baseline": 0.5
+    },
+    {
+      "layer": 9,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.05,
+      "shuffled_label_baseline": 0.4
+    },
+    {
+      "layer": 10,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.1,
+      "shuffled_label_baseline": 0.45
+    },
+    {
+      "layer": 11,
+      "ccs_accuracy": 0.5,
+      "supervised_accuracy": 0.2,
+      "shuffled_label_baseline": 0.45
+    }
+  ],
+  "best_layer_by_ccs": 0,
+  "best_layer_ccs_accuracy": 0.5
+}
