@@ -1,0 +1,51 @@
+Scored 129 test trials across 5 conditions and 2 model(s).
+
+=== Accuracy by condition (pooled across models & similarity levels) ===
+                 accuracy  count
+condition                       
+episodic_chain      1.000     30
+feedback_ci         1.000     30
+feedback_reward     1.000     15
+single_turn         0.125     24
+trial_chain         1.000     30
+
+=== Accuracy by condition x model ===
+                                                             accuracy  count
+condition       model                                                       
+episodic_chain  groq-openai-gpt-oss-120b                          1.0     15
+                openrouter-meta-llama-llama-3.1-8b-instruct       1.0     15
+feedback_ci     groq-openai-gpt-oss-120b                          1.0     15
+                openrouter-meta-llama-llama-3.1-8b-instruct       1.0     15
+feedback_reward openrouter-meta-llama-llama-3.1-8b-instruct       1.0     15
+single_turn     groq-openai-gpt-oss-120b                          0.0      9
+                openrouter-meta-llama-llama-3.1-8b-instruct       0.2     15
+trial_chain     groq-openai-gpt-oss-120b                          1.0     15
+                openrouter-meta-llama-llama-3.1-8b-instruct       1.0     15
+
+=== Accuracy by similarity level (pooled across conditions & models) ===
+            accuracy  count
+similarity                 
+0.00        0.777778     27
+0.25        0.840000     25
+0.50        0.846154     26
+0.75        0.884615     26
+1.00        0.840000     25
+
+=== Accuracy by condition x similarity level (the interaction) ===
+similarity       0.00  0.25  0.50  0.75  1.00
+condition                                    
+episodic_chain    1.0   1.0   1.0   1.0   1.0
+feedback_ci       1.0   1.0   1.0   1.0   1.0
+feedback_reward   1.0   1.0   1.0   1.0   1.0
+single_turn       0.0   0.0   0.2   0.4   0.0
+trial_chain       1.0   1.0   1.0   1.0   1.0
+
+=== Confidence (1-6) vs correctness, by condition (calibration check) ===
+correct          False     True 
+condition                       
+episodic_chain     NaN  3.000000
+feedback_ci        NaN  3.000000
+feedback_reward    NaN  5.000000
+single_turn        1.0  1.000000
+trial_chain        NaN  3.433333
+

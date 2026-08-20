@@ -1,6 +1,11 @@
 # Association Memory
 
-**Status: Skeleton** — readme and folder only, not yet run.
+**Status: Complete** — real, non-mock run data and an analyzed report exist.
+See [`reports/report.md`](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/02_association_memory/reports/report.md).
+Memory architecture (any carry-over vs. none) is the dominant effect: recall
+accuracy is at ceiling (100%) for trial-chain, episodic-chain, and both
+feedback conditions, and near floor (12.5%) for single-turn. The `advanced/`
+arms below remain unrun.
 
 Source: [`examples/demonstration_suite/02_association_memory/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/02_association_memory)
 

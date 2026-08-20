@@ -1,0 +1,6 @@
+condition,0.0,0.25,0.5,0.75,1.0
+episodic_chain,1.0,1.0,1.0,1.0,1.0
+feedback_ci,1.0,1.0,1.0,1.0,1.0
+feedback_reward,1.0,1.0,1.0,1.0,1.0
+single_turn,0.0,0.0,0.2,0.4,0.0
+trial_chain,1.0,1.0,1.0,1.0,1.0

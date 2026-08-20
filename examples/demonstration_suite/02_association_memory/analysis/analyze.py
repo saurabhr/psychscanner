@@ -39,7 +39,7 @@ from _analysis_common import demo_dirs, require_data, write_summary
 
 DEMO_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR, OUT_DIR = demo_dirs(__file__)
-PAL50_PATH = DEMO_DIR.parent.parent / "examples" / "tasks" / "pal50.json"
+PAL50_PATH = DEMO_DIR.parent.parent.parent / "examples" / "tasks" / "pal50.json"
 
 LEVEL_TO_SIM = {"L0": 0.0, "L25": 0.25, "L50": 0.5, "L75": 0.75, "L100": 1.0}
 

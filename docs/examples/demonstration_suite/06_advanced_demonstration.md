@@ -1,6 +1,9 @@
 # Advanced Demonstration
 
-**Status:** Othello-GPT complete and reported; ROME and CCS not yet run.
+**Status:** Othello-GPT and ROME complete and reported (see
+[ROME's report.md](https://github.com/saurabhr/psychscanner/blob/main/examples/demonstration_suite/06_advanced_demonstration/reports/report.md) —
+3/3 rank-one edits succeeded on GPT-2 small, ~44% mean collateral-change
+rate); CCS not yet run.
 
 Source: [`examples/demonstration_suite/06_advanced_demonstration/`](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/06_advanced_demonstration)
 

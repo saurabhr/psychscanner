@@ -1,0 +1,85 @@
+sim_idx,model,family,memory,memory_k,projectname,cogtype,parser,taskname,tasktype,chain_type,trace_id,tunnel_id,trial_idx,trcode,context_item,stimulus,pred_resp_raw,fb_response,resp_recalled_word,resp_confidence
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,0,L0_enc_01,"",STUDY PHASE — Please remember this word pair: the word 'cat' is paired with 'umbrella'.,Got it—I’ve noted that **cat ↔ umbrella**. Feel free to give the next pair when you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,1,L0_enc_02,"",STUDY PHASE — Please remember this word pair: the word 'moon' is paired with 'pencil'.,Understood—**moon ↔ pencil** has been added to the list. Let me know the next pair when you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,2,L0_enc_03,"",STUDY PHASE — Please remember this word pair: the word 'tree' is paired with 'sock'.,Got it—**tree ↔ sock** is now recorded. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,3,L25_enc_01,"",STUDY PHASE — Please remember this word pair: the word 'lion' is paired with 'tiger'.,Got it—**lion ↔ tiger** has been added to the list. Feel free to provide the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,4,L25_enc_02,"",STUDY PHASE — Please remember this word pair: the word 'rose' is paired with 'daisy'.,Understood—**rose ↔ daisy** has been recorded. Let me know the next pair when you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,5,L25_enc_03,"",STUDY PHASE — Please remember this word pair: the word 'oak' is paired with 'pine'.,Got it—**oak ↔ pine** is now recorded. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,6,L50_enc_01,"",STUDY PHASE — Please remember this word pair: the word 'bee' is paired with 'honey'.,Understood—**bee ↔ honey** has been added to the list. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,7,L50_enc_02,"",STUDY PHASE — Please remember this word pair: the word 'fire' is paired with 'smoke'.,Got it—**fire ↔ smoke** is now recorded. Feel free to give the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,8,L50_enc_03,"",STUDY PHASE — Please remember this word pair: the word 'pen' is paired with 'ink'.,Understood—**pen ↔ ink** has been added to the list. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,9,L75_enc_01,"",STUDY PHASE — Please remember this word pair: the word 'salt' is paired with 'pepper'.,Got it—**salt ↔ pepper** is now recorded. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,10,L75_enc_02,"",STUDY PHASE — Please remember this word pair: the word 'bread' is paired with 'butter'.,Understood—**bread ↔ butter** has been added to the list. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,11,L75_enc_03,"",STUDY PHASE — Please remember this word pair: the word 'black' is paired with 'white'.,Got it—**black ↔ white** is now recorded. Let me know the next pair whenever you’re ready.,,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,12,L100_enc_01,"",STUDY PHASE — Please remember this word pair: the word 'big' is paired with 'large'.,"Got it—**big ↔ large** has been added to the list.
+
+**Current list of studied pairs (13 total):**  
+1. cat ↔ umbrella  
+2. moon ↔ pencil  
+3. tree ↔ sock  
+4. lion ↔ tiger  
+5. rose ↔ daisy  
+6. oak ↔ pine  
+7. bee ↔ honey  
+8. fire ↔ smoke  
+9. pen ↔ ink  
+10. salt ↔ pepper  
+11. bread ↔ butter  
+12. black ↔ white  
+13. big ↔ large  
+
+Let me know the next pair whenever you’re ready!",,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,13,L100_enc_02,"",STUDY PHASE — Please remember this word pair: the word 'happy' is paired with 'joyful'.,"Got it—**happy ↔ joyful** has been added to the list.
+
+**Updated list of studied pairs (14 total):**  
+1. cat ↔ umbrella  
+2. moon ↔ pencil  
+3. tree ↔ sock  
+4. lion ↔ tiger  
+5. rose ↔ daisy  
+6. oak ↔ pine  
+7. bee ↔ honey  
+8. fire ↔ smoke  
+9. pen ↔ ink  
+10. salt ↔ pepper  
+11. bread ↔ butter  
+12. black ↔ white  
+13. big ↔ large  
+14. happy ↔ joyful  
+
+Let me know the next pair whenever you’re ready!",,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,14,L100_enc_03,"",STUDY PHASE — Please remember this word pair: the word 'fast' is paired with 'quick'.,"Got it—**fast ↔ quick** has been added to the list.
+
+**Updated list of studied pairs (15 total):**  
+1. cat ↔ umbrella  
+2. moon ↔ pencil  
+3. tree ↔ sock  
+4. lion ↔ tiger  
+5. rose ↔ daisy  
+6. oak ↔ pine  
+7. bee ↔ honey  
+8. fire ↔ smoke  
+9. pen ↔ ink  
+10. salt ↔ pepper  
+11. bread ↔ butter  
+12. black ↔ white  
+13. big ↔ large  
+14. happy ↔ joyful  
+15. fast ↔ quick  
+
+Let me know the next pair whenever you’re ready!",,,
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,15,L0_tst_01,"",TEST PHASE — What word was paired with 'cat' during the study phase?,"{'recalled_word': 'umbrella', 'confidence': 5}",,umbrella,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,16,L0_tst_02,"",TEST PHASE — What word was paired with 'moon' during the study phase?,"{'recalled_word': 'pencil', 'confidence': 5}",,pencil,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,17,L0_tst_03,"",TEST PHASE — What word was paired with 'tree' during the study phase?,"{'recalled_word': 'sock', 'confidence': 5}",,sock,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,18,L25_tst_01,"",TEST PHASE — What word was paired with 'lion' during the study phase?,"{'recalled_word': 'tiger', 'confidence': 5}",,tiger,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,19,L25_tst_02,"",TEST PHASE — What word was paired with 'rose' during the study phase?,"{'recalled_word': 'daisy', 'confidence': 5}",,daisy,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,20,L25_tst_03,"",TEST PHASE — What word was paired with 'oak' during the study phase?,"{'recalled_word': 'pine', 'confidence': 5}",,pine,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,21,L50_tst_01,"",TEST PHASE — What word was paired with 'bee' during the study phase?,"{'recalled_word': 'honey', 'confidence': 5}",,honey,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,22,L50_tst_02,"",TEST PHASE — What word was paired with 'fire' during the study phase?,"{'recalled_word': 'smoke', 'confidence': 5}",,smoke,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,23,L50_tst_03,"",TEST PHASE — What word was paired with 'pen' during the study phase?,"{'recalled_word': 'ink', 'confidence': 5}",,ink,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,24,L75_tst_01,"",TEST PHASE — What word was paired with 'salt' during the study phase?,"{'recalled_word': 'pepper', 'confidence': 5}",,pepper,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,25,L75_tst_02,"",TEST PHASE — What word was paired with 'bread' during the study phase?,"{'recalled_word': 'butter', 'confidence': 5}",,butter,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,26,L75_tst_03,"",TEST PHASE — What word was paired with 'black' during the study phase?,"{'recalled_word': 'white', 'confidence': 5}",,white,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,27,L100_tst_01,"",TEST PHASE — What word was paired with 'big' during the study phase?,"{'recalled_word': 'large', 'confidence': 5}",,large,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,28,L100_tst_02,"",TEST PHASE — What word was paired with 'happy' during the study phase?,"{'recalled_word': 'joyful', 'confidence': 5}",,joyful,5
+0,openai/gpt-oss-120b,groq,Convo,-1,pal_episodic_chain,no,0,pal_subset_block,episodic,task,20260820T11-30-07pal_episodic_chainConvopal_subset_block0,sidx-[0]-model-openai/gpt-oss-120b-family-groq-memory-Convo-pal_episodic_chain,29,L100_tst_03,"",TEST PHASE — What word was paired with 'fast' during the study phase?,"{'recalled_word': 'quick', 'confidence': 5}",,quick,5

@@ -1,0 +1,6 @@
+condition,accuracy,count
+episodic_chain,1.0,30
+feedback_ci,1.0,30
+feedback_reward,1.0,15
+single_turn,0.125,24
+trial_chain,1.0,30
