@@ -101,9 +101,7 @@ jupyter lab examples/
 | `02_parameters_reference.ipynb` | Full `ExpCard` parameter reference |
 | `03_parsers.ipynb` | Response parsing overview |
 | `04_parser_modules.ipynb` | Custom parser modules |
-| `05_rm_task.ipynb` | Reality monitoring cognitive task |
 | `06_feedback_api.ipynb` | Feedback / scoring API |
-| `07_rm_feedback_task.ipynb` | Reality monitoring with feedback |
 | `08_ps_parser_guide.ipynb` | Structured output parsing guide |
 | `09_vviq16_study.ipynb` | VVIQ-16 imagery questionnaire study |
 
