@@ -98,6 +98,7 @@ nav:
     - A Modular Planner/Executor/Validator Agent: tutorials/15_planner_executor_agent.ipynb
     - Reflection Agents: tutorials/16_reflection_agents.ipynb
     - "Cognitive RL: Bandits and the Prisoner's Dilemma": tutorials/17_cognitive_rl_bandits_and_pd.ipynb
+    - Multimodal Stimuli: tutorials/18_multimodal_stimuli.ipynb
   - Examples:
     - Overview: examples/index.md
     - Conditional Next Trial: examples/conditional_next_trial.md

@@ -47,6 +47,7 @@ These tutorials are the Jupyter notebooks from [`examples/`](https://github.com/
 | Notebook | What it covers |
 |---|---|
 | [Tool Binding and Multimodal Stimuli](12_tool_binding_and_multimodal.ipynb) | `card.tools`, per-trial tool subsetting, the four multimodal content-block builders, and the same stimulus run under every `chain_type`/`memory` combination |
+| [Multimodal Stimuli](18_multimodal_stimuli.ipynb) | Focused follow-up to the tutorial above: running a multimodal trial end to end through `ExpCard`/`ScannerModel`, and why JSON-authored `{"path": ...}` blocks are restricted to a relative, non-traversing path (task-card JSON is untrusted input) |
 | [A Real Tool-Calling Loop](13_react_tool_agent.ipynb) | `psychscanner.agents.make_react_agent` — LangChain's `create_agent` ReAct loop, adapted to the `ScanningAgent` contract |
 | [A Multimodal Supervisor/Planner/Worker Agent](14_supervisor_multiagent.ipynb) | `psychscanner.agents.make_supervisor_agent` — a Jockey-style (TwelveLabs + LangGraph) routing agent generalized from video to arbitrary multimodal content blocks |
 | [A Modular Planner/Executor/Validator Agent](15_planner_executor_agent.ipynb) | `psychscanner.agents.make_planner_executor_agent` — the modular agentic architecture from arxiv:2310.00194 |
