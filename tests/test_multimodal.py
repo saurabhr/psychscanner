@@ -71,13 +71,19 @@ def test_gen_stimulus_prompt_multimodal_context_absent():
     assert msg.content == blocks
 
 
-def test_gen_stimulus_prompt_resolves_json_authored_path_block(tmp_path):
-    """A hand-written JSON task card can use {"path": ...} instead of image_block()."""
+def test_gen_stimulus_prompt_resolves_json_authored_path_block(tmp_path, monkeypatch):
+    """A hand-written JSON task card can use {"path": ...} instead of image_block().
+
+    Relative to cwd, not absolute -- task-card JSON is untrusted input, so
+    resolve_path_block() rejects absolute/".."-traversal paths (see
+    test_multimodal_path_containment.py). This exercises the still-supported
+    relative-path form.
+    """
+    monkeypatch.chdir(tmp_path)
     raw = b"\x89PNG\r\n"
-    path = tmp_path / "img.png"
-    path.write_bytes(raw)
+    (tmp_path / "img.png").write_bytes(raw)
     trstim = {
-        "stimulus": [{"type": "image", "path": str(path)}, {"type": "text", "text": "q"}],
+        "stimulus": [{"type": "image", "path": "img.png"}, {"type": "text", "text": "q"}],
         "trcode": "feat_1",
         "context_present": False,
     }
@@ -89,6 +95,40 @@ def test_gen_stimulus_prompt_resolves_json_authored_path_block(tmp_path):
     assert base64.b64decode(msg.content[0]["base64"]) == raw
     assert msg.content[0]["mime_type"] == "image/png"
     assert msg.content[1] == {"type": "text", "text": "q"}
+
+
+def test_json_authored_path_block_rejects_absolute_path(tmp_path):
+    """Regression (code review finding): a task card is untrusted input --
+    an absolute path in a "path" block used to be read straight off disk
+    and shipped to the model provider (e.g. {"path": "/etc/passwd"})."""
+    secret = tmp_path / "secret.txt"
+    secret.write_text("do not leak me")
+    trstim = {
+        "stimulus": [{"type": "file", "path": str(secret)}],
+        "trcode": "feat_1",
+        "context_present": False,
+    }
+
+    try:
+        gen_stimulus_prompt(trstim)
+        assert False, "expected ValueError for an absolute path"
+    except ValueError as exc:
+        assert "relative path" in str(exc)
+
+
+def test_json_authored_path_block_rejects_parent_traversal():
+    """Regression (code review finding): "../" escapes were also unguarded."""
+    trstim = {
+        "stimulus": [{"type": "file", "path": "../../etc/passwd"}],
+        "trcode": "feat_1",
+        "context_present": False,
+    }
+
+    try:
+        gen_stimulus_prompt(trstim)
+        assert False, "expected ValueError for a '..' path"
+    except ValueError as exc:
+        assert "relative path" in str(exc)
 
 
 def test_gen_stimulus_prompt_multimodal_context_present():

@@ -56,10 +56,24 @@ def resolve_path_block(block: dict) -> dict:
     path, without a Python call to :func:`image_block`/:func:`audio_block`/
     :func:`file_block`. Blocks without a ``"path"`` key (already ``base64``
     or ``url``) pass through unchanged.
+
+    Task-card JSON is untrusted input (hand-authored, or fetched from a
+    third-party library via ``download_lib()``) -- unlike ``image_block``/
+    ``audio_block``/``file_block`` above, which take a path the calling
+    Python code already chose. ``path`` here is therefore restricted to a
+    relative path with no ``..`` traversal component, so a task card can't
+    read arbitrary files off the host (e.g. ``/etc/passwd`` or a
+    ``../../.aws/credentials`` escape) and have their contents embedded in
+    the prompt sent to the model provider.
     """
     if "path" not in block:
         return block
     path = Path(block["path"])
+    if path.is_absolute() or ".." in path.parts:
+        raise ValueError(
+            "multimodal stimulus 'path' must be a relative path with no '..' "
+            f"components (task-card JSON is untrusted input) -- got {block['path']!r}"
+        )
     mime_type = block.get("mime_type") or mimetypes.guess_type(path.name)[0]
     resolved = {k: v for k, v in block.items() if k != "path"}
     resolved["base64"] = base64.b64encode(path.read_bytes()).decode("ascii")
