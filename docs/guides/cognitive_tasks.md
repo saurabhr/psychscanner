@@ -1,8 +1,9 @@
 # Cognitive Tasks
 
 PsychScanner is designed for validated cognitive paradigms.
-This guide covers the Reality Monitoring (RM) paradigm in detail and provides
-a template for building other multi-phase cognitive experiments.
+This guide walks through a paired-associate learning (PAL) task in detail and
+ends with a fully annotated template for building your own multi-phase
+cognitive experiments.
 
 ---
 
@@ -12,22 +13,22 @@ Every task is defined in a JSON file (or inline dict). The top-level keys are:
 
 ```json
 {
-  "tasktype"        : "survey",
+  "tasktype"        : "episodic",
   "taskname"        : "my_task",
   "instructions"    : { "definition": ["…"] },
   "contexts"        : ["Scene 1 description", "Scene 2 description"],
-  "contexts_id"     : ["encode", "test"],
+  "contexts_id"     : ["study", "test"],
   "context_present" : true,
   "chain_type"      : "item",
-  "parser"          : "Response_part_1_rm",
+  "parser"          : "PairedAssociateRecall",
   "items": {
-    "encode": [
-      { "trcode": "encode_1", "stimulus": { "Word_Pair": { "word_1": "APPLE", "word_2": "FRUIT"  } } },
-      { "trcode": "encode_2", "stimulus": { "Word_Pair": { "word_1": "TABLE", "word_2": "____"   } } }
+    "study": [
+      { "trcode": "study_1", "stimulus": "STUDY PHASE — remember this word pair: 'cat' is paired with 'umbrella'.", "word1": "cat", "word2": "umbrella" },
+      { "trcode": "study_2", "stimulus": "STUDY PHASE — remember this word pair: 'river' is paired with 'lantern'.", "word1": "river", "word2": "lantern" }
     ],
     "test": [
-      { "trcode": "test_1",   "stimulus": "APPLE — was the second word internally or externally generated?" },
-      { "trcode": "test_2",   "stimulus": "TABLE — was the second word internally or externally generated?" }
+      { "trcode": "test_1",   "stimulus": "TEST PHASE — what word was paired with 'cat' during the study phase?", "word1": "cat", "word2": "umbrella" },
+      { "trcode": "test_2",   "stimulus": "TEST PHASE — what word was paired with 'river' during the study phase?", "word1": "river", "word2": "lantern" }
     ]
   }
 }
@@ -60,63 +61,67 @@ Every task is defined in a JSON file (or inline dict). The top-level keys are:
 
 ---
 
-## Reality Monitoring task
+## Paired-associate learning (PAL) task
 
-The Reality Monitoring (RM) paradigm tests whether an agent can distinguish
-between self-generated (imagined) and externally provided information.
+The paired-associate learning (PAL) paradigm tests whether an agent can study
+word pairs and later recall the second word of each pair from the first —
+a classic multi-phase (study → test) episodic memory design. This is the same
+task behind `examples/tasks/pal50.json` and the
+[Association Memory](../examples/demonstration_suite/02_association_memory.md)
+demonstration.
 
-### Encoding phase
+### Study phase
 
-The agent is shown word pairs. For **perceived** trials, both words are given.
-For **imagined** trials, only the first word is given and the agent must generate the second.
+The agent is shown a word pair to remember.
 
 ```json
-{ "trcode": "encode_perceived_1",
-  "stimulus": { "Word_Pair": { "word_1": "APPLE", "word_2": "FRUIT"  } } }
-
-{ "trcode": "encode_imagined_1",
-  "stimulus": { "Word_Pair": { "word_1": "TABLE", "word_2": "____"   } } }
+{ "trcode": "study_1",
+  "stimulus": "STUDY PHASE — remember this word pair: 'cat' is paired with 'umbrella'.",
+  "word1": "cat", "word2": "umbrella" }
 ```
 
-Parser: `Response_part_1_rm` — returns `Word_2` (str) + `Rating` (0–100 relatedness).
+No parser is needed here — study trials aren't scored (`"fb": false`).
 
 ### Test phase
 
-The agent is shown only the first word and must judge whether the second word
-was internally or externally generated, and rate confidence.
+The agent is shown only the first word and must recall the second.
 
 ```json
 { "trcode": "test_1",
-  "stimulus": "APPLE — was the second word internally or externally generated?" }
+  "stimulus": "TEST PHASE — what word was paired with 'cat' during the study phase?",
+  "word1": "cat", "word2": "umbrella" }
 ```
 
-Parser: `Response_part_2_rm` — returns `Judgment` (internal/external) + `Confidence` (1–6).
+Parser: `PairedAssociateRecall` — returns `recalled_word` (str), scored against
+the trial's own `word2` field.
 
-### Multi-phase setup
+### Three ways to chain study and test
 
-Run encoding and test phases in a single `Convo` experiment:
+The same study/test items can be run under three different memory shapes —
+see [Memory Types](memory_types.md#choosing-the-right-combination):
+
+| Shape | `memory` | `chain_type` | What happens |
+|---|---|---|---|
+| Single-turn | `SingleTurn` | `"item"` | Every trial is a fresh call — no memory of study during test |
+| Trial-chain | `Convo` | `"trial"` | Each pair's study + test share one thread; pairs are independent of each other |
+| Episodic-chain | `Convo` | `"task"` | The whole study block, then the whole test block, share one continuous conversation |
 
 ```python
 from pathlib import Path
 from psychscanner import ExpCardInit, ExpCard, ScannerModel, to_csv
-from psychscanner.parsers import Response_part_1_rm, Response_part_2_rm
-
-def rm_parser(trcode: str):
-    """Route parser by trial type."""
-    return Response_part_2_rm if "test" in trcode else Response_part_1_rm
 
 card = ExpCardInit(
     model      = "llama3.1:8b",
     family     = "ollama",
     parameters = {"temperature": 0},
-    task_file  = Path("tasks/rm_task.json"),
+    task_file  = Path("tasks/pal50.json"),
     memory     = "Convo",
-    chain_type = "item",
-    parser     = rm_parser,
+    chain_type = "task",         # episodic-chain: whole session is one conversation
+    parser     = "PairedAssociateRecall",
     cogtype    = "no",
     nsim       = 20,
     proj_dir   = Path("./results"),
-    projectname = "rm_study",
+    projectname = "pal_study",
     tunnel_status = "1",
 )
 
@@ -125,37 +130,36 @@ results = scanner.run(progress_bar=True)
 to_csv(scanner, path=card.proj_dir)
 ```
 
-### RM with feedback
+### PAL with feedback
 
 Add trial-level correctness feedback using `FeedbackBase`:
 
 ```python
 from psychscanner import FeedbackBase
-import json
 
-class RMFeedback(FeedbackBase):
-    def on_response(self, trial: dict, response: dict) -> str:
-        word2 = trial["stimulus"]["Word_Pair"]["word_2"]
-        given = response.get("Word_2", "")
-        if "__" in word2:   # imagined trial
-            fb = "CORRECT — novel word generated." if given else "INCORRECT — no word provided."
-        else:               # perceived trial
-            fb = "CORRECT." if given.lower() == word2.lower() else f"INCORRECT — expected '{word2}', got '{given}'."
-        return json.dumps({"feedback": fb})
+class CorrectIncorrectFeedback(FeedbackBase):
+    def on_response(self, trial: dict, response: dict) -> str | None:
+        if trial.get("phase") != "test":
+            return None   # no feedback during study
+        given = str(response.get("recalled_word", "")).strip().lower()
+        target = str(trial.get("word2", "")).strip().lower()
+        if given == target:
+            return f"CORRECT — '{trial['word1']}' was indeed paired with '{trial['word2']}'."
+        return f"INCORRECT — you said '{given}', but the studied pair was '{trial['word1']}–{trial['word2']}'."
 
 fb_card = ExpCardInit(
     model       = "llama3.1:8b",
     family      = "ollama",
-    task_file   = Path("tasks/rm_task.json"),
+    task_file   = Path("tasks/pal50.json"),
     memory      = "Convo",
     chain_type  = "task",
-    parser      = rm_parser,
+    parser      = "PairedAssociateRecall",
     feedback    = True,
-    feedback_fn = RMFeedback,
+    feedback_fn = CorrectIncorrectFeedback,
     cogtype     = "no",
     nsim        = 20,
     proj_dir    = Path("./results"),
-    projectname = "rm_feedback_study",
+    projectname = "pal_feedback_study",
 )
 
 scanner = ScannerModel(expcard=ExpCard(fb_card))
@@ -246,7 +250,7 @@ card = ExpCardInit(task_file=task, memory="Convo", chain_type="trial", parser="1
 A vigilance block of mostly-standard displays with rare oddball targets. The
 whole block is one conversation, so expectation/fatigue effects can
 accumulate across trials — optionally paired with `FeedbackBase` for
-correctness feedback, same pattern as `RMFeedback` above:
+correctness feedback, same pattern as `CorrectIncorrectFeedback` above:
 
 ```python
 "items": {"vig": [
@@ -334,23 +338,53 @@ card = ExpCardInit(
 3. Set `memory` and `chain_type` to match your paradigm.
 4. If feedback is needed, implement `FeedbackBase.on_response()`.
 
+Annotated template — copy this and swap in your own paradigm's content:
+
 ```python
 task = {
+    # Free-form label for your own bookkeeping — not read by the engine.
     "tasktype": "imagery",
+
+    # Used as a sub-folder name under proj_dir/ when results are written out.
     "taskname": "mental_rotation",
+
+    # Shown to the agent as (part of) the system message. Can be a string,
+    # a list of strings, or a {"definition": [...]} dict like below.
     "instructions": {"definition": ["Imagine rotating the object and describe what you see."]},
+
+    # Full-text descriptions of each "context" (phase/condition) in your task.
+    # Only shown to the agent when context_present is True.
     "contexts":    ["Cube", "Pyramid"],
+
+    # Short IDs, one per entry in "contexts". Each trial's context is looked
+    # up by matching the text before the first "_" in its trcode against
+    # this list — e.g. trcode "cube_0" below resolves to contexts_id[0].
     "contexts_id": ["cube", "pyramid"],
+
+    # Whether the matched context text is actually inserted into the prompt.
     "context_present": True,
+
+    # How trials are chained into model calls — "item" (default, one call per
+    # trial), "trial" (several stimuli in one call), or "task" (trials share
+    # a running conversation). See Memory Types > chain_type.
     "chain_type": "item",
+
+    # Registered parser class name, used when the card sets parser="1".
+    # Swap for a custom parser (see Custom Parsers) if your response format
+    # doesn't fit one of the built-ins.
     "parser": "DefaultResponseRating",
+
+    # Trial groups. The dict keys ("cube", "pyramid") are arbitrary labels —
+    # only each trial's own "trcode" prefix is used for context lookup.
     "items": {
         "cube":    [{"trcode": "cube_0",    "stimulus": "Rotate the cube 90° clockwise."}],
         "pyramid": [{"trcode": "pyramid_0", "stimulus": "Rotate the pyramid upside down."}],
     }
 }
 
-card = ExpCardInit(task_file=task, parser="1", ...)
+# parser="1" tells ExpCard to resolve the parser from the task JSON's own
+# "parser" field above, rather than overriding it here.
+card = ExpCardInit(task_file=task, parser="1", cogtype="no", nsim=20)
 ```
 
 ---
@@ -368,5 +402,5 @@ card = ExpCardInit(task_file=task, parser="1", ...)
 - [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —
   crossing a task card with multiple simulated personas
 - [Memory Types](memory_types.md) — Convo vs. SingleTurn
-- [Parsers API](../api/parsers.md) — RM parser classes
+- [Parsers API](../api/parsers.md) — `PairedAssociateRecall` and other parser classes
 - [Feedback API](../examples/demonstration_suite/02_association_memory.md) — feedback examples

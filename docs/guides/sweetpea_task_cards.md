@@ -169,7 +169,7 @@ Add it to `crossing` (and an `AtMostKInARow` constraint) the same way as
 ## See also
 
 - [Cognitive Tasks](cognitive_tasks.md) — the full task JSON schema and
-  worked examples (Reality Monitoring, visual search)
+  worked examples (paired-associate learning, visual search)
 - [PsychScanner Workflow](psychscanner_workflow.md) — the experiment card
   (`ExpCard`) a SweetPea-generated task card gets wrapped into to run
 - [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) —

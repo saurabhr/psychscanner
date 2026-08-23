@@ -117,9 +117,9 @@ regardless of `chain_type` — `chain_type` only changes which LangGraph
 |---|---|---|
 | Standard questionnaire | `SingleTurn` | `"item"` |
 | Imagery vividness (VVIQ) | `SingleTurn` | `"item"` |
-| Reality monitoring — encoding only | `SingleTurn` | `"item"` |
-| Reality monitoring — encode + test | `Convo` | `"item"` |
-| RM with trial feedback | `Convo` | `"task"` |
+| Paired-associate learning — single-turn | `SingleTurn` | `"item"` |
+| Paired-associate learning — trial-chain (study+test paired) | `Convo` | `"trial"` |
+| Paired-associate learning — episodic-chain (+ feedback) | `Convo` | `"task"` |
 | Multi-phase cognitive task | `Convo` | `"trial"` |
 
 ---

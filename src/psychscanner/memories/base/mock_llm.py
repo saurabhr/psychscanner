@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import typing
 from typing import Any, Dict, Iterator, List, Optional, TYPE_CHECKING
 
 from langchain_core.language_models import BaseChatModel
@@ -13,12 +14,50 @@ from langchain_core.messages import (
 import click
 from langchain_core.messages.ai import UsageMetadata
 from langchain_core.outputs import ChatGeneration, ChatGenerationChunk, ChatResult
-from pydantic import Field
+from langchain_core.runnables import Runnable, RunnableLambda
+from pydantic import BaseModel, Field
 
 if TYPE_CHECKING:
     from langchain_core.callbacks import (
         CallbackManagerForLLMRun,
     )
+
+
+def _mock_schema_instance(schema: type[BaseModel]) -> BaseModel:
+    """Build a schema-valid dummy instance of a structured-output parser class.
+
+    Not real content -- each required field gets its own default if it has
+    one, else a type-appropriate placeholder (first Literal option, "mock"
+    for str, 0/0.0 for numbers, False for bool, [] / {} for containers,
+    recursing into nested BaseModel fields). Just enough to satisfy Pydantic
+    validation so a task card's mock-LLM dry run can exercise its
+    ``with_structured_output`` path end-to-end without a real API key.
+    """
+    values: dict[str, Any] = {}
+    for name, field in schema.model_fields.items():
+        if not field.is_required():
+            continue
+        ann = field.annotation
+        origin = typing.get_origin(ann)
+        if origin is typing.Literal:
+            values[name] = typing.get_args(ann)[0]
+        elif isinstance(ann, type) and issubclass(ann, BaseModel):
+            values[name] = _mock_schema_instance(ann)
+        elif ann is str:
+            values[name] = "mock"
+        elif ann is int:
+            values[name] = 0
+        elif ann is float:
+            values[name] = 0.0
+        elif ann is bool:
+            values[name] = False
+        elif origin in (list, set, tuple):
+            values[name] = []
+        elif origin is dict:
+            values[name] = {}
+        else:
+            values[name] = None
+    return schema(**values)
 
 
 class ChatMockModel(BaseChatModel):
@@ -158,6 +197,32 @@ class ChatMockModel(BaseChatModel):
             # The on_llm_new_token will be called automatically
             run_manager.on_llm_new_token(token, chunk=chunk)
         yield chunk
+
+    def with_structured_output(
+        self,
+        schema: type[BaseModel],
+        *,
+        include_raw: bool = False,
+        **kwargs: Any,
+    ) -> Runnable:
+        """Mock structured output: returns a schema-valid dummy instance.
+
+        The base ``BaseChatModel`` implementation raises ``NotImplementedError``
+        here (it needs real tool-calling support), which broke every task card
+        using a structured-output parser -- card- or trial-level -- as soon as
+        it hit this mock model's validation/dry-run path. Real generation
+        still happens via ``self.invoke`` for the raw message; only the parsed
+        side is synthesized (see ``_mock_schema_instance``).
+        """
+
+        def _invoke(messages: Any, **_: Any) -> Any:
+            ai_message = self.invoke(messages)
+            parsed = _mock_schema_instance(schema)
+            if include_raw:
+                return {"raw": ai_message, "parsed": parsed, "parsing_error": None}
+            return parsed
+
+        return RunnableLambda(_invoke)
 
     @property
     def _llm_type(self) -> str:

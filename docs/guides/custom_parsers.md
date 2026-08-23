@@ -198,14 +198,14 @@ When a task has different trial types that need different parsers, you have two 
 ### Option A — callable dispatch (recommended for code)
 
 ```python
-from psychscanner.parsers import Response_part_1_rm, Response_part_2_rm
+from psychscanner.parsers import PairedAssociateRecall
 
-def rm_dispatch(trcode: str):
+def phase_dispatch(trcode: str):
     if "test" in trcode:
-        return Response_part_2_rm   # Judgment + Confidence
-    return Response_part_1_rm       # Word_2 + Rating
+        return PairedAssociateRecall   # recalled_word + confidence
+    return None                        # no structured output needed during study
 
-card = ExpCardInit(parser=rm_dispatch, ...)
+card = ExpCardInit(parser=phase_dispatch, ...)
 ```
 
 The callable is called once per trial with the trial's `trcode` string and must
@@ -222,8 +222,8 @@ Set `card.parser = "0"` as the card-level fallback:
   "chain_type": "item",
   "parser": "0",
   "items": {
-    "encode_1": [{"trcode": "encode_1", "parser": "Response_part_1_rm", "stimulus": {...}}],
-    "test_1":   [{"trcode": "test:encode_1", "parser": "Response_part_2_rm", "stimulus": {...}}]
+    "study_1": [{"trcode": "study_1", "parser": null, "stimulus": {...}}],
+    "test_1":  [{"trcode": "test_1", "parser": "PairedAssociateRecall", "stimulus": {...}}]
   }
 }
 ```
@@ -284,15 +284,15 @@ class RatingConf(BaseModel):
         ..., description="Confidence: 1 (guessing) to 6 (certain).")
 ```
 
-### Source judgment (reality monitoring)
+### Free recall with confidence
 
 ```python
-class SourceJudgment(BaseModel):
-    """Judge the origin of the item."""
-    source: Literal["internally generated", "externally presented", "new"] = Field(
-        ..., description="Was the item imagined, perceived, or new?")
+class RecallResponse(BaseModel):
+    """Recall the studied item and rate confidence."""
+    recalled_word: str = Field(
+        ..., description="The word you believe was paired with the probe during study.")
     confidence: Literal[1, 2, 3, 4, 5, 6] = Field(
-        ..., description="Confidence in the judgment: 1–6.")
+        ..., description="Confidence in the recall: 1–6.")
 ```
 
 ### Binary yes/no with explanation
@@ -323,4 +323,4 @@ card = ExpCardInit(parser=step_dispatch, ...)
 
 - [Parsers API Reference](../api/parsers.md) — full class listing
 - Example notebooks — [Parsers](../tutorials/03_parsers.ipynb), [Parser System Guide](../tutorials/08_ps_parser_guide.ipynb)
-- [Reality Monitoring task guide](cognitive_tasks.md)
+- [Paired-Associate Learning task guide](cognitive_tasks.md#paired-associate-learning-pal-task)

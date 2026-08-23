@@ -4,7 +4,7 @@ Comprehensive guides for using PsychScanner.
 
 ## Getting Started
 
-- [Cognitive Tasks](cognitive_tasks.md) - The task JSON schema (task card), plus the Reality Monitoring paradigm and visual search examples
+- [Cognitive Tasks](cognitive_tasks.md) - The task JSON schema (task card), a paired-associate learning walkthrough, visual search examples, and an annotated custom-task template
 - [PsychScanner Workflow](psychscanner_workflow.md) - A slide-ready summary of the execution path (experiment card)
 - [Survey Tasks](survey_tasks.md) - Creating and running surveys
 - [Running a Survey with Persona Levels](../examples/demonstration_suite/03_personality_survey.md) - Simulating participants with distinct personas
@@ -23,6 +23,11 @@ Comprehensive guides for using PsychScanner.
   [Extending psychscanner](../tutorials/index.md#extending-psychscanner) and
   [Tool binding, multimodal stimuli, and custom agent architectures](../tutorials/index.md#tool-binding-multimodal-stimuli-and-custom-agent-architectures)
   tutorial sections.
+- **Cognitive reinforcement learning** — drive a `FeedbackBase`-based
+  Q-learning environment through the planner/executor/validator agent on an
+  n-armed bandit and an iterated Prisoner's Dilemma — see the
+  [Cognitive reinforcement learning](../tutorials/index.md#cognitive-reinforcement-learning)
+  tutorial section.
 
 Coming soon:
 - Real-time monitoring
