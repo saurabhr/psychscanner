@@ -120,7 +120,6 @@ nav:
     - Parsers: api/parsers.md
     - SessionTunnel: api/session_tunnel.md
   - CLI: cli.md
-  - Deployment: deployment.md
   - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md
   - Psychscanner-Primal Docs: https://saurabhr.github.io/psychscanner-primal/
