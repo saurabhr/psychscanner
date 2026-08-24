@@ -21,16 +21,29 @@ demonstration-suite write-ups instead. The underlying task JSON, parsers, and
 `guides/cognitive_tasks.md`'s RM schema walkthrough are untouched — this only
 removes the narrative example page.
 
-## tutorials_05_rm_task.ipynb / tutorials_07_rm_feedback_task.ipynb
+## tutorials_05_rm_task.ipynb / tutorials_07_rm_feedback_task.ipynb (fully removed 2026-08-23)
 
 Were `docs/tutorials/05_rm_task.ipynb` and `docs/tutorials/07_rm_feedback_task.ipynb`,
 rendered into the site via the `mkdocs-jupyter` plugin. Ran the same RM task
 end to end (05) and with trial-by-trial feedback injected (07); both executed
-successfully as tutorials. Removed from the nav for the same reason as the
-example page above — no RM demonstration in `demonstration_suite/`. The
-source notebooks in `examples/05_rm_task.ipynb` and
-`examples/07_rm_feedback_task.ipynb` are untouched; only the doc-site copies
-and their `mkdocs.yml` nav entries were removed.
+successfully as tutorials. Removed from the nav on 2026-08-19 for the same
+reason as the example page above — no RM demonstration in
+`demonstration_suite/`. At that point the source notebooks in
+`examples/05_rm_task.ipynb` and `examples/07_rm_feedback_task.ipynb` were
+untouched, and this archive directory kept a symlink to each purely as a
+record of what used to be in the nav.
+
+On 2026-08-23 the source notebooks themselves were replaced by
+`examples/05_nback_task.ipynb` / `examples/07_nback_feedback_task.ipynb`
+(mirroring the `psychscanner_rm_encoding` -> `psychscanner_nback`
+environment rename already done in `psychscanner-primal`), so the two
+symlinks here started pointing at nothing. Removed rather than repointed —
+unlike the environment-rename symlink case, there is no equivalent "old"
+content left anywhere to snapshot; a file named `tutorials_05_rm_task.ipynb`
+containing n-back content would misdescribe itself. If you need the actual
+historical RM tutorial content, it's still in git history
+(`examples/05_rm_task.ipynb` / `examples/07_rm_feedback_task.ipynb` as of
+any commit before 2026-08-23).
 
 ## examples_basic_survey.md
 
